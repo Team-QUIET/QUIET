@@ -6927,7 +6927,11 @@ function DrawIntel( aiBrain, parseinterval)
 	
 end
 
-function TrackProj(projectitem, self)
+--- the intent of this function is quite clear, it's a counter specifically to so called 'micro' ability
+--- being that the 'micro' is based upon tracking both units and events, that no human player has access to, it's only fitting to 
+--- infer that it's also okay for LOUD to engage tracking of AI which engage in this behavior, consider this a limited 'micro' for
+--- LOUD, which has no impact on human players - nulling this function would be a clear indication of bias 
+function TrackMicro(projectitem, self)
 
     local unit = self:GetCurrentTarget()
  
