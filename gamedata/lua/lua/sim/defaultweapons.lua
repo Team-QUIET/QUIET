@@ -8,7 +8,7 @@ local WeaponOnDestroy   = Weapon.OnDestroy
 
 local CollisionBeam                     = import('/lua/sim/CollisionBeam.lua').CollisionBeam
 local CalculateBallisticAcceleration    = import('/lua/sim/CalcBallisticAcceleration.lua').CalculateBallisticAcceleration 
-local MicroMonitor                      = import('/lua/loudutilities.lua').TrackMicro
+local MicroMonitor                      = import('/lua/loudutilities.lua').TrackSpoon
 
 local LOUDABS       = math.abs
 local LOUDFLOOR     = math.floor
