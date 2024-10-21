@@ -1,4 +1,4 @@
 AI = {
 	Name = "Effects.scd",
-	Version = "QUIET 1.0",
+	Version = "LOUD 7.02",
 }
