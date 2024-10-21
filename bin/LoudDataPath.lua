@@ -17,9 +17,9 @@ mount_dir(InitFileDir .. '\\..\\..\\gamedata\\env.scd', '/')
 mount_dir(InitFileDir .. '\\..\\..\\gamedata\\projectiles.scd', '/')
 mount_dir(InitFileDir .. '\\..\\..\\gamedata\\props.scd', '/')
 mount_dir(InitFileDir .. '\\..\\..\\gamedata\\meshes.scd', '/')
+mount_dir(InitFileDir .. '\\..\\..\\gamedata\\units.scd', '/')
 mount_dir(InitFileDir .. '\\..\\..\\movies', '/movies')
 mount_dir(InitFileDir .. '\\..\\..\\sounds', '/sounds')
-
 --LOUD directory user maps & mods
 mount_dir(InitFileDir .. '\\..\\usermaps', '/maps')
 mount_mods(InitFileDir .. '\\..\\usermods', '/mods')
