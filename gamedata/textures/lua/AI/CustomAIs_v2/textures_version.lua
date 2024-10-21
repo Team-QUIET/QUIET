@@ -1,4 +1,4 @@
 AI = {
 	Name = "Textures",
-	Version = "7.03 LOUD",
+	Version = "QUIET 0.19",
 }
