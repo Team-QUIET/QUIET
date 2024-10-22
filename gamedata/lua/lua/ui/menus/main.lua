@@ -154,7 +154,7 @@ function CreateUI()
     gameVersionText.Depth:Set(border.Depth() + 10)
 
     local loudVersion = import('/lua/AI/CustomAIs_v2/ExtrasAI.lua').AI.Version
-    local loudVersionText = UIUtil.CreateText(border, "LOUD Version: "..loudVersion, 14, UIUtil.bodyFont)
+    local loudVersionText = UIUtil.CreateText(border, "QUIET Version: "..loudVersion, 14, UIUtil.bodyFont)
     loudVersionText:SetColor('677983')
     LayoutHelpers.Below(loudVersionText, gameVersionText)
     loudVersionText.Depth:Set(border.Depth() + 11)
