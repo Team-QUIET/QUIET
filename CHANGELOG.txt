@@ -1,3 +1,18 @@
+### Release 10-22-2024
+
+QUIET 1.00
+Blackops for QUIET 0.10
+Effects 1.0
+Textures 0.19
+Units 1.01
+
+- Fixed Cybran & ACU Textures
+  - They now have high resolution textures like Seraphim & UEF ACUs
+- Fixed Cybran & UEF Engineers Wheels/Threads not animating
+- Significantly improved graphics, LODs, Rigging, Targetbones, and other such things on Vanilla Units
+- Implemented first edition of Physically Based Rendering (Improves Shaders on ALL Units and makes them consistently look better on all maps)
+
+
 ### Release 10-07-2024
 
 LUA 7.14
