@@ -67,6 +67,12 @@ UnitBlueprint {
             },
         },
 
+        MovementEffects = {
+            Land = {
+                Treads = { ScrollTreads = true, },
+            },
+        },
+
         UniformScale = 0.075,
     },
 	

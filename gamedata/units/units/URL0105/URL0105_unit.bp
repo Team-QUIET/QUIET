@@ -46,6 +46,12 @@ UnitBlueprint {
 
         Mesh = { IconFadeInZoom = 130, LODs = { {LODCutoff = 215,Scrolling = true,ShaderName = 'Insect'} } },
 
+        MovementEffects = {
+            Land = {
+                Treads = { ScrollTreads = true, },
+            },
+        },
+
         UniformScale = 0.09,
     },
 	

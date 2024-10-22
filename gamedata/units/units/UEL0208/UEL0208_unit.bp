@@ -67,6 +67,9 @@ UnitBlueprint {
         },
 
         MovementEffects = {
+            Land = {
+                Treads = { ScrollTreads = true, },
+            },
             Water = {
                 Effects = {
                     { Bones = {'Front_Right_Wake'}, Scale = 0.6, Type = 'LeftFrontWake' },
