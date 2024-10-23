@@ -77,7 +77,15 @@ UnitBlueprint {
 		AnimationTransform = '/mods/TotalMayhem/units/BRMT3AVA/BRMT3AVA_unpack.sca',
         AnimationWalkRate = 1.55,
         
-        Mesh = { IconFadeInZoom = 230, LODs = { { LODCutoff = 850, ShaderName = 'Insect' } } },
+        Mesh = { 
+            IconFadeInZoom = 230,
+            LODs = { 
+                { 
+                    LODCutoff = 850, 
+                    ShaderName = 'Insect',
+                }, 
+            }, 
+        },
         
         MovementEffects = {
             Land = {
