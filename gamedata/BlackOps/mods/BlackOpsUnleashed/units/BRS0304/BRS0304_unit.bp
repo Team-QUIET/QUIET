@@ -106,7 +106,7 @@ UnitBlueprint {
             },
         },
         
-        Mesh = { IconFadeInZoom = 100, LODs = { {LODCutoff = 300,ShaderName = 'Insect'} } },
+        Mesh = { IconFadeInZoom = 100, LODs = { {LODCutoff = 300,ShaderName = 'CybranNavy'} } },
         
         MovementEffects = {
             Water = {

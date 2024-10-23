@@ -97,8 +97,8 @@ UnitBlueprint{
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
-                { LODCutoff = 140, ShaderName = "Aeon" },
-                { LODCutoff = 300, ShaderName = "Aeon", AlbedoName = "was0332_lod1_albedo.dds", SpecularName = "was0332_lod1_specteam.dds" },
+                { LODCutoff = 140, ShaderName = "AeonNavy" },
+                { LODCutoff = 300, ShaderName = "AeonNavy", AlbedoName = "was0332_lod1_albedo.dds", SpecularName = "was0332_lod1_specteam.dds" },
             },
         },
 

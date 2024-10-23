@@ -89,7 +89,7 @@ UnitBlueprint {
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
-                { LODCutoff = 500, ShaderName = 'Insect' },
+                { LODCutoff = 500, ShaderName = 'CybranNavy' },
             },
         },
 

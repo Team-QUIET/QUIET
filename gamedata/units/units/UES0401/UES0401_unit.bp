@@ -108,7 +108,7 @@ UnitBlueprint {
             Water   = { Effects = { { Bones = {'UES0401'}, Scale = 1.7, Type = 'SeaIdle01' } } }
         },
 
-        Mesh = { IconFadeInZoom = 130, LODs = { { LODCutoff = 800, ShaderName = 'Unit', } } },
+        Mesh = { IconFadeInZoom = 130, LODs = { { LODCutoff = 800, ShaderName = 'UEFNavy', } } },
 
         MovementEffects = {
             Sub     = { Effects = { { Bones = {'Exhaust01','Exhaust02','Exhaust03','Exhaust04'}, Scale = 13, Type = 'BackWake' } } },

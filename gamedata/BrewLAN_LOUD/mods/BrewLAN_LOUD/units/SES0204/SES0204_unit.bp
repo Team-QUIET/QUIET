@@ -78,10 +78,10 @@ UnitBlueprint {
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
-                { LODCutoff = 32,  ShaderName = 'Unit' },
-                { LODCutoff = 64,  ShaderName = 'Unit' },
-                { LODCutoff = 128, ShaderName = 'Unit' },
-                { LODCutoff = 256, ShaderName = 'Unit' },
+                { LODCutoff = 32,  ShaderName = 'UEFNavy' },
+                { LODCutoff = 64,  ShaderName = 'UEFNavy' },
+                { LODCutoff = 128, ShaderName = 'UEFNavy' },
+                { LODCutoff = 256, ShaderName = 'UEFNavy' },
             },
         },
         

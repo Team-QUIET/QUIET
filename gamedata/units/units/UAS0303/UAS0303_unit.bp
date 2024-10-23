@@ -108,12 +108,12 @@ UnitBlueprint {
                 {
                     LODCutoff = 200,
                     Scrolling = true,
-                    ShaderName = 'Aeon',
+                    ShaderName = 'AeonNavy',
                 },
                 {
                     AlbedoName = 'uas0303_lod1_albedo.dds',
                     LODCutoff = 600,
-                    ShaderName = 'Aeon',
+                    ShaderName = 'AeonNavy',
                     SpecularName = 'uas0303_lod1_specteam.dds',
                 },
             },

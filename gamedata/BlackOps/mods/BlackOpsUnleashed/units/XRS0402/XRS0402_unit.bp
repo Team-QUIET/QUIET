@@ -103,8 +103,8 @@ UnitBlueprint {
         Mesh = {
             IconFadeInZoom = 130,
             LODs = {
-                { LODCutoff = 200, ShaderName = 'Insect' },
-                { AlbedoName = 'XRS0402_lod1_albedo.dds', LODCutoff = 600, ShaderName = 'Insect', SpecularName = 'XRS0402_lod1_specteam.dds' },
+                { LODCutoff = 200, ShaderName = 'CybranNavy' },
+                { AlbedoName = 'XRS0402_lod1_albedo.dds', LODCutoff = 600, ShaderName = 'CybranNavy', SpecularName = 'XRS0402_lod1_specteam.dds' },
             },
         },
         

@@ -84,7 +84,7 @@ UnitBlueprint {
             },
         },
 
-        Mesh = { IconFadeInZoom = 130, LODs = { { LODCutoff = 600, ShaderName = 'Unit' } } },
+        Mesh = { IconFadeInZoom = 130, LODs = { { LODCutoff = 600, ShaderName = 'UEFNavy' } } },
 
         MovementEffects = {
             Water = {
