@@ -49,7 +49,9 @@ optionsOrder = {
     "sound",
 }
 
+local Prefs = import("/lua/user/prefs.lua")
 local savedMasterVol = false
+local savedBloomIntensity = nil
 local savedFXVol = false
 local savedMusicVol = false
 local savedVOVol = false
@@ -932,7 +934,33 @@ options = {
                         {text = "On", key = 1 },
                     },
                 },
-            }
+            },
+            {
+                title = "<LOC OPTIONS_BLOOM_INTENSITY>Bloom Intensity",
+                key = 'bloom_intensity',
+                type = 'slider',
+                default = 15,
+                custom = {
+                    min = 10,
+                    max = 17,
+                    inc = 1,
+                },
+
+                init = function()
+                    savedBloomIntensity = Prefs.GetFromCurrentProfile('options.bloom_intensity')
+                end,
+                cancel = function()
+                    if savedBloomIntensity then
+                        ConExecute("ren_BloomBlurKernelScale " .. tostring(savedBloomIntensity / 10))
+                    end
+                end,
+                update = function(control,value)
+                    ConExecute("ren_BloomBlurKernelScale " .. tostring(value / 10))
+                end,
+                set = function(key,value,startup)
+                    ConExecute("ren_BloomBlurKernelScale " .. tostring(value / 10))
+                end,
+            },
         },
     },
     sound = {

@@ -660,6 +660,10 @@ Tooltips = {
         title = "Bloom Render",
         description = "Toggles a glow type effect that is used on many weapon effects and some UI elements (off = fastest)",
     },
+    options_bloom_intensity = {
+        title = "Bloom Intensity",
+        description = "Allows you to adjust the bloom intensity. Ranges from 10 (essentially no bloom) to 17 (more bright than usual). The standard value is 15.\r\n\r\nThis feature only works when bloom is enabled.",
+    },
 
     -- **********************
     -- *** Options: Sound
