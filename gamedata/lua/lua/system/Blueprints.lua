@@ -727,10 +727,7 @@ function ModBlueprints(all_blueprints)
 			for i, cat in bp.Categories do
 		
 				if cat == 'NAVAL' then
-			
-					econScale = 0.0     
 					speedScale = -0.10  --- move slower
-					viewScale = 0.00
 			
 					for j, catj in bp.Categories do
 				
@@ -755,140 +752,47 @@ function ModBlueprints(all_blueprints)
                             end
 		
 							if bp.Economy.BuildTime then
-							
-								bp.Economy.BuildTime = bp.Economy.BuildTime + (bp.Economy.BuildTime * econScale)
-                                
-								bp.Economy.BuildCostEnergy = bp.Economy.BuildCostEnergy + (bp.Economy.BuildCostEnergy * econScale)
-                                
                                 -- simple 10% energy cost reduction for all naval units
-                                bp.Economy.BuildCostEnergy = bp.Economy.BuildCostEnergy * 0.9
-                                
-								bp.Economy.BuildCostMass = bp.Economy.BuildCostMass + (bp.Economy.BuildCostMass * econScale)
-								
+                                bp.Economy.BuildCostEnergy = bp.Economy.BuildCostEnergy * 0.9              
 							end
 						
 							if bp.Physics.Maxspeed then
-							
 								bp.Physics.MaxSpeed = bp.Physics.MaxSpeed + (bp.Physics.MaxSpeed * speedScale)
-								
 							end	
 							
-							if bp.Intel.VisionRadius then
-							
-								bp.Intel.VisionRadius = math.floor(bp.Intel.VisionRadius + (bp.Intel.VisionRadius * viewScale))
-								
+							if bp.Intel then
+								bp.Intel.WaterVisionRadius = 6
 							end
-							
-							if bp.Intel.WaterVisionRadius and bp.Intel.WaterVisionRadius > 0 then
-							
-								bp.Intel.WaterVisionRadius = math.floor(bp.Intel.WaterVisionRadius + (bp.Intel.WaterVisionRadius * viewScale))
-								
-							else
-							
-								if bp.Intel then
-									bp.Intel.WaterVisionRadius = 6
-								end
-								
-							end
-					
 						end
 						
 						-- naval structures get a little extra adjustment seperate from all other structures
 						if catj == 'STRUCTURE' then
-				
-							if bp.Intel.VisionRadius then
-							
-								bp.Intel.VisionRadius = math.floor(bp.Intel.VisionRadius + (bp.Intel.VisionRadius * viewScale))
-								
+							if bp.Intel then
+									bp.Intel.WaterVisionRadius = 6							
 							end
-						
-							if bp.Intel.WaterVisionRadius and bp.Intel.WaterVisionRadius > 0 then
-							
-								bp.Intel.WaterVisionRadius = math.floor(bp.Intel.WaterVisionRadius + (bp.Intel.WaterVisionRadius * viewScale))
-								
-							else
-							
-								if bp.Intel then
-									bp.Intel.WaterVisionRadius = 6
-								end
-								
-							end
-                            
 						end						
 					end
 				end
 			
 				if cat == 'AIR' then
-			
 					econScale = 0.075	-- cost more
-					speedScale = -0.0
-					viewScale = -0.00
 		
 					for j, catj in bp.Categories do
 				
 						if catj == 'MOBILE' then
-                   
-                            if bp.Air.KMove and bp.Air.KMoveDamping > 1 then
-                                --LOG("AI DEBUG KMoveDamping for "..repr(bp.Description).." reduced from "..bp.Air.KMoveDamping.." to 1 - KMove is "..bp.Air.KMove)
-                                bp.Air.KMoveDamping = math.max( 1, bp.Air.KMove )
-                            end
-                            
-                            if bp.Air.KTurn then
-                                if bp.Air.KTurnDamping and bp.Air.KTurnDamping > (bp.Air.KTurn * 1.25) then
-                                    --LOG("AI DEBUG KTurnDamping for "..repr(bp.Description).." reduced from "..repr(bp.Air.KTurnDamping).." to "..bp.Air.KTurn * 1.25)
-                                    bp.Air.KTurnDamping = bp.Air.KTurn * 1.25
-                                end
-                            end
-							
-                            -- this is the one that controls air unit speed
-                            -- enforce a minimum airspeed
-							if bp.Air.MaxAirspeed then
-								bp.Air.MaxAirspeed = bp.Air.MaxAirspeed + (bp.Air.MaxAirspeed * speedScale)
-                                bp.Air.MinAirspeed = bp.Air.MaxAirspeed * 0.5
-							end
 					
 							if bp.Economy.BuildTime then
 								bp.Economy.BuildTime = bp.Economy.BuildTime + (bp.Economy.BuildTime * econScale)
 								bp.Economy.BuildCostEnergy = bp.Economy.BuildCostEnergy + (bp.Economy.BuildCostEnergy * econScale)
 								bp.Economy.BuildCostMass = bp.Economy.BuildCostMass + (bp.Economy.BuildCostMass * econScale)
 							end
-
-							-- air units speed is not controlled by this
-							if bp.Physics.Maxspeed then
-								bp.Physics.MaxSpeed = bp.Physics.MaxSpeed + (bp.Physics.MaxSpeed * speedScale)
-                                bp.Physics.MinSpeed = bp.Physics.MaxSpeed * 0.5
-							end
-						
-							-- if the unit uses a SizeSphere for collisions, make sure it's big enough as related to it's max speed
-							-- if the value is set too low, the unit becomes nearly unhittable except by tracking SAMs
-							-- this steep dropoff starts to occur around .9 but is tolerable at that setting with a decent amount of
-							-- hits but a few misses at the top end (of particular note are the AA lasers)
-							if bp.SizeSphere and bp.Air.MaxAirspeed then
-								bp.SizeSphere = math.max( 0.9, bp.Air.MaxAirspeed * 0.095 )
-							end
-                            
-                            if not bp.Physics.BackUpDistance then
-                                bp.Physics.BackUpDistance = 1.0
-                            end
-
-							if bp.Physics.MaxBrake then
-								bp.Physics.MaxBrake = bp.Physics.MaxBrake + (bp.Physics.MaxBrake * speedScale)
-							end
                             
                             if not bp.Physics.TurnRadius then
                                 bp.Physics.TurnRadius = 15
                             end
-							
-							if bp.Intel.VisionRadius then
-								bp.Intel.VisionRadius = math.floor(bp.Intel.VisionRadius + (bp.Intel.VisionRadius * viewScale))
-							end
-							
-							if bp.Intel.WaterVisionRadius and bp.Intel.WaterVisionRadius > 0 then
-								bp.Intel.WaterVisionRadius = math.floor(bp.Intel.WaterVisionRadius + (bp.Intel.WaterVisionRadius * viewScale))
-							else
-								if bp.Intel then
-									bp.Intel.WaterVisionRadius = 0
-								end
+		
+							if bp.Intel then
+								bp.Intel.WaterVisionRadius = 0
 							end
                             
                             if bp.Weapon then
@@ -907,51 +811,17 @@ function ModBlueprints(all_blueprints)
 				end
 			
 				if cat == 'LAND' then
-			
-					econScale = 0
-					speedScale = 0
-					viewScale = 0
 		
 					for j, catj in bp.Categories do
 				
 						if catj == 'MOBILE' then
 
-							if bp.Economy.BuildTime and econScale != 0 then
-								bp.Economy.BuildTime = bp.Economy.BuildTime + (bp.Economy.BuildTime * econScale)
-								bp.Economy.BuildCostEnergy = bp.Economy.BuildCostEnergy + (bp.Economy.BuildCostEnergy * econScale)
-								bp.Economy.BuildCostMass = bp.Economy.BuildCostMass + (bp.Economy.BuildCostMass * econScale)
-							end
-
 							if bp.SizeY and not bp.Physics.LayerChangeOffsetHeight then
 								bp.Physics.LayerChangeOffsetHeight = bp.SizeY/2 * -1
 							end
-			
-							if bp.Physics.MaxSpeed then
-								bp.Physics.MaxSpeed = bp.Physics.MaxSpeed + (bp.Physics.MaxSpeed * speedScale)
-							end
-							
-							if bp.Physics.MaxBrake then
-								bp.Physics.MaxBrake = bp.Physics.MaxBrake + (bp.Physics.MaxBrake * speedScale)
-							end
-							
-							if bp.Physics.MaxSpeedReverse then
-								bp.Physics.MaxSpeedReverse = bp.Physics.MaxSpeedReverse + (bp.Physics.MaxSpeedReverse * speedScale)
-							end
-							
-							if bp.Physics.RotateOnSpot then
-								bp.Physics.RotateOnSpot = false
-							end
-							
-							if bp.Intel.VisionRadius then
-								bp.Intel.VisionRadius = math.floor(bp.Intel.VisionRadius + (bp.Intel.VisionRadius * viewScale))
-							end	
 
-							if bp.Intel.WaterVisionRadius and bp.Intel.WaterVisionRadius > 0 then
-								bp.Intel.WaterVisionRadius = math.floor(bp.Intel.WaterVisionRadius + (bp.Intel.WaterVisionRadius * viewScale))
-							else
-								if bp.Intel then
-									bp.Intel.WaterVisionRadius = 3
-								end
+							if bp.Intel then
+								bp.Intel.WaterVisionRadius = 3
 							end
 							
 							-- this series of adjustments is designed to give the lower tech mobile land units a little more 'oomph' with
@@ -1024,12 +894,6 @@ function ModBlueprints(all_blueprints)
 							bp.Intel.WaterVisionRadius = 0
 						end
 						
-					end
-				
-					local buildtimemod = 1	-- take longer to build (but costs remain same)
-				
-					if bp.Economy.BuildTime then
-						bp.Economy.BuildTime = bp.Economy.BuildTime * buildtimemod
 					end
 					
 					-- the purpose of this alteration is to address the parity of T2 and T3 static defenses with respect to mobile units
