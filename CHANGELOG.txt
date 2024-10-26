@@ -1,3 +1,13 @@
+### Release 10-26-2024
+
+LUA 1.02
+CIV_UNITS 1.0
+
+- Fixed Aeon Civilian Structures Breaking Many Maps
+- Added Bloom Intensity Slider to allow you to adjust bloom brightness
+- Rework How Bombers drop bombs to make them drop more often
+- Remove many blueprints.lua changes that were not needed anymore
+
 ### Release 10-22-2024
 
 QUIET 1.00
