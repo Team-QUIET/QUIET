@@ -10,156 +10,180 @@
 -- height, etc) and calculates the proper value to feed to the bomb adjust 
 -- function. [152]
 
--- This is a fraction between 0 and 1, indicating which part of the target we want to hit
--- 0 : on feet ; 1 : on head
--- I personally think that 0 is better, but if you want to try, feel free to play with this...
+-- upvalue globals for performance
+local GetSurfaceHeight = GetSurfaceHeight
+local VDist2 = VDist2
 
-local alpha = 0
+local EntityMethods = moho.entity_methods
+local EntityGetPosition = EntityMethods.GetPosition
+local EntityGetPositionXYZ = EntityMethods.GetPositionXYZ
 
--- This table stores the acceleration previously calculated.
--- This serves for bombers carrying several bombs: acceleration is calculated
--- for first bomb, then stored in this table and reused for the next bombs
--- format : bomber_table[entityId] = {acc, remaining_bombs}
+local UnitMethods = moho.unit_methods
+local UnitGetVelocity = UnitMethods.GetVelocity
+local UnitGetTargetEntity = UnitMethods.GetTargetEntity
 
-local bomber_table = {}
+CalculateBallisticAcceleration = function(self, projectile)
+	local launcher = projectile:GetLauncher()
+	if not launcher then -- fail-fast
+		return 4.9 -- Return the default gravity value if some calculations fail
+	end
 
--- This is the default value returned by the function if a problem occured in the calculation...
--- But normally that may never happen
+	local UnitGetVelocity = UnitGetVelocity
+	local VDist2 = VDist2
+	-- Get projectile position and velocity
+	-- velocity will need to be multiplied by 10 due to being returned /tick instead of /s
+	local projPosX, projPosY, projPosZ = EntityGetPositionXYZ(projectile)
+	local projVelX, _, projVelZ = UnitGetVelocity(launcher)
 
-local default_value = 4.9
+	local targetPos
+	local targetVelX, targetVelZ = 0, 0
 
+	local data = self.CurrentSalvoData
 
-
-CalculateBallisticAcceleration = function (weapon, proj)
-
-    local Projectiles = weapon.CBFP_CalcBallAcc.ProjectilesPerOnFire
-    
-	local launcher = proj:GetLauncher()
-   
-	if not launcher then return default_value end
-
-	local LOUDSQRT  = math.sqrt
-    local LOUDPOW   = math.pow
-
-	local acc = default_value
-   
-	local entityId = launcher:GetEntityId()
-   
-	if bomber_table[entityId] then
-	
-		-- acceleration yet calculated
-		acc = bomber_table[entityId].acc
-		
-		bomber_table[entityId].remaining_bombs = bomber_table[entityId].remaining_bombs - 1
-      
-		if bomber_table[entityId].remaining_bombs <= 0 then
-			bomber_table[entityId] = nil
+	-- if it's the first time...
+	if not data then
+		-- setup target (which won't change mid-bombing run)
+		local target = UnitGetTargetEntity(launcher)
+		if target then -- target is a unit / prop
+			targetPos = EntityGetPosition(target)
+			if not target.IsProp then
+				targetVelX, _, targetVelZ = UnitGetVelocity(target)
+			end
+		else -- target is a position i.e. attack ground
+			targetPos = self:GetCurrentTargetPos()
 		end
-		
-	else
-	
-		local pos_target = {0, 0, 0}
-		local wx, wy, wz = 0, 0, 0
 
-		-- Get projectile position
-		local pos_proj = proj:GetPosition()
-
-		-- Get the target (if it's a entity)
-		local target = launcher:GetTargetEntity()
-
-        --- resolve position if it's an entity or ground fire
+		-- and there's not going to be a second time
+		if self.bp.MuzzleSalvoSize <= 1 then
+			-- do the calculation but skip any cache or salvo logic
+			if not targetPos then
+				return 4.9
+			end
+			if target and not target.IsProp then
+				targetVelX, _, targetVelZ = UnitGetVelocity(target)
+			end
+			local targetPosX, targetPosZ = targetPos[1], targetPos[3]
+			local distVel = VDist2(projVelX, projVelZ, targetVelX, targetVelZ)
+			if distVel == 0 then
+				return 4.9
+			end
+			local distPos = VDist2(projPosX, projPosZ, targetPosX, targetPosZ)
+			do
+				local dropShort = self.DropBombShortRatio
+				if dropShort then
+					distPos = distPos * dropShort
+				end
+			end
+			if distPos == 0 then
+				return 4.9
+			end
+			local time = distPos / distVel
+			projPosY = projPosY - GetSurfaceHeight(targetPosX + time * targetVelX, targetPosZ + time * targetVelZ)
+			return 200 * projPosY / (time * time)
+		else -- otherwise, calculate & cache a couple things the first time only
+			data = {
+				lastAccel = 4.9,
+				targetPos = targetPos,
+			}
+			if target then
+				if target.Dead then
+					data.target = nil
+				else
+					data.target = target
+				end
+			end
+			self.CurrentSalvoData = data
+		end
+	else -- if it's a successive bomb drop, update the targeting data
+		local target = data.target
 		if target then
-
-			pos_target = target:GetPosition()
-      
-			--- Get target speed
-			wx, wy, wz = target:GetVelocity()
-			wx = wx * 10
-			wy = wy * 10
-			wz = wz * 10
-
+			if target.Dead then -- if the unit is destroyed, use the last known position
+				data.target = nil
+				targetPos = data.targetPos
+			else
+				if not target.IsProp then
+					targetVelX, _, targetVelZ = UnitGetVelocity(target)
+				end
+				targetPos = EntityGetPosition(target)
+			end
 		else
-
-			pos_target = weapon:GetCurrentTargetPos()
-
-			--- Set alpha to 0 so we don't overshoot because of this variable
-			alpha = 0
-			
-		end
-
-		--- sometimes one of these is nil
-		if not pos_target[1] or not pos_target[2] or not pos_target[3] then
-			return default_value
-		end
-
-		--- Get height
-		local unit_height = pos_target[2] - GetSurfaceHeight( pos_target[1], pos_target[3] )
-      
-		--- decide where we hit the target
-		pos_target[2] = GetSurfaceHeight( pos_target[1], pos_target[3] ) + alpha * unit_height
-      
-		--- Get launcher speed; As the projectile is just dropped, this also gives the projectile speed
-		local ux, uy, uz = launcher:GetVelocity()
-
-		ux = ux * 10
-		uy = uy * 10
-		uz = uz * 10
-      
-		local v_launcher = LOUDSQRT( LOUDPOW(ux,2) + LOUDPOW(uy,2) + LOUDPOW(uz,2) )
-		local vhorz_launcher = LOUDSQRT( LOUDPOW(ux,2) + LOUDPOW(uz,2) )
-      
-		if vhorz_launcher == 0 then return default_value end
-      
-		--- calculate bomb speed; Don't ask me why, but it seems this is how it is calculated!
-		local vx = ux * v_launcher / vhorz_launcher
-		local vz = uz * v_launcher / vhorz_launcher
-
-		--- calculate distance between projectile and target
-		local dist = LOUDSQRT( LOUDPOW(pos_target[1] -  pos_proj[1], 2) +  LOUDPOW(pos_target[3] -  pos_proj[3], 2) )
-      
-		--- calculate the offset : this is for planes carrying several bombs. We are calculating
-		--- the trajectory of first bomb, but as the result will be a carpet bomb, we try to have
-		--- the target in the center of the flames, so the first bomb must fall before the target
-		--- (0.1 is the delay between 2 drops)
-		
-		local offset = (Projectiles - 1) * 0.1 * (vhorz_launcher * 0.5)
-      
-		dist = dist - offset  --- this is not exact in some cases, but that should be good enough
-      
-		--- calculate height between projectile and target
-		local height = pos_proj[2] - pos_target[2]
-      
-		--- calculate horizontal speed between projectile and target
-		local vhorz = LOUDSQRT( LOUDPOW(vx-wx, 2) + LOUDPOW(vz-wz, 2) )
-		
-		if vhorz == 0 then return default_value end
-      
-		--- calculate the time after which the bomb will hit the target
-		local t = dist / vhorz
-		if t == 0 then return default_value end
-      
-		--- calculate the position of target at time t
-		local pos_target_t = {0,0,0}
-
-		pos_target_t[1] = pos_target[1] + wx * t
-		pos_target_t[3] = pos_target[3] + wz * t
-      
-		--- because of the terrain, we don't rely on vertical speed to get the altitude...
-		pos_target_t[2] = GetSurfaceHeight(pos_target_t[1], pos_target_t[3]) + alpha * unit_height
-      
-		--- calculate the average vertical speed
-		vvert = (pos_target_t[2] - pos_target[2]) / t
-      
-		--- calculate ballistic acceleration so that the projectile hits the target
-		acc = 2 * LOUDPOW(1/t , 2) * (height - t * vvert)
-      
-		--- fill bomber_table if several bombs must be dropped
-		if Projectiles > 1 then
-			bomber_table[entityId] = {}
-			bomber_table[entityId].acc = acc
-			bomber_table[entityId].remaining_bombs = Projectiles - 1
+			targetPos = data.targetPos
 		end
 	end
-   
+	if not targetPos then
+		-- put the bomb cluster in free-fall
+		local GetSurfaceHeight = GetSurfaceHeight
+		local MathSqrt = math.sqrt
+		local spread = self.AdjustedSalvoDelay * (self.SalvoSpreadStart + self.CurrentSalvoNumber)
+		-- default gravitational acceleration is 4.9; however, bomb clusters adjust the time it takes to land
+		-- so we convert the acceleration to time to add the spread and convert back:
+		-- h = unitY - surfaceY         =>  h2 = 0.5 * (unitY - surfaceHeight(unitX, unitZ))
+		-- t = sqrt(2 h / a) + spread   =>  t = sqrt(4 / 4.9 * h2) + spread
+		-- a = 0.5 h / t^2              =>  a = h2 / t^2
+		local halfHeight = 0.5 * (projPosY - GetSurfaceHeight(projPosX, projPosZ))
+		if halfHeight < 0.01 then return 4.9 end
+		local time = MathSqrt(0.816326530612 * halfHeight) + spread
+
+		-- now that we know roughly when we'll land, we can find a better guess for where
+		-- we'll land, and thus guess the true falling height better as well
+		halfHeight = 0.5 * (projPosY - GetSurfaceHeight(projPosX + time * projVelX, projPosX + time * projVelX))
+		if halfHeight < 0.01 then return 4.9 end
+		time = MathSqrt(0.816326530612 * halfHeight) + spread
+
+		local acc = halfHeight / (time * time)
+		data.lastAccel = acc
+		return acc
+	end
+
+	-- calculate flat (exclude y-axis) distance and velocity between projectile and target
+	-- velocity will eventually need to multiplied by 10 due to being per tick instead of per second
+	local distVel = VDist2(projVelX, projVelZ, targetVelX, targetVelZ)
+	if distVel == 0 then
+		data.lastAccel = 4.9
+		return 4.9
+	end
+	local targetPosX, targetPosZ = targetPos[1], targetPos[3]
+
+	-- calculate the distance for this particular bomb
+	local distPos = VDist2(projPosX, projPosZ, targetPosX, targetPosZ)
+	do
+		local dropShort = self.DropBombShortRatio
+		if dropShort then
+			distPos = distPos * dropShort
+		end
+	end
+
+	-- how many ticks until the bomb hits the target in xz-space
+	local time = distPos / distVel
+	local adjustedTime = time + self.AdjustedSalvoDelay * (self.SalvoSpreadStart + self.CurrentSalvoNumber)
+	if adjustedTime == 0 then
+		data.lastAccel = 4.9
+		return 4.9
+	end
+
+	-- If we have a target, targetPos may have updated now.
+	-- save the new predicted target position in case we lose the target
+	-- so that we can drop the bomb salvo centered onto there.
+	if data.target then
+		targetPos[1] = targetPos[1] + time * targetVelX
+		targetPos[3] = targetPos[3] + time * targetVelZ
+		data.targetPos = targetPos
+	end
+
+	-- find out where the target will be at that point in time (it could be moving)
+	-- (time and velocity being in ticks cancel out)
+	-- what is the height difference at that future position
+	projPosY = projPosY -
+		GetSurfaceHeight(targetPosX + adjustedTime * targetVelX, targetPosZ + adjustedTime * targetVelZ)
+
+	-- The basic formula for displacement over time is h = 0.5 * a * t^2
+	-- h: displacement, a: acceleration, t: time
+	-- now we can calculate what acceleration we need to make it hit the target in the y-axis
+	-- a = 2 * h / t^2
+
+	-- also convert time from ticks to seconds (multiply by 10, twice)
+	local acc = 200 * projPosY / (adjustedTime * adjustedTime)
+
+	data.lastAccel = acc
 	return acc
-end 
+end
