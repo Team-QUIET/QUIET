@@ -6928,76 +6928,7 @@ function DrawIntel( aiBrain, parseinterval)
 end
 
 function TrackProj(projectitem, self)
-
-    local unit = self:GetCurrentTarget()
- 
-    if not LOUDENTITY(categories.MOBILE,unit) then
-        return
-    end
-
-    if unit:BeenDestroyed() or projectitem:BeenDestroyed() then
-        return
-    end
-
-    local brain = GetAIBrain(unit)
-
-    if brain.BrainType == "AI" and string.sub( brain.Personality, 1, 1) == 'm' then
-
-        local bp = projectitem:GetBlueprint().Physics
-
-        if (bp.DetonateAboveHeight and bp.DetonateAboveHeight > 0) then
-            return
-        end
-        
-        if (bp.DetonateBelowHeight and bp.DetonateBelowHeight > 0) then
-    
-            local tpos = projectitem:GetCurrentTargetPosition()
-            local mpos = projectitem:GetPosition()
-            local dist = VDist2( mpos[1],mpos[3], tpos[1],tpos[3] )
-            
-            local prevelev = mpos[2]
-            local prevdist = dist
-			
-            if tpos then
-                local theight = GetSurfaceHeight(tpos[1],tpos[3])
-                projectitem:ChangeDetonateBelowHeight(bp.DetonateBelowHeight/3)
-            end
-   
-            WaitTicks(2)
-
-            if unit:BeenDestroyed() or projectitem:BeenDestroyed() then
-                return
-            end
-            
-            while not projectitem:BeenDestroyed() do
-        
-                tpos = projectitem:GetCurrentTargetPosition()
-                mpos = projectitem:GetPosition()
-                dist = VDist2( mpos[1],mpos[3], tpos[1],tpos[3] )
-            
-                if prevdist < dist or mpos[2] < prevelev then
-                
-                    projectitem:TrackTarget(true)
-                    projectitem:SetAcceleration(bp.DetonateBelowHeight)
-                    WaitTicks(3)
-                    break
-                else
-                    WaitTicks(1)
-                    prevdist = dist
-                    prevelev = mpos[2]
-                end
-            end
-        
-        elseif projectitem.Distance then
-
-            while (not projectitem:BeenDestroyed()) and projectitem.Distance > 10 do
-                WaitTicks(2)
-            end
-
-        end
-
-    end
-
+	--noop
 end
 
 function LogGamePerformanceData()
