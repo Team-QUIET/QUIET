@@ -169,65 +169,39 @@ DefaultProjectileWeapon = Class(Weapon) {
     end,
 
     CreateProjectileAtMuzzle = function(self, muzzle)
-
-        local proj          = self:CreateProjectileForWeapon(muzzle)
-
-        local bp            = self.bp
-        local unit          = self.unit
-        
-        local Audio         = bp.Audio
-        local CacheLayer    = unit.CacheLayer
-	
-		if ScenarioInfo.ProjectileDialog then
-			LOG("*AI DEBUG Projectile CreateProjectileAtMuzzle "..repr(bp.Label).." Muzzle "..repr(muzzle).." Projectile "..repr(proj.BlueprintID) )
-		end
-		
-        if not proj or BeenDestroyed(proj) then
-            return false
+        local proj = self:CreateProjectileForWeapon(muzzle)
+        if not proj or proj:BeenDestroyed() then
+            return proj
         end
-		
+
+        local bp = self.bp
         if bp.DetonatesAtTargetHeight == true then
-		
-            local pos = GetCurrentTargetPos(self)
-			
+            local pos = self:GetCurrentTargetPos()
             if pos then
-            
                 local theight = GetSurfaceHeight(pos[1], pos[3])
                 local hght = pos[2] - theight
-                
-                ChangeDetonateAboveHeight( proj, hght )
+                proj:ChangeDetonateAboveHeight(hght)
             end
         end
-		
         if bp.Flare then
             proj:AddFlare(bp.Flare)
         end
-        
-        if (CacheLayer == 'Water' or CacheLayer == 'Sub' or CacheLayer == 'Seabed') then
-
-            if Audio.FireUnderWater then
-                PlaySound( self, Audio.FireUnderWater )
-            elseif Audio.Fire then
-                PlaySound( self, Audio.Fire)
-            end
-        else
-            if Audio.Fire then
-                PlaySound( self, Audio.Fire)
-            end
+        if self.unit.Layer == 'Water' and bp.Audio.FireUnderWater then
+            self:PlaySound(bp.Audio.FireUnderWater)
+        elseif bp.Audio.Fire then
+            self:PlaySound(bp.Audio.Fire)
         end
 
-		if self.CBFP_CalcBallAcc then
-            self:CheckBallisticAcceleration( proj )
-		end
-		
-		if bp.CountedProjectile then
+        if bp.CountedProjectile then
 			self:CheckCountedMissileLaunch()
 		end
 
-        proj:ForkThread( Monitor, self)
+        if bp.FixBombTrajectory then
+            self:CheckBallisticAcceleration(proj)
+        end
 
         return proj
-    end,
+    end;
 	
 	-- passed in the bp data to avoid the call
     CheckCountedMissileLaunch = function(self)
