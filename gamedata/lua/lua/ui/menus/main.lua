@@ -126,7 +126,7 @@ function CreateUI()
     -- BACKGROUND
     local parent = UIUtil.CreateScreenGroup(GetFrame(0), "Main Menu ScreenGroup")
 
-    local backImage = Bitmap(parent, UIUtil.UIFile('/scx_menu/main-menu/background-ACUs-blue-black.dds'))
+    local backImage = Bitmap(parent, UIUtil.UIFile('/scx_menu/main-menu/quiet-background.dds'))
     LayoutHelpers.FillParent(backImage, parent)
     backImage.Bottom:Set(function() return parent.Width() * 0.5625 end)
     backImage.Depth:Set(10)
@@ -142,7 +142,7 @@ function CreateUI()
     LayoutHelpers.FillParent(border, parent)
 
     -- SupCom logo resizes to current resolution
-    local logo = Bitmap(border, UIUtil.UIFile('/scx_menu/logo/logo.dds'))
+    local logo = Bitmap(border, UIUtil.UIFile('/scx_menu/logo/quiet-logo.dds'))
     LayoutHelpers.AtHorizontalCenterIn(logo, border)
     LayoutHelpers.AtTopIn(logo, border)
     logo.Depth:Set(60)
