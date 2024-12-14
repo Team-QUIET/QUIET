@@ -454,7 +454,7 @@ local function LoadDialog(parent)
     movie:Loop(true)
     movie:Play()
 
-    local text = '::  GET LOUD!  ::'
+    local text = ':: STAY  QUIET ::'
     local textControl = UIUtil.CreateText(movie, text, 28, UIUtil.bodyFont)
     textControl:SetColor(color)
     LayoutHelpers.AtCenterIn(textControl, parent, 200)

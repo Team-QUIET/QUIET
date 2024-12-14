@@ -4116,7 +4116,7 @@ function CreateUI(maxPlayers, useSteam)
 		GUI.fillOpenCombo = Combo(GUI.observerPanel, 14, 10, false, nil, "UI_Tab_Rollover_01", "UI_Tab_Click_01")
 
 		LayoutHelpers.CenteredRightOf(GUI.fillOpenCombo, GUI.fillOpenLabel, 5)
-		LayoutHelpers.SetWidth(GUI.fillOpenCombo, 90)
+		LayoutHelpers.SetWidth(GUI.fillOpenCombo, 150) --was 90, more width to read.
 
 		Tooltip.AddControlTooltip(GUI.fillOpenCombo, 'lob_fill_combo')
 		
