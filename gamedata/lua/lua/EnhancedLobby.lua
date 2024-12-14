@@ -169,6 +169,25 @@ function GetSortOrder()
 	
 end
 
+--great hack.
+function order(tbl)
+  local ret = {}
+  local tail = nil
+
+  for i,v in tbl do
+    if v.key == 'loud' then
+      tail = v
+    else
+      table.insert(ret, v)
+    end
+  end
+  if not(tail == nil) then
+    table.insert(ret,tail)
+  end
+
+  return ret
+end
+
 function GetAIList()
 
     local aitypes = {}
@@ -263,7 +282,8 @@ function GetAIList()
 
     end
     
-    return aitypes
+    --return aitypes
+    return order(aitypes)
 
 end
 
