@@ -160,6 +160,9 @@ local function CreateDependsDialog(parent, text, yesFunc)
     UIUtil.CreateWorldCover(dialog)
 end
 
+local m28id = Mods.match_uid('fnewm028')
+LOG("<<<<<<M28 Should Be " .. m28id)
+
 local quietStandard = {
     '25D57D85-7D84-27HT-A501-BR3WL4N000079', -- BrewLAN
     '62e2j64a-53a2-y6sg-32h5-146as555a18u3', -- Total Mayhem
@@ -171,7 +174,8 @@ local quietStandard = {
     'fffffffe-6e98-4864-9599-4133236eea7a', -- LOUD Unit Additions
     'HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1240', -- Supreme Score Board
     'zzzzzzze-fffe-fffe-fffe-71aabbf8363f',  -- QUIET Community Edition
-    'zzzzzzze-fffe-fffe-fffe-94ccddf9599f'   -- QUIET Economy and Flow
+    'zzzzzzze-fffe-fffe-fffe-94ccddf9599f',   -- QUIET Economy and Flow
+    m28id --M28AI
     --'9e8ea941-c306-4751-b367-e00000000302', -- BlackOps ACUs
     --'ffffffff-6f00-4864-9599-4133236eea7a', -- LOUD Evenflow
 }
@@ -200,8 +204,9 @@ local modSchema = {
         'ffffffff-6f00-4864-9599-4133236eea7a', -- Evenflow
         'ffffffff-6e98-4864-9599-4133236eea7a', -- Integrated Storage
         'ffffffff-ffff-ffff-ffff-fffffffffffe', -- Structure Enhancements
-        'zzzzzzze-fffe-fffe-fffe-71aabbf8363f',  -- QUIET Community Edition
-        'zzzzzzze-fffe-fffe-fffe-94ccddf9599f'   -- QUIET Economy and Flow
+        'zzzzzzze-fffe-fffe-fffe-71aabbf8363f', -- QUIET Community Edition
+        'zzzzzzze-fffe-fffe-fffe-94ccddf9599f', -- QUIET Economy and Flow
+        m28id                                   -- M28AI
     },
     ["Unofficial Rebalance"] = {
         '25D57D85-9JA7-D842-BREW-INTEL00000002', -- BrewLAN: Bletchley Park

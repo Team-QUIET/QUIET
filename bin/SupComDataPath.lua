@@ -25,8 +25,8 @@ mount_dir(InitFileDir .. '\\..\\gamedata\\textures\\textures', '/textures')
 mount_dir(InitFileDir .. '\\..\\gamedata\\units\\units', '/units')
 mount_dir(InitFileDir .. '\\..\\sounds', '/sounds')
 
---LOUD content
-mount_dir(InitFileDir .. '\\..\\..\\LOUD\\maps', '/maps')
+--QUIET content
+mount_dir(InitFileDir .. '\\..\\..\\QUIET\\maps', '/maps')
 
 --Vanilla content
 mount_dir(InitFileDir .. '\\..\\..\\fonts', '/fonts')
@@ -56,8 +56,8 @@ mount_dir(InitFileDir .. '\\..\\gamedata\\BrewLAN_LOUD\\lua', '/lua')
 mount_dir(InitFileDir .. '\\..\\gamedata\\WyvernBattlePack\\lua', '/lua')
 
 --LOUD directory user maps & mods
-mount_dir(InitFileDir .. '\\..\\..\\LOUD\\usermaps', '/maps')
-mount_mods(InitFileDir .. '\\..\\..\\LOUD\\usermods', '/mods')
+mount_dir(InitFileDir .. '\\..\\..\\QUIET\\usermaps', '/maps')
+mount_mods(InitFileDir .. '\\..\\..\\QUIET\\usermods', '/mods')
 
 --Documents directory user maps & mods (SCFA default)
 --mount_contents(SHGetFolderPath('PERSONAL') .. 'My Games\\Gas Powered Games\\Supreme Commander Forged Alliance\\maps', '/maps')
