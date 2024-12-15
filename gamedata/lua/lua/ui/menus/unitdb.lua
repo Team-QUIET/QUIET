@@ -25,6 +25,7 @@ local mainDirs = {
 	'/mods/LOUD Unit Additions/units',
 	'/mods/TotalMayhem/units',
 	'/mods/BattlePack/units',
+  '/mods/QUIET-Community-Edition/units'
 }
 
 local originMap = {

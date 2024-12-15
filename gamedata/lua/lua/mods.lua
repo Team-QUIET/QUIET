@@ -463,3 +463,47 @@ _G.GetModConfig = function(uid)
     end
     return false
 end
+
+--enable tracking mods by name.
+--dynamically updating m28
+--how about this.
+--we default to auto-enabling m28
+
+--look through UIDs to see if any match the pattern.
+--This is helpful when looking for e.g. fnewm028
+--so we can auto-enable it.
+function match_uid(pattern)
+  local alls = AllMods()
+  for uid,md in alls do
+    if string.find(uid,pattern) then
+      return uid
+    end
+  end
+  return nil
+end
+
+function autoenablem28()
+  local uid = match_uid('fnewm028')
+  LOG("<<<<<<<M28 Thinks it is " .. uid)
+  if uid then
+    local selected = GetSelectedMods()
+    if selected[uid] then
+      LOG("<<<<<<<<<<<<M28 ALREADY ENABLED BRO >>>>>>>>" .. uid)
+      return --already on bro
+    else
+      LOG("<<<<<<<<<<<<<<M28 Currently:" .. uid)
+      LOG("<<<<<<<<<<<<M28 AUTO ENABLING BRO  >>>>>>>>")
+      local mysel = {}
+      mysel[uid] = true
+      local alls = AllMods()
+      for k,v in selected do
+        if alls[k] then
+          mysel[k] = true
+        end
+      end
+      SetSelectedMods(mysel)
+    end
+  end
+end
+
+autoenablem28()
