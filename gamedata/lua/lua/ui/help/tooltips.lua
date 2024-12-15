@@ -762,9 +762,9 @@ Tooltips = {
         description = "Any mod which you installed into the usermods folder.",
     },
 
-    modmgr_loudstandard = {
-        title = "Enable LOUD Standard",
-        description = "Turn on the group of mods officially endorsed by the LOUD Development Team as the true LOUD experience.",
+    modmgr_quietstandard = {
+        title = "Enable QUIET Standard",
+        description = "Turn on the group of mods officially endorsed by the QUIET Development Team as the true QUIET experience.",
     },
 
     -- **********************
