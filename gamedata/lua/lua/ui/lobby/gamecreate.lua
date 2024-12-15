@@ -236,11 +236,6 @@ function CreateUI(playerName, over, exitBehavior, useSteam)
         if useSteam then
 			protocol = "STEAM"
 			
-			if not string.find(gameName, "LOUD ") then
-			
-				gameName = 'LOUD '..gameName
-				
-			end
 		else
 			protocol = "UDP"
 		end
