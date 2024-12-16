@@ -128,7 +128,10 @@ function CreateUI()
 
     local backImage = Bitmap(parent, UIUtil.UIFile('/scx_menu/main-menu/quiet-background.dds'))
     LayoutHelpers.FillParent(backImage, parent)
-    backImage.Bottom:Set(function() return parent.Width() * 0.5625 end)
+    --don't think this is necessary.  it screws up image on wider aspect ratio
+    --monitors.  This should keep us locked to the bottom of the screen now...
+    
+    --backImage.Bottom:Set(function() return parent.Width() * 0.5625 end)
     backImage.Depth:Set(10)
 
     local darker = Bitmap(parent)
