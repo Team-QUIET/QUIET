@@ -4068,8 +4068,8 @@ function CreateUI(maxPlayers, useSteam)
                 end
             end
         end
-
-        GUI.setAllAIMultBtn = UIUtil.CreateButtonStd(GUI.observerPanel, '/lobby/lan-game-lobby/toggle', "Set All AI Cheat", 10, 0)
+        --changed to smalltoggle and shorter text since we made combo box bigger.
+        GUI.setAllAIMultBtn = UIUtil.CreateButtonStd(GUI.observerPanel, '/lobby/lan-game-lobby/smalltoggle', "Set Cheat", 10, 0)
 
         LayoutHelpers.CenteredRightOf(GUI.setAllAIMultBtn, GUI.fillAIMult)
 
