@@ -4,6 +4,7 @@
 local BareBonesWeapon           = import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon
 local DefaultProjectileWeapon   = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 local DefaultBeamWeapon         = import('/lua/sim/DefaultWeapons.lua').DefaultBeamWeapon
+local DefaultOverchargeWeapon   = import('/lua/sim/defaultweapons.lua').OverchargeWeapon
 
 local CollisionBeamFile         = import('defaultcollisionbeams.lua')
 
@@ -88,7 +89,7 @@ SDFChronotronCannonWeapon               = Class(DefaultProjectileWeapon) { FxMuz
     FxChargeMuzzleFlash = EffectTemplate.SChronotronCannonMuzzleCharge,
 }
 
-SDFChronotronCannonOverChargeWeapon     = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SChronotronCannonOverChargeMuzzle }
+SDFChronotronCannonOverChargeWeapon     = Class(DefaultOverchargeWeapon) { FxMuzzleFlash = EffectTemplate.SChronotronCannonOverChargeMuzzle, DesiredWeaponLabel = 'ChronotronCannon' }
 
 SDFLightChronotronCannonWeapon          = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SLightChronotronCannonMuzzleFlash}
 

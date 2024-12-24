@@ -4,6 +4,7 @@
 local BareBonesWeapon           = import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon
 local DefaultBeamWeapon         = import('/lua/sim/DefaultWeapons.lua').DefaultBeamWeapon
 local DefaultProjectileWeapon   = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
+local DefaultOverchargeWeapon   = import('/lua/sim/defaultweapons.lua').OverchargeWeapon
 
 local OrbitalDeathLaserCollisionBeam    = import('defaultcollisionbeams.lua').OrbitalDeathLaserCollisionBeam
 local TDFHiroCollisionBeam              = import('defaultcollisionbeams.lua').TDFHiroCollisionBeam
@@ -85,7 +86,7 @@ TDFLightPlasmaCannonWeapon              = Class(DefaultProjectileWeapon) { FxMuz
 
 TDFHeavyPlasmaCannonWeapon              = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPlasmaCannonHeavyMuzzleFlash }
 
-TDFOverchargeWeapon                     = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TCommanderOverchargeFlash01 }
+TDFOverchargeWeapon                     = Class(DefaultOverchargeWeapon) { FxMuzzleFlash = EffectTemplate.TCommanderOverchargeFlash01, DesiredWeaponLabel = 'RightZephyr' }
 
 TDFMachineGunWeapon                     = Class(DefaultProjectileWeapon) { FxMuzzleFlash = {'/effects/emitters/machinegun_muzzle_fire_01_emit.bp',
         '/effects/emitters/machinegun_muzzle_fire_02_emit.bp',

@@ -2,6 +2,7 @@
 ---  Default definitions of Aeon weapons
 
 local WeaponFile = import('/lua/sim/DefaultWeapons.lua')
+local DefaultOverchargeWeapon = import('/lua/sim/defaultweapons.lua').OverchargeWeapon
 local CollisionBeamFile = import('defaultcollisionbeams.lua')
 
 local QuantumBeamGeneratorCollisionBeam     = CollisionBeamFile.QuantumBeamGeneratorCollisionBeam
@@ -200,7 +201,7 @@ ADFLaserHighIntensityWeapon     = Class(DefaultProjectileWeapon) { FxMuzzleFlash
 
 ADFLaserLightWeapon             = Class(DefaultProjectileWeapon) { FxMuzzleFlash = {'/effects/emitters/flash_04_emit.bp' },}
 
-ADFOverchargeWeapon             = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.ACommanderOverchargeFlash01 }
+ADFOverchargeWeapon             = Class(DefaultOverchargeWeapon) { FxMuzzleFlash = EffectTemplate.ACommanderOverchargeFlash01, DesiredWeaponLabel = 'RightDisruptor'}
 
 ADFQuantumAutogunWeapon         = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.Aeon_DualQuantumAutoGunMuzzleFlash }
 

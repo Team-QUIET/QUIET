@@ -4,6 +4,8 @@ local BareBonesWeapon           = import('/lua/sim/DefaultWeapons.lua').BareBone
 local KamikazeWeapon            = import('/lua/sim/DefaultWeapons.lua').KamikazeWeapon
 local DefaultBeamWeapon         = import('/lua/sim/DefaultWeapons.lua').DefaultBeamWeapon
 local DefaultProjectileWeapon   = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
+local DefaultOverchargeWeapon   = import('/lua/sim/defaultweapons.lua').OverchargeWeapon
+
 
 local DefaultBeamWeaponOnCreate     = DefaultBeamWeapon.OnCreate
 local DefaultBeamWeaponIdleState    = DefaultBeamWeapon.IdleState
@@ -156,7 +158,7 @@ CDFLaserDisintegratorWeapon02           = Class(DefaultProjectileWeapon) { FxMuz
     },
 }
 
-CDFOverchargeWeapon                     = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.CMolecularRipperOverChargeFlash01}
+CDFOverchargeWeapon                     = Class(DefaultOverchargeWeapon) { FxMuzzleFlash = EffectTemplate.CMolecularRipperOverChargeFlash01, DesiredWeaponLabel = 'RightRipper' }
 
 CDFProtonCannonWeapon                   = Class(DefaultProjectileWeapon) { FxMuzzleFlash = {'/effects/emitters/proton_cannon_muzzle_01_emit.bp',
                      '/effects/emitters/proton_cannon_muzzle_02_emit.bp',},

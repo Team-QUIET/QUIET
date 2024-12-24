@@ -1475,10 +1475,7 @@ UnitBlueprint {
             DamageType = 'Overcharge',
 
             DisplayName = 'Chronotron Overcharge Cannon',
-
-            EnergyChargeForFirstShot = false,
-
-            EnergyDrainPerSecond = 3000,
+            
             EnergyRequired = 30000,
 
             FireTargetLayerCapsTable = {

@@ -33,10 +33,10 @@ local Weapon = import('/lua/sim/Weapon.lua').Weapon
 
 local wep, wpTarget
 
-
 EAL0001 = Class(AWalkingLandUnit) {
 
     DeathThreadDestructionWaitTime = 2,
+    EnergyRequired = nil,
 	
 	BuffFields = {
 		DamageField1 = Class(AeonBuffField){ OnCreate = function(self) AeonBuffField.OnCreate(self) end, },
@@ -52,114 +52,7 @@ EAL0001 = Class(AWalkingLandUnit) {
 		
         RightDisruptor = Class(ADFDisruptorCannonWeapon) {},
 		
-        OverCharge = Class(ADFOverchargeWeapon) {
-
-            OnCreate = function(self)
-
-                ADFOverchargeWeapon.OnCreate(self)
-
-                self:SetWeaponEnabled(false)
-
-                self.AimControl:SetEnabled(false)
-                self.AimControl:SetPrecedence(0)
-            end,
-
-            OnEnableWeapon = function(self)
-
-                if self:BeenDestroyed() then return end
-
-                ADFOverchargeWeapon.OnEnableWeapon(self)
-
-                self:SetWeaponEnabled(true)
-
-                --self.unit:SetWeaponEnabledByLabel('RightDisruptor', false)
-
-                self.unit:BuildManipulatorSetEnabled(false)
-
-                self.AimControl:SetEnabled(true)
-                self.AimControl:SetPrecedence(20)
-
-                if self.unit.BuildArmManipulator then
-                    self.unit.BuildArmManipulator:SetPrecedence(0)
-                end
-
-                self.AimControl:SetHeadingPitch( self.unit:GetWeaponManipulatorByLabel('RightDisruptor'):GetHeadingPitch() )
-            end,
-
-            OnWeaponFired = function(self)
-
-                ADFOverchargeWeapon.OnWeaponFired(self)
-
-                self:OnDisableWeapon()
-                self:ForkThread(self.PauseOvercharge)
-            end,
-            
-            OnDisableWeapon = function(self)
-
-                if self.unit:BeenDestroyed() then return end
-
-                self:SetWeaponEnabled(false)
-
-                --self.unit:SetWeaponEnabledByLabel('RightDisruptor', true)
-
-                self.unit:BuildManipulatorSetEnabled(false)
-
-                self.AimControl:SetEnabled(false)
-                self.AimControl:SetPrecedence(0)
-
-                if self.unit.BuildArmManipulator then
-                    self.unit.BuildArmManipulator:SetPrecedence(0)
-                end
-                
-                self.unit:GetWeaponManipulatorByLabel('RightDisruptor'):SetHeadingPitch( self.AimControl:GetHeadingPitch() )
-            end,
-            
-            PauseOvercharge = function(self)
-
-                if not self.unit:IsOverchargePaused() then
-
-                    self.unit:SetOverchargePaused(true)
-
-                    WaitSeconds(1/self:GetBlueprint().RateOfFire)
-
-                    self.unit:SetOverchargePaused(false)
-                end
-            end,
-            
-            OnFire = function(self)
-
-                if not self.unit:IsOverchargePaused() then
-                    ADFOverchargeWeapon.OnFire(self)
-                end
-            end,
-			
-            IdleState = State(ADFOverchargeWeapon.IdleState) {
-			
-                OnGotTarget = function(self)
-
-                    if not self.unit:IsOverchargePaused() then
-                        ADFOverchargeWeapon.IdleState.OnGotTarget(self)
-                    end
-                end,            
-				
-                OnFire = function(self)
-
-                    if not self.unit:IsOverchargePaused() then
-                        ChangeState(self, self.RackSalvoFiringState)
-                    end
-                end,
-            },
-			
-            RackSalvoFireReadyState = State(ADFOverchargeWeapon.RackSalvoFireReadyState) {
-
-                OnFire = function(self)
-
-                    if not self.unit:IsOverchargePaused() then
-                        ADFOverchargeWeapon.RackSalvoFireReadyState.OnFire(self)
-                    end
-                end,
-            },              
-        },
+        OverCharge = Class(ADFOverchargeWeapon) {},
 		
         EXChronoDampener01 = Class(ADFChronoDampener) {},
         EXChronoDampener02 = Class(ADFChronoDampener) {},

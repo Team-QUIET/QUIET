@@ -1597,10 +1597,7 @@ UnitBlueprint {
             DamageType = 'Overcharge',
 			
             DisplayName = 'Overcharge Cannon',
-			
-            EnergyChargeForFirstShot = false,
-			
-            EnergyDrainPerSecond = 3000,
+						
             EnergyRequired = 30000,
 			
             FireTargetLayerCapsTable = {
@@ -1618,9 +1615,7 @@ UnitBlueprint {
             MaxRadius = 30,
 
             MuzzleVelocity = 25,
-            
-            NotExclusive = true,
-			
+            			
             OverChargeWeapon = true,
 			
             ProjectileId = '/projectiles/ADFOverCharge01/ADFOverCharge01_proj.bp',
