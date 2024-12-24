@@ -505,5 +505,9 @@ function autoenablem28()
     end
   end
 end
-
-autoenablem28()
+--only run if we're in a place we can GetPreference
+--looks like some contexts (maybe ui thread or simthread)
+--don't have this binding so we get errors in the log.
+if rawget(_G, 'GetPreference')  then
+  autoenablem28()
+end
