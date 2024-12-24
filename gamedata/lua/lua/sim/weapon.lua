@@ -71,6 +71,10 @@ Weapon = Class(moho.weapon_methods) {
 
         -- store the blueprint of the weapon 
         self.bp = GetBlueprint(self)
+
+        -- store the brain
+        local unit = self.unit
+        self.Brain = unit:GetAIBrain()
 		
         local bp = self.bp
 
