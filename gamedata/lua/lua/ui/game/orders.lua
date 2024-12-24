@@ -90,6 +90,7 @@ ResetGrid()     -- this sets up the default grid and order slots
 -- positioning controls, don't belong to file
 local layoutVar = false
 local glowThread = false
+local lastOCTime = {}
 
 -- these variables control the number of slots available for orders
 -- from DMS -- 
@@ -831,82 +832,62 @@ local function TacticalBtnText(button)
     end
 end
 
-function EnterOverchargeMode()
-    local econData = GetEconomyTotals()
-
-    if not currentSelection[1] or currentSelection[1]:IsDead() then return end
-
-    local bp = currentSelection[1]:GetBlueprint()
-
-    local overchargeLevel = 0
-    local overchargeFound = false
-    local overchargePaused = currentSelection[1]:IsOverchargePaused()
-
+function FindOCWeapon(bp)
     for index, weapon in bp.Weapon do
         if weapon.OverChargeWeapon then
-            overchargeLevel = weapon.EnergyRequired
-            overchargeFound = true
-            break
+            return weapon
         end
     end
 
-    if overchargeFound then
-        if overchargeLevel > 0 and econData["stored"]["ENERGY"] > overchargeLevel and not overchargePaused then
-            ConExecute('StartCommandMode order RULEUCC_Overcharge')
-        end
+    return
+end
+
+function OverchargeBehavior(self, modifiers)
+    if modifiers.Left then
+        EnterOverchargeMode()
+    end
+end
+
+function EnterOverchargeMode()
+    local unit = currentSelection[1]
+    if not unit or unit.Dead or unit:IsOverchargePaused() then return end
+    local bp = unit:GetBlueprint()
+    local weapon = FindOCWeapon(bp)
+    if not weapon then return end
+
+    local econData = GetEconomyTotals()
+    if econData["stored"]["ENERGY"] >= weapon.EnergyRequired then
+        ConExecute('StartCommandMode order RULEUCC_Overcharge')
     end
 end
 
 local function OverChargeFrame(self, deltaTime)
+    local unit = currentSelection[1]
+    if not unit or unit.Dead then return end
+    local weapon = FindOCWeapon(unit:GetBlueprint())
+    if not weapon then
+        self:SetNeedsFrameUpdate(false)
+        return
+    end
 
-    if deltaTime and currentSelection[1] then
-
-        if currentSelection[1]:IsDead() then return end
-
-        local bp = currentSelection[1]:GetBlueprint()
-        local overchargeLevel = false
-
-        -- find the overcharge weapon --
-        for index, weapon in bp.Weapon do
-            if weapon.OverChargeWeapon then
-                overchargeLevel = weapon.EnergyRequired
-                break
+    local econData = GetEconomyTotals()
+    if econData["stored"]["ENERGY"] >= weapon.EnergyRequired and not unit:IsOverchargePaused() then
+        if self:IsDisabled() then
+            self:Enable()
+            local armyTable = GetArmiesTable()
+            local facStr = import("/lua/factions.lua").Factions[armyTable.armiesTable[armyTable.focusArmy].faction + 1].SoundPrefix
+            local sound = Sound({Bank = 'XGG', Cue = 'Computer_Computer_Basic_Orders_01173'})
+            if not lastOCTime[unit:GetArmy()] then
+                lastOCTime[unit:GetArmy()] = GetGameTimeSeconds() - 2
+            end
+            if GetGameTimeSeconds() - lastOCTime[unit:GetArmy()] > 1 then
+                PlayVoice(sound)
+                lastOCTime[unit:GetArmy()] = GetGameTimeSeconds()
             end
         end
-
-        -- now see if there's enough power to use the weapon --
-        if overchargeLevel then
-
-            if not currentSelection[1]:IsOverchargePaused() then
-
-                local econData = GetEconomyTotals()
-
-                -- if we have the charge - enable the weapon & play the sound
-                if econData["stored"]["ENERGY"] > overchargeLevel then
-
-                    if self:IsDisabled() then
-
-                        self:Enable()
-
-                        local armyTable = GetArmiesTable()
-                        local facStr = import('/lua/factions.lua').Factions[armyTable.armiesTable[armyTable.focusArmy].faction + 1].SoundPrefix
-                        local sound = Sound({Bank = 'XGG', Cue = 'Computer_Computer_Basic_Orders_01173'})
-
-                        PlayVoice(sound)
-                    end
-
-                else
-                    self:Disable()
-                end
-
-            else
-                if not self:IsDisabled() then
-                    self:Disable()
-                end
-            end
-
-        else
-            self:SetNeedsFrameUpdate(false)
+    else
+        if not self:IsDisabled() then
+            self:Disable()
         end
     end
 end
@@ -919,9 +900,9 @@ end
 local defaultOrdersTable = {
     -- Common rules
     RULEUCC_Move = {                helpText = "move",          bitmapId = 'move',                  preferredSlot = 1,  behavior = StandardOrderBehavior    },
-    RULEUCC_Attack = {              helpText = "attack",        bitmapId = 'attack',                preferredSlot = 2,  behavior = StandardOrderBehavior    },
+    RULEUCC_Attack = {              helpText = "attack",        bitmapId = 'attack',                preferredSlot = 2,  behavior = AttackOrderBehavior      },
     AttackMove = {                  helpText = "attack_move",   bitmapId = 'attack_move',           preferredSlot = 3,  behavior = AttackMoveBehavior       },
-    RULEUCC_Overcharge = {          helpText = "overcharge",    bitmapId = 'overcharge',            preferredSlot = 4,  behavior = StandardOrderBehavior,   onframe = OverChargeFrame},
+    RULEUCC_Overcharge = {          helpText = "overcharge",    bitmapId = 'overcharge',            preferredSlot = 4,  behavior = OverchargeBehavior,   onframe = OverChargeFrame},
     RULEUCC_Patrol = {              helpText = "patrol",        bitmapId = 'patrol',                preferredSlot = 5,  behavior = StandardOrderBehavior    },
     RULEUCC_Stop = {                helpText = "stop",          bitmapId = 'stop',                  preferredSlot = 6,  behavior = MomentaryOrderBehavior   },
     RULEUCC_Guard = {               helpText = "assist",        bitmapId = 'guard',                 preferredSlot = 7,  behavior = StandardOrderBehavior    },
