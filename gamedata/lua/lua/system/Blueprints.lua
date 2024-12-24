@@ -597,7 +597,7 @@ function ModBlueprints(all_blueprints)
 						wep.MuzzleSalvoDelay = 0
 					end
                     
-                    if wep.EnergyRequired != nil then
+                    if wep.EnergyRequired != nil and wep.EnergyDrainPerSecond != nil then
                     
                         local chargetime = wep.EnergyRequired / wep.EnergyDrainPerSecond
                         

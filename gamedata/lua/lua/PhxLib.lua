@@ -479,8 +479,10 @@ PhxLib.PhxWeapDPS = function(weapon)
 
         local rechargeTime = 0
         local energyRequired = (weapon.EnergyRequired or 0)
+        local energyRequiredperSecond = (weapon.EnergyDrainPerSecond or 0)
 
-        if energyRequired > 0 then -- and not weapon.RackSalvoFiresAfterCharge    then
+        -- Introduced energyrequiredpersecond in ACU's case where he did not have energyrequiredpersecond
+        if energyRequired > 0 and energyRequiredperSecond > 0 then -- and not weapon.RackSalvoFiresAfterCharge    then
 
             rechargeTime = energyRequired / weapon.EnergyDrainPerSecond
             rechargeTime = math.ceil(rechargeTime*10)/10
