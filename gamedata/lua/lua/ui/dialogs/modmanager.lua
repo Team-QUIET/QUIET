@@ -175,8 +175,8 @@ local quietStandard = {
     'HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1240', -- Supreme Score Board
     'zzzzzzze-fffe-fffe-fffe-71aabbf8363f',  -- QUIET Community Edition
     'zzzzzzze-fffe-fffe-fffe-94ccddf9599f',   -- QUIET Economy and Flow
-    m28id --M28AI
-    --'9e8ea941-c306-4751-b367-e00000000302', -- BlackOps ACUs
+    m28id,--M28AI
+    '9e8ea941-c306-4751-b367-e00000000302', -- BlackOps ACUs
     --'ffffffff-6f00-4864-9599-4133236eea7a', -- LOUD Evenflow
 }
 
