@@ -1311,7 +1311,7 @@ function CreateDialog(over, inLobby, exitBehavior, useCover, modStatus)
     local quietStdBtn = UIUtil.CreateButtonStd(panel, '/widgets/small', "QUIET Standard", 12)
     LayoutHelpers.AtRightTopIn(quietStdBtn, panel, 30, 75)
     quietStdBtn.OnClick = function(self, modifiers)
-        for _, v in loudStandard do
+        for _, v in quietStandard do
             modStatus[v].checked = true
         end
         UpdateModListTable()
