@@ -737,13 +737,13 @@ Tooltips = {
         title = "Units",
         description = "Mods which add new units to the game.",
     },
-    modmgr_folder_ui = {
-        title = "User Interface",
-        description = "Mods which change the way you control the game without changing the game itself.",
-    },
     modmgr_folder_official = {
         title = "Official Rebalance",
         description = "Small but meaningful changes to the game. Recommended by the LOUD team for the complete experience.",
+    },
+    modmgr_folder_ui = {
+        title = "User Interface",
+        description = "Mods which change the way you control the game without changing the game itself.",
     },
     modmgr_folder_unofficial = {
         title = "Unofficial Rebalance",
@@ -756,6 +756,10 @@ Tooltips = {
     modmgr_folder_misc = {
         title = "Miscellaneous",
         description = "Mods which don't fit into any other category.",
+    },
+    modmgr_folder_deprecated = {
+        title = "Deprecated",
+        description = "Mods which are no longer supported.",
     },
     modmgr_folder_user = {
         title = "Usermods",

@@ -25,6 +25,7 @@ local DEFAULT_CLOSED_FOLDERS = {
     "Unofficial Rebalance",
     "Mutators",
     "Miscellaneous",
+    "Deprecated",
 }
 
 -- This function can be called while the ModManager is active, to update changes to the selected mods on the fly.
@@ -190,6 +191,13 @@ local modSchema = {
         '62e2j64a-53a2-y6sg-32h5-146as555a18u3', -- Total Mayhem
         '9a9C61C0-1787-10DF-A0AD-BATTLEPACK002', -- Wyvern Battle Pack
     },
+    ["Official Rebalance"] = {
+        'ffffffff-6e98-4864-9599-4133236eea7a', -- Integrated Storage
+        'ffffffff-ffff-ffff-ffff-fffffffffffe', -- Structure Enhancements
+        'zzzzzzze-fffe-fffe-fffe-71aabbf8363f', -- QUIET Community Edition
+        'zzzzzzze-fffe-fffe-fffe-94ccddf9599f', -- QUIET Economy and Flow
+        m28id                                   -- M28AI
+    },
     ["User Interface"] = {
         'Machd6c5-cd5c-4e34-b6cc-11503ed5e2da', -- Disperse Move
         '175542E4-D4F5-11DC-B450-11D755D89593', -- HotStats
@@ -200,27 +208,9 @@ local modSchema = {
         'HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1240', -- Supreme Score Board
         '022E3DB4-9C00-5ED7-9876-4866D316E015', -- UI Party
     },
-    ["Official Rebalance"] = {
-        'ffffffff-6f00-4864-9599-4133236eea7a', -- Evenflow
-        'ffffffff-6e98-4864-9599-4133236eea7a', -- Integrated Storage
-        'ffffffff-ffff-ffff-ffff-fffffffffffe', -- Structure Enhancements
-        'zzzzzzze-fffe-fffe-fffe-71aabbf8363f', -- QUIET Community Edition
-        'zzzzzzze-fffe-fffe-fffe-94ccddf9599f', -- QUIET Economy and Flow
-        m28id                                   -- M28AI
-    },
-    ["Unofficial Rebalance"] = {
-        '25D57D85-9JA7-D842-BREW-INTEL00000002', -- BrewLAN: Bletchley Park
-        '25D57D85-9JA7-LOUD-BREW-RESEARCH00005', -- BrewLAN: Research and Daiquiris
-        '16678e1e-7fc9-11e5-8bcf-waterguard10', -- Water Guard
-        '25D57D85-9JA7-D842-GKG4-ASJDKG49G8S70', -- Waterlag
-    },
+    ["Unofficial Rebalance"] = { },
     ["Mutators"] = {
-        'ffffffff-9d4e-11dc-8314-0800200c0605', -- Enhanced BO Commanders
-        'ffffffff-9d4e-11dc-8314-0800200c0702', -- Enhanced T4 Artillery
-        '0a970b58-533d-11dc-8314-0800200c9a66', -- Enhanced Nukes
         '74A9EAB2-E851-11DB-A1F1-F2C755D89593', -- Enhanced Resources
-        'b8d941e131multiplier',                 -- Enhanced Static HP Multiplier
-        'TANKSYS-EXPERIMENTS-1-COMBAT',         -- Tanksy's Experiments: Combat Changes
         -- BrewLAN
         'f31a09b5-2b2f-4bb4-aeac-47ab777a7cde', -- Antimass
         '190261d0-4bb0-11e2-bcSC-CITIES000001', -- Cityscapes
@@ -237,6 +227,8 @@ local modSchema = {
         '16678e1e-7fc9-11e5-8bcf-scathingbe20', -- Scathing Beetles
         'BREWLANS-a0a7-426d-88f2-SPOMEN00000', -- Spomeniki
         '25D57D85-9JA7-D842-BREW-SUDDEN000001', -- Sudden Death
+        '16678e1e-7fc9-11e5-8bcf-waterguard10', -- Water Guard
+        '25D57D85-9JA7-D842-GKG4-ASJDKG49G8S70', -- Waterlag
     },
     ["Miscellaneous"] = {
         '25D57D85-9JA7-D842-GKG4-ORIGIN0000001', -- BrewLAN Baristas
@@ -249,26 +241,37 @@ local modSchema = {
         'stonksc5-f109-4145-b83f-a0b589087460', -- Stonks
         '5362BE90-44BE-11DD-A519-83AF56D89593', -- Supreme Commander Music
     },
-    ["Usermods"] = {},
+    ["Deprecated"] = {
+        'ffffffff-6f00-4864-9599-4133236eea7a', -- LOUD Evenflow
+        'ffffffff-9d4e-11dc-8314-0800200c0605', -- Enhanced BO Commanders
+        'ffffffff-9d4e-11dc-8314-0800200c0702', -- Enhanced T4 Artillery
+        '0a970b58-533d-11dc-8314-0800200c9a66', -- Enhanced Nukes
+        'TANKSYS-EXPERIMENTS-1-COMBAT',         -- Tanksy's Experiments: Combat Changes
+        '25D57D85-9JA7-D842-BREW-INTEL00000002', -- BrewLAN: Bletchley Park
+        '25D57D85-9JA7-LOUD-BREW-RESEARCH00005', -- BrewLAN: Research and Daiquiris
+    },
+    ["Usermods"] = { },
 }
 
 local folderOrder = {
     "Units",
-    "User Interface",
     "Official Rebalance",
+    "User Interface",
     "Unofficial Rebalance",
     "Mutators",
     "Miscellaneous",
+    "Deprecated",
     "Usermods",
 }
 
 local folderTooltips = {
     ["Units"] = 'modmgr_folder_units',
-    ["User Interface"] = 'modmgr_folder_ui',
     ["Official Rebalance"] = 'modmgr_folder_official',
+    ["User Interface"] = 'modmgr_folder_ui',
     ["Unofficial Rebalance"] = 'modmgr_folder_unofficial',
     ["Mutators"] = 'modmgr_folder_mut',
     ["Miscellaneous"] = 'modmgr_folder_misc',
+    ["Deprecated"] = 'modmgr_folder_deprecated',
     ["Usermods"] = 'modmgr_folder_user',
 }
 
