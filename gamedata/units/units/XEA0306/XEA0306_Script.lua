@@ -75,13 +75,13 @@ XEA0306 = Class(TAirUnit) {
 	
 		TAirUnit.OnTransportAttach(self, attachBone, unit)
 		
-        unit:SetCanTakeDamage(not self.ShieldIsOn) #-- make transported unit invulnerable if transport is too
+        unit:SetCanTakeDamage(not self.ShieldIsOn) -- make transported unit invulnerable if transport is too
 		
 	end,
 	
     OnTransportDetach = function(self, attachBone, unit)
 	
-        unit:SetCanTakeDamage(true) #-- Units dropped by the transport should be vulnerable
+        unit:SetCanTakeDamage(true) -- Units dropped by the transport should be vulnerable
 		
 		TAirUnit.OnTransportDetach(self, attachBone, unit)
 		
@@ -144,7 +144,7 @@ XEA0306 = Class(TAirUnit) {
 	
         if self.GetCargo then
 		
-            local cargo = self:GetCargo() #-- added by brute51  all carried units should be vulnerable again
+            local cargo = self:GetCargo() -- added by brute51  all carried units should be vulnerable again
 			
             for k, v in cargo do
 			

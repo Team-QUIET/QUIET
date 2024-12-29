@@ -13,15 +13,7 @@ UEL0303 = Class(TWalkingLandUnit) {
                 'ArmL_B02', 'Barrel_L', 'ArmL_B03', 'ArmL_B04',
             },
         },
-    },
-
-    OnShieldIsUp = function (self)
-        self:SetCanTakeDamage(false)
-    end,
-
-    OnShieldIsDown = function (self)
-        self:SetCanTakeDamage(true) 
-    end,    
+    }, 
 }
 
 TypeClass = UEL0303

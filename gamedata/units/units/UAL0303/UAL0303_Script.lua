@@ -26,14 +26,6 @@ UAL0303 = Class(AWalkingLandUnit) {
         end
 
     end,    
-
-    OnShieldIsUp = function (self)
-        self:SetCanTakeDamage(false)
-    end,
-
-    OnShieldIsDown = function (self)
-        self:SetCanTakeDamage(true) 
-    end,
 }
 
 TypeClass = UAL0303

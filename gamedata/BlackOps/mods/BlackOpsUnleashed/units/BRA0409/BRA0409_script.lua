@@ -58,16 +58,16 @@ BRA0409 = Class(CAirUnit) {
     
     OnTransportAttach = function(self, attachBone, unit)
         CAirUnit.OnTransportAttach(self, attachBone, unit)
-        unit:SetCanTakeDamage(false) # making transported unit invulnerable inside transport
+        unit:SetCanTakeDamage(false) -- making transported unit invulnerable inside transport
     end,
 
     OnTransportDetach = function(self, attachBone, unit)
-        unit:SetCanTakeDamage(true) # Units dropped by the transport shouldnt be vulnerable
+        unit:SetCanTakeDamage(true) -- Units dropped by the transport shouldnt be vulnerable
         CAirUnit.OnTransportDetach(self, attachBone, unit)
     end,
 
 
-    # Override air destruction effects so we can do something custom here
+    -- Override air destruction effects so we can do something custom here
     CreateUnitAirDestructionEffects = function( self, scale )
         self:ForkThread(self.AirDestructionEffectsThread, self )
     end,

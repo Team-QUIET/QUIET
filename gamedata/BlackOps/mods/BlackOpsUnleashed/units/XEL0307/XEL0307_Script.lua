@@ -131,14 +131,6 @@ XEL0307 = Class(TLandUnit) {
         TLandUnit.OnStopBeingBuilt(self,builder,layer)
 
     end,
-
-    OnShieldIsUp = function (self)
-        self:SetCanTakeDamage(false)
-    end,
-
-    OnShieldIsDown = function (self)
-        self:SetCanTakeDamage(true) 
-    end,
     
 	OnLayerChange = function(self, new, old)
 	
