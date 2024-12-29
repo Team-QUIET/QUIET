@@ -208,12 +208,7 @@ local modSchema = {
         'HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1240', -- Supreme Score Board
         '022E3DB4-9C00-5ED7-9876-4866D316E015', -- UI Party
     },
-    ["Unofficial Rebalance"] = {
-        '25D57D85-9JA7-D842-BREW-INTEL00000002', -- BrewLAN: Bletchley Park
-        '25D57D85-9JA7-LOUD-BREW-RESEARCH00005', -- BrewLAN: Research and Daiquiris
-        '16678e1e-7fc9-11e5-8bcf-waterguard10', -- Water Guard
-        '25D57D85-9JA7-D842-GKG4-ASJDKG49G8S70', -- Waterlag
-    },
+    ["Unofficial Rebalance"] = { },
     ["Mutators"] = {
         '74A9EAB2-E851-11DB-A1F1-F2C755D89593', -- Enhanced Resources
         -- BrewLAN
@@ -232,6 +227,8 @@ local modSchema = {
         '16678e1e-7fc9-11e5-8bcf-scathingbe20', -- Scathing Beetles
         'BREWLANS-a0a7-426d-88f2-SPOMEN00000', -- Spomeniki
         '25D57D85-9JA7-D842-BREW-SUDDEN000001', -- Sudden Death
+        '16678e1e-7fc9-11e5-8bcf-waterguard10', -- Water Guard
+        '25D57D85-9JA7-D842-GKG4-ASJDKG49G8S70', -- Waterlag
     },
     ["Miscellaneous"] = {
         '25D57D85-9JA7-D842-GKG4-ORIGIN0000001', -- BrewLAN Baristas
@@ -250,8 +247,10 @@ local modSchema = {
         'ffffffff-9d4e-11dc-8314-0800200c0702', -- Enhanced T4 Artillery
         '0a970b58-533d-11dc-8314-0800200c9a66', -- Enhanced Nukes
         'TANKSYS-EXPERIMENTS-1-COMBAT',         -- Tanksy's Experiments: Combat Changes
+        '25D57D85-9JA7-D842-BREW-INTEL00000002', -- BrewLAN: Bletchley Park
+        '25D57D85-9JA7-LOUD-BREW-RESEARCH00005', -- BrewLAN: Research and Daiquiris
     },
-    ["Usermods"] = {},
+    ["Usermods"] = { },
 }
 
 local folderOrder = {
