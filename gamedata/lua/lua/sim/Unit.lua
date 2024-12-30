@@ -1464,9 +1464,8 @@ Unit = Class(UnitMethods) {
 	
         return self.CanTakeDamage
     end,
-    
+
     OnDamage = function(self, instigator, amount, vector, damageType)
-    
         local platoon = self.PlatoonHandle
 
         -- if the unit is in a platoon that exists and that platoon has a CallForHelpAI
@@ -1487,18 +1486,17 @@ Unit = Class(UnitMethods) {
 				
 			end
         end
-		
+
         if self.CanTakeDamage then
-		
-            self:DoOnDamagedCallbacks(instigator)
-			
-			-- from BrewLAN -- reduces bomb damage against bombers in the air
-			if EntityCategoryContains(categories.BOMBER, self) and self:GetCurrentLayer() == 'Air' and damageType == 'NormalBomb' then
-				amount = amount * 0.05
-			end
-			
-            self:DoTakeDamage(instigator, amount, vector, damageType)
-			
+            -- Pass damage to an active personal shield, as personal shields no longer have collisions
+            local myShield = self.MyShield
+            if myShield.MyShieldType == "Personal" and myShield:IsOn() then
+                self:DoOnDamagedCallbacks(instigator)
+                self.MyShield:ApplyDamage(instigator, amount, vector, damageType)
+            elseif damageType ~= "FAF_AntiShield" then
+                self:DoOnDamagedCallbacks(instigator)
+                self:DoTakeDamage(instigator, amount, vector, damageType)
+            end
         end
     end,
 
