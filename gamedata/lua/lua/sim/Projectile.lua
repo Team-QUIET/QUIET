@@ -4,8 +4,8 @@
 
 --local Entity = import('/lua/sim/Entity.lua').Entity
 --local EntityOnCreate = Entity.OnCreate
-local EntityMethods = moho.entity_methods
-local ProjectileMethods = moho.projectile_methods
+local EntityMethods = _G.moho.entity_methods
+local ProjectileMethods = _G.moho.projectile_methods
 
 local CreateRandomScorchSplatAtObject = import('/lua/defaultexplosions.lua').CreateRandomScorchSplatAtObject
 
@@ -64,9 +64,8 @@ local DefaultTerrainType = GetTerrainType( -1, -1 )
 local ALLBPS = __blueprints
 
 Projectile = ClassProjectile( ProjectileMethods ) {
-
+    IsProjectile = true,
     DestroyOnImpact = true,
-	
     FxImpactTrajectoryAligned = true,
 
     ForkThread = function(self, fn, ...)
@@ -1035,4 +1034,27 @@ Projectile = ClassProjectile( ProjectileMethods ) {
 		
     end,
 
+}
+
+--- A dummy projectile that solely inherits what it needs. Useful for
+-- effects that require projectiles without additional overhead.
+--  Credit to Jip (FAF) for GC TractorClaw Rework
+
+---@class DummyProjectile : moho.projectile_methods
+DummyProjectile = ClassDummyProjectile(moho.projectile_methods) {
+
+    ---@param self DummyProjectile
+    ---@param inWater? boolean
+    OnCreate = function(self, inWater)
+        -- expected to be cached by all projectiles
+        self.bp = GetBlueprint(self)
+        self.Army = GetArmy(self)
+    end,
+
+    ---@param self DummyProjectile
+    ---@param targetType string
+    ---@param targetEntity Unit | Prop
+    OnImpact = function(self, targetType, targetEntity)
+        self:Destroy()
+    end,
 }

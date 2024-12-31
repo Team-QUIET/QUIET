@@ -28,17 +28,17 @@ local CreateEmitterAtBone = CreateEmitterAtBone
 
 local VectorCached = { 0, 0, 0 }
 	
-local AdjustHealth      = moho.entity_methods.AdjustHealth
-local GetArmy           = moho.entity_methods.GetArmy        
-local GetBlueprint      = moho.entity_methods.GetBlueprint
-local GetHealth         = moho.entity_methods.GetHealth
-local GetMaxHealth      = moho.entity_methods.GetMaxHealth
-local SetMesh           = moho.entity_methods.SetMesh
+local AdjustHealth      = _G.moho.entity_methods.AdjustHealth
+local GetArmy           = _G.moho.entity_methods.GetArmy        
+local GetBlueprint      = _G.moho.entity_methods.GetBlueprint
+local GetHealth         = _G.moho.entity_methods.GetHealth
+local GetMaxHealth      = _G.moho.entity_methods.GetMaxHealth
+local SetMesh           = _G.moho.entity_methods.SetMesh
 
-local GetArmorMult      = moho.unit_methods.GetArmorMult
-local GetStat           = moho.unit_methods.GetStat
-local SetStat           = moho.unit_methods.SetStat
-local SetShieldRatio    = moho.unit_methods.SetShieldRatio
+local GetArmorMult      = _G.moho.unit_methods.GetArmorMult
+local GetStat           = _G.moho.unit_methods.GetStat
+local SetStat           = _G.moho.unit_methods.SetStat
+local SetShieldRatio    = _G.moho.unit_methods.SetShieldRatio
 
 Shield = ClassShield(moho.shield_methods,Entity) {
 

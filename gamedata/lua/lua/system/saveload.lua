@@ -41,7 +41,8 @@ end
 
 export_name('Class',Class)
 export_name('State',State)
--- INVESTIGATE ME: Wtf does this do?
+-- Unused StateProxyTag
+-- Was used for saving state proxies for loading a save file in the Original SC Game
 -- export_name('StateProxyTag',StateProxyTag)
 
 export_name('__serialize_name_for_object',__serialize_name_for_object)
