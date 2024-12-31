@@ -63,7 +63,7 @@ local DefaultTerrainType = GetTerrainType( -1, -1 )
 
 local ALLBPS = __blueprints
 
-Projectile = Class( ProjectileMethods ) {
+Projectile = ClassProjectile( ProjectileMethods ) {
 
     DestroyOnImpact = true,
 	

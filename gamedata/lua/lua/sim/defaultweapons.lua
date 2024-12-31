@@ -65,7 +65,7 @@ local WeaponHasTarget           = WeaponMethods.WeaponHasTarget
 WeaponMethods = nil
 
 
-DefaultProjectileWeapon = Class(Weapon) {		
+DefaultProjectileWeapon = ClassWeapon(Weapon) {		
 
     FxRackChargeMuzzleFlash = false,
     FxRackChargeMuzzleFlashScale = 1,
@@ -1724,7 +1724,7 @@ DefaultProjectileWeapon = Class(Weapon) {
 
 local DefaultProjectileWeaponOnCreate = DefaultProjectileWeapon.OnCreate
 
-KamikazeWeapon = Class(DefaultProjectileWeapon) {
+KamikazeWeapon = ClassWeapon(DefaultProjectileWeapon) {
 
     OnWeaponFired = function(self)
 
@@ -1739,7 +1739,7 @@ KamikazeWeapon = Class(DefaultProjectileWeapon) {
  
 }
 
-BareBonesWeapon = Class(DefaultProjectileWeapon) {
+BareBonesWeapon = ClassWeapon(DefaultProjectileWeapon) {
     
     RackSalvoFireReadyState = State {
 
@@ -1796,7 +1796,7 @@ BareBonesWeapon = Class(DefaultProjectileWeapon) {
 
 }
 
-DefaultBeamWeapon = Class(DefaultProjectileWeapon) {
+DefaultBeamWeapon = ClassWeapon(DefaultProjectileWeapon) {
 
     BeamType = CollisionBeam,
 
