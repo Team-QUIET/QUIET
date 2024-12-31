@@ -742,14 +742,10 @@ DefaultProjectileWeapon = Class(Weapon) {
 		
     end,
 
-
+    -- Moved QCE OnWeaponFired function here -- 12/31/2024 -- Azraeelian Angel
+    -- QCE OnWeaponFired function
+    -- Present for Overcharge to hook into
     OnWeaponFired = function(self)
-     
-        if ScenarioInfo.WeaponStateDialog then
-            LOG("*AI DEBUG DefaultWeapon OnWeaponFired "..repr(self.bp.Label).." at "..GetGameTick() )
-        end
-        
-		Weapon.OnWeaponFired(self)
     end,
 
     OnDisableWeapon = function(self)

@@ -206,76 +206,17 @@ Shield = Class(moho.shield_methods,Entity) {
     GetOverkill = function(self,instigator,amount,type)
     end,    
 
-    OnDamage =  function(self,instigator,amount,vector,type)
-	
-		local AdjustHealth = AdjustHealth
-		local SetShieldRatio = SetShieldRatio
-		local GetArmorMult = GetArmorMult
-		local GetHealth = GetHealth
-		local GetMaxHealth = GetMaxHealth
-        
-		local LOUDMIN = LOUDMIN
-		local LOUDMAX = LOUDMAX
-
-        local absorbed = amount * ( GetArmorMult( self.Owner, type ) )
-
-        absorbed = LOUDMIN( GetHealth(self), absorbed )
-		
-		if ScenarioInfo.ShieldDialog then
-			LOG("*AI DEBUG Shield on "..repr(__blueprints[self.Owner.BlueprintID].Description).." absorbs "..absorbed.." damage")
-		end
-
-        if self.PassOverkillDamage and (amount-absorbed) > 0 then
-
-			local overkill = (amount-absorbed) * ( GetArmorMult( self.Owner, type ))
-
-			overkill = LOUDMAX( overkill, 0 )
-			
-			if overkill > 0 then
-
-				if self.Owner and IsUnit(self.Owner) then
-				
-					if ScenarioInfo.ShieldDialog then
-						LOG("*AI DEBUG Shield Owner "..repr(__blueprints[self.Owner.BlueprintID].Description).." takes "..overkill.." damage")
-					end
-				
-					self.Owner:DoTakeDamage(instigator, overkill, vector, type)
-					
-				end
-            end
+    -- Moved QCE OnDamage function here -- 12/31/2024 -- Azraeelian Angel
+    -- QCE OnDamage function
+    OnDamage = function(self, instigator, amount, vector, damageType)
+        -- only applies to trees
+        if damageType == "TreeForce" or damageType == "TreeFire" then
+            return
         end
-        
-        AdjustHealth( self, instigator, -absorbed) 
-		
-		SetShieldRatio( self.Owner, GetHealth(self)/GetMaxHealth(self) )
-        
-        if self.RegenThread then
-           KillThread(self.RegenThread)
-           self.RegenThread = nil
-        end
-		
-        if GetHealth(self) <= 0 then
-		
-            ChangeState(self, self.DamageRechargeState)
-			
-        else
-		
-            if self.OffHealth < 0 then
-			
-                ForkTo(self.CreateImpactEffect, self, vector)
-				
-                if self.RegenRate > 0 then
-				
-                    self.RegenThread = self:ForkThread(self.RegenStartThread)
 
-                end
-				
-            else
-			
-                self:UpdateShieldRatio(0)
-				
-            end
-        end
+        -- Only called when a shield is directly impacted, so not for Personal Shields
+        -- This means personal shields never have ApplyDamage called with doOverspill as true
+        self:ApplyDamage(instigator, amount, vector, damageType, true)
     end,
 
     RegenStartThread = function(self)
@@ -419,6 +360,12 @@ Shield = Class(moho.shield_methods,Entity) {
 
     IsOn = function(self)
         return false
+    end,
+    
+    -- Moved QCE IsUp function here -- 12/31/2024 -- Azraeelian Angel
+    -- QCE IsUp function
+    IsUp = function(self)
+        return (self:IsOn() and self.Enabled)
     end,
 
     RemoveShield = function(self)
