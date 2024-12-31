@@ -30,10 +30,10 @@ local ForkThread = ForkThread
 local KillThread = KillThread
 local VDist2 = VDist2
 
-local GetArmy           = moho.entity_methods.GetArmy
-local GetBlueprint      = moho.weapon_methods.GetBlueprint
-local GetCurrentTarget  = moho.weapon_methods.GetCurrentTarget
-local GetSource         = moho.blip_methods.GetSource
+local GetArmy           = _G.moho.entity_methods.GetArmy
+local GetBlueprint      = _G.moho.weapon_methods.GetBlueprint
+local GetCurrentTarget  = _G.moho.weapon_methods.GetCurrentTarget
+local GetSource         = _G.moho.blip_methods.GetSource
 
 local DefaultBuffField = import('/lua/defaultbufffield.lua').DefaultBuffField
 
