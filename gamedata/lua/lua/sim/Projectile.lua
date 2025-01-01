@@ -524,6 +524,14 @@ Projectile = ClassProjectile( ProjectileMethods ) {
 		
     end,
 
+    PassMetaDamage = function(self, data)
+
+        self.DamageData = {}
+
+        setmetatable(self.DamageData, data)
+
+    end,
+
     DoDamage = function(self, instigator, damageData, targetEntity)
 	
         local damage = damageData.DamageAmount or 0
