@@ -1,0 +1,22 @@
+ProjectileBlueprint{
+    Description = "TeNdRiL!",
+    General = {
+        Category = "Defense",
+        Faction = "Seraphim",
+        Weapon = "Anti Nuke Tendril",
+    },
+    Physics = {
+        Acceleration = 60,
+        CollideEntity = false,
+        CollideSurface = false,
+        DestroyOnWater = false,
+        HitAssignedTarget = true,
+        LeadTarget = false,
+        Lifetime = 0.575,
+        MaxSpeed = 60,
+        TrackTarget = false,
+        TurnRate = 360,
+        UseGravity = true,
+        VelocityAlign = true,
+    },
+}

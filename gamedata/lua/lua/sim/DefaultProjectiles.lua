@@ -2,6 +2,7 @@
 ---  Script for default projectiles
 
 local Projectile = import('/lua/sim/Projectile.lua').Projectile
+local DummyProjectile = import("/lua/sim/projectile.lua").DummyProjectile
 
 local ProjectileOnCreate        = Projectile.OnCreate
 local ProjectileOnEnterWater    = Projectile.OnEnterWater
@@ -289,7 +290,7 @@ OnWaterEntryEmitterProjectile = ClassProjectile(Projectile) {
 	
 }
 
-BaseGenericDebris = ClassDummyProjectile( EmitterProjectile ){
+BaseGenericDebris = ClassDummyProjectile(DummyProjectile){
     FxUnitHitScale = 0.25,
     FxWaterHitScale = 0.25,
     FxUnderWaterHitScale = 0.25,

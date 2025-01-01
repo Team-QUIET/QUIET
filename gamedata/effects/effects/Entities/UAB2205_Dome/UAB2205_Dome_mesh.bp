@@ -1,0 +1,12 @@
+MeshBlueprint{
+    LODs = {
+        {
+            LODCutoff = 1000,
+            ShaderName = "GlassAlpha",
+            MeshName = "UAB2205_DOME_lod0.scm",
+            AlbedoName = "UAB2205_DOME_Albedo.dds",
+            NormalsName = "UAB2205_DOME_NormalsTS.dds",
+        },
+    },
+    SortOrder = 1000,
+}

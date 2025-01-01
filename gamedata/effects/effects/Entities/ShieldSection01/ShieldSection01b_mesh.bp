@@ -1,0 +1,14 @@
+MeshBlueprint{
+    IconFadeInZoom = 4,
+    LODs = {
+        {
+            LODCutoff = 1000,
+            ShaderName = "CybranShieldImpact",
+            MeshName = "/effects/Entities/SphereSection01/SphereSection01_lod0.scm",
+            AlbedoName = "ShieldSection01b_Albedo.dds",
+            SpecularName = "ShieldSection01b_Normals.dds",
+        },
+    },
+    SortOrder = 500,
+    StraddleWater = true,
+}

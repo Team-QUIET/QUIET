@@ -1037,8 +1037,8 @@ Projectile = ClassProjectile( ProjectileMethods ) {
 }
 
 --- A dummy projectile that solely inherits what it needs. Useful for
--- effects that require projectiles without additional overhead.
---  Credit to Jip (FAF) for GC TractorClaw Rework
+--- effects that require projectiles without additional overhead.
+--- Credit to Jip (FAF)
 
 ---@class DummyProjectile : moho.projectile_methods
 DummyProjectile = ClassDummyProjectile(moho.projectile_methods) {
