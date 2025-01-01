@@ -228,10 +228,12 @@ UnitBlueprint {
 
             TargetCheckInterval = 3,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'DEFENSE',
-                'MOBILE',
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
             },
             TargetRestrictDisallow = 'UNTARGETABLE',
             TrackingRadius = 1.2,
@@ -304,10 +306,12 @@ UnitBlueprint {
 			
             TargetCheckInterval = 3,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'DEFENSE',
-                'MOBILE',
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
             },
             TargetRestrictDisallow = 'UNTARGETABLE',
             TrackingRadius = 1.1,

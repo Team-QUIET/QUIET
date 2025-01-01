@@ -267,8 +267,12 @@ UnitBlueprint {
 			
             TargetCheckInterval = 0.4,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
             },
             TargetRestrictDisallow = 'HIGHALTAIR, UNTARGETABLE, SATELLITE',
 			
@@ -330,8 +334,12 @@ UnitBlueprint {
 			
             TargetCheckInterval = 0.4,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
             },
             TargetRestrictDisallow = 'HIGHALTAIR, UNTARGETABLE, SATELLITE, WALL',
 			

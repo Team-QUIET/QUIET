@@ -344,10 +344,12 @@ UnitBlueprint {
 			
             TargetCheckInterval = 1.0,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'DEFENSE',
-                'MOBILE',				
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
             },
             TargetRestrictDisallow = 'UNTARGETABLE,SATELLITE,WALL',
             TrackingRadius = 1.05,
