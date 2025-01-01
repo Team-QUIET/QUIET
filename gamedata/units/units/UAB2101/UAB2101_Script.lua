@@ -2,9 +2,9 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local ADFGravitonProjectorWeapon = import('/lua/aeonweapons.lua').ADFGravitonProjectorWeapon
 
-UAB2101 = Class(AStructureUnit) {
+UAB2101 = ClassUnit(AStructureUnit) {
     Weapons = {
-        MainGun = Class(ADFGravitonProjectorWeapon) {},
+        MainGun = ClassWeapon(ADFGravitonProjectorWeapon) {},
     },
 }
 

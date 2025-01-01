@@ -8,11 +8,11 @@ local LaserPhalanxWeapon = import('/mods/4DC/lua/4D_weapons.lua').LaserPhalanxWe
 local CreateBoneEffects = import('/lua/EffectUtilities.lua').CreateBoneEffects
 local WeaponSteam       = import('/lua/effecttemplates.lua').WeaponSteam01
 
-ual0310 = Class(AWalkingLandUnit) { 
+ual0310 = ClassUnit(AWalkingLandUnit) { 
 
 	Weapons = {
 	
-		HatchMissile = Class(ArrowMissileWeapon) {
+		HatchMissile = ClassWeapon(ArrowMissileWeapon) {
 
             OnWeaponFired = function(self) 
 			
@@ -35,9 +35,9 @@ ual0310 = Class(AWalkingLandUnit) {
             end,
 		},
 		
-		MissileSideLeft     = Class(AAAZealotMissileWeapon) {},
-		MissileSideRight    = Class(AAAZealotMissileWeapon) {},
-		LaserPhalanx        = Class(LaserPhalanxWeapon) {},
+		MissileSideLeft     = ClassWeapon(AAAZealotMissileWeapon) {},
+		MissileSideRight    = ClassWeapon(AAAZealotMissileWeapon) {},
+		LaserPhalanx        = ClassWeapon(LaserPhalanxWeapon) {},
 	},
 
     CreateEnhancement = function(self, enh)

@@ -7,13 +7,13 @@ local CDFParticleCannonWeapon   = WeaponsFile.CDFParticleCannonWeapon
 
 WeaponsFile = nil
 
-BRMT2MEDM = Class(CWalkingLandUnit) {
+BRMT2MEDM = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 	
-        MainGun = Class(CDFParticleCannonWeapon) {},
+        MainGun = ClassWeapon(CDFParticleCannonWeapon) {},
 		
-        ParticleMortar1 = Class(CDFProtonCannonWeapon) { FxMuzzleFlashScale = 0.3 },
+        ParticleMortar1 = ClassWeapon(CDFProtonCannonWeapon) { FxMuzzleFlashScale = 0.3 },
     },
 }
 

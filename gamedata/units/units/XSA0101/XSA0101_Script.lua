@@ -2,7 +2,7 @@ local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local VizMarker = import('/lua/sim/VizMarker.lua').VizMarker
 
-XSA0101 = Class(SAirUnit) {
+XSA0101 = ClassUnit(SAirUnit) {
 
 	OnKilled = function(self, instigator, type, overkillRatio)
 	

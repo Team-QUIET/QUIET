@@ -40,7 +40,7 @@ local WaitTicks = coroutine.yield
 local wep, wpTarget
 
 
-EEL0001 = Class(TWalkingLandUnit) {
+EEL0001 = ClassUnit(TWalkingLandUnit) {
 
     DeathThreadDestructionWaitTime = 2,
 
@@ -50,13 +50,13 @@ EEL0001 = Class(TWalkingLandUnit) {
 
     Weapons = {
 	
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
 		
-        TargetPainter = Class(Targeting) {},
+        TargetPainter = ClassWeapon(Targeting) {},
 		
-        RightZephyr = Class(TDFZephyrCannonWeapon) {},
+        RightZephyr = ClassWeapon(TDFZephyrCannonWeapon) {},
 		
-        EXFlameCannon01 = Class(EXFlameCannonWeapon) {
+        EXFlameCannon01 = ClassWeapon(EXFlameCannonWeapon) {
         
             OnCreate = function(self)
         
@@ -66,7 +66,7 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,
         },
         
-        EXFlameCannon02 = Class(EXFlameCannonWeapon) {
+        EXFlameCannon02 = ClassWeapon(EXFlameCannonWeapon) {
         
             OnCreate = function(self)
         
@@ -76,15 +76,15 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,
         },
 		
-        TorpedoLauncher01 = Class(TANTorpedoAngler) { FxMuzzleFlash = false },
-        TorpedoLauncher02 = Class(TANTorpedoAngler) { FxMuzzleFlash = false },
-        TorpedoLauncher03 = Class(TANTorpedoAngler) { FxMuzzleFlash = false },
+        TorpedoLauncher01 = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlash = false },
+        TorpedoLauncher02 = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlash = false },
+        TorpedoLauncher03 = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlash = false },
 		
-        EXAntiMatterCannon01 = Class(UEFACUAntiMatterWeapon) {},
-        EXAntiMatterCannon02 = Class(UEFACUAntiMatterWeapon) {},
-        EXAntiMatterCannon03 = Class(UEFACUAntiMatterWeapon) {},
+        EXAntiMatterCannon01 = ClassWeapon(UEFACUAntiMatterWeapon) {},
+        EXAntiMatterCannon02 = ClassWeapon(UEFACUAntiMatterWeapon) {},
+        EXAntiMatterCannon03 = ClassWeapon(UEFACUAntiMatterWeapon) {},
 		
-        EXGattlingEnergyCannon01 = Class(UEFACUHeavyPlasmaGatlingCannonWeapon) {
+        EXGattlingEnergyCannon01 = ClassWeapon(UEFACUHeavyPlasmaGatlingCannonWeapon) {
         
             OnCreate = function(self)
             
@@ -116,7 +116,7 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,    
 		},
 		
-        EXGattlingEnergyCannon02 = Class(UEFACUHeavyPlasmaGatlingCannonWeapon) {
+        EXGattlingEnergyCannon02 = ClassWeapon(UEFACUHeavyPlasmaGatlingCannonWeapon) {
 
             OnCreate = function(self)
             
@@ -148,7 +148,7 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,    
 		},
 		
-        EXGattlingEnergyCannon03 = Class(UEFACUHeavyPlasmaGatlingCannonWeapon) {
+        EXGattlingEnergyCannon03 = ClassWeapon(UEFACUHeavyPlasmaGatlingCannonWeapon) {
 
             OnCreate = function(self)
             
@@ -180,11 +180,11 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,    
 		},
 		
-        EXClusterMissles01 = Class(TIFCruiseMissileLauncher) {},
-        EXClusterMissles02 = Class(TIFCruiseMissileLauncher) {},
-        EXClusterMissles03 = Class(TIFCruiseMissileLauncher) {},
+        EXClusterMissles01 = ClassWeapon(TIFCruiseMissileLauncher) {},
+        EXClusterMissles02 = ClassWeapon(TIFCruiseMissileLauncher) {},
+        EXClusterMissles03 = ClassWeapon(TIFCruiseMissileLauncher) {},
 		
-        EXEnergyLance01 = Class(PDLaserGrid) {
+        EXEnergyLance01 = ClassWeapon(PDLaserGrid) {
 
             PlayOnlyOneSoundCue = true,
         
@@ -196,7 +196,7 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,
         }, 
 
-        EXEnergyLance02 = Class(PDLaserGrid) {
+        EXEnergyLance02 = ClassWeapon(PDLaserGrid) {
 
             PlayOnlyOneSoundCue = true,
         
@@ -208,9 +208,9 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,
         }, 
 		
-        OverCharge = Class(TDFOverchargeWeapon) {},
+        OverCharge = ClassWeapon(TDFOverchargeWeapon) {},
         
-        TacMissile = Class(TIFCruiseMissileLauncher) {
+        TacMissile = ClassWeapon(TIFCruiseMissileLauncher) {
 
             CreateProjectileAtMuzzle = function(self)
 
@@ -231,7 +231,7 @@ EEL0001 = Class(TWalkingLandUnit) {
             end,
         },
         
-        TacNukeMissile = Class(TIFCruiseMissileLauncher) {
+        TacNukeMissile = ClassWeapon(TIFCruiseMissileLauncher) {
 
             CreateProjectileAtMuzzle = function(self)
 

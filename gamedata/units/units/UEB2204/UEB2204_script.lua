@@ -1,9 +1,9 @@
 local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local TAAFlakArtilleryCannon = import('/lua/terranweapons.lua').TAAFlakArtilleryCannon
 
-UEB2204 = Class(TStructureUnit) {
+UEB2204 = ClassUnit(TStructureUnit) {
     Weapons = {
-        AAGun = Class(TAAFlakArtilleryCannon) {},
+        AAGun = ClassWeapon(TAAFlakArtilleryCannon) {},
     },
 }
 

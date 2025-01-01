@@ -4,10 +4,10 @@ local AntiTorpedo = import('/lua/aeonweapons.lua').AIFQuasarAntiTorpedoWeapon
 
 local WaitFor = WaitFor
 
-UEB0303 = Class(TSeaFactoryUnit) {
+UEB0303 = ClassUnit(TSeaFactoryUnit) {
 
     Weapons = {
-        AntiTorpedo = Class(AntiTorpedo) {},
+        AntiTorpedo = ClassWeapon(AntiTorpedo) {},
     },
     
     OnCreate = function(self)

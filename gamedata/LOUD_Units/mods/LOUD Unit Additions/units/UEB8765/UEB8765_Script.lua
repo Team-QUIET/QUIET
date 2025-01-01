@@ -4,10 +4,10 @@ local TIFCommanderDeathWeapon = import('/lua/terranweapons.lua').TIFCommanderDea
 
 local Buff = import('/lua/sim/Buff.lua')
 
-UEB8765 = Class(TEnergyStorageUnit) {
+UEB8765 = ClassUnit(TEnergyStorageUnit) {
 
     Weapons = {
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
     },
 
     OnCreate = function(self)

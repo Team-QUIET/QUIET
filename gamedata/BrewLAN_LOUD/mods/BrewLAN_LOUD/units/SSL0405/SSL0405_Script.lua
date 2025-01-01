@@ -16,13 +16,13 @@ WeaponsFile = nil
 local EffectUtil = import('/lua/EffectUtilities.lua')
 local CleanupEffectBag = EffectUtil.CleanupEffectBag
 
-SSL0405 = Class(SLandUnit) {
+SSL0405 = ClassUnit(SLandUnit) {
 
     BpId = 'ssl0405',
 
     Weapons = {
 
-        BigGun = Class(SDFSinnuntheWeapon) {
+        BigGun = ClassWeapon(SDFSinnuntheWeapon) {
 
             PlayFxMuzzleChargeSequence = function(self, muzzle)
 
@@ -38,13 +38,13 @@ SSL0405 = Class(SLandUnit) {
             end,
         },
 
-        TailGun     = Class(SAAOlarisCannonWeapon) {},
-        SmallGun    = Class(SDFAireauBolterWeapon) { FxMuzzleFlashScale = 2.4 },
-        FaceGuns    = Class(SDFThauCannon) {},
-        Torpedo     = Class(SANUallCavitationTorpedo) {},
-        AntiTorpedo = Class(SDFAjelluAntiTorpedoDefense) {},
-        GapingMaw   = Class(SDFGapingMaw) {},
-        ClawMelee   = Class(SMeleeBladeBeamWeapon) {
+        TailGun     = ClassWeapon(SAAOlarisCannonWeapon) {},
+        SmallGun    = ClassWeapon(SDFAireauBolterWeapon) { FxMuzzleFlashScale = 2.4 },
+        FaceGuns    = ClassWeapon(SDFThauCannon) {},
+        Torpedo     = ClassWeapon(SANUallCavitationTorpedo) {},
+        AntiTorpedo = ClassWeapon(SDFAjelluAntiTorpedoDefense) {},
+        GapingMaw   = ClassWeapon(SDFGapingMaw) {},
+        ClawMelee   = ClassWeapon(SMeleeBladeBeamWeapon) {
 
             OnWeaponFired = function(self)
                 if not self.unit.TallStance and not self.unit.AnimationManipulator then

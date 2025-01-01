@@ -1,6 +1,6 @@
 local CIridiumRocketProjectile = import('/lua/cybranprojectiles.lua').CIridiumRocketProjectile
 
-CDFRocketIridium03 = Class(CIridiumRocketProjectile) {
+CDFRocketIridium03 = ClassProjectile(CIridiumRocketProjectile) {
 
     FxImpactUnit = import('/lua/EffectTemplates.lua').CNeutronClusterBombHitUnit01,
     FxImpactProp = import('/lua/EffectTemplates.lua').CNeutronClusterBombHitUnit01,

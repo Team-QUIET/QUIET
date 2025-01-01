@@ -2,11 +2,11 @@ local ALandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local AAATemporalFizzWeapon = import('/lua/aeonweapons.lua').AAATemporalFizzWeapon
 
-UAL0205 = Class(ALandUnit) {
+UAL0205 = ClassUnit(ALandUnit) {
     KickupBones = {},
     
     Weapons = {
-        AAGun = Class(AAATemporalFizzWeapon) {
+        AAGun = ClassWeapon(AAATemporalFizzWeapon) {
 
             ChargeEffectMuzzles = {'Muzzle_R01', 'Muzzle_L01'},
             

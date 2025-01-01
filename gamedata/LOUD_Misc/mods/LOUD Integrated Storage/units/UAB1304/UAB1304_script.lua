@@ -1,6 +1,6 @@
 local AMassCollectionUnit = import('/lua/defaultunits.lua').MassCollectionUnit
 
-UAB1304 = Class(AMassCollectionUnit) {
+UAB1304 = ClassUnit(AMassCollectionUnit) {
 
 	OnStopBeingBuilt = function(self,builder,layer)
         AMassCollectionUnit.OnStopBeingBuilt(self,builder,layer)

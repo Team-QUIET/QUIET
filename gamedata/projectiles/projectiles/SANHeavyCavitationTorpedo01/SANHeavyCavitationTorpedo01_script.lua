@@ -10,7 +10,7 @@ local CreateEmitterAtEntity = CreateEmitterAtEntity
 local CreateEmitterOnEntity = CreateEmitterOnEntity
 
 -- This torpedo is air dropped and splits into 3
-SANHeavyCavitationTorpedo01 = Class(SHeavyCavitationTorpedo) {
+SANHeavyCavitationTorpedo01 = ClassProjectile(SHeavyCavitationTorpedo) {
 
 	FxSplashScale = .5,
 	

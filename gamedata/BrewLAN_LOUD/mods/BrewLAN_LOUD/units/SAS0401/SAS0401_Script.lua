@@ -15,20 +15,20 @@ local NegPos = function(b) if math.random(0, 1) then return b else return -b end
 
 local ShipNumber = 0
 
-SAS0401 = Class(ASeaUnit) {
+SAS0401 = ClassUnit(ASeaUnit) {
     FxDamageScale = 2,
     DestructionTicks = 400,
 
     Weapons = {
-        Oblivion        = Class(ADFCannonOblivionWeapon) {
+        Oblivion        = ClassWeapon(ADFCannonOblivionWeapon) {
             FxChargeMuzzleFlash = {
                 '/effects/emitters/oblivion_cannon_flash_01_emit.bp',
                 '/effects/emitters/oblivion_cannon_flash_02_emit.bp',
             },
         },
-        Salvation       = Class(AIFQuanticArtillery) {},
-        Zealot          = Class(AAAZealotMissileWeapon) {},
-        Disruptor       = Class(ADFDisruptorCannonWeapon) {
+        Salvation       = ClassWeapon(AIFQuanticArtillery) {},
+        Zealot          = ClassWeapon(AAAZealotMissileWeapon) {},
+        Disruptor       = ClassWeapon(ADFDisruptorCannonWeapon) {
             CreateProjectileAtMuzzle = function(self, muzzle)
 
                 local proj = ADFDisruptorCannonWeapon.CreateProjectileAtMuzzle(self, muzzle)
@@ -40,7 +40,7 @@ SAS0401 = Class(ASeaUnit) {
                 end
             end,
         },
-        AntiTorpedo     = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo     = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
 
     HidePanels = function(self)

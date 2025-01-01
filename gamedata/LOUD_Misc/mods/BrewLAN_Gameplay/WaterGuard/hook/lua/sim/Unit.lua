@@ -1,7 +1,7 @@
 do
     local UnitOld = Unit
 
-    Unit = Class(UnitOld) {
+    Unit = ClassUnit(UnitOld) {
 
         OnPreCreate = function(self)
             UnitOld.OnPreCreate(self)

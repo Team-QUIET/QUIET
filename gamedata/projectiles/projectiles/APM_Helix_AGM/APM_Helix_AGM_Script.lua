@@ -7,7 +7,7 @@ local WaitTicks = WaitTicks
 
 local FxScale = 3
 
-APM_Helix_AGM = Class(AMissileSerpentineProjectile) {
+APM_Helix_AGM = ClassProjectile(AMissileSerpentineProjectile) {
 
 	FxAirUnitHitScale = FxScale,
     FxLandHitScale = FxScale,

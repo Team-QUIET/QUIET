@@ -3,7 +3,7 @@ local AGuidedMissileProjectile = import('/lua/aeonprojectiles.lua').AGuidedMissi
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-AIFGuidedMissile02 = Class(AGuidedMissileProjectile) {
+AIFGuidedMissile02 = ClassProjectile(AGuidedMissileProjectile) {
 
     OnCreate = function(self)
 		AGuidedMissileProjectile.OnCreate(self)

@@ -27,7 +27,7 @@ local EffectTemplate        = import('/lua/EffectTemplates.lua')
 local BlacOpsEffectTemplate = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffectTemplates.lua')
 local CreateDeathExplosion  = import('/lua/defaultexplosions.lua').CreateDefaultHitExplosionAtBone
 
-BRL0401 = Class(CWalkingLandUnit) {
+BRL0401 = ClassUnit(CWalkingLandUnit) {
 
     PlayEndAnimDestructionEffects = false,
 
@@ -35,7 +35,7 @@ BRL0401 = Class(CWalkingLandUnit) {
 
 		-- audio toggle weapons --
 
-    	HeadWeapon = Class(CDFLaserHeavyWeapon){
+    	HeadWeapon = ClassWeapon(CDFLaserHeavyWeapon){
 		
             OnWeaponFired = function(self, muzzle)
 
@@ -48,20 +48,20 @@ BRL0401 = Class(CWalkingLandUnit) {
         },
 		
 		-- default weapons --
-		SideCannons     = Class(CDFLaserHeavyWeapon) {},
-        TopGun          = Class(BassieCannonWeapon01) { FxMuzzleFlashScale = 0.8 },
-		LasMissile      = Class(BasiliskAAMissile01) {},
-        MissileRack     = Class(CIFMissileLoaWeapon) {},
+		SideCannons     = ClassWeapon(CDFLaserHeavyWeapon) {},
+        TopGun          = ClassWeapon(BassieCannonWeapon01) { FxMuzzleFlashScale = 0.8 },
+		LasMissile      = ClassWeapon(BasiliskAAMissile01) {},
+        MissileRack     = ClassWeapon(CIFMissileLoaWeapon) {},
         
-		BolterLeft      = Class(CDFElectronBolterWeapon) {},
-		BolterRight     = Class(CDFElectronBolterWeapon) {},        
+		BolterLeft      = ClassWeapon(CDFElectronBolterWeapon) {},
+		BolterRight     = ClassWeapon(CDFElectronBolterWeapon) {},        
 
 		-- Siege weapons
-		ShoulderGuns    = Class(CDFLaserDisintegratorWeapon) {},
-        MissileRack2    = Class(CIFMissileLoaWeapon) {},
+		ShoulderGuns    = ClassWeapon(CDFLaserDisintegratorWeapon) {},
+        MissileRack2    = ClassWeapon(CIFMissileLoaWeapon) {},
 	
 		-- Death weapon
-		BasiliskDeathNuck = Class(CIFCommanderDeathWeapon) {},
+		BasiliskDeathNuck = ClassWeapon(CIFCommanderDeathWeapon) {},
 
     },
     

@@ -1,6 +1,6 @@
 local GLaserProjectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojectiles.lua').GLaserProjectile
 
-GLaser01 = Class(GLaserProjectile) {
+GLaser01 = ClassProjectile(GLaserProjectile) {
 
 	OnImpact = function(self, TargetType, TargetEntity)
 	

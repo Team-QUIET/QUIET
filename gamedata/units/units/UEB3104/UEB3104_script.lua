@@ -1,6 +1,6 @@
 local TRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 
-UEB3104 = Class(TRadarUnit) {
+UEB3104 = ClassUnit(TRadarUnit) {
 
     OnIntelDisabled = function(self)
         TRadarUnit.OnIntelDisabled(self)

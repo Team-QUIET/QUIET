@@ -2,7 +2,7 @@ local SeraLightningCannonChild = import('/mods/BlackOpsUnleashed/lua/BlackOpspro
 
 local GetEnemyUnitsInSphere = import('/lua/utilities.lua').GetEnemyUnitsInSphere
 
-SeraHeavyLightningCannonChild01 = Class(SeraLightningCannonChild) {
+SeraHeavyLightningCannonChild01 = ClassProjectile(SeraLightningCannonChild) {
 
     AttackBeams = {'/mods/BlackOpsUnleashed/effects/emitters/seraphim_lightning_beam_02_emit.bp'},
 

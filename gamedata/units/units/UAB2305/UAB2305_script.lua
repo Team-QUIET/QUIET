@@ -2,10 +2,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFQuantumWarhead = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-UAB2305 = Class(AStructureUnit) {
+UAB2305 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        QuantumMissiles = Class(AIFQuantumWarhead) {
+        QuantumMissiles = ClassWeapon(AIFQuantumWarhead) {
 		
             UnpackEffects01 = {'/effects/emitters/aeon_nuke_unpack_01_emit.bp',},
 

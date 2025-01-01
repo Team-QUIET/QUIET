@@ -5,11 +5,11 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CAMEMPMissileWeapon = import('/lua/cybranweapons.lua').CAMEMPMissileWeapon
 
-SRL0321 = Class(CLandUnit) {
+SRL0321 = ClassUnit(CLandUnit) {
 
     Weapons = {
 	
-        AntiMissile = Class(CAMEMPMissileWeapon) {
+        AntiMissile = ClassWeapon(CAMEMPMissileWeapon) {
 
             OnWeaponFired = function(self)
 			

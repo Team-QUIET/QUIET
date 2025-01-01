@@ -2,10 +2,10 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TAMInterceptorWeapon = import('/lua/terranweapons.lua').TAMInterceptorWeapon
 
-SEL0321 = Class(TLandUnit) {
+SEL0321 = ClassUnit(TLandUnit) {
 
     Weapons = {
-        AntiMissile = Class(TAMInterceptorWeapon) {},
+        AntiMissile = ClassWeapon(TAMInterceptorWeapon) {},
     },
     
 }

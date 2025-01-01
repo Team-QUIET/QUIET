@@ -2,7 +2,7 @@ local TMissileCruiseSubProjectile = import('/lua/terranprojectiles.lua').TMissil
 
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-MissileCruiseSubTerran01 = Class(TMissileCruiseSubProjectile) {
+MissileCruiseSubTerran01 = ClassProjectile(TMissileCruiseSubProjectile) {
 
     FxSplashScale = 0.5,
 

@@ -2,10 +2,10 @@ local SStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local SIFZthuthaamArtilleryCannon = import('/lua/seraphimweapons.lua').SIFZthuthaamArtilleryCannon
 
-SSB2103 = Class(SStructureUnit) {
+SSB2103 = ClassUnit(SStructureUnit) {
 
     Weapons = {
-        MainGun = Class(SIFZthuthaamArtilleryCannon) {},
+        MainGun = ClassWeapon(SIFZthuthaamArtilleryCannon) {},
     },
 }
 

@@ -18,7 +18,7 @@ local CreateAttachedEmitter = CreateAttachedEmitter
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-BRMT3BM2 = Class(CWalkingLandUnit) {
+BRMT3BM2 = ClassUnit(CWalkingLandUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	
@@ -34,10 +34,10 @@ BRMT3BM2 = Class(CWalkingLandUnit) {
 
     Weapons = {
 
-        Rockets = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.3},
-        robottalk = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},
+        Rockets = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.3},
+        robottalk = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},
 		
-        maingun1 = Class(TDFGaussCannonWeapon) {
+        maingun1 = ClassWeapon(TDFGaussCannonWeapon) {
 			
 	        FxMuzzleEffect = EffectTemplate.CElectronBolterMuzzleFlash01,
 		
@@ -80,7 +80,7 @@ BRMT3BM2 = Class(CWalkingLandUnit) {
             end,                   
         },
 		
-        gatling1 = Class(CDFParticleCannonWeapon) { FxMuzzleFlashScale = 0.1 },
+        gatling1 = ClassWeapon(CDFParticleCannonWeapon) { FxMuzzleFlashScale = 0.1 },
     },
 	
     AmbientExhaustBones = {'Exhaust01','Exhaust02'},	

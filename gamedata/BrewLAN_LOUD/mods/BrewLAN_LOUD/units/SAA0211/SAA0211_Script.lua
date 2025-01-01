@@ -2,9 +2,9 @@ local AAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local AIFBombQuarkWeapon = import('/lua/aeonweapons.lua').AIFBombQuarkWeapon
 
-SAA0211 = Class(AAirUnit) {
+SAA0211 = ClassUnit(AAirUnit) {
     Weapons = {
-        Bomb = Class(AIFBombQuarkWeapon) {},
+        Bomb = ClassWeapon(AIFBombQuarkWeapon) {},
     },
 }
 

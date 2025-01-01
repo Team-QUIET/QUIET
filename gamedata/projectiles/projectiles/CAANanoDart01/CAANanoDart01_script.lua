@@ -5,7 +5,7 @@ local WaitSeconds = WaitSeconds
 
 local CreateEmitterOnEntity = CreateEmitterOnEntity
 
-CAANanoDart01 = Class(CAANanoDartProjectile03) {
+CAANanoDart01 = ClassProjectile(CAANanoDartProjectile03) {
 
 	OnCreate = function(self)
 	

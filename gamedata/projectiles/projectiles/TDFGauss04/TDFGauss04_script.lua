@@ -3,7 +3,7 @@ local TDFGaussCannonProjectile = import('/lua/terranprojectiles.lua').TDFLandGau
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-TDFGauss04 = Class(TDFGaussCannonProjectile) {
+TDFGauss04 = ClassProjectile(TDFGaussCannonProjectile) {
     
     OnCreate = function(self, inWater)
 

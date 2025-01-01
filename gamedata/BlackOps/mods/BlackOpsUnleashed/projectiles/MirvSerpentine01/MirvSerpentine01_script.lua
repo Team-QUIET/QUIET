@@ -3,7 +3,7 @@ local AMissileSerpentineProjectile = import('/lua/aeonprojectiles.lua').AMissile
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-AIFMissileSerpentine01 = Class(AMissileSerpentineProjectile) {
+AIFMissileSerpentine01 = ClassProjectile(AMissileSerpentineProjectile) {
 
     OnCreate = function(self)
         AMissileSerpentineProjectile.OnCreate(self)

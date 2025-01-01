@@ -14,12 +14,12 @@ local TrashAdd = TrashBag.Add
 
 WeaponFile = nil
 
-SES0204 = Class(TSubUnit) {
+SES0204 = ClassUnit(TSubUnit) {
 
     Weapons = {
 
-        Torpedo = Class(TANTorpedoAngler) {},
-        AAGun = Class(TAAFlakArtilleryCannon) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
+        AAGun = ClassWeapon(TAAFlakArtilleryCannon) {},
 
     },
     

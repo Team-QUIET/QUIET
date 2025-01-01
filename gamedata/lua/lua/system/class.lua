@@ -426,14 +426,14 @@ function ConstructClass(bases, specs)
         -- special case: we have only one base and an empty specification: just return the base. There are a lot of empty classes
         -- being created, an example is: 
 
-        -- UEL0001 = Class(ACUUnit) {
+        -- UEL0001 = ClassUnit(ACUUnit) {
         --     Weapons = {
-        --         DeathWeapon = Class(DeathNukeWeapon) {},
-        --         RightZephyr = Class(TDFZephyrCannonWeapon) {},
-        --         OverCharge = Class(TDFOverchargeWeapon) {},
-        --         AutoOverCharge = Class(TDFOverchargeWeapon) {},
-        --         TacMissile = Class(TIFCruiseMissileLauncher) {},
-        --         TacNukeMissile = Class(TIFCruiseMissileLauncher) {},
+        --         DeathWeapon = ClassWeapon(DeathNukeWeapon) {},
+        --         RightZephyr = ClassWeapon(TDFZephyrCannonWeapon) {},
+        --         OverCharge = ClassWeapon(TDFOverchargeWeapon) {},
+        --         AutoOverCharge = ClassWeapon(TDFOverchargeWeapon) {},
+        --         TacMissile = ClassWeapon(TIFCruiseMissileLauncher) {},
+        --         TacNukeMissile = ClassWeapon(TIFCruiseMissileLauncher) {},
         --     },
         --     (...)
         -- }

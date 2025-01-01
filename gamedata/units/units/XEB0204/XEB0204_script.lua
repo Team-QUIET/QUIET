@@ -1,6 +1,6 @@
 local ConstructionStructureUnit = import('/lua/terranunits.lua').TConstructionStructureUnit
 
-XEB0204 = Class(ConstructionStructureUnit) {
+XEB0204 = ClassUnit(ConstructionStructureUnit) {
 
     OnStartBuild = function(self, unitBeingBuilt, order)
 

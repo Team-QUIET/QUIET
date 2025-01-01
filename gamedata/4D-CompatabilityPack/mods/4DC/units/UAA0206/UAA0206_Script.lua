@@ -4,10 +4,10 @@ AAirUnit = import('/mods/4DC/lua/CustomAbilities/4D_DefensiveTeleportation/4D_De
 
 local IonWeapon = import('/lua/terranweapons.lua').TDFHiroPlasmaCannon
 
-UAA0206 = Class(AAirUnit) {
+UAA0206 = ClassUnit(AAirUnit) {
 
     Weapons = {
-        Ion_Beam = Class(IonWeapon) {},
+        Ion_Beam = ClassWeapon(IonWeapon) {},
     },
     
     OnKilled = function(self)

@@ -3,12 +3,12 @@ local TSeaUnit =  import('/lua/defaultunits.lua').SeaUnit
 local TAALinkedRailgun = import('/lua/terranweapons.lua').TAALinkedRailgun
 local TDFGaussCannonWeapon = import('/lua/terranweapons.lua').TDFGaussCannonWeapon
 
-UES0103 = Class(TSeaUnit) {
+UES0103 = ClassUnit(TSeaUnit) {
 
     Weapons = {
 	
-        MainGun = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
-        AAGun = Class(TAALinkedRailgun) {},
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
+        AAGun = ClassWeapon(TAALinkedRailgun) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

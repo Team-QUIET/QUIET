@@ -4,7 +4,7 @@ local CreateAttachedEmitter = CreateAttachedEmitter
 
 local LOUDINSERT = table.insert
 
-BEB4209 = Class(TStructureUnit) {
+BEB4209 = ClassUnit(TStructureUnit) {
 
 	AntiTeleport = {'/effects/emitters/seraphim_shield_generator_t3_03_emit.bp','/effects/emitters/seraphim_shield_generator_t2_03_emit.bp'},
     

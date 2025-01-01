@@ -1,7 +1,7 @@
 --Most of this is from the UEF tech 1 generator, becase there didn't seem a point writing it all again.
 local TConstructionUnit = import('/lua/terranunits.lua').TConstructionUnit
 
-SNLMER1 = Class(TConstructionUnit) {
+SNLMER1 = ClassUnit(TConstructionUnit) {
     OnStopBeingBuilt = function(self,builder,layer)
         TConstructionUnit.OnStopBeingBuilt(self, builder, layer)
         self:SetMaintenanceConsumptionActive()

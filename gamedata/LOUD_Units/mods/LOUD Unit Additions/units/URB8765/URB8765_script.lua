@@ -2,7 +2,7 @@ local CEnergyStorageUnit= import('/lua/defaultunits.lua').StructureUnit
 
 local CIFCommanderDeathWeapon = import('/lua/cybranweapons.lua').CIFCommanderDeathWeapon
 
-URB8765 = Class(CEnergyStorageUnit) {
+URB8765 = ClassUnit(CEnergyStorageUnit) {
     DestructionPartsChassisToss = {'URB8765'},
 
     OnStopBeingBuilt = function(self,builder,layer)
@@ -11,7 +11,7 @@ URB8765 = Class(CEnergyStorageUnit) {
     end,
 
     Weapons = {
-        DeathWeapon = Class(CIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(CIFCommanderDeathWeapon) {},
     },
 
     AnimThread = function(self)

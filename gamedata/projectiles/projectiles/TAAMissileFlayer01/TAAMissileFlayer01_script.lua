@@ -1,6 +1,6 @@
 local TMissileAAProjectile = import('/lua/terranprojectiles.lua').TMissileAAProjectile
 
-TAAMissileFlayer01 = Class(TMissileAAProjectile) {}
+TAAMissileFlayer01 = ClassProjectile(TMissileAAProjectile) {}
 
 TypeClass = TAAMissileFlayer01
 

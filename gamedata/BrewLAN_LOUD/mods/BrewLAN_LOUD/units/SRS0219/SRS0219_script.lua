@@ -11,11 +11,11 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-SRS0219 = Class(CSeaUnit) {
+SRS0219 = ClassUnit(CSeaUnit) {
     DestructionTicks = 200,
 
     Weapons = {
-        AAGun = Class(CAAAutocannon) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

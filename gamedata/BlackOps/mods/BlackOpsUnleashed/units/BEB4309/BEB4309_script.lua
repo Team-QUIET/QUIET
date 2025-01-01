@@ -5,7 +5,7 @@ local CreateRotator = CreateRotator
 
 local LOUDINSERT = table.insert
 
-BEB4309 = Class(TStructureUnit) {
+BEB4309 = ClassUnit(TStructureUnit) {
 
 	AntiTeleport = {'/effects/emitters/seraphim_shield_generator_t3_03_emit.bp','/effects/emitters/seraphim_shield_generator_t2_03_emit.bp'},
 

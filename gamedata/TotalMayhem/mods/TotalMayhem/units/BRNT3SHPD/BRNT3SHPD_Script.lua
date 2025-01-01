@@ -10,19 +10,19 @@ local TDFLightPlasmaCannonWeapon    = WeaponsFile.TDFLightPlasmaCannonWeapon
 
 WeaponsFile = nil
 
-BRNT3SHPD = Class(TStructureUnit) {
+BRNT3SHPD = ClassUnit(TStructureUnit) {
 
     Weapons = {
 
-        GaussCannon = Class(TDFGaussCannonWeapon) {
+        GaussCannon = ClassWeapon(TDFGaussCannonWeapon) {
 
             FxMuzzleFlash = EffectTemplate.TPlasmaGatlingCannonMuzzleFlash,
             FxMuzzleFlashScale = 1.1, 
         },     
 		
-        TurretGun = Class(TDFLightPlasmaCannonWeapon) {},
+        TurretGun = ClassWeapon(TDFLightPlasmaCannonWeapon) {},
 
-        SAM = Class(TSAMLauncher) {},
+        SAM = ClassWeapon(TSAMLauncher) {},
     },
 }
 

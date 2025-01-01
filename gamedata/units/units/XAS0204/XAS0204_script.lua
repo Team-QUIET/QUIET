@@ -7,11 +7,11 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-XAS0204 = Class(ASubUnit) {
+XAS0204 = ClassUnit(ASubUnit) {
 
     Weapons = {
 	
-        Torpedo = Class(AANChronoTorpedoWeapon) {},
+        Torpedo = ClassWeapon(AANChronoTorpedoWeapon) {},
 
     },
 	

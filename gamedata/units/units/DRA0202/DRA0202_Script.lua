@@ -3,11 +3,11 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 local CAAMissileNaniteWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 local CIFMissileCorsairWeapon = import('/lua/cybranweapons.lua').CIFMissileCorsairWeapon
 
-DRA0202 = Class(CAirUnit) {
+DRA0202 = ClassUnit(CAirUnit) {
     Weapons = {
-        AntiAirMissiles = Class(CAAMissileNaniteWeapon) {},
+        AntiAirMissiles = ClassWeapon(CAAMissileNaniteWeapon) {},
 		
-        GroundMissile = Class(CIFMissileCorsairWeapon) {
+        GroundMissile = ClassWeapon(CIFMissileCorsairWeapon) {
         
             IdleState = State (CIFMissileCorsairWeapon.IdleState) {
                 Main = function(self)

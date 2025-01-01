@@ -1,10 +1,10 @@
 local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 local SAAShleoCannonWeapon = import('/lua/seraphimweapons.lua').SAAShleoCannonWeapon
 
-XSB2104 = Class(SStructureUnit) {
+XSB2104 = ClassUnit(SStructureUnit) {
 
     Weapons = {
-        AAGun = Class(SAAShleoCannonWeapon) { FxMuzzleScale = 1.5 },
+        AAGun = ClassWeapon(SAAShleoCannonWeapon) { FxMuzzleScale = 1.5 },
     },
 	
 }

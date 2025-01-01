@@ -2,7 +2,7 @@ local CIridiumRocketProjectile = import('/lua/cybranprojectiles.lua').CIridiumRo
 
 local FxScale = 2.5
 
-CPM_Tyrant_AGM = Class(CIridiumRocketProjectile) {
+CPM_Tyrant_AGM = ClassProjectile(CIridiumRocketProjectile) {
 
 	FxAirUnitHitScale = FxScale,
     FxLandHitScale = FxScale,

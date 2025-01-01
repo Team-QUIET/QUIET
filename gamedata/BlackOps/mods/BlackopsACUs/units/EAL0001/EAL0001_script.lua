@@ -33,7 +33,7 @@ local Weapon = import('/lua/sim/Weapon.lua').Weapon
 
 local wep, wpTarget
 
-EAL0001 = Class(AWalkingLandUnit) {
+EAL0001 = ClassUnit(AWalkingLandUnit) {
 
     DeathThreadDestructionWaitTime = 2,
     EnergyRequired = nil,
@@ -46,28 +46,28 @@ EAL0001 = Class(AWalkingLandUnit) {
 
     Weapons = {
 	
-        DeathWeapon = Class(AIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFCommanderDeathWeapon) {},
 		
-        TargetPainter = Class(Targeting) {},
+        TargetPainter = ClassWeapon(Targeting) {},
 		
-        RightDisruptor = Class(ADFDisruptorCannonWeapon) {},
+        RightDisruptor = ClassWeapon(ADFDisruptorCannonWeapon) {},
 		
-        OverCharge = Class(ADFOverchargeWeapon) {},
+        OverCharge = ClassWeapon(ADFOverchargeWeapon) {},
 		
-        EXChronoDampener01 = Class(ADFChronoDampener) {},
-        EXChronoDampener02 = Class(ADFChronoDampener) {},
+        EXChronoDampener01 = ClassWeapon(ADFChronoDampener) {},
+        EXChronoDampener02 = ClassWeapon(ADFChronoDampener) {},
 		
-        EXTorpedoLauncher01 = Class(AANChronoTorpedoWeapon) {},
-        EXTorpedoLauncher02 = Class(AANChronoTorpedoWeapon) {},
-        EXTorpedoLauncher03 = Class(AANChronoTorpedoWeapon) {},
+        EXTorpedoLauncher01 = ClassWeapon(AANChronoTorpedoWeapon) {},
+        EXTorpedoLauncher02 = ClassWeapon(AANChronoTorpedoWeapon) {},
+        EXTorpedoLauncher03 = ClassWeapon(AANChronoTorpedoWeapon) {},
 		
-        EXMiasmaArtillery01 = Class(AIFArtilleryMiasmaShellWeapon) {},
-        EXMiasmaArtillery02 = Class(AIFArtilleryMiasmaShellWeapon) {},
-        EXMiasmaArtillery03 = Class(AIFArtilleryMiasmaShellWeapon) {},
+        EXMiasmaArtillery01 = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
+        EXMiasmaArtillery02 = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
+        EXMiasmaArtillery03 = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
 		
-        EXPhasonBeam01 = Class(PhasonLaser) {},
-        EXPhasonBeam02 = Class(PhasonLaser) {},
-        EXPhasonBeam03 = Class(PhasonLaser) {},
+        EXPhasonBeam01 = ClassWeapon(PhasonLaser) {},
+        EXPhasonBeam02 = ClassWeapon(PhasonLaser) {},
+        EXPhasonBeam03 = ClassWeapon(PhasonLaser) {},
     },
 
     OnCreate = function(self)

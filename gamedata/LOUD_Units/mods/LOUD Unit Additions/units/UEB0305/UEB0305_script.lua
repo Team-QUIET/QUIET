@@ -1,6 +1,6 @@
 local TQuantumGateUnit = import('/lua/defaultunits.lua').QuantumGateUnit
 
-UEB0305 = Class(TQuantumGateUnit) {
+UEB0305 = ClassUnit(TQuantumGateUnit) {
 
 	GateEffectVerticalOffset = 0.35,
 	GateEffectScale = 0.42,

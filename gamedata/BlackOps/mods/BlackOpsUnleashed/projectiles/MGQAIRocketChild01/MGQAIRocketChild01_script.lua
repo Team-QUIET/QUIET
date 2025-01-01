@@ -1,6 +1,6 @@
 local MGQAIRocketChildProjectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojectiles.lua').MGQAIRocketChildProjectile
 
-MGQAIRocket01 = Class(MGQAIRocketChildProjectile) {
+MGQAIRocket01 = ClassProjectile(MGQAIRocketChildProjectile) {
 
     OnCreate = function(self)
 

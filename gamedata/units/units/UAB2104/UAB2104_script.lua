@@ -2,10 +2,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AAASonicPulseBatteryWeapon = import('/lua/aeonweapons.lua').AAASonicPulseBatteryWeapon
 
-UAB2104 = Class(AStructureUnit) {
+UAB2104 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        AAGun = Class(AAASonicPulseBatteryWeapon) { FxMuzzleScale = 2.25 },
+        AAGun = ClassWeapon(AAASonicPulseBatteryWeapon) { FxMuzzleScale = 2.25 },
     },
 	
 }

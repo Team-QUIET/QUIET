@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local CreateSplat = CreateSplat
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-ShellTankTerran01 = Class(Projectile) {
+ShellTankTerran01 = ClassProjectile(Projectile) {
 
     FxUnitHitScale = 1,
     FxImpactUnit = {},

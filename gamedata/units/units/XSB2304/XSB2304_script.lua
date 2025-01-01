@@ -1,9 +1,9 @@
 local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 local SAALosaareAutoCannonWeapon = import('/lua/seraphimweapons.lua').SAALosaareAutoCannonWeapon
 
-XSB2304 = Class(SStructureUnit) {
+XSB2304 = ClassUnit(SStructureUnit) {
     Weapons = {
-        AutoCannon = Class(SAALosaareAutoCannonWeapon) {},
+        AutoCannon = ClassWeapon(SAALosaareAutoCannonWeapon) {},
     },
 }
 

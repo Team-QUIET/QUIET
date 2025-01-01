@@ -6,7 +6,7 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-XSS0305 = Class(SSonarUnit) {
+XSS0305 = ClassUnit(SSonarUnit) {
 
     TimedSonarTTIdleEffects = {
         { Bones = {0}, Type = 'SonarBuoy01' },

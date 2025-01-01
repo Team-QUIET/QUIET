@@ -3,7 +3,7 @@ local TMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 local ChangeState = ChangeState
 local WaitFor = WaitFor
 
-UEB1104 = Class(TMassFabricationUnit) {
+UEB1104 = ClassUnit(TMassFabricationUnit) {
 
     DestructionPartsLowToss = {'B01','B02',},
     DestructionPartsChassisToss = {'UEB1104'},

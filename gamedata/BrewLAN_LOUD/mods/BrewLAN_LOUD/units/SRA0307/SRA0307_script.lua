@@ -2,10 +2,10 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local CIFNaniteTorpedoWeapon = import('/lua/cybranweapons.lua').CIFNaniteTorpedoWeapon
 
-SRA0307 = Class(CAirUnit) {
+SRA0307 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        Torpedo = Class(CIFNaniteTorpedoWeapon) {},
+        Torpedo = ClassWeapon(CIFNaniteTorpedoWeapon) {},
     },
     
     OnStopBeingBuilt = function(self,builder,layer)

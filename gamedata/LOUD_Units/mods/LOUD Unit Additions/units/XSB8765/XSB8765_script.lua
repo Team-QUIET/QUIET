@@ -2,10 +2,10 @@ local SMassStorageUnit = import('/lua/seraphimunits.lua').SMassStorageUnit
 
 local SIFCommanderDeathWeapon = import('/lua/seraphimweapons.lua').SIFCommanderDeathWeapon
 
-XSB8765 = Class(SMassStorageUnit) {
+XSB8765 = ClassUnit(SMassStorageUnit) {
 
     Weapons = {
-        DeathWeapon = Class(SIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(SIFCommanderDeathWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

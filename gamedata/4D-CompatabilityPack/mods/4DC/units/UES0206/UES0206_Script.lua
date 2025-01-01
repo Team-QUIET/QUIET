@@ -3,15 +3,15 @@ local TSubUnit = import('/lua/defaultunits.lua').SubUnit
 local CMobileKamikazeBombWeapon = import('/lua/cybranweapons.lua').CMobileKamikazeBombWeapon
 local CMobileKamikazeBombDeathWeapon = import('/lua/cybranweapons.lua').CMobileKamikazeBombDeathWeapon
 
-ues0206 = Class(TSubUnit) {
+ues0206 = ClassUnit(TSubUnit) {
 
     DestroyOnKilled = false,
     
     Weapons = {
     
-        DeathWeapon = Class(CMobileKamikazeBombDeathWeapon) {},   
+        DeathWeapon = ClassWeapon(CMobileKamikazeBombDeathWeapon) {},   
         
-        Suicide = Class(CMobileKamikazeBombWeapon) { 
+        Suicide = ClassWeapon(CMobileKamikazeBombWeapon) { 
         
             OnFire = function(self)
                 -- Disable death weapon after initial firing

@@ -2,12 +2,12 @@ local CWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local CIFGrenadeWeapon = import('/lua/cybranweapons.lua').CIFGrenadeWeapon
 
-URL0103 = Class(CWalkingLandUnit) {
+URL0103 = ClassUnit(CWalkingLandUnit) {
 
     DestructionTicks = 200,
 
     Weapons = {
-        MainGun = Class(CIFGrenadeWeapon) {
+        MainGun = ClassWeapon(CIFGrenadeWeapon) {
             FxMuzzleFlash = {
                 '/effects/emitters/cybran_artillery_muzzle_flash_01_emit.bp',
                 '/effects/emitters/cybran_artillery_muzzle_flash_02_emit.bp',

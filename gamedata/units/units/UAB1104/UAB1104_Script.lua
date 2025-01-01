@@ -2,7 +2,7 @@ local AMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 
 local ChangeState = ChangeState
 
-UAB1104 = Class(AMassFabricationUnit) {
+UAB1104 = ClassUnit(AMassFabricationUnit) {
 
     OnCreate = function(self)
         AMassFabricationUnit.OnCreate(self)

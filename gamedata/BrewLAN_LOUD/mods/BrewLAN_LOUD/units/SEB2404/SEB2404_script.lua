@@ -5,10 +5,10 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TIFArtilleryWeapon = import('/lua/terranweapons.lua').TIFArtilleryWeapon
 
-SEB2404 = Class(TStructureUnit) {
+SEB2404 = ClassUnit(TStructureUnit) {
     
     Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = ClassWeapon(TIFArtilleryWeapon) {
 		
             FxMuzzleFlashScale = 3,
             

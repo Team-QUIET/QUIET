@@ -1,4 +1,4 @@
-ADFReactonCannon01 = Class(import('/lua/aeonprojectiles.lua').AReactonCannonProjectile) {
+ADFReactonCannon01 = ClassProjectile(import('/lua/aeonprojectiles.lua').AReactonCannonProjectile) {
 
     CreateImpactEffects = function( self, army, EffectTable, EffectScale )
 

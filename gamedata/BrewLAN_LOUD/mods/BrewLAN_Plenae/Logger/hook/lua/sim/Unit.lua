@@ -1,7 +1,7 @@
 do
     local UnitOld = Unit
 
-    Unit = Class(UnitOld) {
+    Unit = ClassUnit(UnitOld) {
         OnStopBeingBuilt = function(self,builder,layer, ...)
             UnitOld.OnStopBeingBuilt(self,builder,layer, unpack(arg))
             local bp = self:GetBlueprint()

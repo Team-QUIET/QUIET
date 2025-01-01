@@ -2,7 +2,7 @@ local CDFHvyProtonCannonProjectile = import('/lua/cybranprojectiles.lua').CDFHvy
 
 local BlackOpsEffectTemplate = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffectTemplates.lua')
 
-CDFProtonCannon05 = Class(CDFHvyProtonCannonProjectile) {
+CDFProtonCannon05 = ClassProjectile(CDFHvyProtonCannonProjectile) {
 	
 	PolyTrails = {BlackOpsEffectTemplate.BassieCannonPolyTrail,'/mods/BlackOpsUnleashed/effects/emitters/bassie_cannon_trail_01_emit.bp'},
 

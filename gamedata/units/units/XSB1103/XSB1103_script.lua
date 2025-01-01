@@ -1,6 +1,6 @@
 local SMassCollectionUnit = import('/lua/seraphimunits.lua').SMassCollectionUnit
 
-XSB1103 = Class(SMassCollectionUnit) {
+XSB1103 = ClassUnit(SMassCollectionUnit) {
 
     OnStartBuild = function(self, unitBeingBuilt, order)
         SMassCollectionUnit.OnStartBuild(self, unitBeingBuilt, order)

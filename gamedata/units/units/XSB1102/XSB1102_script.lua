@@ -1,6 +1,6 @@
 local SEnergyCreationUnit = import('/lua/seraphimunits.lua').SEnergyCreationUnit
 
-XSB1102 = Class(SEnergyCreationUnit) {
+XSB1102 = ClassUnit(SEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 

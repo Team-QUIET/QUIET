@@ -22,14 +22,14 @@ local CIFCommanderDeathWeapon = CWeapons.CIFCommanderDeathWeapon
 
 CWeapons = nil
 
-URL0301 = Class(CWalkingLandUnit) {
+URL0301 = ClassUnit(CWalkingLandUnit) {
     LeftFoot = 'Left_Foot02',
     RightFoot = 'Right_Foot02',
 
     Weapons = {
-        DeathWeapon = Class(CIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(CIFCommanderDeathWeapon) {},
 
-        RightDisintegrator = Class(CDFLaserDisintegratorWeapon) {
+        RightDisintegrator = ClassWeapon(CDFLaserDisintegratorWeapon) {
 
             OnCreate = function(self)
                 CDFLaserDisintegratorWeapon.OnCreate(self)
@@ -39,7 +39,7 @@ URL0301 = Class(CWalkingLandUnit) {
             end,
         },
 
-        NMissile = Class(CAAMissileNaniteWeapon) {},
+        NMissile = ClassWeapon(CAAMissileNaniteWeapon) {},
     },
 
 

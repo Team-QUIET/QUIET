@@ -2,7 +2,7 @@ local TSeaFactoryUnit = import('/lua/terranunits.lua').TSeaFactoryUnit
 
 local WaitFor = WaitFor
 
-UEB0203 = Class(TSeaFactoryUnit) {    
+UEB0203 = ClassUnit(TSeaFactoryUnit) {    
     OnCreate = function(self)
         TSeaFactoryUnit.OnCreate(self)
         self.BuildPointSlider = CreateSlider(self, self:GetBlueprint().Display.BuildAttachBone or 0, -5, 0, 0, -1)

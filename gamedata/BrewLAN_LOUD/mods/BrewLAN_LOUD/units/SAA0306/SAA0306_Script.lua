@@ -7,7 +7,7 @@ local AAirUnit = import('/lua/defaultunits.lua').AirUnit
 local AAATemporalFizzWeapon = import('/lua/aeonweapons.lua').AAATemporalFizzWeapon
 local explosion = import('/lua/defaultexplosions.lua')
 
-SAA0306 = Class(AAirUnit) {
+SAA0306 = ClassUnit(AAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
 
@@ -22,7 +22,7 @@ SAA0306 = Class(AAirUnit) {
 	},
 
     Weapons = {
-        AAFizz = Class(AAATemporalFizzWeapon) {},
+        AAFizz = ClassWeapon(AAATemporalFizzWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

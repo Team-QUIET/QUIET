@@ -1,6 +1,6 @@
 local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UAB5103 = Class(AStructureUnit) {
+UAB5103 = ClassUnit(AStructureUnit) {
 	FxTransportBeacon = {'/effects/emitters/red_beacon_light_01_emit.bp'},
 	FxTransportBeaconScale =1,
 	

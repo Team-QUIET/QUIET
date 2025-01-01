@@ -1,4 +1,4 @@
-CAntiAir02 = Class(import('/lua/sim/defaultprojectiles.lua').SinglePolyTrailProjectile) {
+CAntiAir02 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').SinglePolyTrailProjectile) {
 
 	FxImpactTrajectoryAligned =true,
 

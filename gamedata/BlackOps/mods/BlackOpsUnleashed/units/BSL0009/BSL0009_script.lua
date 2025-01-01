@@ -8,14 +8,14 @@ local EffectTemplate = import('/lua/kirveseffects.lua')
 local CreateAttachedEmitter = CreateAttachedEmitter
 local ForkThread = ForkThread
 
-BSL0009 = Class(SLandUnit) {
+BSL0009 = ClassUnit(SLandUnit) {
 
     Weapons = {
-        PhasonBeam = Class(SDFUnstablePhasonBeam) {
+        PhasonBeam = ClassWeapon(SDFUnstablePhasonBeam) {
 			FxMuzzleFlash = {'/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_01_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_02_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_03_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_04_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_05_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_06_emit.bp','/mods/BlackOpsUnleashed/Effects/Emitters/seraphim_electricity_emit.bp'},
 		},
 		
-		Dummy = Class(Dummy) {},
+		Dummy = ClassWeapon(Dummy) {},
     },
 	
 	AmbientEffects = 'OrbGlowEffect',

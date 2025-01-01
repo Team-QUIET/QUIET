@@ -19,13 +19,13 @@ local CreateAttachedEmitter = CreateAttachedEmitter
 
 local LOUDINSERT = table.insert
 
-BEL0307 = Class(TLandUnit) {
+BEL0307 = ClassUnit(TLandUnit) {
 	
     Weapons = {
 	
-        MainTurret = Class(RailGunWeapon) {},
+        MainTurret = ClassWeapon(RailGunWeapon) {},
 
-        GattlerTurret = Class(JuggPlasmaGatlingCannonWeapon) {
+        GattlerTurret = ClassWeapon(JuggPlasmaGatlingCannonWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
 			
@@ -88,9 +88,9 @@ BEL0307 = Class(TLandUnit) {
             end,    
         },
 		
-        Laser = Class(JuggLaserweapon) {},
+        Laser = ClassWeapon(JuggLaserweapon) {},
 		
-        RocketRack = Class(TIFCruiseMissileUnpackingLauncher) {},		
+        RocketRack = ClassWeapon(TIFCruiseMissileUnpackingLauncher) {},		
     },
  
     

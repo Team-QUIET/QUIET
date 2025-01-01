@@ -9,10 +9,10 @@ local SDFUnstablePhasonBeam         = SeraphimWeapons.SDFUltraChromaticBeamGener
 
 SeraphimWeapons = nil
 
-SSA0313 = Class(SAirUnit, MissileFlare) {
+SSA0313 = ClassUnit(SAirUnit, MissileFlare) {
     Weapons = {
-        AutoCannon = Class(SAALosaareAutoCannonWeapon) {},
-        PhasonBeam = Class(SDFUnstablePhasonBeam) {},
+        AutoCannon = ClassWeapon(SAALosaareAutoCannonWeapon) {},
+        PhasonBeam = ClassWeapon(SDFUnstablePhasonBeam) {},
     },
 
     FlareBones = {'Smol_Ring'},

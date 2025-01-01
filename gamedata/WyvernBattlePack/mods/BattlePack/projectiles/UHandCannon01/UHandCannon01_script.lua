@@ -2,9 +2,9 @@
 --  File     :  /projectiles/uef/uhandcannon01/uhandcannon01_script.lua
 --  Author(s):	Gordon Duclos, Aaron Lundquist
 --  Summary  :  SC2 UEF Hand Cannon: UHandCannon01
---  Copyright © 2009 Gas Powered Games, Inc.  All rights reserved.
+--  Copyright ï¿½ 2009 Gas Powered Games, Inc.  All rights reserved.
 -----------------------------------------------------------------------------
-UHandCannon01 = Class(import('/mods/BattlePack/lua/BattlePackDefaultProjectiles.lua').SC2SinglePolyTrailProjectile) {
+UHandCannon01 = ClassProjectile(import('/mods/BattlePack/lua/BattlePackDefaultProjectiles.lua').SC2SinglePolyTrailProjectile) {
 	FxImpactTrajectoryAligned =true,
 
         FxTrails = {

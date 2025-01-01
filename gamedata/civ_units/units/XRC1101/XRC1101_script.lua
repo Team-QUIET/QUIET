@@ -1,7 +1,7 @@
 local CCivilianStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local SSQuantumJammerTowerAmbient = import('/lua/EffectTemplates.lua').SJammerTowerAmbient
 
-XRC1101 = Class(CCivilianStructureUnit) 
+XRC1101 = ClassUnit(CCivilianStructureUnit) 
 
 {
    OnCreate = function(self, builder, layer)

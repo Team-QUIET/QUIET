@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local CreateTrail = CreateTrail
 
-CDFRocketMeson01 = Class(CRocketProjectile) {
+CDFRocketMeson01 = ClassProjectile(CRocketProjectile) {
 
    PolyTrail = '/effects/emitters/default_polytrail_06_emit.bp',
 

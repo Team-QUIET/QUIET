@@ -10,11 +10,11 @@ local TANTorpedoAngler                  = terranweapons.TANTorpedoAngler
 
 terranweapons = nil
 
-SEA0314 = Class(TAirUnit, MissileFlare) {
+SEA0314 = ClassUnit(TAirUnit, MissileFlare) {
 
     Weapons = {
 
-        Bomb = Class(TIFSmallYieldNuclearBombWeapon) {
+        Bomb = ClassWeapon(TIFSmallYieldNuclearBombWeapon) {
 
             -- hooking the bomb firing in the hope of someday diverting
             -- the bomber immediately upon firing rather than breaking off
@@ -27,8 +27,8 @@ SEA0314 = Class(TAirUnit, MissileFlare) {
         
         },
         
-        Missile = Class(TIFCruiseMissileLauncher) {},
-        Torpedo = Class(TANTorpedoAngler) { FxMuzzleFlash = false },
+        Missile = ClassWeapon(TIFCruiseMissileLauncher) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlash = false },
     },
 
     FlareBones = {'Tail'},

@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 
-AIFMissileSerpentine02 = Class(AMissileSerpentineProjectile) {
+AIFMissileSerpentine02 = ClassProjectile(AMissileSerpentineProjectile) {
 
     FxWaterHitScale = 1.65,
 

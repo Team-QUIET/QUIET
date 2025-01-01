@@ -2,9 +2,9 @@ local SConstructionUnit = import('/lua/seraphimunits.lua').SConstructionUnit
 
 local SDFOhCannon = import('/lua/seraphimweapons.lua').SDFOhCannon
 
-SSL0219 = Class(SConstructionUnit) {
+SSL0219 = ClassUnit(SConstructionUnit) {
     Weapons = {
-        MainGun = Class(SDFOhCannon) {}
+        MainGun = ClassWeapon(SDFOhCannon) {}
     },      
     OnStartBuild = function(self, unitBeingBuilt, order)
         --Disable the gun while building something

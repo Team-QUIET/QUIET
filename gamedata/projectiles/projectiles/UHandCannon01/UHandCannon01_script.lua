@@ -2,7 +2,7 @@ local Projectile = import('/lua/sim/DefaultProjectiles.lua').EmitterProjectile
 
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-UHandCannon01 = Class(Projectile) { 
+UHandCannon01 = ClassProjectile(Projectile) { 
 
 	FxImpactTrajectoryAligned = true,
 	

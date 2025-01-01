@@ -8,11 +8,11 @@ local ADFQuantumAutogunWeapon = WeaponsFile.ADFQuantumAutogunWeapon
 
 WeaponsFile = nil
 
-BAA0001 = Class(AAirUnit) {
+BAA0001 = ClassUnit(AAirUnit) {
 
     Weapons = {
 	
-        MainGun = Class(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
+        MainGun = ClassWeapon(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
 			FxMuzzleFlash = {
 				'/effects/emitters/oblivion_cannon_flash_04_emit.bp',
 				'/effects/emitters/oblivion_cannon_flash_05_emit.bp',				
@@ -20,8 +20,8 @@ BAA0001 = Class(AAirUnit) {
 			},        
         },
 		
-        BlazeGun = Class(ADFQuantumAutogunWeapon) {},
-        Depthcharge = Class(AANDepthChargeBombWeapon) {},
+        BlazeGun = ClassWeapon(ADFQuantumAutogunWeapon) {},
+        Depthcharge = ClassWeapon(AANDepthChargeBombWeapon) {},
 		
     },
 

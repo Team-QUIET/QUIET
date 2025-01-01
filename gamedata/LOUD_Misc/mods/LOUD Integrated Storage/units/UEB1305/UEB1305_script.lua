@@ -1,6 +1,6 @@
 local TMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 
-UEB1305 = Class(TMassFabricationUnit) {
+UEB1305 = ClassUnit(TMassFabricationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TMassFabricationUnit.OnStopBeingBuilt(self,builder,layer)

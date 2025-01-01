@@ -4,7 +4,7 @@
 local EmitterProjectile = import('/lua/sim/defaultprojectiles.lua').EmitterProjectile
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-EXBillyFlavorPlume01 = Class(EmitterProjectile) {
+EXBillyFlavorPlume01 = ClassProjectile(EmitterProjectile) {
     FxTrails = EffectTemplate.TNukeFlavorPlume01,
     FxTrailScale = 0.5,-- Exavier Added Scale
     FxImpactUnit = {},

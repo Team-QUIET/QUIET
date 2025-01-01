@@ -10,14 +10,14 @@ local SDFHeavyPhasicAutoGunWeapon       = SeraphimWeapons.SDFHeavyPhasicAutoGunW
 
 SeraphimWeapons = nil
 
-SSA0306 = Class(SAirUnit) {
+SSA0306 = ClassUnit(SAirUnit) {
 
     AirDestructionEffectBones = { 'BSA0306','Left_Attachpoint08','Right_Attachpoint02'},
 
     Weapons = {
-        AutoGun = Class(SDFHeavyPhasicAutoGunWeapon) {},
-        AALeft = Class(SAALosaareAutoCannonWeaponAirUnit) {},
-        AARight = Class(SAALosaareAutoCannonWeaponAirUnit) {},
+        AutoGun = ClassWeapon(SDFHeavyPhasicAutoGunWeapon) {},
+        AALeft = ClassUnit(SAALosaareAutoCannonWeaponAirUnit) {},
+        AARight = ClassUnit(SAALosaareAutoCannonWeaponAirUnit) {},
     },
 
     # Override air destruction effects so we can do something custom here

@@ -3,7 +3,7 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 local CreateDefaultHitExplosionAtBone = import('/lua/defaultexplosions.lua').CreateDefaultHitExplosionAtBone
 local util = import('/lua/utilities.lua')
 
-URA0107 = Class(CAirUnit) {
+URA0107 = ClassUnit(CAirUnit) {
 
     Weapons = {},
 

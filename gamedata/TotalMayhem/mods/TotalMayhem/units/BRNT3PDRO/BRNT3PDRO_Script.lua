@@ -6,11 +6,11 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BRNT3PDRO = Class(TStructureUnit) {
+BRNT3PDRO = ClassUnit(TStructureUnit) {
 
     Weapons = {
 
-        RocketPod = Class(TDFGaussCannonWeapon) {
+        RocketPod = ClassWeapon(TDFGaussCannonWeapon) {
 
             FxMuzzleFlashScale = 1,
 			

@@ -1,6 +1,6 @@
 local CConstructionStructureUnit = import('/lua/cybranunits.lua').CConstructionStructureUnit
 
-XRB0104 = Class(CConstructionStructureUnit) {
+XRB0104 = ClassUnit(CConstructionStructureUnit) {
 
     OnStartBuild = function(self, unitBeingBuilt, order)
 

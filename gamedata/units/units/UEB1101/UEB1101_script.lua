@@ -4,7 +4,7 @@ local LOUDSTATE = ChangeState
 local CreateSlider = CreateSlider
 local WaitFor = WaitFor
 
-UEB1101 = Class(TEnergyCreationUnit) {
+UEB1101 = ClassUnit(TEnergyCreationUnit) {
 
     OnCreate = function(self)
 	

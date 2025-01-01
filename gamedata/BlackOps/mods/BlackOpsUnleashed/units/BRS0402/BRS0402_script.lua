@@ -16,7 +16,7 @@ CybranWeaponsFile2 = nil
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BRS0402= Class(CSeaUnit) {
+BRS0402= ClassUnit(CSeaUnit) {
 
 	MuzzleFlashEffects01 = {
 		'/mods/BlackOpsUnleashed/effects/emitters/xcannon_cannon_muzzle_01_emit.bp',	-- large redish flash
@@ -32,7 +32,7 @@ BRS0402= Class(CSeaUnit) {
 	
     Weapons = {
 	
-        MainCannon01 = Class(XCannonWeapon01) {
+        MainCannon01 = ClassWeapon(XCannonWeapon01) {
 		
         	OnWeaponFired = function(self)
 			
@@ -137,7 +137,7 @@ BRS0402= Class(CSeaUnit) {
 			
         },
 		
-        MainCannon02 = Class(XCannonWeapon01) {
+        MainCannon02 = ClassWeapon(XCannonWeapon01) {
 		
         	OnWeaponFired = function(self)
 			
@@ -248,15 +248,15 @@ BRS0402= Class(CSeaUnit) {
 			
         },
 		
-        SecondaryCannon = Class(CDFProtonCannonWeapon) {},
+        SecondaryCannon = ClassWeapon(CDFProtonCannonWeapon) {},
 		
-        AntiMissile = Class(CAMZapperWeapon) {},
+        AntiMissile = ClassWeapon(CAMZapperWeapon) {},
 		
-        Torpedo = Class(CANNaniteTorpedoWeapon) {},
+        Torpedo = ClassWeapon(CANNaniteTorpedoWeapon) {},
 		
-        AALaser = Class(MGAALaserWeapon) {},
+        AALaser = ClassWeapon(MGAALaserWeapon) {},
 		
-        CruiseMissile = Class(CIFMissileLoaWeapon){},		
+        CruiseMissile = ClassWeapon(CIFMissileLoaWeapon){},		
 		
     },
 	

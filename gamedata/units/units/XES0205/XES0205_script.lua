@@ -1,6 +1,6 @@
 local SeaUnit =  import('/lua/defaultunits.lua').SeaUnit
 
-XES0205 = Class(SeaUnit) {
+XES0205 = ClassUnit(SeaUnit) {
 
     ShieldEffects = {
         '/effects/emitters/terran_shield_generator_shipmobile_01_emit.bp',

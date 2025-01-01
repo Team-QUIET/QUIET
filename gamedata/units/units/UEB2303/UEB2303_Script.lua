@@ -2,7 +2,7 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TIFArtilleryWeapon = import('/lua/terranweapons.lua').TIFArtilleryWeapon
 
-UEB2303 = Class(TStructureUnit) {
+UEB2303 = ClassUnit(TStructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TStructureUnit.OnStopBeingBuilt(self,builder,layer)
@@ -13,7 +13,7 @@ UEB2303 = Class(TStructureUnit) {
     end,
 
     Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = ClassWeapon(TIFArtilleryWeapon) {
         },
     },
 }

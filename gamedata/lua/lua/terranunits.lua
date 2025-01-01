@@ -47,7 +47,7 @@ local SetMesh = moho.entity_methods.SetMesh
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-TAirFactoryUnit = Class(FactoryUnit) {
+TAirFactoryUnit = ClassUnit(FactoryUnit) {
     
     CreateBuildEffects = function( self, unitBeingBuilt, order )
 
@@ -118,7 +118,7 @@ TAirFactoryUnit = Class(FactoryUnit) {
     end,
 }
 
-TLandFactoryUnit = Class(FactoryUnit) {
+TLandFactoryUnit = ClassUnit(FactoryUnit) {
 
     CreateBuildEffects = function( self, unitBeingBuilt, order )
     
@@ -151,9 +151,9 @@ TLandFactoryUnit = Class(FactoryUnit) {
 
 }
 
-TSeaFactoryUnit = Class(TAirFactoryUnit) {}
+TSeaFactoryUnit = ClassUnit(TAirFactoryUnit) {}
 
-TConstructionUnit = Class(ConstructionUnit) {
+TConstructionUnit = ClassUnit(ConstructionUnit) {
 
     CreateBuildEffects = function( self, unitBeingBuilt, order )
         TrashAdd( self.BuildEffectsBag, self:ForkThread( CreateUEFBuildSliceBeams, unitBeingBuilt, __blueprints[self.BlueprintID].General.BuildBones.BuildEffectBones, self.BuildEffectsBag ) )
@@ -203,7 +203,7 @@ TConstructionUnit = Class(ConstructionUnit) {
     end,
 }
 
-TConstructionStructureUnit = Class(StructureUnit) {
+TConstructionStructureUnit = ClassUnit(StructureUnit) {
    
     OnCreate = function(self)
         -- Structure stuff
@@ -346,7 +346,7 @@ TConstructionStructureUnit = Class(StructureUnit) {
 
 }
 
-TMassCollectionUnit = Class(MassCollectionUnit) {
+TMassCollectionUnit = ClassUnit(MassCollectionUnit) {
 
     StartBeingBuiltEffects = function(self, builder, layer)
 	
@@ -362,7 +362,7 @@ TMassCollectionUnit = Class(MassCollectionUnit) {
     end,    
 }
 
-TMobileFactoryUnit = Class(MobileUnit) {
+TMobileFactoryUnit = ClassUnit(MobileUnit) {
 
     StartBeingBuiltEffects = function(self, builder, layer)
 	
@@ -377,7 +377,7 @@ TMobileFactoryUnit = Class(MobileUnit) {
     end,   
 }
 
-TShieldStructureUnit = Class(ShieldStructureUnit) {
+TShieldStructureUnit = ClassUnit(ShieldStructureUnit) {
 
     StartBeingBuiltEffects = function(self,builder,layer)
 	
@@ -393,7 +393,7 @@ TShieldStructureUnit = Class(ShieldStructureUnit) {
     end,
 }
 
-TRadarJammerUnit = Class(RadarJammerUnit) {
+TRadarJammerUnit = ClassUnit(RadarJammerUnit) {
 
     OnIntelEnabled = function(self,intel)
         if not self.MySpinner then

@@ -3,7 +3,7 @@ local SChronatronCannon = import('/lua/seraphimprojectiles.lua').SChronatronCann
 local ChronatronBlastAttackAOE = import('/lua/EffectTemplates.lua').SChronatronCannonBlastAttackAOE 
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-SDFChronatronCannon01 = Class(SChronatronCannon) {
+SDFChronatronCannon01 = ClassProjectile(SChronatronCannon) {
 	FxImpactTrajectoryAligned = false,
 	
     CreateImpactEffects = function( self, army, EffectTable, EffectScale )

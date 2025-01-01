@@ -4,12 +4,12 @@ local TDFRiotWeapon = import('/lua/terranweapons.lua').TDFRiotWeapon
 
 local LOUDINSERT = table.insert
 
-UEA0203 = Class(TAirUnit) {
+UEA0203 = ClassUnit(TAirUnit) {
 
     EngineRotateBones = {'Jet_Front', 'Jet_Back',},
 
     Weapons = {
-        Turret01 = Class(TDFRiotWeapon) {},
+        Turret01 = ClassWeapon(TDFRiotWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

@@ -5,10 +5,10 @@ local WeaponsFile2 = import ('/mods/BlackOpsUnleashed/lua/BlackOpsweapons.lua')
 local YenzothaExperimentalLaser02 = WeaponsFile2.YenzothaExperimentalLaser02
 
 
-BSA0004 = Class(SAirUnit) {
+BSA0004 = ClassUnit(SAirUnit) {
 
 	Weapons = {
-        BeamWeapon = Class(YenzothaExperimentalLaser02) {},
+        BeamWeapon = ClassWeapon(YenzothaExperimentalLaser02) {},
     },
 
 	Carrier = nil,

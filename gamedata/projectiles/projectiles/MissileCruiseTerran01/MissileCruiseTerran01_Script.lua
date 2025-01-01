@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local AttachBeamToEntity = AttachBeamToEntity
 
-MissileCruiseTerran01 = Class(Projectile) {
+MissileCruiseTerran01 = ClassProjectile(Projectile) {
 
     MissileExhaust = {},
 

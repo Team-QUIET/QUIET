@@ -9,12 +9,12 @@ local SAMElectrumMissileDefense = SeraphimWeapons.SAMElectrumMissileDefense
 
 SeraphimWeapons = nil
 
-XSS0202 = Class(SSeaUnit) {
+XSS0202 = ClassUnit(SSeaUnit) {
     Weapons = {
-        Missile         = Class(SLaanseMissileWeapon) {},
-		RightAAGun      = Class(SAAShleoCannonWeapon) {},
-		LeftAAGun       = Class(SAAOlarisCannonWeapon) {},
-        AntiMissile     = Class(SAMElectrumMissileDefense) {},
+        Missile         = ClassWeapon(SLaanseMissileWeapon) {},
+		RightAAGun      = ClassWeapon(SAAShleoCannonWeapon) {},
+		LeftAAGun       = ClassWeapon(SAAOlarisCannonWeapon) {},
+        AntiMissile     = ClassWeapon(SAMElectrumMissileDefense) {},
     },
 
 }

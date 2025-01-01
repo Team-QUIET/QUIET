@@ -8,15 +8,15 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 
 local TrashAdd = TrashBag.Add
 
-BROT3HM = Class(CWalkingLandUnit) {
+BROT3HM = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 
-        MainGun = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.2,
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.2,
             FxMuzzleFlash = EffectTemplate.AOblivionCannonMuzzleFlash02,
 		}, 
 
-        MainGun2 = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5,
+        MainGun2 = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5,
             FxMuzzleFlash = EffectTemplate.AIFBallisticMortarFlash02,
 		}, 
     },

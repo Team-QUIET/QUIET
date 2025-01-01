@@ -2,10 +2,10 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local CDFHeavyMicrowaveLaserGeneratorCom = import('/lua/cybranweapons.lua').CDFHeavyMicrowaveLaserGeneratorCom
 
-BRMT1EXPD = Class(TStructureUnit) {
+BRMT1EXPD = ClassUnit(TStructureUnit) {
 
     Weapons = {
-        MainGun = Class(CDFHeavyMicrowaveLaserGeneratorCom) {},
+        MainGun = ClassWeapon(CDFHeavyMicrowaveLaserGeneratorCom) {},
     },
 }
 

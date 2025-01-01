@@ -1,6 +1,6 @@
 local SShieldHoverLandUnit = import('/lua/seraphimunits.lua').SShieldHoverLandUnit
 
-XSL0307 = Class(SShieldHoverLandUnit) {
+XSL0307 = ClassUnit(SShieldHoverLandUnit) {
     
     ShieldEffects = { '/effects/emitters/aeon_shield_generator_mobile_01_emit.bp' },
     

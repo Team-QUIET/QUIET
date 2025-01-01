@@ -3,7 +3,7 @@ local StructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local Buff = import('/lua/sim/Buff.lua')
 local BuffField = import('/lua/sim/BuffField.lua').BuffField
 
-BSB4205 = Class(StructureUnit) {
+BSB4205 = ClassUnit(StructureUnit) {
 	
 	BuffFields = {
 	

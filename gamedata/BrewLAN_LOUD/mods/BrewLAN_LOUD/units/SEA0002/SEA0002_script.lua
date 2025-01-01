@@ -5,7 +5,7 @@ local VizMarker = import('/lua/sim/VizMarker.lua').VizMarker
 local BrewLANLOUDPath = import( '/lua/game.lua' ).BrewLANLOUDPath()
 local OffsetBoneToTerrain = import(BrewLANLOUDPath .. '/lua/TerrainUtils.lua').OffsetBoneToTerrain
 
-SEA0002 = Class(TAirUnit) {
+SEA0002 = ClassUnit(TAirUnit) {
 
     DestroyNoFallRandomChance = 0,
 

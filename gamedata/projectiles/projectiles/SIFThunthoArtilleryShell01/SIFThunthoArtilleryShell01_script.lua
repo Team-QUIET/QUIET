@@ -5,7 +5,7 @@ local FxFragEffect = import('/lua/EffectTemplates.lua').SThunderStormCannonProje
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-SIFThunthoArtilleryShell01 = Class(SThunthoArtilleryShell) {
+SIFThunthoArtilleryShell01 = ClassProjectile(SThunthoArtilleryShell) {
 
     OnImpact = function(self, TargetType, TargetEntity) 
 

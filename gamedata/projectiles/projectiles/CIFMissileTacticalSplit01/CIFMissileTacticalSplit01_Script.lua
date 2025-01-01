@@ -8,7 +8,7 @@ local CLOATacticalChildMissileProjectile = import('/lua/cybranprojectiles.lua').
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-CIFMissileTacticalSplit01 = Class(CLOATacticalChildMissileProjectile) {
+CIFMissileTacticalSplit01 = ClassProjectile(CLOATacticalChildMissileProjectile) {
 
     OnCreate = function(self)
 	

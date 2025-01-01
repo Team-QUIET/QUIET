@@ -1,6 +1,6 @@
 local SStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-BSB4209 = Class(SStructureUnit) {
+BSB4209 = ClassUnit(SStructureUnit) {
 
 AntiTeleport = {'/effects/emitters/op_seraphim_quantum_jammer_tower_emit.bp'},
     

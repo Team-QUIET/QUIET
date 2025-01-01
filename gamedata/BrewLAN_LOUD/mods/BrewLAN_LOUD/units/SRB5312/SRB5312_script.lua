@@ -3,6 +3,6 @@ local CardinalWallUnit = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '
 
 StackingBuilderUnit = CardinalWallUnit(StackingBuilderUnit) 
 
-SRB5312 = Class(StackingBuilderUnit) {}
+SRB5312 = ClassUnit(StackingBuilderUnit) {}
 
 TypeClass = SRB5312

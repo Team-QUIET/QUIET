@@ -18,15 +18,15 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-SRS0319 = Class(CSeaUnit) {
+SRS0319 = ClassUnit(CSeaUnit) {
     SwitchAnims = true,
     Walking = false,
     IsWaiting = false,
 
     Weapons = {
-        AAGun = Class(CAAAutocannon) {},
-        Torpedo = Class(CANNaniteTorpedoWeapon) {},
-        AntiTorpedo = Class(CIFSmartCharge) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
+        Torpedo = ClassWeapon(CANNaniteTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(CIFSmartCharge) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

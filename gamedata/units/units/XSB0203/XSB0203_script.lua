@@ -1,6 +1,6 @@
 local SSeaFactoryUnit = import('/lua/seraphimunits.lua').SSeaFactoryUnit
 
-XSB0203 = Class(SSeaFactoryUnit) {
+XSB0203 = ClassUnit(SSeaFactoryUnit) {
     OnCreate = function(self)
         SSeaFactoryUnit.OnCreate(self)
         local bp = self:GetBlueprint()

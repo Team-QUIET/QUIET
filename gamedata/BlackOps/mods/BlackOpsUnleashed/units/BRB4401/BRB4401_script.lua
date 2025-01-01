@@ -1,6 +1,6 @@
 local CRadarJammerUnit = import('/lua/defaultunits.lua').RadarJammerUnit
 
-BRB4401 = Class(CRadarJammerUnit) {
+BRB4401 = ClassUnit(CRadarJammerUnit) {
 
     IntelEffects = {
 		{Bones = {'Emitter'}, Offset = {0,3,0}, Type = 'Jammer01'},

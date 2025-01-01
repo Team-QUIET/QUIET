@@ -16,7 +16,7 @@ local AIControl = GantryUtils.AIControl
 local AIStartCheats = GantryUtils.AIStartCheats
 local AICheats = GantryUtils.AICheats
 --------------------------------------------------------------------------------
-SEB0401 = Class(TLandFactoryUnit) {
+SEB0401 = ClassUnit(TLandFactoryUnit) {
 --------------------------------------------------------------------------------
 -- Function triggers
 --------------------------------------------------------------------------------

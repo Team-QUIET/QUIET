@@ -4,9 +4,9 @@ local CDFHvyProtonCannonWeapon = import('/lua/cybranweapons.lua').CDFHvyProtonCa
 
 local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileRedirect
 
-SRB2402 = Class(CStructureUnit) {
+SRB2402 = ClassUnit(CStructureUnit) {
     Weapons = {
-        ParticleGun = Class(CDFHvyProtonCannonWeapon) {},
+        ParticleGun = ClassWeapon(CDFHvyProtonCannonWeapon) {},
     },
     
     OnStopBeingBuilt = function(self,builder,layer)

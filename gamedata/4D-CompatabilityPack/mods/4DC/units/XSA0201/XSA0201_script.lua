@@ -4,7 +4,7 @@ SAirUnit = import('/mods/4DC/lua/CustomAbilities/4D_ShieldDroneSuperClass/4D_Shi
 
 local LOUDINSERT = table.insert
 
-XSA0201 = Class(SAirUnit) {
+XSA0201 = ClassUnit(SAirUnit) {
 
     OnStopBeingBuilt = function(self, builder, layer)
 	

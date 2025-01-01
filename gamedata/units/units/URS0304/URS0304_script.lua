@@ -8,12 +8,12 @@ local CANTorpedoLauncherWeapon  = import('/lua/sim/DefaultWeapons.lua').DefaultP
 
 CybranWeapons = nil
 
-URS0304 = Class(CSubUnit) {
+URS0304 = ClassUnit(CSubUnit) {
 
     Weapons = {
-        NukeMissiles = Class(CIFMissileStrategicWeapon){},
-        CruiseMissile = Class(CIFMissileLoaWeapon){},
-        Torpedo = Class(CANTorpedoLauncherWeapon){},
+        NukeMissiles = ClassWeapon(CIFMissileStrategicWeapon){},
+        CruiseMissile = ClassWeapon(CIFMissileLoaWeapon){},
+        Torpedo = ClassWeapon(CANTorpedoLauncherWeapon){},
     },
 
 }

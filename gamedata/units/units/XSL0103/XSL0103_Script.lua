@@ -2,9 +2,9 @@ local SHoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local SIFThunthoCannonWeapon = import('/lua/seraphimweapons.lua').SIFThunthoCannonWeapon
 
-XSL0103 = Class(SHoverLandUnit) {
+XSL0103 = ClassUnit(SHoverLandUnit) {
     Weapons = {
-        MainGun = Class(SIFThunthoCannonWeapon) {}
+        MainGun = ClassWeapon(SIFThunthoCannonWeapon) {}
     },
 }
 

@@ -2,7 +2,7 @@ local CAANanoDartProjectile = import('/lua/cybranprojectiles.lua').CAANanoDartPr
 
 local CreateEmitterOnEntity = CreateEmitterOnEntity
 
-CAANanoDart02 = Class(CAANanoDartProjectile) {
+CAANanoDart02 = ClassProjectile(CAANanoDartProjectile) {
 
    OnCreate = function(self)
         CAANanoDartProjectile.OnCreate(self)

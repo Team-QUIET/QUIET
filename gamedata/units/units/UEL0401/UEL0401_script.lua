@@ -15,17 +15,17 @@ local LOUDINSERT = table.insert
 local LOUDSTATE = ChangeState
 local WaitFor = WaitFor
 
-UEL0401 = Class(TMobileFactoryUnit) {
+UEL0401 = ClassUnit(TMobileFactoryUnit) {
 
     Weapons = {
 	
-        Turret  = Class(TDFGaussCannonWeapon) {},
+        Turret  = ClassWeapon(TDFGaussCannonWeapon) {},
 		
-        Riotgun = Class(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
+        Riotgun = ClassWeapon(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
 		
-        AAGun   = Class(TAALinkedRailgun) {},
+        AAGun   = ClassWeapon(TAALinkedRailgun) {},
 
-        Torpedo = Class(TANTorpedoAngler) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
     },
 
     FxDamageScale = 2.5,

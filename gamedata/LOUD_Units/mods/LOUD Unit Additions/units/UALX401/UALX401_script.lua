@@ -3,11 +3,11 @@ local AShieldHoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 local AAMSaintWeapon = import('/lua/aeonweapons.lua').AAMSaintWeapon
 local nukeFiredOnGotTarget = false
 
-UALX401 = Class(AShieldHoverLandUnit) {
+UALX401 = ClassUnit(AShieldHoverLandUnit) {
 
 	Weapons = {
 		
-        MissileRack = Class(AAMSaintWeapon) {},
+        MissileRack = ClassWeapon(AAMSaintWeapon) {},
     },
     
     ShieldEffects = {

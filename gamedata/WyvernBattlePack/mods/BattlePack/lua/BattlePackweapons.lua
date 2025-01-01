@@ -26,7 +26,7 @@ local BattlePackBeamFile = import('/mods/BattlePack/lua/BattlePackCollisionBeams
 
 
 
-ExWifeMaincannonWeapon01            = Class(DefaultProjectileWeapon) { FxMuzzleFlash = {'/mods/BattlePack/effects/emitters/ExWifeMaincannon_cannon_muzzle_01_emit.bp',
+ExWifeMaincannonWeapon01            = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = {'/mods/BattlePack/effects/emitters/ExWifeMaincannon_cannon_muzzle_01_emit.bp',
 		'/mods/BattlePack/effects/emitters/ExWifeMaincannon_cannon_muzzle_02_emit.bp',
 		'/mods/BattlePack/effects/emitters/ExWifeMaincannon_cannon_muzzle_03_emit.bp',
 		'/mods/BattlePack/effects/emitters/ExWifeMaincannon_cannon_muzzle_04_emit.bp',
@@ -49,31 +49,31 @@ ExWifeMaincannonWeapon01            = Class(DefaultProjectileWeapon) { FxMuzzleF
 	FxChargeMuzzleFlashScale = 5,
 }
 
-TDFAlternatePlasmaCannonWeapon      = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPlasmaCannonHeavyMuzzleFlash,
+TDFAlternatePlasmaCannonWeapon      = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPlasmaCannonHeavyMuzzleFlash,
 	FxMuzzleFlashScale = 0.5,
 }
 
-BPPPlasmaPPCProj                    = Class(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.BPPPlasmaPPCProjMuzzleFlash ,
+BPPPlasmaPPCProj                    = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.BPPPlasmaPPCProjMuzzleFlash ,
     FxChargeMuzzleFlash = BattlePackEffectTemplate.BPPPlasmaPPCProjChargeMuzzleFlash,
 }
 
-UDisruptorArtillery01               = Class(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.UDisruptorArtillery01MuzzleFlash}
+UDisruptorArtillery01               = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.UDisruptorArtillery01MuzzleFlash}
 
-CybranFlameThrower                  = Class(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.CybranFlameThrowerMuzzleFlash,
+CybranFlameThrower                  = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.CybranFlameThrowerMuzzleFlash,
 	FxMuzzleFlashScale = 1, 
 }
 
 
-AAMicrowaveLaserGenerator           = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.AAMicrowaveLaserCollisionBeam01,
+AAMicrowaveLaserGenerator           = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.AAMicrowaveLaserCollisionBeam01,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
     FxUpackingChargeEffects = EffectTemplate.CMicrowaveLaserCharge01,
     FxUpackingChargeEffectScale = 1,
 }
 
-EXCEMPArrayBeam01                   = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.EXCEMPArrayBeam01CollisionBeam}
+EXCEMPArrayBeam01                   = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.EXCEMPArrayBeam01CollisionBeam}
 
-StarAdderLaser                      = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.StarAdderLaserCollisionBeam02,
+StarAdderLaser                      = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.StarAdderLaserCollisionBeam02,
 
     PlayFxWeaponUnpackSequence = function( self )
         if not self:EconomySupportsBeam() then return end
@@ -90,7 +90,7 @@ StarAdderLaser                      = Class(DefaultBeamWeapon) { BeamType = Batt
 
 --[[
 
-MechCannonWeapon = Class(DefaultProjectileWeapon) {
+MechCannonWeapon = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = EffectTemplate.CElectronBolterMuzzleFlash01,
     FxShellEject  = BattlePackEffectTemplate.CannonGunShells,
 
@@ -102,7 +102,7 @@ MechCannonWeapon = Class(DefaultProjectileWeapon) {
     end,
 }
 
-MechCannonWeapon02 = Class(DefaultProjectileWeapon) {
+MechCannonWeapon02 = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = EffectTemplate.TLandGaussCannonFlash,
     FxShellEject  = BattlePackEffectTemplate.CannonGunShells,
 
@@ -114,12 +114,12 @@ MechCannonWeapon02 = Class(DefaultProjectileWeapon) {
     end,
 }
 
-RagnarokLavaCannonWeapon = Class(DefaultProjectileWeapon) {
+RagnarokLavaCannonWeapon = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = BattlePackEffectTemplate.TMagmaCannonMuzzleFlash,
 	FxMuzzleFlashScale = 1.25,
 }
 
-WyvernLaserWeapon = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.WyvernLaserWeaponCollisionBeam,
+WyvernLaserWeapon = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.WyvernLaserWeaponCollisionBeam,
     FxUpackingChargeEffects = {},
     FxUpackingChargeEffectScale = 0.5,
 
@@ -135,14 +135,14 @@ WyvernLaserWeapon = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.Wyv
     end,
 }
 
-SC2DisruptorWeapon02 = Class(DefaultProjectileWeapon) {
+SC2DisruptorWeapon02 = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = BattlePackEffectTemplate.SC2DisruptorMuzzleFlash02,
 	FxMuzzleFlashScale = 0.5, 
     FxChargeMuzzleFlash = BattlePackEffectTemplate.SC2DisruptorChargeMuzzleFlash02,
 	FxChargeMuzzleFlashScale = 0.5, 
 }
 
-AdaptorZapperWeapon = Class(DefaultBeamWeapon) { BeamType = ZapperCollisionBeam,
+AdaptorZapperWeapon = ClassWeapon(DefaultBeamWeapon) { BeamType = ZapperCollisionBeam,
     FxMuzzleFlash = {'/effects/emitters/cannon_muzzle_flash_01_emit.bp',},
 
     SphereEffectIdleMesh = '/effects/entities/cybranphalanxsphere01/cybranphalanxsphere01_mesh',
@@ -184,7 +184,7 @@ AdaptorZapperWeapon = Class(DefaultBeamWeapon) { BeamType = ZapperCollisionBeam,
     end,    
 }
 
-CybranChronoDampener = Class(DefaultProjectileWeapon) {
+CybranChronoDampener = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = BattlePackEffectTemplate.CChronoDampener,
     FxMuzzleFlashScale = 0.5,
 
@@ -192,13 +192,13 @@ CybranChronoDampener = Class(DefaultProjectileWeapon) {
     end,
 }
 
-GaussCannonWeapon = Class(DefaultProjectileWeapon) {
+GaussCannonWeapon = ClassWeapon(DefaultProjectileWeapon) {
     FxMuzzleFlash = EffectTemplate.TGaussCannonFlash,
 		FxMuzzleScale = 0.05,
 	
 }
 
-HeavyMicrowaveLaser = Class(DefaultBeamWeapon) {
+HeavyMicrowaveLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BattlePackBeamFile.HeavyMicrowaveLaserCollisionBeam01,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -206,7 +206,7 @@ HeavyMicrowaveLaser = Class(DefaultBeamWeapon) {
     FxUpackingChargeEffectScale = 1,
 }
 
-SeraphimPhasonLaser = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.SeraphimPhasonLaserCollisionBeam,
+SeraphimPhasonLaser = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.SeraphimPhasonLaserCollisionBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
     FxUpackingChargeEffects = EffectTemplate.CMicrowaveLaserCharge01,
@@ -226,7 +226,7 @@ SeraphimPhasonLaser = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.S
     end,
 }
 
-SC2PhasonLaser = Class(DefaultBeamWeapon) {
+SC2PhasonLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BattlePackBeamFile.SC2CollosusCollisionBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -247,7 +247,7 @@ SC2PhasonLaser = Class(DefaultBeamWeapon) {
     end,
 }
 
-TWZapperWeapon = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.ZapperCollisionBeam02,
+TWZapperWeapon = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.ZapperCollisionBeam02,
     FxMuzzleFlash = {'/effects/emitters/cannon_muzzle_flash_01_emit.bp',},
 
     SphereEffectIdleMesh = '/effects/entities/cybranphalanxsphere01/cybranphalanxsphere01_mesh',
@@ -289,9 +289,9 @@ TWZapperWeapon = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.Zapper
     end,    
 }
 
-ZapperCollisionBeam02 = Class(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.ZapperCollisionBeam02 }
+ZapperCollisionBeam02 = ClassWeapon(DefaultBeamWeapon) { BeamType = BattlePackBeamFile.ZapperCollisionBeam02 }
 
-SC2ACUPhasonLaser = Class(DefaultBeamWeapon) {
+SC2ACUPhasonLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BattlePackBeamFile.SC2ACUCollisionBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -312,7 +312,7 @@ SC2ACUPhasonLaser = Class(DefaultBeamWeapon) {
     end,
 }
 
-SC2ZephyrCannonWeapon = Class(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.SC2ACUMuzzleFlash,
+SC2ZephyrCannonWeapon = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = BattlePackEffectTemplate.SC2ACUMuzzleFlash,
 	FxMuzzleFlashScale = 0.3, 
 }
 

@@ -7,10 +7,10 @@ local TANTorpedoAngler = import('/lua/terranweapons.lua').TANTorpedoAngler
 local TAALinkedRailgun = import('/lua/terranweapons.lua').TAALinkedRailgun
 
 
-SEA0307 = Class(TAirUnit) {
+SEA0307 = ClassUnit(TAirUnit) {
     Weapons = {
-        Torpedo = Class(TANTorpedoAngler) {},
-        LinkedRailGun = Class(TAALinkedRailgun) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
+        LinkedRailGun = ClassWeapon(TAALinkedRailgun) {},
     },
 
 

@@ -11,11 +11,11 @@ cWeapons = nil
 
 local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileRedirect
 
-URL0303 = Class(CWalkingLandUnit) {
+URL0303 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        Disintigrator = Class(CDFLaserDisintegratorWeapon) {},
-        HeavyBolter = Class(CDFElectronBolterWeapon) {},
+        Disintigrator = ClassWeapon(CDFLaserDisintegratorWeapon) {},
+        HeavyBolter = ClassWeapon(CDFElectronBolterWeapon) {},
     },
     
     OnStopBeingBuilt = function(self,builder,layer)

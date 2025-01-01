@@ -2,9 +2,9 @@ local CStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local CDFProtonCannonWeapon = import('/lua/cybranweapons.lua').CDFProtonCannonWeapon
        
-SRB2311 = Class(CStructureUnit) {
+SRB2311 = ClassUnit(CStructureUnit) {
     Weapons = {
-        FrontCannon01 = Class(CDFProtonCannonWeapon) {},
+        FrontCannon01 = ClassWeapon(CDFProtonCannonWeapon) {},
     },
 }
 TypeClass = SRB2311

@@ -1,5 +1,5 @@
 local GoliathTMDProjectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojectiles.lua').GoliathTMDProjectile
 
-GoliathTMD01 = Class(GoliathTMDProjectile) {}
+GoliathTMD01 = ClassProjectile(GoliathTMDProjectile) {}
 
 TypeClass = GoliathTMD01

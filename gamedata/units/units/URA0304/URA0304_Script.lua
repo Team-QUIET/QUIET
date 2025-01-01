@@ -3,11 +3,11 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 local CIFBombNeutronWeapon  = import('/lua/cybranweapons.lua').CIFBombNeutronWeapon
 local CAAAutocannon         = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-URA0304 = Class(CAirUnit) {
+URA0304 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        Bomb = Class(CIFBombNeutronWeapon) {},
-        AAGun = Class(CAAAutocannon) {},
+        Bomb = ClassWeapon(CIFBombNeutronWeapon) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
     },
 	
     ContrailBones = {'Left_Exhaust','Right_Exhaust'},

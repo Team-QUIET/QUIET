@@ -1,7 +1,7 @@
 local SRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 local AnimationThread = import('/lua/effectutilities.lua').IntelDishAnimationThread
 
-SSB3302 = Class(SRadarUnit) {
+SSB3302 = ClassUnit(SRadarUnit) {
 
     OnStopBeingBuilt = function(self, ...)
         SRadarUnit.OnStopBeingBuilt(self, unpack(arg) )

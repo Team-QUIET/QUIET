@@ -2,9 +2,9 @@ local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local SIFBombZhanaseeWeapon = import('/lua/seraphimweapons.lua').SIFBombZhanaseeWeapon
 
-XSA0304 = Class(SAirUnit) {
+XSA0304 = ClassUnit(SAirUnit) {
     Weapons = {
-        Bomb = Class(SIFBombZhanaseeWeapon) {},
+        Bomb = ClassWeapon(SIFBombZhanaseeWeapon) {},
     },
 }
 TypeClass = XSA0304

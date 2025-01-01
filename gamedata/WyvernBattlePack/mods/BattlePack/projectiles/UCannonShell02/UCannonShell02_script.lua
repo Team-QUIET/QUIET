@@ -2,11 +2,11 @@
 --  File     : /projectiles/UEF/UCannonShell02/UCannonShell02_script.lua
 --  Author(s): Gordon Duclos
 --  Summary  : SC2 UEF Fatboy Cannon Shell: UCannonShell02
---  Copyright © 2009 Gas Powered Games, Inc.  All rights reserved.
+--  Copyright ï¿½ 2009 Gas Powered Games, Inc.  All rights reserved.
 -----------------------------------------------------------------------------
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-UCannonShell02 = Class(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
+UCannonShell02 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
 	
 	PolyTrails  = {
 		'/mods/BattlePack/effects/emitters/w_u_gau01_p_01_polytrails_emit.bp',

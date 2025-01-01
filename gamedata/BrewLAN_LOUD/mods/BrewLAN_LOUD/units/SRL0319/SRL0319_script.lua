@@ -2,10 +2,10 @@ local CConstructionUnit = import('/lua/cybranunits.lua').CConstructionUnit
 
 local CDFElectronBolterWeapon = import('/lua/cybranweapons.lua').CDFElectronBolterWeapon
 
-SRL0209 = Class(CConstructionUnit) {
+SRL0209 = ClassUnit(CConstructionUnit) {
 
     Weapons = {
-        Bolter = Class(CDFElectronBolterWeapon) {},
+        Bolter = ClassWeapon(CDFElectronBolterWeapon) {},
     },
 
     Treads = {

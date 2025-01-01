@@ -5,9 +5,9 @@ local SStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local SIFSuthanusArtilleryCannon = import('/lua/seraphimweapons.lua').SIFSuthanusArtilleryCannon
 
-SSB2404 = Class(SStructureUnit) {
+SSB2404 = ClassUnit(SStructureUnit) {
     Weapons = {
-        MainGun = Class(SIFSuthanusArtilleryCannon) { 
+        MainGun = ClassWeapon(SIFSuthanusArtilleryCannon) { 
               
             IdleState = State(SIFSuthanusArtilleryCannon.IdleState) {
                 OnGotTarget = function(self)

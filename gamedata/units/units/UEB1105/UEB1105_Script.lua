@@ -1,6 +1,6 @@
 local TEnergyStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UEB1105 = Class(TEnergyStorageUnit) {
+UEB1105 = ClassUnit(TEnergyStorageUnit) {
 
     OnCreate = function(self)
         TEnergyStorageUnit.OnCreate(self)

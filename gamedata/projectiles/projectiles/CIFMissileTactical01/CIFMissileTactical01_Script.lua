@@ -8,7 +8,7 @@ local CLOATacticalMissileProjectile = import('/lua/cybranprojectiles.lua').CLOAT
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-CIFMissileTactical01 = Class(CLOATacticalMissileProjectile) {
+CIFMissileTactical01 = ClassProjectile(CLOATacticalMissileProjectile) {
 
     NumChildMissiles = 3,
 

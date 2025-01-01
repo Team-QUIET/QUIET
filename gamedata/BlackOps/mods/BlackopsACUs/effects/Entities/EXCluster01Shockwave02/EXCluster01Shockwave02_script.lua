@@ -3,7 +3,7 @@
 --
 local EmitterProjectile = import('/lua/sim/defaultprojectiles.lua').EmitterProjectile
 
-EXCluster01Shockwave02 = Class(EmitterProjectile) {
+EXCluster01Shockwave02 = ClassProjectile(EmitterProjectile) {
     FxTrails = {'/effects/emitters/nuke_blanket_smoke_01_emit.bp',},
     FxTrailScale = 0.015625,-- Exavier Modified Scale
     FxTrailOffset = 0,

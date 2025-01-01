@@ -4,11 +4,11 @@ local AAATemporalFizzWeapon = import('/lua/aeonweapons.lua').AAATemporalFizzWeap
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-UAB2204 = Class(AStructureUnit) {
+UAB2204 = ClassUnit(AStructureUnit) {
 
     Weapons = {
 
-        AAFizz = Class(AAATemporalFizzWeapon) {
+        AAFizz = ClassWeapon(AAATemporalFizzWeapon) {
         
             ChargeEffectMuzzles = {'Turret_Right_Muzzle', 'Turret_Left_Muzzle'},
             

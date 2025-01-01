@@ -3,6 +3,6 @@
 --------------------------------------------------------------------------------
 local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-SEA0201 = Class(TAirUnit) {}
+SEA0201 = ClassUnit(TAirUnit) {}
 
 TypeClass = SEA0201

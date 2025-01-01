@@ -1,7 +1,7 @@
 
 local CMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 
-URB1104 = Class(CMassFabricationUnit) {
+URB1104 = ClassUnit(CMassFabricationUnit) {
     DestructionPartsLowToss = {'Blade',},
 
     OnStopBeingBuilt = function(self,builder,layer)

@@ -12,12 +12,12 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-UAS0304 = Class(ASubUnit) {
+UAS0304 = ClassUnit(ASubUnit) {
 	
     Weapons = {
 	
-        CruiseMissiles = Class(AIFMissileTacticalSerpentineWeapon) {},
-        NukeMissiles = Class(AIFQuantumWarhead) {},
+        CruiseMissiles = ClassWeapon(AIFMissileTacticalSerpentineWeapon) {},
+        NukeMissiles = ClassWeapon(AIFQuantumWarhead) {},
 		
     },
 	

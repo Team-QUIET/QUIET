@@ -19,7 +19,7 @@ local AIControl = GantryUtils.AIControl
 local AIStartCheats = GantryUtils.AIStartCheats
 local AICheats = GantryUtils.AICheats
 --------------------------------------------------------------------------------
-SAB0401 = Class(AAirFactoryUnit) {
+SAB0401 = ClassUnit(AAirFactoryUnit) {
 --------------------------------------------------------------------------------
 -- Function triggers
 --------------------------------------------------------------------------------

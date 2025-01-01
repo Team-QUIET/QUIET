@@ -2,9 +2,9 @@ local AWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local ADFHeavyDisruptorCannonWeapon = import('/lua/aeonweapons.lua').ADFHeavyDisruptorCannonWeapon
 
-XAL0305 = Class(AWalkingLandUnit) {
+XAL0305 = ClassUnit(AWalkingLandUnit) {
     Weapons = {
-        MainGun = Class(ADFHeavyDisruptorCannonWeapon) {}
+        MainGun = ClassWeapon(ADFHeavyDisruptorCannonWeapon) {}
     },
 }
 

@@ -5,11 +5,11 @@ local SDFBombOtheWeapon = SeraphimWeapons.SDFBombOtheWeapon
 
 SeraphimWeapons = nil
 
-XSA0202 = Class(SAirUnit) {
+XSA0202 = ClassUnit(SAirUnit) {
     Weapons = {
-        ShleoAAGun = Class(SAAShleoCannonWeapon){},
+        ShleoAAGun = ClassWeapon(SAAShleoCannonWeapon){},
 
-        Bomb = Class(SDFBombOtheWeapon) {
+        Bomb = ClassWeapon(SDFBombOtheWeapon) {
 
             IdleState = State (SDFBombOtheWeapon.IdleState) {
                 Main = function(self)

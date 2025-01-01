@@ -1,6 +1,6 @@
 local CShieldStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-URB4205 = Class(CShieldStructureUnit) {
+URB4205 = ClassUnit(CShieldStructureUnit) {
     
     ShieldEffects = {
                 '/effects/emitters/cybran_shield_03_generator_01_emit.bp',

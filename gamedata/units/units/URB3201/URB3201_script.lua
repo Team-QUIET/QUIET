@@ -2,7 +2,7 @@ local CRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 
 local WaitFor = WaitFor
 
-URB3201 = Class(CRadarUnit) {    
+URB3201 = ClassUnit(CRadarUnit) {    
 
     OnIntelDisabled = function(self,intel)
 

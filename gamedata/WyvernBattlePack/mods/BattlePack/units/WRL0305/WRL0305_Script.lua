@@ -5,9 +5,9 @@ local cWeapons = import('/lua/cybranweapons.lua')
 local CDFLaserDisintegratorWeapon = cWeapons.CDFLaserDisintegratorWeapon01
 
 
-WRL0305 = Class(CWalkingLandUnit) {
+WRL0305 = ClassUnit(CWalkingLandUnit) {
     Weapons = {
-        MainGun = Class(CDFLaserDisintegratorWeapon) {},
+        MainGun = ClassWeapon(CDFLaserDisintegratorWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

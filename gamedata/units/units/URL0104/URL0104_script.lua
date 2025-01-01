@@ -2,11 +2,11 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CAANanoDartWeapon = import('/lua/cybranweapons.lua').CAANanoDartWeapon
 
-URL0104 = Class(CLandUnit) {
+URL0104 = ClassUnit(CLandUnit) {
     Weapons = {
-        AAGun = Class(CAANanoDartWeapon) {},
+        AAGun = ClassWeapon(CAANanoDartWeapon) {},
         
-        GroundGun = Class(CAANanoDartWeapon) {
+        GroundGun = ClassWeapon(CAANanoDartWeapon) {
         
             SetOnTransport = function(self, transportstate)
                 CAANanoDartWeapon.SetOnTransport(self, transportstate)

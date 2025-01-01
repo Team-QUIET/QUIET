@@ -5,12 +5,12 @@ local CAMZapperWeapon = import('/lua/cybranweapons.lua').CAMZapperWeapon
 
 local ChangeState = ChangeState
 
-URS0303 = Class(CSeaUnit) {
+URS0303 = ClassUnit(CSeaUnit) {
 
     Weapons = {
 	
-        AAGun = Class(CAAAutocannon) {},
-        Zapper = Class(CAMZapperWeapon) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
+        Zapper = ClassWeapon(CAMZapperWeapon) {},
 		
     },
 

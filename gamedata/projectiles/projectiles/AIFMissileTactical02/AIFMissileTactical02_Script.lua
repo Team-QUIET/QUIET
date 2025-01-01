@@ -3,7 +3,7 @@ local AMissileSerpentineProjectile = import('/lua/aeonprojectiles.lua').AMissile
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-AIFMissileTactical02 = Class(AMissileSerpentineProjectile) {
+AIFMissileTactical02 = ClassProjectile(AMissileSerpentineProjectile) {
 
     OnCreate = function(self)
         AMissileSerpentineProjectile.OnCreate(self)

@@ -8,12 +8,12 @@ local SDFOhCannon                   = SWeapons.SDFOhCannon02
 
 SWeapons = nil
 
-XSS0203 = Class(SSubUnit) {
+XSS0203 = ClassUnit(SSubUnit) {
 
     Weapons = {
-        Torpedo     = Class(Torpedo) {},
-        AntiTorpedo = Class(SDFAjelluAntiTorpedoDefense) {},
-        Cannon      = Class(SDFOhCannon) {},		
+        Torpedo     = ClassWeapon(Torpedo) {},
+        AntiTorpedo = ClassWeapon(SDFAjelluAntiTorpedoDefense) {},
+        Cannon      = ClassWeapon(SDFOhCannon) {},		
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

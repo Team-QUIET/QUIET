@@ -5,7 +5,7 @@ local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 local RandomInt = import('/lua/utilities.lua').GetRandomInt
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-SIFHuAntiNuke01 = Class(SIFHuAntiNuke) {
+SIFHuAntiNuke01 = ClassProjectile(SIFHuAntiNuke) {
 
     OnImpact = function(self, TargetType, TargetEntity) 
 

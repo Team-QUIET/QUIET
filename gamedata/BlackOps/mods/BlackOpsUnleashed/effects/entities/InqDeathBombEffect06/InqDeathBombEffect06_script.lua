@@ -10,7 +10,7 @@
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local BlackOpsEffectTemplate = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffectTemplates.lua')
 
-InqDeathBombEffect06 = Class(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
+InqDeathBombEffect06 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
     FxTrails = BlackOpsEffectTemplate.GoldLaserBombHitRingProjectileFxTrails06,
     FxTrailScale = 0.3,
 }

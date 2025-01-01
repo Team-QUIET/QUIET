@@ -4,10 +4,10 @@ local SDFThauCannon = import('/lua/seraphimweapons.lua').SDFThauCannon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT1EXM1 = Class(SWalkingLandUnit) {
+BRPT1EXM1 = ClassUnit(SWalkingLandUnit) {
 
     Weapons = {
-        TauCannon01 = Class(SDFThauCannon){
+        TauCannon01 = ClassWeapon(SDFThauCannon){
             FxMuzzleFlashScale = 0.5,
         },
     },

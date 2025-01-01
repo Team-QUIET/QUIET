@@ -9,12 +9,12 @@ local TorpedoLauncher           = CybranWeaponsFile.CANNaniteTorpedoWeapon
 CybranWeaponsFile = nil
 
 
-URL0203 = Class(CLandUnit) {
+URL0203 = ClassUnit(CLandUnit) {
 
     Weapons = {
-        Bolter  = Class(CDFElectronBolterWeapon) {},
-        Rocket  = Class(CDFMissileMesonWeapon) {},
-        Torpedo = Class(TorpedoLauncher) {},
+        Bolter  = ClassWeapon(CDFElectronBolterWeapon) {},
+        Rocket  = ClassWeapon(CDFMissileMesonWeapon) {},
+        Torpedo = ClassWeapon(TorpedoLauncher) {},
     },
     
 }

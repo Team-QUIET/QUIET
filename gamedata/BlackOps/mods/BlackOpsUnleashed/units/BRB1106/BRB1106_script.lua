@@ -1,6 +1,6 @@
 local CMassStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
-BRB1106 = Class(CMassStorageUnit) {
+BRB1106 = ClassUnit(CMassStorageUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
     

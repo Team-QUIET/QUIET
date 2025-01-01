@@ -9,11 +9,11 @@ SeraphimWeapons = nil
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPEXBOT = Class( SWalkingLandUnit ) {
+BRPEXBOT = ClassUnit(SWalkingLandUnit) {
 
 	Weapons = {
-		MainGun         = Class(SIFSuthanusArtilleryCannon) {FxMuzzleFlashScale = 3.6},
-		SecondaryGun    = Class(SDFOhCannon) {FxMuzzleFlashScale = 1.8},
+		MainGun         = ClassWeapon(SIFSuthanusArtilleryCannon) {FxMuzzleFlashScale = 3.6},
+		SecondaryGun    = ClassWeapon(SDFOhCannon) {FxMuzzleFlashScale = 1.8},
 	},
 
 	OnStopBeingBuilt = function(self,builder,layer)

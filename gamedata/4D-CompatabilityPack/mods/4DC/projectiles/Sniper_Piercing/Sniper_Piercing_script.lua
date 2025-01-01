@@ -1,5 +1,5 @@
 local Sniper_PiercingProjectile = import('/lua/aeonprojectiles.lua').AHighIntensityLaserProjectile  
 
-Sniper_Piercing = Class(Sniper_PiercingProjectile) {}
+Sniper_Piercing = ClassProjectile(Sniper_PiercingProjectile) {}
 
 TypeClass = Sniper_Piercing

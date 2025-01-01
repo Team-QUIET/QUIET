@@ -10,13 +10,13 @@ local fxutil    = import('/lua/effectutilities.lua')
 
 
 
-WRA0401 = Class(CAirUnit) {
+WRA0401 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        Missile         = Class(CDFRocketIridiumWeapon) {},
-        Disintegrator   = Class(CDFLaserDisintegratorWeapon){},
-		Laser           = Class(CDFHeavyMicrowaveLaserGeneratorCom) {},
-        AA              = Class(CAAMissileNaniteWeapon) {},
+        Missile         = ClassWeapon(CDFRocketIridiumWeapon) {},
+        Disintegrator   = ClassWeapon(CDFLaserDisintegratorWeapon){},
+		Laser           = ClassWeapon(CDFHeavyMicrowaveLaserGeneratorCom) {},
+        AA              = ClassWeapon(CAAMissileNaniteWeapon) {},
     },
     
     MovementAmbientExhaustBones = {'Exhaust01','Exhaust02','Exhaust03','Exhaust04','Exhaust05','Exhaust06'},

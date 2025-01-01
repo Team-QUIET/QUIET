@@ -9,17 +9,17 @@ local AAAZealotMissileWeapon        = AWeapons.AAAZealotMissileWeapon
 
 AWeapons = nil
 
-WAL4404 = Class(AWalkingLandUnit) {
+WAL4404 = ClassUnit(AWalkingLandUnit) {
 
     Weapons = {
     
-        ChinGun     = Class(ADFLaserHighIntensityWeapon) {},
+        ChinGun     = ClassWeapon(ADFLaserHighIntensityWeapon) {},
         
-		Arm         = Class(ADFCannonOblivionWeapon) {},  
+		Arm         = ClassWeapon(ADFCannonOblivionWeapon) {},  
 
-		TopCannon   = Class(ADFQuantumAutogunWeapon) {},
+		TopCannon   = ClassWeapon(ADFQuantumAutogunWeapon) {},
         
-		AAMissile   = Class(AAAZealotMissileWeapon) {},
+		AAMissile   = ClassWeapon(AAAZealotMissileWeapon) {},
     }, 
 }
 

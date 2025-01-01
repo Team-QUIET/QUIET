@@ -1,6 +1,6 @@
 local CAirFactoryUnit = import('/lua/cybranunits.lua').CAirFactoryUnit
 
-URB0102 = Class(CAirFactoryUnit) {
+URB0102 = ClassUnit(CAirFactoryUnit) {
     PlatformBone = 'B01',
     LandUnitBuilt = false,
     UpgradeRevealArm1 = 'Arm01',

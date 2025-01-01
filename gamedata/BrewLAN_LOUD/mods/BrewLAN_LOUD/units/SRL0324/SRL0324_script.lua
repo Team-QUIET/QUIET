@@ -9,7 +9,7 @@ local CRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 local CDFElectronBolterWeapon = import('/lua/cybranweapons.lua').CDFElectronBolterWeapon
 local BrewLANLOUDPath = import( '/lua/game.lua' ).BrewLANLOUDPath()
 
-SRL0324 = Class(CLandUnit) {
+SRL0324 = ClassUnit(CLandUnit) {
 
     OnCreate = function(self)
         self.FxBlinkingLightsBag = {}

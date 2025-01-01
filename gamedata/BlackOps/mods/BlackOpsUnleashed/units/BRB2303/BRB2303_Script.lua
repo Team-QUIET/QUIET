@@ -6,11 +6,11 @@ local HailfireLauncherWeapon = import('/mods/BlackOpsUnleashed/lua/BlackOpsweapo
 local muzzleBones = { 'Muzzle_1', 'Muzzle_2', 'Muzzle_3', 'Muzzle_4', 'Muzzle_5', 'Muzzle_6' } 
 local recoilgroup1 = { 'Recoil_1', 'Recoil_2', 'Recoil_3', 'Recoil_4', 'Recoil_5', 'Recoil_6' } 
 
-BRB2303 = Class(CStructureUnit) {
+BRB2303 = ClassUnit(CStructureUnit) {
 
     Weapons = {
 
-        MainGun = Class(HailfireLauncherWeapon) {
+        MainGun = ClassWeapon(HailfireLauncherWeapon) {
 		
             OnCreate = function(self) 
                 HailfireLauncherWeapon.OnCreate(self) 

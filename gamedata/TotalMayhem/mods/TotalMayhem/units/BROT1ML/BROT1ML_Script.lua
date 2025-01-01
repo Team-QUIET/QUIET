@@ -2,10 +2,10 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TDFGaussCannonWeapon = import('/lua/terranweapons.lua').TDFLandGaussCannonWeapon
 
-BROT1ML = Class(TLandUnit) {
+BROT1ML = ClassUnit(TLandUnit) {
 
     Weapons = {
-        Rockets = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
+        Rockets = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
     },
 }
 

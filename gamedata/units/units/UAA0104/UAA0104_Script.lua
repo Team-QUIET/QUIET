@@ -6,12 +6,12 @@ local util = import('/lua/utilities.lua')
 
 local AAASonicPulseBatteryWeapon = import('/lua/aeonweapons.lua').AAASonicPulseBatteryWeapon
 
-UAA0104 = Class(AAirUnit) {
+UAA0104 = ClassUnit(AAirUnit) {
 
     AirDestructionEffectBones = { 'Exhaust','Wing_Right','Wing_Left','Slots_Left01','Slots_Right01','Right_AttachPoint01','Right_AttachPoint02','Left_AttachPoint01','Left_AttachPoint02' },
 
     Weapons = {
-		SonicPulseBattery = Class(AAASonicPulseBatteryWeapon) {},
+		SonicPulseBattery = ClassWeapon(AAASonicPulseBatteryWeapon) {},
     },
 
     CreateUnitAirDestructionEffects = function( self, scale )

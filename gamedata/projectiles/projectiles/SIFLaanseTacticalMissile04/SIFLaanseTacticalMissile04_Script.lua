@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-SIFLaanseTacticalMissile04 = Class(SLaanseTacticalMissile) {
+SIFLaanseTacticalMissile04 = ClassWeapon(SLaanseTacticalMissile) {
     
     OnCreate = function(self)
         SLaanseTacticalMissile.OnCreate(self)

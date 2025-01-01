@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-SEA0310 = Class(TAirUnit) {
+SEA0310 = ClassUnit(TAirUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TAirUnit.OnStopBeingBuilt(self,builder,layer)

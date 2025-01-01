@@ -5,7 +5,7 @@ local CreateRotator = CreateRotator
 local CreateAttachedEmitter = CreateAttachedEmitter
 local ForkThread = ForkThread
 
-BAB4309 = Class(AStructureUnit) {
+BAB4309 = ClassUnit(AStructureUnit) {
 
 	AntiTeleportEffects = {'/effects/emitters/aeon_gate_02_emit.bp','/effects/emitters/aeon_gate_03_emit.bp'},
 

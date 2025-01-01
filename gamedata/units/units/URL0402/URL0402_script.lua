@@ -27,15 +27,15 @@ local function GetRandomFloat( Min, Max )
 end
 
 
-URL0402 = Class(CWalkingLandUnit) {
+URL0402 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 
-        MainGun         = Class(CDFHeavyMicrowaveLaserGenerator) {},
-        BolterLeft      = Class(CDFElectronBolterWeapon) {},
-        BolterRight     = Class(CDFElectronBolterWeapon) {},        
-        AAMissile       = Class(CAAMissileNaniteWeapon) {},
-        Torpedo         = Class(CANNaniteTorpedoWeapon) {},
+        MainGun         = ClassWeapon(CDFHeavyMicrowaveLaserGenerator) {},
+        BolterLeft      = ClassWeapon(CDFElectronBolterWeapon) {},
+        BolterRight     = ClassWeapon(CDFElectronBolterWeapon) {},        
+        AAMissile       = ClassWeapon(CAAMissileNaniteWeapon) {},
+        Torpedo         = ClassWeapon(CANNaniteTorpedoWeapon) {},
     },
     
     OnStartBeingBuilt = function(self, builder, layer)

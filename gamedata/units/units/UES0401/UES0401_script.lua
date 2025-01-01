@@ -11,12 +11,12 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-UES0401 = Class(TSubUnit) {
+UES0401 = ClassUnit(TSubUnit) {
 
     Weapons = {
 	
-        Torpedo = Class(TANTorpedoAngler) {},
-        AA = Class(TSAMLauncher) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
+        AA = ClassWeapon(TSAMLauncher) {},
 	},
 
     OnCreate = function(self)

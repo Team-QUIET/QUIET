@@ -1,13 +1,13 @@
 local BeamsFile = import('/lua/defaultcollisionbeams.lua')
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-MaelstromDeathLaser = Class(DefaultBeamWeapon) {
+MaelstromDeathLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BeamsFile.DeathLaserCollisionBeam,
     FxUpackingChargeEffects = {},
     FxUpackingChargeEffectScale = 1,
 }
 
-DisarmBeamWeapon = Class(DefaultBeamWeapon) {
+DisarmBeamWeapon = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BeamsFile.DisarmBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},

@@ -11,11 +11,11 @@ local ClusterTorpedo        = AeonWeapons.AANChronoTorpedoWeapon
 AeonWeapons = nil
 
 
-SAA0314 = Class(AAirUnit, MissileFlare) {
+SAA0314 = ClassUnit(AAirUnit, MissileFlare) {
 
     Weapons = {
 
-        Bomb = Class(AIFBombQuarkWeapon) {
+        Bomb = ClassWeapon(AIFBombQuarkWeapon) {
 
             -- hooking the bomb firing in the hope of someday diverting
             -- the bomber immediately upon firing rather than breaking off
@@ -28,9 +28,9 @@ SAA0314 = Class(AAirUnit, MissileFlare) {
         
         },
 
-        CruiseMissile = Class(ACruiseMissileWeapon) {},
+        CruiseMissile = ClassWeapon(ACruiseMissileWeapon) {},
 
-        ClusterTorpedo = Class(ClusterTorpedo) { FxMuzzleFlash = false },
+        ClusterTorpedo = ClassWeapon(ClusterTorpedo) { FxMuzzleFlash = false },
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

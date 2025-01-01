@@ -3,7 +3,7 @@ local AEnergyCreationUnit = import('/lua/aeonunits.lua').AConstructionUnit
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
-WAB0201 = Class(AEnergyCreationUnit) {
+WAB0201 = ClassUnit(AEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         AEnergyCreationUnit.OnStopBeingBuilt(self,builder,layer)

@@ -8,7 +8,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-CIFMissileTactical03 = Class(CLOATacticalMissileProjectile) {
+CIFMissileTactical03 = ClassProjectile(CLOATacticalMissileProjectile) {
 
     NumChildMissiles = 3,
 

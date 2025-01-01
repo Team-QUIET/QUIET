@@ -1,6 +1,6 @@
 local CSeaUnit =  import('/lua/defaultunits.lua').SeaUnit
 
-URB3302 = Class(CSeaUnit) {
+URB3302 = ClassUnit(CSeaUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

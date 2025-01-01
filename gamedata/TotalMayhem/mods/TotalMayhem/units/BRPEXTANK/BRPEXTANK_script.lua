@@ -6,11 +6,11 @@ local SeraLambdaFieldDestroyer = import('/lua/defaultantiprojectile.lua').SeraLa
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPEXTANK = Class(SWalkingLandUnit) {
+BRPEXTANK = ClassUnit(SWalkingLandUnit) {
     
     Weapons = {
 	
-        Turret = Class(SDFHeavyQuarnonCannon) { FxMuzzleFlashScale = 2.0 },
+        Turret = ClassWeapon(SDFHeavyQuarnonCannon) { FxMuzzleFlashScale = 2.0 },
 		
     },
 

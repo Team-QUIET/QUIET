@@ -4,9 +4,9 @@ local SDFUnstablePhasonBeam = import('/lua/seraphimweapons.lua').SDFUnstablePhas
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BSL0403 = Class(SEnergyBallUnit) {
+BSL0403 = ClassUnit(SEnergyBallUnit) {
     Weapons = {
-        PhasonBeam = Class(SDFUnstablePhasonBeam) {},
+        PhasonBeam = ClassWeapon(SDFUnstablePhasonBeam) {},
     },
     
     OnCreate = function(self)

@@ -2,7 +2,7 @@ local SLandFactoryUnit = import('/lua/seraphimunits.lua').SLandFactoryUnit
 
 local LOUDATTACHEMITTER = CreateAttachedEmitter 
 
-BSB2402 = Class(SLandFactoryUnit) {
+BSB2402 = ClassUnit(SLandFactoryUnit) {
 
 	OnStopBeingBuilt = function(self,builder,layer)
 	

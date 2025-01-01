@@ -6,13 +6,13 @@ local TorpedoDecoy = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeap
 
 WeaponFile = nil
 
-XES0102 = Class(TSeaUnit) {
+XES0102 = ClassUnit(TSeaUnit) {
 
     Weapons = {
-        Torpedo = Class(TANTorpedoAngler) { FxMuzzleFlashScale = 0.5, },
+        Torpedo = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlashScale = 0.5, },
         
-        AntiTorpedoLeft = Class(TorpedoDecoy) { FxMuzzleFlash = false },
-        AntiTorpedoRight = Class(TorpedoDecoy) { FxMuzzleFlash = false },
+        AntiTorpedoLeft = ClassWeapon(TorpedoDecoy) { FxMuzzleFlash = false },
+        AntiTorpedoRight = ClassWeapon(TorpedoDecoy) { FxMuzzleFlash = false },
     },    
 }
 

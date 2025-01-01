@@ -6,7 +6,7 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 local ForkThread = ForkThread
 local CreateEmitterOnEntity = CreateEmitterOnEntity
 
-AIFGuidedMissile = Class(AGuidedMissileProjectile) {
+AIFGuidedMissile = ClassProjectile(AGuidedMissileProjectile) {
 
     OnCreate = function(self)
 	

@@ -1,7 +1,7 @@
-BAL0206 = Class(import('/lua/defaultunits.lua').MobileUnit) {
+BAL0206 = ClassUnit(import('/lua/defaultunits.lua').MobileUnit) {
 
     Weapons = {
-        MainGun = Class(import('/lua/aeonweapons.lua').ADFReactonCannon) {},
+        MainGun = ClassWeapon(import('/lua/aeonweapons.lua').ADFReactonCannon) {},
     },
 }
 

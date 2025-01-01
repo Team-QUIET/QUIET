@@ -1,6 +1,6 @@
 local GargEMPWarheadProjectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojectiles.lua').GargEMPWarheadProjectile
 
-GargEMPWarhead01 = Class(GargEMPWarheadProjectile) {
+GargEMPWarhead01 = ClassProjectile(GargEMPWarheadProjectile) {
 
     FxSplashScale = 0.5,
     FxTrails = {},

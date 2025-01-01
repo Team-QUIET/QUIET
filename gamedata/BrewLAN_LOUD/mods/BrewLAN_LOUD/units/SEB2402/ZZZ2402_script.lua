@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 local StructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-ZZZ2402 = Class(StructureUnit) {
+ZZZ2402 = ClassUnit(StructureUnit) {
     OnDamage = function(self, instigator, amount, vector, damageType)
         if self.Parent then
             self.Parent:OnDamage(instigator, amount, vector, damageType)

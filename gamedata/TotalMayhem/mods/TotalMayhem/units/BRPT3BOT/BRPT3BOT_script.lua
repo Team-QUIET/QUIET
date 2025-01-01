@@ -9,12 +9,12 @@ SeraphimWeapons = nil
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT3BOT = Class( SWalkingLandUnit ) {
+BRPT3BOT = ClassUnit(SWalkingLandUnit) {
 
 	Weapons = {
 
-		RightGun    = Class(SAAOlarisCannonWeapon) {},
-		MainTurret  = Class(SDFThauCannon) {},
+		RightGun    = ClassWeapon(SAAOlarisCannonWeapon) {},
+		MainTurret  = ClassWeapon(SDFThauCannon) {},
 	},
 
 

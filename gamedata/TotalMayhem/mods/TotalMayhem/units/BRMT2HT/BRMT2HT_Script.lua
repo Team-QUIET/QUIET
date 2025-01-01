@@ -11,11 +11,11 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BRMT2HT = Class(TLandUnit) {
+BRMT2HT = ClassUnit(TLandUnit) {
 
     Weapons = {
 
-        MainGun = Class(TDFGaussCannonWeapon) {
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) {
 
             FxMuzzleFlashScale = 0.8,
 
@@ -56,7 +56,7 @@ BRMT2HT = Class(TLandUnit) {
             end, 
 		},
 		
-        rocket = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45, },
+        rocket = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45, },
 
     },
 }

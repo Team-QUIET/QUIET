@@ -2,10 +2,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFArtillerySonanceShellWeapon = import('/lua/aeonweapons.lua').AIFArtillerySonanceShellWeapon
 
-UAB2302 = Class(AStructureUnit) {
+UAB2302 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        MainGun = Class(AIFArtillerySonanceShellWeapon) {},
+        MainGun = ClassWeapon(AIFArtillerySonanceShellWeapon) {},
     },
 	
 }

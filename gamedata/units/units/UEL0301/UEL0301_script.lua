@@ -15,7 +15,7 @@ local Shield = import('/lua/shield.lua').Shield
 
 local SetPrecedence = moho.manipulator_methods.SetPrecedence
 
-UEL0301 = Class(TWalkingLandUnit) {
+UEL0301 = ClassUnit(TWalkingLandUnit) {
     
     IntelEffects = {
 		{
@@ -27,8 +27,8 @@ UEL0301 = Class(TWalkingLandUnit) {
 
     Weapons = {
     
-        RightHeavyPlasmaCannon = Class(TDFHeavyPlasmaCannonWeapon) {},
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        RightHeavyPlasmaCannon = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {},
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
     },
 
     OnCreate = function(self)

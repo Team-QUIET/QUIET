@@ -33,7 +33,7 @@ local function GetRandomFloat( Min, Max )
     return Min + (Random() * (Max-Min) )
 end
 
-EXEmitterProjectile = Class(Projectile) {
+EXEmitterProjectile = ClassProjectile(Projectile) {
 
     FxTrails = {'/effects/emitters/missile_munition_trail_01_emit.bp',},
     FxTrailScale = 1,
@@ -48,7 +48,7 @@ EXEmitterProjectile = Class(Projectile) {
     end,
 }
 
-EXSinglePolyTrailProjectile = Class(EXEmitterProjectile) {
+EXSinglePolyTrailProjectile = ClassProjectile(EXEmitterProjectile) {
 
     PolyTrail = '/effects/emitters/test_missile_trail_emit.bp',
 
@@ -63,7 +63,7 @@ EXSinglePolyTrailProjectile = Class(EXEmitterProjectile) {
     end,
 }
 
-EXMultiPolyTrailProjectile = Class(EXEmitterProjectile) {
+EXMultiPolyTrailProjectile = ClassProjectile(EXEmitterProjectile) {
 
     RandomPolyTrails = 0,
 
@@ -98,7 +98,7 @@ EXMultiPolyTrailProjectile = Class(EXEmitterProjectile) {
     end,
 }
 
-EXMultiCompositeEmitterProjectile = Class(EXMultiPolyTrailProjectile) {
+EXMultiCompositeEmitterProjectile = ClassProjectile(EXMultiPolyTrailProjectile) {
 
     Beams = {'/effects/emitters/default_beam_01_emit.bp',},
 
@@ -115,7 +115,7 @@ EXMultiCompositeEmitterProjectile = Class(EXMultiPolyTrailProjectile) {
 }
 
 
-FlameThrowerProjectile01 = Class(EmitterProjectile) {
+FlameThrowerProjectile01 = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {'/mods/BlackOpsACUs/Effects/Emitters/NapalmTrailFX.bp',},
     FxTrailScale = 0.75,
@@ -133,7 +133,7 @@ FlameThrowerProjectile01 = Class(EmitterProjectile) {
 	FxShieldHitScale = 0.7,
 }
 
-UEFACUAntiMatterProjectile01 = Class(EXMultiCompositeEmitterProjectile ) {
+UEFACUAntiMatterProjectile01 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
 
     FxTrails = EXEffectTemplate.ACUAntiMatterFx,
 	PolyTrail = EXEffectTemplate.ACUAntiMatterPoly,
@@ -169,7 +169,7 @@ UEFACUAntiMatterProjectile01 = Class(EXMultiCompositeEmitterProjectile ) {
     end,
 }
 
-UEFACUAntiMatterProjectile02 = Class(EXMultiCompositeEmitterProjectile ) {
+UEFACUAntiMatterProjectile02 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
 
     FxTrails = EXEffectTemplate.ACUAntiMatterFx,
 	PolyTrail = EXEffectTemplate.ACUAntiMatterPoly,
@@ -205,7 +205,7 @@ UEFACUAntiMatterProjectile02 = Class(EXMultiCompositeEmitterProjectile ) {
     end,
 }
 
-UEFACUAntiMatterProjectile03 = Class(EXMultiCompositeEmitterProjectile ) {
+UEFACUAntiMatterProjectile03 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
 
     FxTrails = EXEffectTemplate.ACUAntiMatterFx,
 	PolyTrail = EXEffectTemplate.ACUAntiMatterPoly,
@@ -242,7 +242,7 @@ UEFACUAntiMatterProjectile03 = Class(EXMultiCompositeEmitterProjectile ) {
 }
 
 
-UEFACUClusterMIssileProjectile = Class(SinglePolyTrailProjectile) {
+UEFACUClusterMIssileProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     DestroyOnImpact = false,
     FxTrails = EXEffectTemplate.UEFCruiseMissile01Trails,
@@ -255,7 +255,7 @@ UEFACUClusterMIssileProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactProp = EffectTemplate.TMissileHit01,
 }
 
-UEFACUClusterMIssileProjectile02 = Class(EXEmitterProjectile) {
+UEFACUClusterMIssileProjectile02 = ClassProjectile(EXEmitterProjectile) {
 
     DestroyOnImpact = false,
     FxTrails = {'/effects/emitters/mortar_munition_01_emit.bp',},
@@ -268,7 +268,7 @@ UEFACUClusterMIssileProjectile02 = Class(EXEmitterProjectile) {
 }
 
 
-SeraACUQuantumStormProjectile01 = Class(EmitterProjectile) {
+SeraACUQuantumStormProjectile01 = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.SDFExperimentalPhasonProjFXTrails01,
     FxImpactUnit = EXEffectTemplate.SeraACUQuantumStormProjectileHitUnit,
@@ -285,7 +285,7 @@ SeraACUQuantumStormProjectile01 = Class(EmitterProjectile) {
 
 }
 
-SeraACUQuantumStormProjectile02 = Class(EmitterProjectile) {
+SeraACUQuantumStormProjectile02 = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.SDFExperimentalPhasonProjFXTrails01,
     FxImpactUnit = EXEffectTemplate.SeraACUQuantumStormProjectileHitUnit,
@@ -302,7 +302,7 @@ SeraACUQuantumStormProjectile02 = Class(EmitterProjectile) {
 
 }
 
-SeraACUQuantumStormProjectile03 = Class(EmitterProjectile) {
+SeraACUQuantumStormProjectile03 = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.SDFExperimentalPhasonProjFXTrails01,
     FxImpactUnit = EXEffectTemplate.SeraACUQuantumStormProjectileHitUnit,
@@ -319,7 +319,7 @@ SeraACUQuantumStormProjectile03 = Class(EmitterProjectile) {
 }
 
 
-SeraRapidCannon01Projectile = Class(MultiPolyTrailProjectile) {
+SeraRapidCannon01Projectile = ClassProjectile(MultiPolyTrailProjectile) {
     FxImpactNone = EffectTemplate.SDFAireauWeaponHit01,
     FxImpactUnit = EffectTemplate.SDFAireauWeaponHitUnit,
     FxImpactProp = EffectTemplate.SDFAireauWeaponHit01,
@@ -337,7 +337,7 @@ SeraRapidCannon01Projectile = Class(MultiPolyTrailProjectile) {
 	FxShieldHitScale = 0.7,
 }
 
-SeraRapidCannon01Projectile02 = Class(MultiPolyTrailProjectile) {
+SeraRapidCannon01Projectile02 = ClassProjectile(MultiPolyTrailProjectile) {
     FxImpactNone = EffectTemplate.SDFAireauWeaponHit01,
     FxImpactUnit = EffectTemplate.SDFAireauWeaponHitUnit,
     FxImpactProp = EffectTemplate.SDFAireauWeaponHit01,
@@ -355,7 +355,7 @@ SeraRapidCannon01Projectile02 = Class(MultiPolyTrailProjectile) {
 	FxShieldHitScale = 0.7,
 }
 
-SeraRapidCannon01Projectile03 = Class(MultiPolyTrailProjectile) {
+SeraRapidCannon01Projectile03 = ClassProjectile(MultiPolyTrailProjectile) {
     FxImpactNone = EffectTemplate.SDFAireauWeaponHit01,
     FxImpactUnit = EffectTemplate.SDFAireauWeaponHitUnit,
     FxImpactProp = EffectTemplate.SDFAireauWeaponHit01,
@@ -374,7 +374,7 @@ SeraRapidCannon01Projectile03 = Class(MultiPolyTrailProjectile) {
 }
 
 
-EXInvisoProectilechild01 = Class(EXMultiCompositeEmitterProjectile ) {
+EXInvisoProectilechild01 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit02,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit02,
@@ -391,7 +391,7 @@ EXInvisoProectilechild01 = Class(EXMultiCompositeEmitterProjectile ) {
 	FxShieldHitScale = 0.25,
 }
 
-EXInvisoProectile01 = Class(EXInvisoProectilechild01) {
+EXInvisoProectile01 = ClassProjectile(EXInvisoProectilechild01) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit01,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit01,
@@ -430,7 +430,7 @@ EXInvisoProectile01 = Class(EXInvisoProectilechild01) {
 
 }
 
-EXInvisoProectilechild02 = Class(EXMultiCompositeEmitterProjectile ) {
+EXInvisoProectilechild02 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit02,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit02,
@@ -447,7 +447,7 @@ EXInvisoProectilechild02 = Class(EXMultiCompositeEmitterProjectile ) {
 	FxShieldHitScale = 0.5,
 }
 
-EXInvisoProectile02 = Class(EXInvisoProectilechild02) {
+EXInvisoProectile02 = ClassProjectile(EXInvisoProectilechild02) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit01,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit01,
@@ -486,7 +486,7 @@ EXInvisoProectile02 = Class(EXInvisoProectilechild02) {
 
 }
 
-EXInvisoProectilechild03 = Class(EXMultiCompositeEmitterProjectile ) {
+EXInvisoProectilechild03 = ClassProjectile(EXMultiCompositeEmitterProjectile ) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit02,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit02,
@@ -504,7 +504,7 @@ EXInvisoProectilechild03 = Class(EXMultiCompositeEmitterProjectile ) {
 
 }
 
-EXInvisoProectile03 = Class(EXInvisoProectilechild03) {
+EXInvisoProectile03 = ClassProjectile(EXInvisoProectilechild03) {
     
     FxImpactUnit = EXEffectTemplate.CybranACUEMPArrayHit01,
     FxImpactProp = EXEffectTemplate.CybranACUEMPArrayHit01,
@@ -536,7 +536,7 @@ EXInvisoProectile03 = Class(EXInvisoProectilechild03) {
 }
 
 
-SOmegaCannonOverCharge = Class(MultiPolyTrailProjectile) {
+SOmegaCannonOverCharge = ClassProjectile(MultiPolyTrailProjectile) {
 
 	FxImpactLand = EXEffectTemplate.OmegaOverChargeLandHit,
     FxImpactNone = EXEffectTemplate.OmegaOverChargeLandHit,
@@ -553,7 +553,7 @@ SOmegaCannonOverCharge = Class(MultiPolyTrailProjectile) {
 }
 
 
-UEFHeavyPlasmaGatlingCannon01 = Class(SinglePolyTrailProjectile) {
+UEFHeavyPlasmaGatlingCannon01 = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxImpactUnit = EffectTemplate.THeavyPlasmaGatlingCannonHit,
     FxImpactProp = EffectTemplate.THeavyPlasmaGatlingCannonHit,
@@ -565,7 +565,7 @@ UEFHeavyPlasmaGatlingCannon01 = Class(SinglePolyTrailProjectile) {
     PolyTrail = EXEffectTemplate.UEFHeavyPlasmaGatlingCannon01PolyTrail,
 }
 
-UEFHeavyPlasmaGatlingCannon02 = Class(SinglePolyTrailProjectile) {
+UEFHeavyPlasmaGatlingCannon02 = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxImpactUnit = EffectTemplate.THeavyPlasmaGatlingCannonHit,
     FxImpactProp = EffectTemplate.THeavyPlasmaGatlingCannonHit,
@@ -577,7 +577,7 @@ UEFHeavyPlasmaGatlingCannon02 = Class(SinglePolyTrailProjectile) {
     PolyTrail = EXEffectTemplate.UEFHeavyPlasmaGatlingCannon02PolyTrail,
 }
 
-UEFHeavyPlasmaGatlingCannon03 = Class(SinglePolyTrailProjectile) {
+UEFHeavyPlasmaGatlingCannon03 = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxImpactUnit = EffectTemplate.THeavyPlasmaGatlingCannonHit,
     FxImpactProp = EffectTemplate.THeavyPlasmaGatlingCannonHit,

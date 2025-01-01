@@ -2,9 +2,9 @@ local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local SAAShleoCannonWeapon = import('/lua/seraphimweapons.lua').SAAShleoCannonWeapon
 
-XSA0102 = Class(SAirUnit) {
+XSA0102 = ClassUnit(SAirUnit) {
     Weapons = {
-        SonicPulseBattery = Class(SAAShleoCannonWeapon) {},
+        SonicPulseBattery = ClassWeapon(SAAShleoCannonWeapon) {},
     },
 }
 

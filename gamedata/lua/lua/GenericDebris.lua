@@ -2,7 +2,7 @@ local BaseGenericDebris = import('/lua/sim/DefaultProjectiles.lua').BaseGenericD
 
 local EffectTemplates = import('/lua/EffectTemplates.lua')
 
-GenericDebris = Class( BaseGenericDebris ){
+GenericDebris = ClassDummyProjectile( BaseGenericDebris ){
     FxImpactLand = EffectTemplates.GenericDebrisLandImpact01,
     FxTrails = EffectTemplates.GenericDebrisTrails01,
 }

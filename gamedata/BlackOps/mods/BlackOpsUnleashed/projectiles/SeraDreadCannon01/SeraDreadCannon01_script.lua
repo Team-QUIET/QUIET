@@ -1,6 +1,6 @@
 local SDFSinnuntheWeaponProjectile = import('/lua/seraphimprojectiles.lua').SDFSinnuntheWeaponProjectile
 
-SDFSinnuntheWeapon01 = Class(SDFSinnuntheWeaponProjectile) {
+SDFSinnuntheWeapon01 = ClassProjectile(SDFSinnuntheWeaponProjectile) {
 
     AttackBeams = {'/effects/emitters/seraphim_othuy_beam_01_emit.bp'},
 	

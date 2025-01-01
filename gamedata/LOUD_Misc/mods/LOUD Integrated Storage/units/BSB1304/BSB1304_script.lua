@@ -2,7 +2,7 @@
 local SEnergyCreationUnit = import('/lua/seraphimunits.lua').SEnergyCreationUnit
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BSB1304 = Class(SEnergyCreationUnit) {
+BSB1304 = ClassUnit(SEnergyCreationUnit) {
     
     AirEffects = {
                   '/effects/emitters/hydrocarbon_heatshimmer_01_emit.bp'

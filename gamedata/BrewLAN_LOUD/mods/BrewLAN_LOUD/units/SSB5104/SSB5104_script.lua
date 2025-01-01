@@ -5,7 +5,7 @@ local EffectTemplates = import('/lua/EffectTemplates.lua')
 local SeraphimAirStagePlat02 = EffectTemplates.SeraphimAirStagePlat02
 local SeraphimAirStagePlat01 = EffectTemplates.SeraphimAirStagePlat01
 
-SSB5104 = Class(SAirStagingPlatformUnit) {
+SSB5104 = ClassUnit(SAirStagingPlatformUnit) {
     OnStopBeingBuilt = function(self,builder,layer)
         for k, v in SeraphimAirStagePlat02 do
             CreateAttachedEmitter(self, 0, self:GetArmy(), v):ScaleEmitter(0.3)

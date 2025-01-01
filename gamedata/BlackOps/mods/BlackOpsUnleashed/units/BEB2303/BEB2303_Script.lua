@@ -8,7 +8,7 @@ local recoilgroup1 = { 'Recoil_01', 'Recoil_02', 'Recoil_03' }
 
 local CreateRotator = CreateRotator
 
-BEB2303 = Class(TStructureUnit) {
+BEB2303 = ClassUnit(TStructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TStructureUnit.OnStopBeingBuilt(self,builder,layer)
@@ -22,7 +22,7 @@ BEB2303 = Class(TStructureUnit) {
 
     Weapons = {
 
-        MainGun = Class(BOHellstormGun) {
+        MainGun = ClassWeapon(BOHellstormGun) {
 		
 			OnCreate = function(self) 
                 BOHellstormGun.OnCreate(self) 

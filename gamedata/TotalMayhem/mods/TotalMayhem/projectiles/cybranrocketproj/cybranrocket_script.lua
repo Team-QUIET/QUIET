@@ -1,5 +1,5 @@
 local CybranRocketprojectile = import('/mods/TotalMayhem/lua/TMprojectiles.lua').CybranRocketproj
 
-CybranRocketproj = Class(CybranRocketprojectile) {}
+CybranRocketproj = ClassProjectile(CybranRocketprojectile) {}
 
 TypeClass = CybranRocketproj

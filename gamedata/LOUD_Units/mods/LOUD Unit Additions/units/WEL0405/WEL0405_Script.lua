@@ -14,7 +14,7 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-WEL0405 = Class(ExperimentalMobileUnit) {
+WEL0405 = ClassUnit(ExperimentalMobileUnit) {
 
 	BuffFields = {
 	
@@ -28,7 +28,7 @@ WEL0405 = Class(ExperimentalMobileUnit) {
     
     Weapons = {
 		
-        RightMainWeapon = Class(DefaultProjectileWeapon) {
+        RightMainWeapon = ClassWeapon(DefaultProjectileWeapon) {
 		
             OnCreate = function(self)
 			
@@ -52,7 +52,7 @@ WEL0405 = Class(ExperimentalMobileUnit) {
 
         },
 		
-        LeftMainWeapon = Class(DefaultProjectileWeapon) {
+        LeftMainWeapon = ClassWeapon(DefaultProjectileWeapon) {
 		
             OnCreate = function(self)            
 			
@@ -76,9 +76,9 @@ WEL0405 = Class(ExperimentalMobileUnit) {
 
         },
 		
-        Turret = Class(DefaultProjectileWeapon) {},
+        Turret = ClassWeapon(DefaultProjectileWeapon) {},
 		
-		TacticalMissile = Class(AIFMissileTacticalSerpentineWeapon) {
+		TacticalMissile = ClassWeapon(AIFMissileTacticalSerpentineWeapon) {
 		
             OnLostTarget = function(self)
 			
@@ -102,7 +102,7 @@ WEL0405 = Class(ExperimentalMobileUnit) {
 			end,
         },
 		
-        AntiAirMissiles = Class(AAAZealotMissileWeapon) {},		
+        AntiAirMissiles = ClassWeapon(AAAZealotMissileWeapon) {},		
 		
     },
 

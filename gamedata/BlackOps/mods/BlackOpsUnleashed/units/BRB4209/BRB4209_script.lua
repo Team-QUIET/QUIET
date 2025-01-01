@@ -4,7 +4,7 @@ local Shield = import('/lua/shield.lua').Shield
 
 local ForkThread = ForkThread
 
-BRB4209 = Class(CStructureUnit) {
+BRB4209 = ClassUnit(CStructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 

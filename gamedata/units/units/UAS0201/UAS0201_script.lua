@@ -9,16 +9,16 @@ local AIFQuasarAntiTorpedoWeapon    = AeonWeapons.AIFQuasarAntiTorpedoWeapon
 AeonWeapons = nil
 
 
-UAS0201 = Class(ASeaUnit) {
+UAS0201 = ClassUnit(ASeaUnit) {
 
     Weapons = {
-        FrontTurret = Class(ADFCannonOblivionWeapon) {},
+        FrontTurret = ClassWeapon(ADFCannonOblivionWeapon) {},
 
-        Torpedo = Class(AANChronoTorpedoWeapon) {},
+        Torpedo = ClassWeapon(AANChronoTorpedoWeapon) {},
 
-        AntiTorpedo1 = Class(AIFQuasarAntiTorpedoWeapon) {},
-        AntiTorpedo2 = Class(AIFQuasarAntiTorpedoWeapon) {},
-        AntiTorpedo3 = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo1 = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo2 = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo3 = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
 }
 

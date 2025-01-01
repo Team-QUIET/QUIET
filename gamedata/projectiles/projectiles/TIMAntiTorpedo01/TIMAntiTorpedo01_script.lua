@@ -1,6 +1,6 @@
 local TorpedoDecoyProjectile = import('/lua/terranprojectiles.lua').TTorpedoDecoyProjectile
 
-TTorpedoDecoy = Class(TorpedoDecoyProjectile) {}
+TTorpedoDecoy = ClassProjectile(TorpedoDecoyProjectile) {}
 
 TypeClass = TTorpedoDecoy
 

@@ -2,7 +2,7 @@ local ADisruptorProjectile = import('/lua/aeonprojectiles.lua').AShieldDisruptor
 
 local Damage = Damage
 
-ADFShieldDisruptor01 = Class(ADisruptorProjectile) {
+ADFShieldDisruptor01 = ClassProjectile(ADisruptorProjectile) {
 
 		OnImpact = function(self, TargetType, TargetEntity)
 		

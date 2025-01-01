@@ -7,10 +7,10 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-URB2306 = Class(CStructureUnit) {
+URB2306 = ClassUnit(CStructureUnit) {
     Weapons = {
     
-        BeamCannon = Class(CDFHeavyMicrowaveLaserGenerator) {
+        BeamCannon = ClassWeapon(CDFHeavyMicrowaveLaserGenerator) {
 
             FxMuzzleFlashScale = 1.25,
 
@@ -43,7 +43,7 @@ URB2306 = Class(CStructureUnit) {
             end, 
         },
 
-        AutoCannon = Class(CDFLaserHeavyWeapon) {}
+        AutoCannon = ClassWeapon(CDFLaserHeavyWeapon) {}
     },
 }
 TypeClass = URB2306

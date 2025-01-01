@@ -2,10 +2,10 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local CDFRocketIridiumWeapon = import('/lua/cybranweapons.lua').CDFRocketIridiumWeapon
 
-URA0203 = Class(CAirUnit) {
+URA0203 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        Missile01 = Class(CDFRocketIridiumWeapon) {},
+        Missile01 = ClassWeapon(CDFRocketIridiumWeapon) {},
     },
 
     DestructionPartsChassisToss = {'URA0203',},

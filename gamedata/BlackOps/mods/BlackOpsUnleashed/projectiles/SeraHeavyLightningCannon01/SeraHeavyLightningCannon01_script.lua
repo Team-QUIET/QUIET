@@ -2,7 +2,7 @@ local SHeavyQuarnonCannon = import('/lua/seraphimprojectiles.lua').SHeavyQuarnon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-SDFHeavyQuarnonCannon01 = Class(SHeavyQuarnonCannon) {
+SDFHeavyQuarnonCannon01 = ClassProjectile(SHeavyQuarnonCannon) {
 
 	OnImpact = function(self, TargetType, TargetEntity)
 

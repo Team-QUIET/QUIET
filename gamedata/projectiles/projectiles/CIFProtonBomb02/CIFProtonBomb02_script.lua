@@ -1,6 +1,6 @@
 local CIFProtonBombProjectile = import('/lua/cybranprojectiles.lua').CIFProtonBombProjectile
 
-CIFProtonBomb02 = Class(CIFProtonBombProjectile) {
+CIFProtonBomb02 = ClassProjectile(CIFProtonBombProjectile) {
 
     OnCreate = function(self)
         CIFProtonBombProjectile.OnCreate(self)

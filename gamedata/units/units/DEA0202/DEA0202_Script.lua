@@ -3,13 +3,13 @@ local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 local TAALinkedRailgun    = import('/lua/terranweapons.lua').TAALinkedRailgun
 local TIFCarpetBombWeapon       = import('/lua/terranweapons.lua').TIFCarpetBombWeapon
 
-DEA0202 = Class(TAirUnit) {
+DEA0202 = ClassUnit(TAirUnit) {
 
     Weapons = {
 	
-        AAGun = Class(TAALinkedRailgun) {},
+        AAGun = ClassWeapon(TAALinkedRailgun) {},
 --[[		
-        Bomb = Class(TIFCarpetBombWeapon) {
+        Bomb = ClassWeapon(TIFCarpetBombWeapon) {
 
             IdleState = State (TIFCarpetBombWeapon.IdleState) {
 			

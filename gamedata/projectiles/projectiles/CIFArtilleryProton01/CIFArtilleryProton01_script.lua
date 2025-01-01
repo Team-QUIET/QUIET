@@ -3,7 +3,7 @@ local CArtilleryProtonProjectile = import('/lua/cybranprojectiles.lua').CArtille
 local DamageArea = DamageArea
 local CreateLightParticle = CreateLightParticle
 
-CIFArtilleryProton01 = Class(CArtilleryProtonProjectile) {
+CIFArtilleryProton01 = ClassProjectile(CArtilleryProtonProjectile) {
 
     OnImpact = function(self, targetType, targetEntity)
         CArtilleryProtonProjectile.OnImpact(self, targetType, targetEntity)

@@ -1,6 +1,6 @@
 local SRadarUnit = import('/lua/seraphimunits.lua').SRadarUnit
 
-XSB3101 = Class(SRadarUnit) {
+XSB3101 = ClassUnit(SRadarUnit) {
 
     OnIntelDisabled = function(self)
 

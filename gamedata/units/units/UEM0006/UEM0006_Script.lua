@@ -1,5 +1,5 @@
 local TWallStructureUnit = import('/lua/defaultunits.lua').WallStructureUnit
 
-UEM0006 = Class(TWallStructureUnit) {}
+UEM0006 = ClassUnit(TWallStructureUnit) {}
 
 TypeClass = UEM0006

@@ -12,10 +12,10 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BROT1EXM1 = Class(CWalkingLandUnit) {
+BROT1EXM1 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        MainGun = Class(DisruptorCannon) {
+        MainGun = ClassWeapon(DisruptorCannon) {
 
             FxMuzzleFlashScale = 1,
 --[[
@@ -48,12 +48,12 @@ BROT1EXM1 = Class(CWalkingLandUnit) {
             end,                   
         },
 		
-        Riotgun = Class(TDFRiotWeapon) {
+        Riotgun = ClassWeapon(TDFRiotWeapon) {
             --FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank,
             FxMuzzleFlashScale = 0.25, 
         },
 		
-        rocket = Class(TDFGaussCannonWeapon) {
+        rocket = ClassWeapon(TDFGaussCannonWeapon) {
             FxMuzzleFlashScale = 0.1,
 		},
 

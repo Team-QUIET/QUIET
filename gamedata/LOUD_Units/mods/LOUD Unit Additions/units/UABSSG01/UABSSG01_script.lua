@@ -4,7 +4,7 @@ local Entity = import('/lua/sim/Entity.lua').Entity
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local Util = import('/lua/utilities.lua')
 
-UABSSG01 = Class(AShieldStructureUnit) {
+UABSSG01 = ClassUnit(AShieldStructureUnit) {
     ShieldEffects = {
         '/effects/emitters/aeon_shield_generator_t2_01_emit.bp',
         '/effects/emitters/aeon_shield_generator_t2_02_emit.bp',

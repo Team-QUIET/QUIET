@@ -15,16 +15,16 @@ WeaponFile = nil
 
 local WaitFor = WaitFor
 
-UES0201 = Class(TSeaUnit) {
+UES0201 = ClassUnit(TSeaUnit) {
 
     DestructionTicks = 200,
 
     Weapons = {
 	
-        Turret = Class(TDFGaussCannonWeapon) {},
-        AATurret = Class(TAALinkedRailgun) {},
-        Torpedo = Class(TANTorpedoAngler) {},
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        Turret = ClassWeapon(TDFGaussCannonWeapon) {},
+        AATurret = ClassWeapon(TAALinkedRailgun) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
 		
     },
 

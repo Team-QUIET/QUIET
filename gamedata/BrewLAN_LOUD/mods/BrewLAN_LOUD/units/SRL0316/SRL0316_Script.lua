@@ -5,7 +5,7 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
-SRL0316 = Class(CLandUnit) {
+SRL0316 = ClassUnit(CLandUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

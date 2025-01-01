@@ -4,7 +4,7 @@ local LOUDINSERT = table.insert
 local LOUDROTATE = CreateRotator
 local LOUDATTACHEMITTER = CreateAttachedEmitter
 
-UAB4301 = Class(AShieldStructureUnit) {
+UAB4301 = ClassUnit(AShieldStructureUnit) {
     
     ShieldEffects = {},
     

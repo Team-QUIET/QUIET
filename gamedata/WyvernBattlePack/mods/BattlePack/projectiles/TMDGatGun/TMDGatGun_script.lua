@@ -1,6 +1,6 @@
 local TPlasmaCannonProjectile = import('/lua/terranprojectiles.lua').TPlasmaCannonProjectile
 
-TMDGatGun = Class(TPlasmaCannonProjectile) {}
+TMDGatGun = ClassProjectile(TPlasmaCannonProjectile) {}
 
 TypeClass = TMDGatGun
 

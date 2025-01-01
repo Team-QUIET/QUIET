@@ -5,12 +5,12 @@ local SeraphimWeapons = import('/lua/seraphimweapons.lua')
 local SDFSihEnergyRifleNormalMode = SeraphimWeapons.SDFSniperShotNormalMode
 local SDFSihEnergyRifleSniperMode = SeraphimWeapons.SDFSniperShotSniperMode
 
-BSL0008 = Class(SLandUnit) {
+BSL0008 = ClassUnit(SLandUnit) {
 
     Weapons = {
-        MainGun = Class(SDFSihEnergyRifleNormalMode) {},
+        MainGun = ClassWeapon(SDFSihEnergyRifleNormalMode) {},
 		
-        SniperGun = Class(SDFSihEnergyRifleSniperMode) {
+        SniperGun = ClassWeapon(SDFSihEnergyRifleSniperMode) {
 		
             SetOnTransport = function(self, transportstate)
 			

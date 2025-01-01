@@ -5,7 +5,7 @@ do
     local GetTerrainAngles = TerrainUtils.GetTerrainSlopeAnglesDegrees
     local OffsetBoneToTerrain = TerrainUtils.OffsetBoneToTerrain
 
-    Unit = Class(UnitOld) {
+    Unit = ClassUnit(UnitOld) {
 	
         OnStopBeingBuilt = function(self,builder,layer, ...)
 		

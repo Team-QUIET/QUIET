@@ -3,10 +3,10 @@ local AWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 local ADFLaserHighIntensityWeapon           = import('/lua/aeonweapons.lua').ADFLaserHighIntensityWeapon
 local CreateAeonCommanderBuildingEffects    = import('/lua/EffectUtilities.lua').CreateAeonCommanderBuildingEffects
 
-UAL0303 = Class(AWalkingLandUnit) { 
+UAL0303 = ClassUnit(AWalkingLandUnit) { 
    
     Weapons = {
-        FrontTurret01 = Class(ADFLaserHighIntensityWeapon) {}
+        FrontTurret01 = ClassWeapon(ADFLaserHighIntensityWeapon) {}
     },
     
     CreateBuildEffects = function( self, unitBeingBuilt, order )

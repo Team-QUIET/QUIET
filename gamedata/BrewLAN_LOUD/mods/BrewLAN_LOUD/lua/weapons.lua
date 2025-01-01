@@ -4,7 +4,7 @@ local BareBonesWeapon = WeaponsFile.BareBonesWeapon
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local BrewLANBeams = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '/lua/collisionbeams.lua')
 
-ADFAlchemistPhasonLaser = Class(DefaultBeamWeapon) {
+ADFAlchemistPhasonLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BrewLANBeams.AlchemistPhasonLaserCollisionBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -25,13 +25,13 @@ ADFAlchemistPhasonLaser = Class(DefaultBeamWeapon) {
     end,
 }
 
---[[MaelstromDeathLaser = Class(DefaultBeamWeapon) {
+--[[MaelstromDeathLaser = ClassWeapon(DefaultBeamWeapon) {
     BeamType = BrewLANBeams.DeathLaserCollisionBeam,
     FxUpackingChargeEffects = {},
     FxUpackingChargeEffectScale = 1,
 }]]--
 
-EnergyStorageVariableDeathWeapon = Class(BareBonesWeapon) {
+EnergyStorageVariableDeathWeapon = ClassWeapon(BareBonesWeapon) {
 	FxDeath = EffectTemplate.ExplosionEffectsLrg02,
 
     OnCreate = function(self)

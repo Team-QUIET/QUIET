@@ -2,7 +2,7 @@ local CRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 
 local WaitFor = WaitFor
 
-URB3104 = Class(CRadarUnit) {
+URB3104 = ClassUnit(CRadarUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 

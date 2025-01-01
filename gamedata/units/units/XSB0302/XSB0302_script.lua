@@ -1,6 +1,6 @@
 local SAirFactoryUnit = import('/lua/seraphimunits.lua').SAirFactoryUnit
 
-XSB0302 = Class(SAirFactoryUnit) {
+XSB0302 = ClassUnit(SAirFactoryUnit) {
 
     RollOffBones = { 'Pod01', 'Pod02', 'Pod03', },
 

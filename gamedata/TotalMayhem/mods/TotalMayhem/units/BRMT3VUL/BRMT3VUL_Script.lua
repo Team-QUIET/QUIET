@@ -11,14 +11,14 @@ WeaponsFile = nil
 
 local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileRedirect
 
-BRMT3VUL = Class(CWalkingLandUnit) {
+BRMT3VUL = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 
-        rockets     = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
-        armweapon   = Class(CCannonMolecularWeapon) { FxMuzzleFlashScale = 0.8 },
-        HeavyBolter = Class(CDFElectronBolterWeapon) {},
-        robottalk   = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},
+        rockets     = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
+        armweapon   = ClassWeapon(CCannonMolecularWeapon) { FxMuzzleFlashScale = 0.8 },
+        HeavyBolter = ClassWeapon(CDFElectronBolterWeapon) {},
+        robottalk   = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

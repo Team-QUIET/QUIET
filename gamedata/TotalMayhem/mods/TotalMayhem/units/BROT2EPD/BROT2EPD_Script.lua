@@ -8,11 +8,11 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BROT2EPD = Class(TStructureUnit) {
+BROT2EPD = ClassUnit(TStructureUnit) {
 
     Weapons = {
 	
-        MainGun = Class(TDFGaussCannonWeapon) {
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) {
 			
 	        FxMuzzleEffect = EffectTemplate.TIonizedPlasmaGatlingCannonHit01,
 
@@ -59,9 +59,9 @@ BROT2EPD = Class(TStructureUnit) {
             end, 
 		},      
 
-        AAMissile = Class(AAAZealotMissileWeapon) {FxMuzzleFlashScale = 0.4},		
+        AAMissile = ClassWeapon(AAAZealotMissileWeapon) {FxMuzzleFlashScale = 0.4},		
 
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
 
     },
 }

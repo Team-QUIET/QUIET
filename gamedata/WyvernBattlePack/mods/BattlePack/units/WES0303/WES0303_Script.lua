@@ -9,17 +9,17 @@ local TANTorpedoAngler          = TerranWeaponFile.TANTorpedoAngler
 
 TerranWeaponFile = nil
 
-WES0303 = Class(TSeaUnit) {
+WES0303 = ClassUnit(TSeaUnit) {
 
 Weapons = {
         
-        DeckGun = Class(TDFIonizedPlasmaCannon) {},
+        DeckGun = ClassWeapon(TDFIonizedPlasmaCannon) {},
         
-		AA      = Class(TSAMLauncher) {},
+		AA      = ClassWeapon(TSAMLauncher) {},
         
-		Torpedo = Class(TANTorpedoAngler) {},
+		Torpedo = ClassWeapon(TANTorpedoAngler) {},
         
-        TMD     = Class(TAMPhalanxWeapon) {
+        TMD     = ClassWeapon(TAMPhalanxWeapon) {
         
             PlayFxWeaponUnpackSequence = function(self)
             

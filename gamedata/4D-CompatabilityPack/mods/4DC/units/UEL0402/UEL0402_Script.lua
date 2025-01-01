@@ -33,15 +33,15 @@ local function GetRandomFloat( Min, Max )
 end
 
 
-uel0402 = Class(TWalkingLandUnit) {
+uel0402 = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
 	
-        Grenade = Class(TDFHeavyPlasmaCannonWeapon) {},	
+        Grenade = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {},	
 	
-        plasma_repeater = Class(TDFPlasmaCannonWeapon) {},    
+        plasma_repeater = ClassWeapon(TDFPlasmaCannonWeapon) {},    
 		
-        auto_cannon_right = Class(TDFHeavyPlasmaCannonWeapon) {
+        auto_cannon_right = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {
 		
 			OnCreate = function(self)
 			
@@ -87,7 +87,7 @@ uel0402 = Class(TWalkingLandUnit) {
 			
         },
 
-        auto_cannon_left = Class(TDFHeavyPlasmaCannonWeapon) {
+        auto_cannon_left = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {
 		
 			OnCreate = function(self)
 			
@@ -166,7 +166,7 @@ uel0402 = Class(TWalkingLandUnit) {
 			FxMuzzleFlashScale = 3,
 		},
 		
-		Torpedo = Class(TANTorpedoAngler) {},
+		Torpedo = ClassWeapon(TANTorpedoAngler) {},
 	},
 
     OnCreate = function(self,builder,layer)

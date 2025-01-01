@@ -2,7 +2,7 @@ local AQuantumGateUnit = import('/lua/defaultunits.lua').QuantumGateUnit
 
 local AQuantumGateAmbient = import('/lua/EffectTemplates.lua').AQuantumGateAmbient
 
-UAB0304 = Class(AQuantumGateUnit) {
+UAB0304 = ClassUnit(AQuantumGateUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
     

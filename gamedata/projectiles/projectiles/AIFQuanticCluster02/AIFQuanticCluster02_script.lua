@@ -4,7 +4,7 @@ local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-AIFQuanticCluster02 = Class(import('/lua/aeonprojectiles.lua').AQuantumCluster) {
+AIFQuanticCluster02 = ClassProjectile(import('/lua/aeonprojectiles.lua').AQuantumCluster) {
 
     OnImpact = function(self, TargetType, TargetEntity)
 

@@ -9,7 +9,7 @@ local EffectTemplate = import('/lua/kirveseffects.lua')
 local CollisionBeamFile = import('/lua/kirvesbeams.lua')
 
 
-TAAPhalanxWeapon                = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPhalanxGunMuzzleFlash,
+TAAPhalanxWeapon                = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPhalanxGunMuzzleFlash,
     FxShellEject  = EffectTemplate.TPhalanxGunShells,
 
     PlayFxMuzzleSequence = function(self, muzzle)
@@ -21,7 +21,7 @@ TAAPhalanxWeapon                = Class(DefaultProjectileWeapon) { FxMuzzleFlash
     end,
 }
 
-SDFUnstablePhasonBeam           = Class(DefaultBeamWeapon) { BeamType = CollisionBeamFile.UnstablePhasonLaserCollisionBeam,
+SDFUnstablePhasonBeam           = ClassWeapon(DefaultBeamWeapon) { BeamType = CollisionBeamFile.UnstablePhasonLaserCollisionBeam,
 	
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -29,7 +29,7 @@ SDFUnstablePhasonBeam           = Class(DefaultBeamWeapon) { BeamType = Collisio
     FxUpackingChargeEffectScale = 0.2,
 }
 
-Dummy                           = Class(DefaultBeamWeapon) { BeamType = CollisionBeamFile.TargetingCollisionBeam,
+Dummy                           = ClassWeapon(DefaultBeamWeapon) { BeamType = CollisionBeamFile.TargetingCollisionBeam,
 	
 	FxBeamEndPointScale = 0.01,
 }
@@ -37,7 +37,7 @@ Dummy                           = Class(DefaultBeamWeapon) { BeamType = Collisio
 
 --[[
 
-SDFUnstablePhasonBeam2          = Class(DefaultBeamWeapon) { BeamType = CollisionBeamFile.UnstablePhasonLaserCollisionBeam,
+SDFUnstablePhasonBeam2          = ClassWeapon(DefaultBeamWeapon) { BeamType = CollisionBeamFile.UnstablePhasonLaserCollisionBeam,
 	
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
@@ -46,7 +46,7 @@ SDFUnstablePhasonBeam2          = Class(DefaultBeamWeapon) { BeamType = Collisio
 	FxBeamEndPointScale = 0.01,
 }
 
-TargetingLaser = Class(DefaultBeamWeapon) {
+TargetingLaser = ClassWeapon(DefaultBeamWeapon) {
 
     BeamType = CollisionBeamFile.TargetingCollisionBeam,
 	

@@ -2,9 +2,9 @@ local AHoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local ADFDisruptorCannonWeapon = import('/lua/aeonweapons.lua').ADFDisruptorCannonWeapon
 
-UAL0201 = Class(AHoverLandUnit) {
+UAL0201 = ClassUnit(AHoverLandUnit) {
     Weapons = {
-        MainGun = Class(ADFDisruptorCannonWeapon) {}
+        MainGun = ClassWeapon(ADFDisruptorCannonWeapon) {}
     },
 }
 TypeClass = UAL0201

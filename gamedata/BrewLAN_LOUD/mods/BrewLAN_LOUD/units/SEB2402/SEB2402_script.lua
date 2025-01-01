@@ -2,11 +2,11 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local MaelstromDeathLaser = import('/lua/sim/defaultweapons.lua').MaelstromDeathLaser
 
-SEB2402 = Class(TStructureUnit) {
+SEB2402 = ClassUnit(TStructureUnit) {
 
     Weapons = {
     
-        MainGun = Class(MaelstromDeathLaser){
+        MainGun = ClassWeapon(MaelstromDeathLaser){
         
             OnCreate = function(self)
             

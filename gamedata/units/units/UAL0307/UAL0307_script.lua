@@ -1,6 +1,6 @@
 local AShieldHoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
-UAL0307 = Class(AShieldHoverLandUnit) {
+UAL0307 = ClassUnit(AShieldHoverLandUnit) {
     
     ShieldEffects = {'/effects/emitters/aeon_shield_generator_mobile_01_emit.bp'},
     

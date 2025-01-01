@@ -3,7 +3,7 @@ local SStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local SSeraphimSubCommanderGateway02 = import('/lua/EffectTemplates.lua').SeraphimSubCommanderGateway02
 
 
-BSB4309 = Class(SStructureUnit) {
+BSB4309 = ClassUnit(SStructureUnit) {
 
 	AntiTeleport = {'/effects/emitters/op_seraphim_quantum_jammer_tower_emit.bp'},
 

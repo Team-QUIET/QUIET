@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TIFArtilleryWeapon = import('/lua/terranweapons.lua').TIFArtilleryWeapon
 
-UEL0304 = Class(TLandUnit) {
+UEL0304 = ClassUnit(TLandUnit) {
     Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = ClassWeapon(TIFArtilleryWeapon) {
         }
     },
 }

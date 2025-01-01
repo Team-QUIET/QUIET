@@ -3,7 +3,7 @@ local CRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 local WaitFor = WaitFor
 local WaitTicks = coroutine.yield
 
-URB3101 = Class(CRadarUnit) {
+URB3101 = ClassUnit(CRadarUnit) {
 
     OnIntelDisabled = function(self,intel)
 

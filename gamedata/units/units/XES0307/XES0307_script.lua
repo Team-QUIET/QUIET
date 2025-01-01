@@ -12,14 +12,14 @@ local TANTorpedoAngler      = WeaponsFile.TANTorpedoAngler
 AeonWeapons = nil
 WeaponsFile = nil
 
-UES0302 = Class(TSeaUnit) {
+UES0302 = ClassUnit(TSeaUnit) {
 
     Weapons = {
 	
-        HiroCannon = Class(TDFHiroPlasmaCannon) {},
-        Torpedo = Class(TANTorpedoAngler) {},
-        PhalanxGun = Class(TAMPhalanxWeapon) {},
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        HiroCannon = ClassWeapon(TDFHiroPlasmaCannon) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
+        PhalanxGun = ClassWeapon(TAMPhalanxWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
 	
 }

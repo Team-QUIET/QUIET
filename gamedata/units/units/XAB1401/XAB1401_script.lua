@@ -3,10 +3,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local FxAmbient = import('/lua/effecttemplates.lua').AResourceGenAmbient
 local AIFParagonDeathWeapon = import('/lua/aeonweapons.lua').AIFParagonDeathWeapon
 
-XAB1401 = Class(AStructureUnit) {
+XAB1401 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        DeathWeapon = Class(AIFParagonDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFParagonDeathWeapon) {},
     },
 
 	#-- prevent construction of a Paragon within 164 of an existing paragon owned by self or 100 owned by ally

@@ -8,15 +8,15 @@ local SAMElectrumMissileDefense = SeraphimWeapons.SAMElectrumMissileDefense
 
 SeraphimWeapons = nil
 
-XSS0403 = Class(SSeaUnit) {
+XSS0403 = ClassUnit(SSeaUnit) {
 
     Weapons = {
 	
-		AAGun = Class(SAALosaareAutoCannonWeapon) {},
+		AAGun = ClassWeapon(SAALosaareAutoCannonWeapon) {},
 
-        GroundGun = Class(SDFExperimentalPhasonProj) {},
+        GroundGun = ClassWeapon(SDFExperimentalPhasonProj) {},
 
-		TMD = Class(SAMElectrumMissileDefense) {},
+		TMD = ClassWeapon(SAMElectrumMissileDefense) {},
     },
 
 }

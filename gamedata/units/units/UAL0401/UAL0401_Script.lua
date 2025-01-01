@@ -10,12 +10,12 @@ WeaponsFile = nil
 local utilities = import('/lua/utilities.lua')
 local explosion = import('/lua/defaultexplosions.lua')
 
-UAL0401 = Class(AWalkingLandUnit) {
+UAL0401 = ClassUnit(AWalkingLandUnit) {
 
     Weapons = {
-        EyeWeapon = Class(ADFPhasonLaser) {},
-        RightArmTractor = Class(ADFTractorClaw) {},
-        LeftArmTractor = Class(ADFTractorClaw) {},
+        EyeWeapon = ClassWeapon(ADFPhasonLaser) {},
+        RightArmTractor = ClassWeapon(ADFTractorClaw) {},
+        LeftArmTractor = ClassWeapon(ADFTractorClaw) {},
     },
 
     OnKilled = function(self, instigator, type, overkillRatio)

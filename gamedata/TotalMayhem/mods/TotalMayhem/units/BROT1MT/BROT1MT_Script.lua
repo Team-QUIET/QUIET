@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local AAASonicPulseBatteryWeapon = import('/lua/aeonweapons.lua').AAASonicPulseBatteryWeapon
 
-BROT1MT = Class(TLandUnit) {
+BROT1MT = ClassUnit(TLandUnit) {
     Weapons = {
-        MainGun = Class(AAASonicPulseBatteryWeapon) {},
+        MainGun = ClassWeapon(AAASonicPulseBatteryWeapon) {},
     },
 }
 

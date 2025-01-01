@@ -10,12 +10,12 @@ local CIFNaniteTorpedoWeapon    = CybranWeapons.CIFNaniteTorpedoWeapon
 
 CybranWeapons = nil
 
-SRA0314 = Class(CAirUnit, MissileFlare) {
+SRA0314 = ClassUnit(CAirUnit, MissileFlare) {
 
     Weapons = {
-        Bomb = Class(CIFBombNeutronWeapon) {},
-        Missile = Class(CDFRocketIridiumWeapon) {},
-        Torpedo = Class(CIFNaniteTorpedoWeapon) {},
+        Bomb = ClassWeapon(CIFBombNeutronWeapon) {},
+        Missile = ClassWeapon(CDFRocketIridiumWeapon) {},
+        Torpedo = ClassWeapon(CIFNaniteTorpedoWeapon) {},
     },
 
     FlareBones = {'Flare_L', 'Flare_R'},

@@ -9,20 +9,20 @@ local SIFInainoWeapon           = SeraphimWeapons.SIFInainoWeapon
 
 SeraphimWeapons = nil
 
-XSS0302 = Class(SSeaUnit) {
+XSS0302 = ClassUnit(SSeaUnit) {
 
     FxDamageScale = 1.6,
     DestructionTicks = 250,
 
     Weapons = {
 	
-        Turret = Class(SDFHeavyQuarnonCannon) {},
+        Turret = ClassWeapon(SDFHeavyQuarnonCannon) {},
 		
-        AntiMissile = Class(SAMElectrumMissileDefense) {},
+        AntiMissile = ClassWeapon(SAMElectrumMissileDefense) {},
 		
-        AntiAir = Class(SAAOlarisCannonWeapon) {},
+        AntiAir = ClassWeapon(SAAOlarisCannonWeapon) {},
 		
-        InainoMissiles = Class(SIFInainoWeapon) {},
+        InainoMissiles = ClassWeapon(SIFInainoWeapon) {},
 		
     },
 	

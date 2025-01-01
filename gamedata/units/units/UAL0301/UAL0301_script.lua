@@ -14,11 +14,11 @@ local CreateAeonCommanderBuildingEffects = EffectUtil.CreateAeonCommanderBuildin
 
 local SetPrecedence = moho.manipulator_methods.SetPrecedence
 
-UAL0301 = Class(AWalkingLandUnit) {    
+UAL0301 = ClassUnit(AWalkingLandUnit) {    
 
     Weapons = {
-        RightReactonCannon = Class(ADFReactonCannon) {},
-        DeathWeapon = Class(AIFCommanderDeathWeapon) {},
+        RightReactonCannon = ClassWeapon(ADFReactonCannon) {},
+        DeathWeapon = ClassWeapon(AIFCommanderDeathWeapon) {},
     },
     
     OnPrepareArmToBuild = function(self)

@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TDFGaussCannonWeapon = import('/lua/terranweapons.lua').TDFGaussCannonWeapon
 
-UEL0108 = Class(TLandUnit) {
+UEL0108 = ClassUnit(TLandUnit) {
     Weapons = {
-        MainGun = Class(TDFGaussCannonWeapon) {}
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) {}
     },
 }
 TypeClass = UEL0108

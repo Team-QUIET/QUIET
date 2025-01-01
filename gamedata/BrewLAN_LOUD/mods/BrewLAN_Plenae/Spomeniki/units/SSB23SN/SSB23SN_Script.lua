@@ -2,9 +2,9 @@ local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 local SDFExperimentalPhasonProj = import ('/lua/seraphimweapons.lua').SDFExperimentalPhasonProj
 local Entity = import('/lua/sim/Entity.lua').Entity
 
-SSB23SN = Class(SStructureUnit) {
+SSB23SN = ClassUnit(SStructureUnit) {
     Weapons = {
-        EyeWeapon = Class(SDFExperimentalPhasonProj) {},
+        EyeWeapon = ClassWeapon(SDFExperimentalPhasonProj) {},
     },
 
     OnStopBeingBuilt = function(self, builder, layer)

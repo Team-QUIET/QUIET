@@ -6,12 +6,12 @@ local BPPPlasmaPPCProj = import('/Mods/BattlePack/lua/BattlePackweapons.lua').BP
 local CybranFlameThrower = import('/Mods/BattlePack/lua/BattlePackweapons.lua').CybranFlameThrower
 local StarAdderLaser = import('/Mods/BattlePack/lua/BattlePackweapons.lua').StarAdderLaser
 
-WEL4404 = Class(TWalkingLandUnit) {
+WEL4404 = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
-		FlameThrower = Class(CybranFlameThrower) {},
-        BeamCannon = Class(StarAdderLaser) {},
-        PlasmaPPC = Class(BPPPlasmaPPCProj) {},
+		FlameThrower = ClassWeapon(CybranFlameThrower) {},
+        BeamCannon = ClassWeapon(StarAdderLaser) {},
+        PlasmaPPC = ClassWeapon(BPPPlasmaPPCProj) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

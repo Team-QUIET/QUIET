@@ -14,7 +14,7 @@ local CreateSeraphimExperimentalBuildBaseThread = import('/lua/EffectUtilities.l
 
 local explosion = import('/lua/defaultexplosions.lua')
 
-XSL0401 = Class(SWalkingLandUnit) {
+XSL0401 = ClassUnit(SWalkingLandUnit) {
 
     SpawnEffects = {
 		'/effects/emitters/seraphim_othuy_spawn_01_emit.bp',
@@ -25,9 +25,9 @@ XSL0401 = Class(SWalkingLandUnit) {
 	
     Weapons = {
 	
-        EyeWeapon = Class(SDFExperimentalPhasonProj) {},
-        LeftArm = Class(SDFAireauWeapon) {},
-        RightArm = Class(SDFSinnuntheWeapon)
+        EyeWeapon = ClassWeapon(SDFExperimentalPhasonProj) {},
+        LeftArm = ClassWeapon(SDFAireauWeapon) {},
+        RightArm = ClassWeapon(SDFSinnuntheWeapon)
         {
             PlayFxMuzzleChargeSequence = function(self, muzzle)
 			
@@ -56,7 +56,7 @@ XSL0401 = Class(SWalkingLandUnit) {
             end,
         },
         
-        AA = Class(SAAOlarisCannonWeapon) {},
+        AA = ClassWeapon(SAAOlarisCannonWeapon) {},
 
     },
     

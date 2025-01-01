@@ -5,13 +5,13 @@ local SAMElectrumMissileDefense = import('/lua/seraphimweapons.lua').SAMElectrum
 
 local SeraLambdaFieldDestroyer = import('/lua/defaultantiprojectile.lua').SeraLambdaFieldDestroyer
 
-BSL0010 = Class(SWalkingLandUnit) {
+BSL0010 = ClassUnit(SWalkingLandUnit) {
 
     LambdaEffects = {'/effects/emitters/seraphim_rift_in_small_01_emit.bp','/effects/emitters/seraphim_rift_in_small_02_emit.bp'},
 
     Weapons = {
-        MainGun = Class(SDFThauCannon) {},
-        AntiMissile = Class(SAMElectrumMissileDefense) {},
+        MainGun = ClassWeapon(SDFThauCannon) {},
+        AntiMissile = ClassWeapon(SAMElectrumMissileDefense) {},
     },
     
     OnStopBeingBuilt = function(self,builder,layer)

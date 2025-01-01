@@ -5,9 +5,9 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local ADFPhasonLaser = import('/lua/aeonweapons.lua').ADFPhasonLaser
 
-SAB2306 = Class(AStructureUnit) {
+SAB2306 = ClassUnit(AStructureUnit) {
     Weapons = {
-        EyeWeapon = Class(ADFPhasonLaser) {},
+        EyeWeapon = ClassWeapon(ADFPhasonLaser) {},
     },
 
     OnKilled = function(self, instigator, type, overkillRatio)

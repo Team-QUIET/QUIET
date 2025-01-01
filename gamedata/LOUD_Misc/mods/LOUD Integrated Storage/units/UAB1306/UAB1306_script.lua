@@ -1,6 +1,6 @@
 local AEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
-UAB1306 = Class(AEnergyCreationUnit) {
+UAB1306 = ClassUnit(AEnergyCreationUnit) {
     AmbientEffects = 'AT3PowerAmbient',
 
     -- OnStopBeingBuilt = function(self, builder, layer)

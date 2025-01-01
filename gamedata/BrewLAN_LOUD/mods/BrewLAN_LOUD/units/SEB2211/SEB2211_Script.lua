@@ -2,9 +2,9 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TDFShipGaussCannonWeapon = import('/lua/terranweapons.lua').TDFGaussCannonWeapon
 
-SEB2211 = Class(TStructureUnit) {
+SEB2211 = ClassUnit(TStructureUnit) {
     Weapons = {
-        Turret = Class(TDFShipGaussCannonWeapon) {},
+        Turret = ClassWeapon(TDFShipGaussCannonWeapon) {},
     },
 }
 

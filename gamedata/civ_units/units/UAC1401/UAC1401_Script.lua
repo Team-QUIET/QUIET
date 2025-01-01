@@ -7,7 +7,7 @@
 -- #** 
 -- #**  Copyright � 2005 Gas Powered Games, Inc.  All rights reserved.
 -- #****************************************************************************
-UAC1401 = Class(import('/lua/defaultunits.lua').StructureUnit) {}
+UAC1401 = ClassUnit(import('/lua/defaultunits.lua').StructureUnit) {}
 
 TypeClass = UAC1401
 

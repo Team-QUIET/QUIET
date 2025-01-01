@@ -6,7 +6,7 @@ local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-TIFMissileCruiseCDR = Class(TMissileCruiseProjectile) {
+TIFMissileCruiseCDR = ClassProjectile(TMissileCruiseProjectile) {
 
 	FxAirUnitHitScale = 1.65,
     FxLandHitScale = 1.65,

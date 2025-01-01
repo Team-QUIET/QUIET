@@ -1,6 +1,6 @@
 local SEnergyStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
-XSB1105 = Class(SEnergyStorageUnit) {
+XSB1105 = ClassUnit(SEnergyStorageUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         SEnergyStorageUnit.OnStopBeingBuilt(self,builder,layer)

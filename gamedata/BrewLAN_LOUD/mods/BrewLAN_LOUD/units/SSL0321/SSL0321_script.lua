@@ -2,11 +2,11 @@ local SLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local SIFHuAntiNukeWeapon = import('/lua/seraphimweapons.lua').SIFHuAntiNukeWeapon
 
-SSL0321 = Class(SLandUnit) {
+SSL0321 = ClassUnit(SLandUnit) {
 
     Weapons = {
 
-        AntiNuke = Class(SIFHuAntiNukeWeapon) {
+        AntiNuke = ClassWeapon(SIFHuAntiNukeWeapon) {
 
             OnWeaponFired = function(self)
                 self.unit:ForkThread(self.unit.HideMissile)   

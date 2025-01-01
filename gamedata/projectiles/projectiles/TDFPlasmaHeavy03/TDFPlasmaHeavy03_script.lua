@@ -3,7 +3,7 @@ local THeavyPlasmaCannonProjectile = import('/lua/terranprojectiles.lua').THeavy
 local CreateLightParticle = CreateLightParticle
 local CreateEmitterAtEntity = CreateEmitterAtEntity
 
-TDFPlasmaHeavy03 = Class(THeavyPlasmaCannonProjectile) {
+TDFPlasmaHeavy03 = ClassProjectile(THeavyPlasmaCannonProjectile) {
 
     CreateImpactEffects = function( self, army, EffectTable, EffectScale )
 		local launcher = self:GetLauncher()

@@ -7,10 +7,10 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-XRS0204 = Class(CSubUnit) {
+XRS0204 = ClassUnit(CSubUnit) {
 
     Weapons = {
-        Torpedo = Class(CANNaniteTorpedoWeapon) {},
+        Torpedo = ClassWeapon(CANNaniteTorpedoWeapon) {},
     },
 	
     OnCreate = function(self)

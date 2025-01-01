@@ -7,10 +7,10 @@ local CreateCybranBuildBeams = import('/lua/EffectUtilities.lua').CreateCybranBu
 local ScaleEmitter = moho.IEffect.ScaleEmitter
 local TrashDestroy = TrashBag.Destroy
 
-URL0107 = Class(CWalkingLandUnit) {
+URL0107 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        LaserArms = Class(CDFLaserHeavyWeapon) {},
+        LaserArms = ClassWeapon(CDFLaserHeavyWeapon) {},
     },
     
     OnCreate = function(self)

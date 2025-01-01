@@ -7,11 +7,11 @@ local WeaponSteam        = import('/lua/effecttemplates.lua').WeaponSteam01
 
 local CreateRotator = CreateRotator
 
-BELK002 = Class(TLandUnit) {
+BELK002 = ClassUnit(TLandUnit) {
 
     Weapons = {
 
-        GatlingCannon = Class(TAAPhalanxWeapon) {
+        GatlingCannon = ClassWeapon(TAAPhalanxWeapon) {
 
             PlayFxWeaponPackSequence = function(self)
 

@@ -2,7 +2,7 @@ local CAAMissileNaniteProjectile = import('/lua/cybranprojectiles.lua').CAAMissi
 local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 
-CAAMissileNanite01 = Class(CAAMissileNaniteProjectile) {
+CAAMissileNanite01 = ClassProjectile(CAAMissileNaniteProjectile) {
 
     OnCreate = function(self)
         CAAMissileNaniteProjectile.OnCreate(self)

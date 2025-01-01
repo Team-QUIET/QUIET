@@ -13,7 +13,7 @@ local SeraLambdaFieldDestroyer = import('/lua/defaultantiprojectile.lua').SeraLa
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BSB0405 = Class(SShieldStructureUnit) {
+BSB0405 = ClassUnit(SShieldStructureUnit) {
 	
     LambdaEffects = {
         '/effects/emitters/seraphim_t3power_ambient_01_emit.bp',
@@ -22,7 +22,7 @@ BSB0405 = Class(SShieldStructureUnit) {
     },
 	
     Weapons = {
-        Eye = Class(LambdaWeapon) {},
+        Eye = ClassWeapon(LambdaWeapon) {},
     },
     
     OnStopBeingBuilt = function(self, builder, layer)

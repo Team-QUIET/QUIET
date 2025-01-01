@@ -10,12 +10,12 @@ WeaponsFile = nil
 
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
-WSL0404 = Class(SLandUnit) {
+WSL0404 = ClassUnit(SLandUnit) {
 
     Weapons = {
-	    MainWeapon = Class(SDFExperimentalPhasonProj) {},
-        RightTurret = Class(SDFUltraChromaticBeamGenerator) {},
-        AAGun = Class(SAAShleoCannonWeapon) {
+	    MainWeapon = ClassWeapon(SDFExperimentalPhasonProj) {},
+        RightTurret = ClassWeapon(SDFUltraChromaticBeamGenerator) {},
+        AAGun = ClassWeapon(SAAShleoCannonWeapon) {
             FxMuzzleScale = 2.25,
         },
     },

@@ -3,7 +3,7 @@ local TNapalmCarpetBombProjectile = import('/lua/terranprojectiles.lua').TNapalm
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 local CreateDecal = CreateDecal
 
-TIFNapalmCarpetBomb01 = Class(TNapalmCarpetBombProjectile) {
+TIFNapalmCarpetBomb01 = ClassProjectile(TNapalmCarpetBombProjectile) {
 
     OnImpact = function(self, TargetType, targetEntity)
 

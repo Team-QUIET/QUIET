@@ -6,7 +6,7 @@ local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
 local CreateEmitterAtBone = CreateEmitterAtBone
 
-AIFFragmentationSensorShell02 = Class(AArtilleryFragmentationSensorShellProjectile) {
+AIFFragmentationSensorShell02 = ClassProjectile(AArtilleryFragmentationSensorShellProjectile) {
 
     OnImpact = function(self, TargetType, TargetEntity) 
 	

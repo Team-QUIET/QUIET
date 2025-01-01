@@ -6,7 +6,7 @@ local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 local TSAMLauncher                  = import('/lua/terranweapons.lua').TSAMLauncher
 local TDFHeavyPlasmaCannonWeapon    = import('/lua/terranweapons.lua').TDFHeavyPlasmaCannonWeapon
 
-XEA0306 = Class(TAirUnit) {
+XEA0306 = ClassUnit(TAirUnit) {
 
     AirDestructionEffectBones = {'FrontRight_Engine_Exhaust','FrontLeft_Engine_Exhaust','BackRight_Engine_Exhaust','BackLeft_Engine_Exhaust'},
 
@@ -19,8 +19,8 @@ XEA0306 = Class(TAirUnit) {
 	
     Weapons = {
 	
-        AAMissle = Class(TSAMLauncher) {},
-        PlasmaGun = Class(TDFHeavyPlasmaCannonWeapon) {},
+        AAMissle = ClassWeapon(TSAMLauncher) {},
+        PlasmaGun = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {},
 		
     },
 

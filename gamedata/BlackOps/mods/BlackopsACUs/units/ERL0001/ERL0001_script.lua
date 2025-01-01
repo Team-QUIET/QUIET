@@ -33,21 +33,21 @@ local TrashDestroy = TrashBag.Destroy
 
 local wep, wpTarget
 
-ERL0001 = Class(CWalkingLandUnit) {
+ERL0001 = ClassUnit(CWalkingLandUnit) {
 	
     DeathThreadDestructionWaitTime = 2,
 
 	BuffFields = {
 		OpticalInterferenceField = Class(BuffField){},
-	},
+	 },
 
     Weapons = {
 
-        DeathWeapon = Class(CIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(CIFCommanderDeathWeapon) {},
 		
-        TargetPainter = Class(Targeting) { FxMuzzleFlash = false },
+        TargetPainter = ClassWeapon(Targeting) { FxMuzzleFlash = false },
 
-        RightRipper = Class(CCannonMolecularWeapon) {
+        RightRipper = ClassWeapon(CCannonMolecularWeapon) {
 
         	OnCreate = function(self)
                 CCannonMolecularWeapon.OnCreate(self)
@@ -56,14 +56,14 @@ ERL0001 = Class(CWalkingLandUnit) {
             end,
         },
 
-        EXRocketPack01 = Class(RocketPack) {},
-        EXRocketPack02 = Class(RocketPack) {},
+        EXRocketPack01 = ClassWeapon(RocketPack) {},
+        EXRocketPack02 = ClassWeapon(RocketPack) {},
 
-        EXTorpedoLauncher01 = Class(CANNaniteTorpedo) {},
-        EXTorpedoLauncher02 = Class(CANNaniteTorpedo) {},
-        EXTorpedoLauncher03 = Class(CANNaniteTorpedo) {},
+        EXTorpedoLauncher01 = ClassWeapon(CANNaniteTorpedo) {},
+        EXTorpedoLauncher02 = ClassWeapon(CANNaniteTorpedo) {},
+        EXTorpedoLauncher03 = ClassWeapon(CANNaniteTorpedo) {},
 
-        EXEMPArray01 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray01 = ClassWeapon(EXCEMPArrayBeam01) {
 
             OnWeaponFired = function(self)
 
@@ -157,60 +157,60 @@ ERL0001 = Class(CWalkingLandUnit) {
 					self.unit.EMPArrayEffects01 = {}
 				end
 			end,
-		},
+		 },
 
-        EXEMPArray02 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray02 = ClassWeapon(EXCEMPArrayBeam01) {
+            OnWeaponFired = function(self)
+                EXCEMPArrayBeam01.OnWeaponFired(self)
+					self:SetWeaponEnabled(false)
+            end,
+		 },
+
+        EXEMPArray03 = ClassWeapon(EXCEMPArrayBeam01) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPArray03 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray04 = ClassWeapon(EXCEMPArrayBeam01) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPArray04 = Class(EXCEMPArrayBeam01) {
+        EXEMPShot01 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPShot01 = Class(CCannonMolecularWeapon) {
+        EXEMPShot02 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPShot02 = Class(CCannonMolecularWeapon) {
+        EXEMPShot03 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
-		},
+		 },
 
-        EXEMPShot03 = Class(CCannonMolecularWeapon) {
-            OnWeaponFired = function(self)
-                EXCEMPArrayBeam01.OnWeaponFired(self)
-					self:SetWeaponEnabled(false)
-            end,
-		},
+        EXMLG01 = ClassWeapon(MicrowaveLaser) {},
+        EXMLG02 = ClassWeapon(MicrowaveLaser) {},
+        EXMLG03 = ClassWeapon(MicrowaveLaser) {},
 
-        EXMLG01 = Class(MicrowaveLaser) {},
-        EXMLG02 = Class(MicrowaveLaser) {},
-        EXMLG03 = Class(MicrowaveLaser) {},
+        EXAA01 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA02 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA03 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA04 = ClassWeapon(EXCEMPArrayBeam01) {},
 
-        EXAA01 = Class(EXCEMPArrayBeam01) {},
-        EXAA02 = Class(EXCEMPArrayBeam01) {},
-        EXAA03 = Class(EXCEMPArrayBeam01) {},
-        EXAA04 = Class(EXCEMPArrayBeam01) {},
-
-        OverCharge = Class(CDFOverchargeWeapon) {},
+        OverCharge = ClassWeapon(CDFOverchargeWeapon) {},
     },
 
 

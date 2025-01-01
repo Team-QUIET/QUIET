@@ -4,10 +4,10 @@ local SIFExperimentalStrategicMissile = import('/lua/seraphimweapons.lua').SIFEx
 local EffectUtil = import('/lua/EffectUtilities.lua')
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-XSB2401 = Class(SStructureUnit) {
+XSB2401 = ClassUnit(SStructureUnit) {
 
     Weapons = {
-        NukeMissiles = Class(SIFExperimentalStrategicMissile){
+        NukeMissiles = ClassWeapon(SIFExperimentalStrategicMissile){
 
             OnWeaponFired = function(self)
                 self.unit:ForkThread(self.unit.HideMissile)   

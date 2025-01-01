@@ -2,9 +2,9 @@ local MineStructureUnit = import('/lua/defaultunits.lua').MineStructureUnit
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-SSB2221 = Class(MineStructureUnit) {
+SSB2221 = ClassUnit(MineStructureUnit) {
     Weapons = {
-        Suicide = Class(MineStructureUnit.Weapons.Suicide) {
+        Suicide = ClassWeapon(MineStructureUnit.Weapons.Suicide) {
    			FxDeathLand = EffectTemplate.SZhanaseeBombHit01,
             FxDeathWater = EffectTemplate.SRifterArtilleryWaterHit,
             SplatTexture = {

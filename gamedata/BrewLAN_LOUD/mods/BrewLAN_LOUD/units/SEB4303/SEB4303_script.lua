@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 local TShieldStructureUnit = import('/lua/terranunits.lua').TShieldStructureUnit
 
-SEB4303 = Class(TShieldStructureUnit) {
+SEB4303 = ClassUnit(TShieldStructureUnit) {
 
     ShieldEffects = {
         '/effects/emitters/terran_shield_generator_t2_01_emit.bp',

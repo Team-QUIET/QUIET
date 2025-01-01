@@ -1,6 +1,6 @@
 local AEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 local AT2PowerAmbient = import('/lua/EffectTemplates.lua').AT2PowerAmbient
-SAB1201 = Class(AEnergyCreationUnit) {
+SAB1201 = ClassUnit(AEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         AEnergyCreationUnit.OnStopBeingBuilt(self, builder, layer)

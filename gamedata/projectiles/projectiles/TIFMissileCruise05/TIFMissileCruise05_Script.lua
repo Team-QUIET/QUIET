@@ -7,7 +7,7 @@ local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-TIFMissileCruise05 = Class(TMissileCruiseProjectile) {
+TIFMissileCruise05 = ClassProjectile(TMissileCruiseProjectile) {
 
     FxTrails = EffectTemplate.TMissileExhaust01,
     FxTrailOffset = -0.85,

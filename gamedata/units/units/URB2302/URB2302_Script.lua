@@ -6,11 +6,11 @@ local DefaultProjectileWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultPro
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-URB2302 = Class(CStructureUnit) {
+URB2302 = ClassUnit(CStructureUnit) {
 
     Weapons = {
 	
-        MainGun = Class(CIFArtilleryWeapon) {
+        MainGun = ClassWeapon(CIFArtilleryWeapon) {
 		
             FxMuzzleFlashScale = 0.6,
             FxGroundEffect = EffectTemplate.CDisruptorGroundEffect,

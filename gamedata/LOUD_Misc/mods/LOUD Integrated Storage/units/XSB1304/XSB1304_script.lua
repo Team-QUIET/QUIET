@@ -1,7 +1,7 @@
 
 local SMassCollectionUnit = import('/lua/seraphimunits.lua').SMassCollectionUnit
 
-XSB1304 = Class(SMassCollectionUnit) {
+XSB1304 = ClassUnit(SMassCollectionUnit) {
 
 	OnStopBeingBuilt = function(self,builder,layer)
         SMassCollectionUnit.OnStopBeingBuilt(self,builder,layer)

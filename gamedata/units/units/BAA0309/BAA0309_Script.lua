@@ -6,11 +6,11 @@ local GetRandomInt = import('/lua/utilities.lua').GetRandomInt
 
 local AAASonicPulseBatteryWeapon = import('/lua/aeonweapons.lua').AAASonicPulseBatteryWeapon
 
-BAA0309 = Class(AAirUnit) {
+BAA0309 = ClassUnit(AAirUnit) {
 
     AirDestructionEffectBones = { 'Exhaust', 'Wing_Right', 'Wing_Left','Slots_Left01', 'Slots_Right01', 'Right_Attachpoint02','Left_Attachpoint02'},
 
-    Weapons = { SonicPulseBattery = Class(AAASonicPulseBatteryWeapon) {},  },
+    Weapons = { SonicPulseBattery = ClassWeapon(AAASonicPulseBatteryWeapon) {},  },
 
     CreateUnitAirDestructionEffects = function( self, scale )
 	

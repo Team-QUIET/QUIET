@@ -24,18 +24,18 @@ local TrashAdd = TrashBag.Add
 local WaitTicks = coroutine.yield
 
 
-UEL0001 = Class(TWalkingLandUnit) { 
+UEL0001 = ClassUnit(TWalkingLandUnit) { 
    
     DeathThreadDestructionWaitTime = 2,
 
     Weapons = {
-        DeathWeapon         = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon         = ClassWeapon(TIFCommanderDeathWeapon) {},
         
-        RightZephyr         = Class(TDFZephyrCannonWeapon) {},
+        RightZephyr         = ClassWeapon(TDFZephyrCannonWeapon) {},
         
-        RightZephyrUpgraded = Class(TDFZephyrCannonWeapon) {},
+        RightZephyrUpgraded = ClassWeapon(TDFZephyrCannonWeapon) {},
 
-        OverCharge = Class(TDFOverchargeWeapon) {
+        OverCharge = ClassWeapon(TDFOverchargeWeapon) {
 
             OnCreate = function(self)
                 TDFOverchargeWeapon.OnCreate(self)
@@ -125,9 +125,9 @@ UEL0001 = Class(TWalkingLandUnit) {
             
         },
         
-        TacMissile = Class(TIFCruiseMissileLauncher) {},
+        TacMissile = ClassWeapon(TIFCruiseMissileLauncher) {},
         
-        TacNukeMissile = Class(TIFCruiseMissileLauncher) {},
+        TacNukeMissile = ClassWeapon(TIFCruiseMissileLauncher) {},
     },
 
     OnCreate = function(self)

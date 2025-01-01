@@ -17,16 +17,16 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileRedirect
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRMT3MCM2 = Class(CWalkingLandUnit) {
+BRMT3MCM2 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
         
-        rockets     = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
-        ArmCannon   = Class(CCannonMolecularWeapon) { FxMuzzleFlashScale = 1.2, FxMuzzleFlash = EffectTemplate.CHvyProtonCannonMuzzleflash },
-        mgweapon    = Class(TDFRiotWeapon) { FxMuzzleFlashScale = 0.75, FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
-        lasers      = Class(MicrowaveLaser) {},
-        robottalk   = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},        
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        rockets     = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
+        ArmCannon   = ClassWeapon(CCannonMolecularWeapon) { FxMuzzleFlashScale = 1.2, FxMuzzleFlash = EffectTemplate.CHvyProtonCannonMuzzleflash },
+        mgweapon    = ClassWeapon(TDFRiotWeapon) { FxMuzzleFlashScale = 0.75, FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
+        lasers      = ClassWeapon(MicrowaveLaser) {},
+        robottalk   = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0},        
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

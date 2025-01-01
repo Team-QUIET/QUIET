@@ -2,10 +2,10 @@ local SSeaFactoryUnit = import('/lua/seraphimunits.lua').SSeaFactoryUnit
 
 local SDFAjelluAntiTorpedoDefense = import('/lua/seraphimweapons.lua').SDFAjelluAntiTorpedoDefense
 
-XSB0303 = Class(SSeaFactoryUnit) {
+XSB0303 = ClassUnit(SSeaFactoryUnit) {
 
     Weapons = {
-        AntiTorpedo = Class(SDFAjelluAntiTorpedoDefense) {},
+        AntiTorpedo = ClassWeapon(SDFAjelluAntiTorpedoDefense) {},
     },
   
     OnCreate = function(self)

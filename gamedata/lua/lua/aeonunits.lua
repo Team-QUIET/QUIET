@@ -20,7 +20,7 @@ local ScaleEmitter = moho.IEffect.ScaleEmitter
 
 local TrashAdd = TrashBag.Add
 
-AeonFactoryUnit = Class(FactoryUnit) {
+AeonFactoryUnit = ClassUnit(FactoryUnit) {
 
     StartBuildFx = function( self, unitBeingBuilt )
         CreateAeonFactoryBuildingEffects( self, unitBeingBuilt, __blueprints[self.BlueprintID].General.BuildBones.BuildEffectBones, self.Buildbone, self.BuildEffectsBag )         
@@ -40,7 +40,7 @@ AeonFactoryUnit = Class(FactoryUnit) {
     
 }
 
-AConstructionUnit = Class(ConstructionUnit) {
+AConstructionUnit = ClassUnit(ConstructionUnit) {
 
     CreateBuildEffects = function( self, unitBeingBuilt, order )
         CreateAeonConstructionUnitBuildingEffects( self, unitBeingBuilt, self.BuildEffectsBag )
@@ -64,7 +64,7 @@ AConstructionUnit = Class(ConstructionUnit) {
     end,
 }
 
-AShieldStructureUnit = Class(ShieldStructureUnit) {
+AShieldStructureUnit = ClassUnit(ShieldStructureUnit) {
     
     RotateSpeed = 30,
     
@@ -105,7 +105,7 @@ AShieldStructureUnit = Class(ShieldStructureUnit) {
     end,    
 }
 
-ARadarJammerUnit = Class(RadarJammerUnit) {
+ARadarJammerUnit = ClassUnit(RadarJammerUnit) {
     
     RotateSpeed = 30,
     
@@ -160,4 +160,4 @@ ARadarJammerUnit = Class(RadarJammerUnit) {
     end,    
 }    
 
-AHoverLandUnit = Class(MobileUnit) {}
+AHoverLandUnit = ClassUnit(MobileUnit) {}

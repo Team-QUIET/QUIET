@@ -2,9 +2,9 @@ local AWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local AAAZealotMissileWeapon = import('/lua/aeonweapons.lua').AAAZealotMissileWeapon
 
-BALK003 = Class(AWalkingLandUnit) {    
+BALK003 = ClassUnit(AWalkingLandUnit) {    
     Weapons = {
-		AAMissile = Class(AAAZealotMissileWeapon) {},
+		AAMissile = ClassWeapon(AAAZealotMissileWeapon) {},
     },
 }
 

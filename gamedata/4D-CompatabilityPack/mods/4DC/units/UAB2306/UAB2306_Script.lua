@@ -9,11 +9,11 @@ local LOUDINSERT = table.insert
 
 local TrashAdd = TrashBag.Add
 
-UAB2306 = Class(AStructureUnit) {
+UAB2306 = ClassUnit(AStructureUnit) {
 
     Weapons = {
 
-		BFG = Class(BFGShellWeapon) {
+		BFG = ClassWeapon(BFGShellWeapon) {
 
             PlayFxMuzzleChargeSequence = function(self, muzzle)
                 self.unit:AddBeamFX()

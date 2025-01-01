@@ -4,7 +4,7 @@ local CardinalWallUnit = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '
 
 StackingBuilderUnit = CardinalWallUnit(StackingBuilderUnit) 
 
-SEB5310 = Class(StackingBuilderUnit) {
+SEB5310 = ClassUnit(StackingBuilderUnit) {
     OnStartBuild = function(self, unitBeingBuilt, order )
         StackingBuilderUnit.OnStartBuild(self, unitBeingBuilt, order )
         

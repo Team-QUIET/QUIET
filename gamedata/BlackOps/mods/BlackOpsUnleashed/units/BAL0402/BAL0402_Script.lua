@@ -12,7 +12,7 @@ local LOUDATTACHEMITTER = CreateAttachedEmitter
 local Buff = import('/lua/sim/Buff.lua')
 local AeonBuffField = import('/lua/aeonweapons.lua').AeonBuffField
 
-BAL0402 = Class(AHoverLandUnit) {
+BAL0402 = ClassUnit(AHoverLandUnit) {
 
     FxDamageScale = 2,
     DestructionTicks = 400,
@@ -29,16 +29,16 @@ BAL0402 = Class(AHoverLandUnit) {
 
     Weapons = {
 	
-		MissileRack = Class(AIFMissileTacticalSerpentineWeapon) {},
+		MissileRack = ClassWeapon(AIFMissileTacticalSerpentineWeapon) {},
 		
-        MainGun     = Class(ADFDisruptorWeapon) {},
+        MainGun     = ClassWeapon(ADFDisruptorWeapon) {},
 		
-		Turret  = Class(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
+		Turret  = ClassWeapon(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
         
 			FxMuzzleFlash = {'/effects/emitters/oblivion_cannon_flash_04_emit.bp','/effects/emitters/oblivion_cannon_flash_05_emit.bp','/effects/emitters/oblivion_cannon_flash_06_emit.bp'},        
         },
 		
-        AntiMissile1 = Class(AAMWillOWisp) {},
+        AntiMissile1 = ClassWeapon(AAMWillOWisp) {},
 		
     },
 

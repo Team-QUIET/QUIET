@@ -8,12 +8,12 @@ local AAMWillOWisp              = AeonWeapons.AAMWillOWisp
 
 AeonWeapons = nil
 
-UAS0202 = Class(ASeaUnit) {
+UAS0202 = ClassUnit(ASeaUnit) {
     Weapons = {
-        FrontTurret         = Class(ADFCannonQuantumWeapon) {},
-        AntiAirMissiles01   = Class(AAAZealotMissileWeapon) {},
-        AntiAirMissiles02   = Class(AAAZealotMissileWeapon) {},
-        AntiMissile         = Class(AAMWillOWisp) {},
+        FrontTurret         = ClassWeapon(ADFCannonQuantumWeapon) {},
+        AntiAirMissiles01   = ClassWeapon(AAAZealotMissileWeapon) {},
+        AntiAirMissiles02   = ClassWeapon(AAAZealotMissileWeapon) {},
+        AntiMissile         = ClassWeapon(AAMWillOWisp) {},
     },
 
 }

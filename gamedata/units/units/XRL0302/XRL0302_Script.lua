@@ -2,11 +2,11 @@ local CWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local CMobileKamikazeBombWeapon = import('/lua/cybranweapons.lua').CMobileKamikazeBombWeapon
 
-XRL0302 = Class(CWalkingLandUnit) {
+XRL0302 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 
-        Suicide = Class(CMobileKamikazeBombWeapon) {
+        Suicide = ClassWeapon(CMobileKamikazeBombWeapon) {
         
 			OnWeaponFired = function(self)	
 				CMobileKamikazeBombWeapon.OnWeaponFired(self)

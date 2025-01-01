@@ -14,7 +14,7 @@ WeaponsFile = nil
 local ForkThread = ForkThread
 local WaitTicks = coroutine.yield
 
-UEA0104 = Class(TAirUnit) {
+UEA0104 = ClassUnit(TAirUnit) {
     AirDestructionEffectBones = { 'Char04', 'Char03', 'Char02', 'Char01',
                                 'Front_Right_Exhaust','Front_Left_Exhaust','Back_Right_Exhaust','Back_Left_Exhaust',
                                 'Right_Arm05','Right_Arm07','Right_Arm02','Right_Arm03', 'Right_Arm04','Right_Arm01'},
@@ -24,8 +24,8 @@ UEA0104 = Class(TAirUnit) {
     BeamExhaustIdle = '/effects/emitters/transport_thruster_beam_02_emit.bp',
 
     Weapons = {
-        LinkedRailGun = Class(TAALinkedRailgun) {},
-        RiotGun = Class(TDFRiotWeapon) {},
+        LinkedRailGun = ClassWeapon(TAALinkedRailgun) {},
+        RiotGun = ClassWeapon(TDFRiotWeapon) {},
     },
 
     DestructionTicks = 250,

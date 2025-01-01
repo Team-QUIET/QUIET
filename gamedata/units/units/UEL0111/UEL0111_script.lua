@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TIFCruiseMissileUnpackingLauncher = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-UEL0111 = Class(TLandUnit) {
+UEL0111 = ClassUnit(TLandUnit) {
     Weapons = {
-        MissileWeapon = Class(TIFCruiseMissileUnpackingLauncher){ FxMuzzleFlash = {'/effects/emitters/terran_mobile_missile_launch_01_emit.bp'} },
+        MissileWeapon = ClassWeapon(TIFCruiseMissileUnpackingLauncher){ FxMuzzleFlash = {'/effects/emitters/terran_mobile_missile_launch_01_emit.bp'} },
     },
 }
 

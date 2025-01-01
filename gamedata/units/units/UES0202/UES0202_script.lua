@@ -11,16 +11,16 @@ WeaponFile = nil
 
 local TAAMissileLaunchNoBackSmoke = import('/lua/EffectTemplates.lua').TAAMissileLaunchNoBackSmoke
 
-UES0202 = Class(TSeaUnit) {
+UES0202 = ClassUnit(TSeaUnit) {
 
     DestructionTicks = 200,
 
     Weapons = {
-        FrontTurret01 = Class(TDFGaussCannonWeapon) {},
+        FrontTurret01 = ClassWeapon(TDFGaussCannonWeapon) {},
         
-        RearAATurret = Class(TSAMLauncher) { FxMuzzleFlash = TAAMissileLaunchNoBackSmoke, },
+        RearAATurret = ClassWeapon(TSAMLauncher) { FxMuzzleFlash = TAAMissileLaunchNoBackSmoke, },
         
-        PhalanxGun01 = Class(TAMPhalanxWeapon) {
+        PhalanxGun01 = ClassWeapon(TAMPhalanxWeapon) {
             PlayFxWeaponUnpackSequence = function(self)
                 if not self.SpinManip then 
                     self.SpinManip = CreateRotator(self.unit, 'Center_Turret_Barrel', 'z', nil, 270, 180, 60)
@@ -41,7 +41,7 @@ UES0202 = Class(TSeaUnit) {
             end,
         },
         
-        CruiseMissile = Class(TIFCruiseMissileLauncher) {
+        CruiseMissile = ClassWeapon(TIFCruiseMissileLauncher) {
 
 			CurrentRack = 1,
 
