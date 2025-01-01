@@ -34,9 +34,9 @@ UnitBlueprint {
 	
     Defense = {
         ArmorType = 'Normal',
-        Health = 460,
-        MaxHealth = 460,
-        RegenRate = 2,
+        Health = 400,
+        MaxHealth = 400,
+        RegenRate = 0,
         SurfaceThreatLevel = 25.1,
     },
 	
@@ -44,8 +44,8 @@ UnitBlueprint {
 	
     Display = {
         Abilities = {
-            'Deploys to fire',
-			'Undeploys to move',
+            'Shield Damage Reduction -50%',
+			'High Range',
         },
 
         AnimationDeath = {

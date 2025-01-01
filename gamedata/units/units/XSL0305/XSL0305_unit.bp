@@ -41,8 +41,8 @@ UnitBlueprint {
 	
     Defense = {
         ArmorType = 'Normal',
-        Health = 590,
-        MaxHealth = 590,
+        Health = 425,
+        MaxHealth = 425,
         RegenRate = 2,
         SurfaceThreatLevel = 24.9,
     },
@@ -51,9 +51,9 @@ UnitBlueprint {
 	
     Display = {
         Abilities = {
-			'Sniper role',
-            '<LOC ability_personalstealth>Personal Stealth',
-            'Deploys for long range',
+			'Snipe Mode - Shield Damage Reduction -75%',
+            'Regular Mode - Shield Damage Reduction -20%',
+            'High Range',
         },
 
         AnimationDeath = {
@@ -95,12 +95,6 @@ UnitBlueprint {
         UniformScale = 0.068,
     },
 	
-    Economy = {
-        BuildCostEnergy = 15000,
-        BuildCostMass = 800,
-        BuildTime = 4000,
-    },
-	
     General = {
         CapCost = 3,
         CommandCaps = {
@@ -127,7 +121,6 @@ UnitBlueprint {
     Intel = {
 		FreeIntel = true,
         VisionRadius = 32,
-		RadarStealth = true,
     },
 	
     Interface = {
@@ -195,7 +188,7 @@ UnitBlueprint {
             CollideFriendly = false,
 			
             Damage = 700,
-            DamageType = 'Normal',
+            DamageType = 'ShieldMult0.8',
 			
             DisplayName = 'Sih Energy Rifle',
 			
