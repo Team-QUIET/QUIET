@@ -73,7 +73,8 @@ UnitBlueprint {
                 },
             },
         },
-
+
+
         UniformScale = 0.05,
     },
 	
@@ -293,12 +294,14 @@ UnitBlueprint {
 			
             RequireTime = 0,
 
-            TargetCheckInterval = 1.0,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE',
-                'DEFENSE',
-                'ALLUNITS',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },
             },
             TargetRestrictDisallow = 'UNTARGETABLE,AIR,WALL',
             TrackingRadius = 1.15,

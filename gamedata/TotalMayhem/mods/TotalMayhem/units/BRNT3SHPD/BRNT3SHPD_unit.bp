@@ -510,8 +510,14 @@ UnitBlueprint {
 
             TargetCheckInterval = 0.5,
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            }
 			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
@@ -586,9 +592,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',			
 
             TrackingRadius = 1.05,
@@ -661,9 +672,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 
             TrackingRadius = 1.05,
@@ -735,9 +751,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
             TrackingRadius = 1.05,
@@ -809,9 +830,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
             TrackingRadius = 1.05,
@@ -884,9 +910,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
             TrackingRadius = 1.05,
@@ -958,9 +989,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
             TrackingRadius = 1.05,
@@ -1032,9 +1068,14 @@ UnitBlueprint {
             TargetCheckInterval = 0.5,
 			
             TargetPriorities = {
-                'ALLUNITS -HIGHALTAIR',
-            },
-			
+                "EXPERIMENTAL",
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },			
             TargetRestrictDisallow = 'UNTARGETABLE,HIGHALTAIR,SATELLITE',
 			
             TrackingRadius = 1.05,

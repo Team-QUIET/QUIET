@@ -173,7 +173,8 @@ UnitBlueprint {
             LAYER_Land = true,
             LAYER_Water = true,
         },
-                Elevation = 0.25,
+        
+        Elevation = 0.25,
 
         MaxAcceleration = 0,
         MaxBrake = 2,
@@ -184,7 +185,8 @@ UnitBlueprint {
 
         MeshExtentsX = 1.75,
         MeshExtentsY = 1,
-        MeshExtentsZ = 1.75,
+        MeshExtentsZ = 1.75,
+
         MotionType = 'RULEUMT_Hover',
 
         SkirtOffsetX = -0.5,
@@ -266,12 +268,14 @@ UnitBlueprint {
 
             RateOfFire = 3,
 
-            TargetCheckInterval = 1,
-
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'MOBILE',
-                'DEFENSE',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },
                 'ALLUNITS',
             },
 
