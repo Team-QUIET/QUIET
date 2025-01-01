@@ -240,7 +240,7 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
 
 		self:ForkThread(self.WeaponConfigCheck)
 
-        self.BuildArmManipulator:SetHeadingPitch( self:GetWeaponManipulatorByLabel('RightRipper'):GetHeadingPitch() )
+        self.BuildArmManipulator:SetHeadingPitch( self:GetWeaponManipulatorByLabel('TargetPainter'):GetHeadingPitch() )
     end,
 
     OnFailedToBuild = function(self)
@@ -256,7 +256,7 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
 
 		self:ForkThread(self.WeaponConfigCheck)
 
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStartBuild = function(self, unitBeingBuilt, order)
@@ -295,7 +295,7 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
 
         self.UnitBeingBuilt = nil
         self.UnitBuildOrder = nil
@@ -314,7 +314,7 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnFailedCapture = function(self, target)
@@ -329,7 +329,7 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStopReclaim = function(self, target)
@@ -344,12 +344,24 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStopBeingBuilt = function(self,builder,layer)
 
         CWalkingLandUnit.OnStopBeingBuilt(self,builder,layer)
+
+        self.Animator = CreateAnimator(self)
+        self.Animator:SetPrecedence(0)
+        
+        if self.IdleAnim then
+            self.Animator:PlayAnim( __blueprints[self.BlueprintID].Display.AnimationIdle, true)
+            for k, v in self.DisabledBones do
+                self.Animator:SetBoneEnabled(v, false)
+            end
+        end
+
+        self:BuildManipulatorSetEnabled(false)
 
         self:DisableUnitIntel('Cloak')
         self:DisableUnitIntel('CloakField')
@@ -590,68 +602,20 @@ ERL0001 = ClassUnit(CWalkingLandUnit) {
     WeaponConfigCheck = function(self)
 
 		if self.wcBuildMode then
-		
+
 			self:SetWeaponEnabledByLabel('TargetPainter', false)
-			self:SetWeaponEnabledByLabel('RightRipper', false)
-			self:SetWeaponEnabledByLabel('OverCharge', false)
 
-			self:SetWeaponEnabledByLabel('EXRocketPack01', false)
-			self:SetWeaponEnabledByLabel('EXRocketPack02', false)
-
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher01', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher02', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher03', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray01', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
-
-			self:SetWeaponEnabledByLabel('EXMLG01', false)
-			self:SetWeaponEnabledByLabel('EXMLG02', false)
-			self:SetWeaponEnabledByLabel('EXMLG03', false)
 		end
 
 		if self.wcOCMode then
-		
+
 			self:SetWeaponEnabledByLabel('TargetPainter', false)
-			self:SetWeaponEnabledByLabel('RightRipper', false)
 
-			self:SetWeaponEnabledByLabel('EXRocketPack01', false)
-			self:SetWeaponEnabledByLabel('EXRocketPack02', false)
-
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher01', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher02', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher03', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray01', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
-
-			self:SetWeaponEnabledByLabel('EXMLG01', false)
-			self:SetWeaponEnabledByLabel('EXMLG02', false)
-			self:SetWeaponEnabledByLabel('EXMLG03', false)
 		end
-
+        
 		if not self.wcBuildMode and not self.wcOCMode then
 		
-			self:SetWeaponEnabledByLabel('TargetPainter', true)
-			self:SetWeaponEnabledByLabel('RightRipper', true)
-			self:SetWeaponEnabledByLabel('OverCharge', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
+			self:SetWeaponEnabledByLabel('TargetPainter', true) 
 
 			if self.wcRocket01 then
 
