@@ -64,7 +64,7 @@ TrashBag = ClassTrashBag {
             end
             self.Counter = 1
         end
-    end
+    end,
 
     -- Checks if the trashbag is empty
     ---@param self TrashBag
