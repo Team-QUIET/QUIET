@@ -10,7 +10,7 @@ local ItemList = import('/lua/maui/itemlist.lua').ItemList
 local Bitmap = import('/lua/maui/bitmap.lua').Bitmap
 local Dragger = import('/lua/maui/dragger.lua').Dragger
 
-SpecialGrid = Class(Group) {
+SpecialGrid = ClassUI(Group) {
     __init = function(self, parent, isVertical)
         Group.__init(self, parent)
         self.top = 1

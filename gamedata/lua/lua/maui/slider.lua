@@ -7,7 +7,7 @@ local lazyvar = import('/lua/lazyvar.lua')
 
 local LOUDFLOOR = math.floor
 
-Slider = Class(Group)
+Slider = ClassUI(Group)
 {
     -- TODO make it possible for the start value to be greate than the end value and have that work the opposite way
     __init = function(self, parent, isVertical, startValue, endValue, thumb, thumbOver, thumbDown, background, debugname)
@@ -150,7 +150,7 @@ Slider = Class(Group)
     OnScrub = function(self,value) end,
 }
 
-IntegerSlider = Class(Slider)
+IntegerSlider = ClassUI(Slider)
 {
     __init = function(self, parent, isVertical, startValue, endValue, indentValue, thumb, thumbOver, thumbDown, background)
         Slider.__init(self, parent, isVertical, LOUDFLOOR(startValue), LOUDFLOOR(endValue), thumb, thumbOver, thumbDown, background)

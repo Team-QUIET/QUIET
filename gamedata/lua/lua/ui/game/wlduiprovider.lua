@@ -1,5 +1,5 @@
 
-WldUIProvider = Class(moho.WldUIProvider_methods) {
+WldUIProvider = ClassUI(moho.WldUIProvider_methods) {
     __init = function(self)
         InternalCreateWldUIProvider(self)
     end,

@@ -14,7 +14,7 @@
 
 local Control = import('control.lua').Control
 
-Border = Class(moho.border_methods, Control) {
+Border = ClassUI(moho.border_methods, Control) {
 
     __init = function(self, parent, debugname)
         InternalCreateBorder(self, parent)

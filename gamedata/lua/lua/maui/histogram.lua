@@ -16,7 +16,7 @@ Class methods:
 --]]
 
 
-Histogram = Class(moho.hostogram_methods, Control) {
+Histogram = ClassUI(moho.hostogram_methods, Control) {
     __init = function(self, parent, debugname)
         InternalCreateHistogram(self, parent)
         if debugname then

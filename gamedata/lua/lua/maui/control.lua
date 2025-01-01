@@ -25,7 +25,7 @@
     -- SetName(string name)
     -- Dump()
 
-Control = Class(moho.control_methods) {
+Control = ClassUI(moho.control_methods) {
 
     -- reset the control's layout to the defaults, in this case
     -- makes a circular dependency where you must have at least 4 defined

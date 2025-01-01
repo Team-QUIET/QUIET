@@ -3,14 +3,14 @@
 --* Author: Chris Blackwell
 --* Summary: Various utility functions that will assist UI creation
 --*
---* Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
+--* Copyright ï¿½ 2005 Gas Powered Games, Inc.  All rights reserved.
 --*****************************************************************************
 
 local Checkbox = import('checkbox.lua').Checkbox
 
 -- Create a radio group, which is a group of checkboxes and associtated labels that have
 -- a mutually exclusive checked state.
-RadioGroup = Class
+RadioGroup = ClassSimple
 {
     -- items is an indexed table of checkbox's with labels in the form:
     -- {{checkbox = Checkbox(), label = Text()}, {checkbox = Checkbox(), label = Text()}, etc}

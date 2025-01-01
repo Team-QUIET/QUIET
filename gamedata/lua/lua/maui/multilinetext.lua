@@ -7,7 +7,7 @@ local LazyVar = import('/lua/lazyvar.lua')
 --TODO make scrollable
 --TODO word wrap
 
-MultiLineText = Class(Group) {
+MultiLineText = ClassUI(Group) {
     __init = function(self, parent, font, pointSize, color)
         Group.__init(self, parent)
 

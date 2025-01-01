@@ -3,7 +3,7 @@
 -- SetDefaultTexture(filename, hotspotX, hotspotY)
 -- Reset() -- re-applies default texture
 
-Cursor = Class(moho.cursor_methods) {
+Cursor = ClassUI(moho.cursor_methods) {
     __init = function(self, defaultTexture, defaultHotspotX, defaultHotspotY)
         _c_CreateCursor(self, nil)
         self:SetDefaultTexture(defaultTexture, defaultHotspotX, defaultHotspotY)

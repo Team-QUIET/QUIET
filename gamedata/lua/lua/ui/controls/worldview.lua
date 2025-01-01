@@ -136,7 +136,7 @@ DecalFunctions = {
 	
 }
 
-WorldView = Class(moho.UIWorldView, Control) {
+WorldView = ClassUI(moho.UIWorldView, Control) {
 
     Cursor = nil,
     bMouseIn = false,

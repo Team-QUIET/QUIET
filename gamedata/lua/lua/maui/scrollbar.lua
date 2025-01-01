@@ -11,7 +11,7 @@ ScrollAxis = {
     Horz = "Horz"
 }
 
-Scrollbar = Class(moho.scrollbar_methods, Control) {
+Scrollbar = ClassUI(moho.scrollbar_methods, Control) {
 
     __init = function(self, parent, axis, debugname)
         InternalCreateScrollbar(self, parent, axis)

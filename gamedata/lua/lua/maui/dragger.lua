@@ -2,7 +2,7 @@
 -- Destroy()
 -- PostDragger(originFrame, keycode, dragger)
 
-Dragger = Class(moho.dragger_methods) {
+Dragger = ClassUI(moho.dragger_methods) {
 
     __init = function(self)
         InternalCreateDragger(self)

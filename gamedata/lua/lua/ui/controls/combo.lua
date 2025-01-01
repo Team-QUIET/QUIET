@@ -49,7 +49,7 @@ local defaultBitmaps = {
 }
 
 
-Combo = Class(Group) {
+Combo = ClassUI(Group) {
     __init = function(self, parent, pointSize, maxVisibleItems, staticTitle, bitmaps, rolloverCue, clickCue, itemCue, debugName)
         Group.__init(self, parent)
         self:SetName(debugName or "Combo")
@@ -374,7 +374,7 @@ Combo = Class(Group) {
 -- NOTE: At some point a flexible control combo that uses grid should be made so anything can be in it
 
 -- bitmap array expects an array of bitmap names or colors
-BitmapCombo = Class(Group) {
+BitmapCombo = ClassUI(Group) {
     __init = function(self, parent, bitmapArray, defaultIndex, isColor, bitmaps, rolloverCue, clickCue, debugName)
         Group.__init(self, parent)
         self:SetName(debugName or "BitmapCombo")

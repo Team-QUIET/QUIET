@@ -30,7 +30,7 @@
 local Control = import('control.lua').Control
 local ScaleNumber = import("/lua/maui/layouthelpers.lua").ScaleNumber
 
-Bitmap = Class(moho.bitmap_methods, Control) {
+Bitmap = ClassUI(moho.bitmap_methods, Control) {
 
     __init = function(self, parent, filename, debugname)
 	
