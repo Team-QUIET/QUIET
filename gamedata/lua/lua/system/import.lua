@@ -1,6 +1,6 @@
-# Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
-#
-# Implement import()
+-- Copyright ï¿½ 2005 Gas Powered Games, Inc.  All rights reserved.
+--
+-- Implement import()
 
 
 -- Table of all loaded modules, indexed by name.

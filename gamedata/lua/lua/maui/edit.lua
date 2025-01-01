@@ -34,7 +34,7 @@ local Control = import('control.lua').Control
 local ScaleNumber = import("/lua/maui/layouthelpers.lua").ScaleNumber
 local UIUtil = import('/lua/ui/uiutil.lua')
 
-Edit = Class(moho.edit_methods, Control) {
+Edit = ClassUI(moho.edit_methods, Control) {
 
     __init = function(self, parent, debugname)
         InternalCreateEdit(self, parent)

@@ -2,7 +2,7 @@ local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 
 local SeraLambdaField = import('/mods/BlackOpsACUs/lua/BlackOpsdefaultantiprojectile.lua').SeraLambdaFieldRedirector
 
-ESB0005 = Class(SStructureUnit) {
+ESB0005 = ClassUnit(SStructureUnit) {
 
 
 -- File pathing and special paramiters called ###########################

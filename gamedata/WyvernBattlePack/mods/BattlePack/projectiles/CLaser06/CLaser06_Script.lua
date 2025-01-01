@@ -2,10 +2,10 @@
 --  File     :  /projectiles/cybran/claser06/claser06_script.lua
 --  Author(s):
 --  Summary  :  SC2 Cybran Laser: CLaser01
---  Copyright © 2009 Gas Powered Games, Inc.  All rights reserved.
+--  Copyright ï¿½ 2009 Gas Powered Games, Inc.  All rights reserved.
 -----------------------------------------------------------------------------
 local EffectTemplate = import('/lua/EffectTemplates.lua')
-CLaser06 = Class(import('/lua/sim/defaultprojectiles.lua').SinglePolyTrailProjectile) {
+CLaser06 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').SinglePolyTrailProjectile) {
 	FxImpactTrajectoryAligned =true,
 
 	PolyTrail = '/mods/BattlePack/effects/emitters/w_c_aa01_p_03_polytrail_emit.bp',

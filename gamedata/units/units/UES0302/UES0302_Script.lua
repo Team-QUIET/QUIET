@@ -9,13 +9,13 @@ local TIFSmartCharge        = WeaponsFile.TIFSmartCharge
 
 WeaponsFile = nil
 
-UES0302 = Class(TSeaUnit) {
+UES0302 = ClassUnit(TSeaUnit) {
 
     Weapons = {
-        Turret      = Class(TDFGaussCannonWeapon) {},	
-        AAGun       = Class(TAALinkedRailgun) {},
-        PhalanxGun  = Class(TAMPhalanxWeapon) {},
-        AntiTorpedo = Class(TIFSmartCharge) {},
+        Turret      = ClassWeapon(TDFGaussCannonWeapon) {},	
+        AAGun       = ClassWeapon(TAALinkedRailgun) {},
+        PhalanxGun  = ClassWeapon(TAMPhalanxWeapon) {},
+        AntiTorpedo = ClassWeapon(TIFSmartCharge) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

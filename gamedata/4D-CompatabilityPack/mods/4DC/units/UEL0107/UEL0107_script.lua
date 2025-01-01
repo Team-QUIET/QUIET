@@ -3,11 +3,11 @@ local THoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 local MortarWeapon               = import('/lua/terranweapons.lua').TDFFragmentationGrenadeLauncherWeapon
 local AANDepthChargeBombWeapon      = import('/lua/aeonweapons.lua').AANDepthChargeBombWeapon
 
-UEL0107 = Class(THoverLandUnit) {
+UEL0107 = ClassUnit(THoverLandUnit) {
 
     Weapons = {
-        Mortar = Class(MortarWeapon){},
-        DepthCharge = Class(AANDepthChargeBombWeapon){},
+        Mortar = ClassWeapon(MortarWeapon){},
+        DepthCharge = ClassWeapon(AANDepthChargeBombWeapon){},
     },
 
 }

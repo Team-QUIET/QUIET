@@ -1,6 +1,6 @@
 local CConstructionStructureUnit = import('/lua/cybranunits.lua').CConstructionStructureUnit
 
-XRB0204 = Class(CConstructionStructureUnit) {
+XRB0204 = ClassUnit(CConstructionStructureUnit) {
 
     OnStartBeingBuilt = function(self, builder, layer)
 

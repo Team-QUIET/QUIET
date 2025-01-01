@@ -8,18 +8,18 @@ local CAABurstCloudFlakArtilleryWeapon  = CybranWeaponsFile.CAABurstCloudFlakArt
 
 CybranWeaponsFile = nil
 
-WRL0404 = Class(CWalkingLandUnit) {
+WRL0404 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        MainGun = Class(CDFHvyProtonCannonWeapon) {},
+        MainGun = ClassWeapon(CDFHvyProtonCannonWeapon) {},
 		
-        RightLaserTurret = Class(CDFHeavyMicrowaveLaserGenerator) {},
-        LeftLaserTurret = Class(CDFHeavyMicrowaveLaserGenerator) {},
+        RightLaserTurret = ClassWeapon(CDFHeavyMicrowaveLaserGenerator) {},
+        LeftLaserTurret = ClassWeapon(CDFHeavyMicrowaveLaserGenerator) {},
 		
-        AAGun1 = Class(CAABurstCloudFlakArtilleryWeapon) {},
-        AAGun2 = Class(CAABurstCloudFlakArtilleryWeapon) {},
-        AAGun3 = Class(CAABurstCloudFlakArtilleryWeapon) {},
-        AAGun4 = Class(CAABurstCloudFlakArtilleryWeapon) {},
+        AAGun1 = ClassWeapon(CAABurstCloudFlakArtilleryWeapon) {},
+        AAGun2 = ClassWeapon(CAABurstCloudFlakArtilleryWeapon) {},
+        AAGun3 = ClassWeapon(CAABurstCloudFlakArtilleryWeapon) {},
+        AAGun4 = ClassWeapon(CAABurstCloudFlakArtilleryWeapon) {},
     },
 }
 

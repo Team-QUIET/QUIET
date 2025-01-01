@@ -62,7 +62,7 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
 
-SAirFactoryUnit = Class(FactoryUnit) {
+SAirFactoryUnit = ClassUnit(FactoryUnit) {
 
     StartBuildFx = function( self, unitBeingBuilt )
     
@@ -245,7 +245,7 @@ SAirFactoryUnit = Class(FactoryUnit) {
 	
 }
 
-SLandFactoryUnit = Class(FactoryUnit) {
+SLandFactoryUnit = ClassUnit(FactoryUnit) {
 
     StartBuildFx = function( self, unitBeingBuilt )
     
@@ -325,7 +325,7 @@ SLandFactoryUnit = Class(FactoryUnit) {
     
 }
 
-SSeaFactoryUnit = Class(FactoryUnit) {
+SSeaFactoryUnit = ClassUnit(FactoryUnit) {
 
     StartBuildFx = function( self, unitBeingBuilt )
     
@@ -400,7 +400,7 @@ SSeaFactoryUnit = Class(FactoryUnit) {
     },      
 }
 
-SConstructionUnit = Class(ConstructionUnit) {
+SConstructionUnit = ClassUnit(ConstructionUnit) {
 
     OnCreate = function(self)
     
@@ -492,7 +492,7 @@ SConstructionUnit = Class(ConstructionUnit) {
     end,      
 }
 
-SEnergyCreationUnit = Class(EnergyCreationUnit) {
+SEnergyCreationUnit = ClassUnit(EnergyCreationUnit) {
 
     OnCreate = function(self)
         EnergyCreationUnitOnCreate(self)
@@ -511,23 +511,23 @@ SEnergyCreationUnit = Class(EnergyCreationUnit) {
     end,
 }
 
-SMassCollectionUnit = Class(MassCollectionUnit) {}
+SMassCollectionUnit = ClassUnit(MassCollectionUnit) {}
 
-SMassFabricationUnit = Class(MassFabricationUnit) {}
+SMassFabricationUnit = ClassUnit(MassFabricationUnit) {}
 
-SMassStorageUnit = Class(StructureUnit) {}
+SMassStorageUnit = ClassUnit(StructureUnit) {}
 
-SRadarUnit = Class(RadarUnit) {}
+SRadarUnit = ClassUnit(RadarUnit) {}
 
-SSonarUnit = Class(SonarUnit) {}
+SSonarUnit = ClassUnit(SonarUnit) {}
 
-SSeaUnit = Class(SeaUnit) {}
+SSeaUnit = ClassUnit(SeaUnit) {}
 
-SShieldHoverLandUnit = Class(MobileUnit) {}
+SShieldHoverLandUnit = ClassUnit(MobileUnit) {}
 
-SShieldLandUnit = Class(MobileUnit) {}
+SShieldLandUnit = ClassUnit(MobileUnit) {}
 
-SShieldStructureUnit = Class(ShieldStructureUnit) {
+SShieldStructureUnit = ClassUnit(ShieldStructureUnit) {
 
     OnShieldEnabled = function(self)
         ShieldStructureUnit.OnShieldEnabled(self)
@@ -551,23 +551,23 @@ SShieldStructureUnit = Class(ShieldStructureUnit) {
     end,
 }
 
-SStructureUnit = Class(StructureUnit) {}
+SStructureUnit = ClassUnit(StructureUnit) {}
 
-SSubUnit = Class(SubUnit) {}
+SSubUnit = ClassUnit(SubUnit) {}
 
-STransportBeaconUnit = Class(TransportBeaconUnit) {}
+STransportBeaconUnit = ClassUnit(TransportBeaconUnit) {}
 
-SWalkingLandUnit = Class(WalkingLandUnit) {}
+SWalkingLandUnit = ClassUnit(WalkingLandUnit) {}
 
-SWallStructureUnit = Class(WallStructureUnit) {}
+SWallStructureUnit = ClassUnit(WallStructureUnit) {}
 
-SCivilianStructureUnit = Class(StructureUnit) {}
+SCivilianStructureUnit = ClassUnit(StructureUnit) {}
 
-SQuantumGateUnit = Class(QuantumGateUnit) {}
+SQuantumGateUnit = ClassUnit(QuantumGateUnit) {}
 
-SRadarJammerUnit = Class(RadarJammerUnit) {}
+SRadarJammerUnit = ClassUnit(RadarJammerUnit) {}
 
-SEnergyBallUnit = Class(MobileUnit) {
+SEnergyBallUnit = ClassUnit(MobileUnit) {
     timeAlive = 0,
     
     OnCreate = function(self)

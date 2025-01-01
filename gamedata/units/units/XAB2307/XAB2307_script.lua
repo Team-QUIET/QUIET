@@ -2,10 +2,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFQuanticArtillery = import('/lua/aeonweapons.lua').AIFQuanticArtillery
 
-XAB2307 = Class(AStructureUnit) {
+XAB2307 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        MainGun = Class(AIFQuanticArtillery) {},
+        MainGun = ClassWeapon(AIFQuanticArtillery) {},
     },
 }
 TypeClass = XAB2307

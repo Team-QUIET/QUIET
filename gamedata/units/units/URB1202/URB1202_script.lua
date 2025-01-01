@@ -1,6 +1,6 @@
 local CMassCollectionUnit = import('/lua/defaultunits.lua').MassCollectionUnit
 
-URB1202 = Class(CMassCollectionUnit) {
+URB1202 = ClassUnit(CMassCollectionUnit) {
     OnStartBuild = function(self, unitBeingBuilt, order)
         CMassCollectionUnit.OnStartBuild(self, unitBeingBuilt, order)
         if not self.AnimationManipulator then return end

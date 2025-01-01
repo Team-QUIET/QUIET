@@ -4,10 +4,10 @@ local SDFHeavyQuarnonCannon = import('/lua/seraphimweapons.lua').SDFHeavyQuarnon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT3ML = Class(SWalkingLandUnit) {
+BRPT3ML = ClassUnit(SWalkingLandUnit) {
     
     Weapons = {
-        FrontTurret = Class(SDFHeavyQuarnonCannon) { FxMuzzleFlashScale = 0.5 },
+        FrontTurret = ClassWeapon(SDFHeavyQuarnonCannon) { FxMuzzleFlashScale = 0.5 },
     },
     
     OnStopBeingBuilt = function(self,builder,layer)

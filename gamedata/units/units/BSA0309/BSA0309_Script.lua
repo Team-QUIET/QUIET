@@ -15,14 +15,14 @@ local SeraLambdaFieldDestroyer = import('/lua/defaultantiprojectile.lua').SeraLa
 
 local ForkThead = ForkThread
 
-BSA0309 = Class(SAirUnit) {
+BSA0309 = ClassUnit(SAirUnit) {
 
     AirDestructionEffectBones = { 'XSA0309','Left_Attachpoint08','Right_Attachpoint02'},
 
     Weapons = {
 	
-        AutoGun = Class(SDFHeavyPhasicAutoGunWeapon) {},
-        AAGun = Class(SAAShleoCannonWeapon) {},
+        AutoGun = ClassWeapon(SDFHeavyPhasicAutoGunWeapon) {},
+        AAGun = ClassWeapon(SAAShleoCannonWeapon) {},
 		
     },
 	

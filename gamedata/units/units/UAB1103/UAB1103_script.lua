@@ -1,6 +1,6 @@
 local AMassCollectionUnit = import('/lua/defaultunits.lua').MassCollectionUnit
 
-UAB1103 = Class(AMassCollectionUnit) {
+UAB1103 = ClassUnit(AMassCollectionUnit) {
 
     OnStartBuild = function(self, unitBeingBuilt, order)
         AMassCollectionUnit.OnStartBuild(self, unitBeingBuilt, order)

@@ -6,11 +6,11 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BAB2306 = Class(AStructureUnit) {
+BAB2306 = ClassUnit(AStructureUnit) {
 
     Weapons = {
 
-		MainGun = Class(MiniPhasonLaser){
+		MainGun = ClassWeapon(MiniPhasonLaser){
 
 	        FxVentEffect2 = EffectTemplate.WeaponSteam01,
     

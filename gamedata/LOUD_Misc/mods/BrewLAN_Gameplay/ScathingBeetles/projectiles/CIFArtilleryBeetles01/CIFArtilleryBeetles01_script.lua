@@ -4,7 +4,7 @@
 local CArtilleryProtonProjectile = import('/lua/cybranprojectiles.lua').CArtilleryProtonProjectile
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-CIFArtilleryBeetle01 = Class(CArtilleryProtonProjectile) {
+CIFArtilleryBeetle01 = ClassProjectile(CArtilleryProtonProjectile) {
 
     OnCreate = function(self, ...)
         CArtilleryProtonProjectile.OnCreate(self, unpack(arg) )

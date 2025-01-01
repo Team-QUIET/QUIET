@@ -1,7 +1,7 @@
 
 local CEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
-URB1306 = Class(CEnergyCreationUnit) {
+URB1306 = ClassUnit(CEnergyCreationUnit) {
     
     AmbientEffects = 'CT3PowerAmbient',
 --[[    

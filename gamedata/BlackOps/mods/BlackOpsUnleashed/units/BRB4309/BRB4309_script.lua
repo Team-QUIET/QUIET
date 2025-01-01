@@ -4,7 +4,7 @@ local Shield = import('/lua/shield.lua').Shield
 
 local ForkThread = ForkThread
 
-BRB4309 = Class(CStructureUnit) {
+BRB4309 = ClassUnit(CStructureUnit) {
 
     OnCreate = function(self)
 

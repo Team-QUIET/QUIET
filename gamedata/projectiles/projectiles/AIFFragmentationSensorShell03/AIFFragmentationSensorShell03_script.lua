@@ -5,7 +5,7 @@ local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
 local CreateDecal = CreateDecal
 
-AIFFragmentationSensorShell03 = Class(AArtilleryFragmentationSensorShellProjectile) {
+AIFFragmentationSensorShell03 = ClassProjectile(AArtilleryFragmentationSensorShellProjectile) {
 
     OnImpact = function(self, TargetType, targetEntity)
 		-- if hitting ground create the splat on the ground

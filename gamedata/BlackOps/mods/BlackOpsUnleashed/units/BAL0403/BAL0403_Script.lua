@@ -9,7 +9,7 @@ local LOUDINSERT = table.insert
 local LOUDATTACHEMITTER = CreateAttachedEmitter
 local AttachBeamEntityToEntity = AttachBeamEntityToEntity
 
-BAL0403 = Class(AWalkingLandUnit) {
+BAL0403 = ClassUnit(AWalkingLandUnit) {
 
 	ChargeEffects01 = {'/mods/BlackOpsUnleashed/effects/emitters/g_laser_flash_01_emit.bp',	'/mods/BlackOpsUnleashed/effects/emitters/g_laser_muzzle_01_emit.bp'},
 
@@ -19,7 +19,7 @@ BAL0403 = Class(AWalkingLandUnit) {
 	
     Weapons = {
 	
-        MainGun = Class(GoldenLaserGenerator) {
+        MainGun = ClassWeapon(GoldenLaserGenerator) {
 		
             OnWeaponFired = function(self)
 			
@@ -144,7 +144,7 @@ BAL0403 = Class(AWalkingLandUnit) {
 			end,
         },
 		
-        BoomWeapon = Class(CDFLaserHeavyWeapon){
+        BoomWeapon = ClassWeapon(CDFLaserHeavyWeapon){
 		
         	OnWeaponFired = function(self)
                	CDFLaserHeavyWeapon.OnWeaponFired(self)

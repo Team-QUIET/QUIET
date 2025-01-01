@@ -1,11 +1,11 @@
 local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local TAMPhalanxWeapon = import('/lua/terranweapons.lua').TAMPhalanxWeapon
 
-UEB4201 = Class(TStructureUnit) {
+UEB4201 = ClassUnit(TStructureUnit) {
 
     Weapons = {
 
-        Turret01 = Class(TAMPhalanxWeapon) {
+        Turret01 = ClassWeapon(TAMPhalanxWeapon) {
         
                 OnCreate = function(self)
 

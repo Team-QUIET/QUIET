@@ -1,6 +1,6 @@
 local SShieldStructureUnit = import('/lua/seraphimunits.lua').SShieldStructureUnit
 
-SSB5301 = Class(SShieldStructureUnit) {
+SSB5301 = ClassUnit(SShieldStructureUnit) {
 
     ShieldEffects = {'/effects/emitters/seraphim_shield_generator_t2_01_emit.bp'},
     

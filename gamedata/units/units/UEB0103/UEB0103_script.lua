@@ -2,7 +2,7 @@ local TSeaFactoryUnit = import('/lua/terranunits.lua').TSeaFactoryUnit
 
 local WaitFor = WaitFor
 
-UEB0103 = Class(TSeaFactoryUnit) {    
+UEB0103 = ClassUnit(TSeaFactoryUnit) {    
     StartArmsMoving = function(self)
         TSeaFactoryUnit.StartArmsMoving(self)
         if not self.ArmSlider then

@@ -12,15 +12,15 @@ WeaponsFile = nil
 local CreateBoneEffects      = import('/lua/effectutilities.lua').CreateBoneEffects
 local WeaponSteam            = import('/lua/effecttemplates.lua').WeaponSteam01
 
-BEA0403 = Class(TAirUnit) {
+BEA0403 = ClassUnit(TAirUnit) {
 
     Weapons = {
 
-        Turret  = Class(TDFGaussCannonWeapon) {},
+        Turret  = ClassWeapon(TDFGaussCannonWeapon) {},
 
-        AAAFlak = Class(TAAFlakArtilleryCannon) {},
+        AAAFlak = ClassWeapon(TAAFlakArtilleryCannon) {},
 
-        GatlingAACannon01 = Class(TDFPlasmaCannonWeapon){
+        GatlingAACannon01 = ClassWeapon(TDFPlasmaCannonWeapon){
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then
@@ -43,7 +43,7 @@ BEA0403 = Class(TAirUnit) {
             end,
         },
 
-        GatlingAACannon02 = Class(TDFPlasmaCannonWeapon){
+        GatlingAACannon02 = ClassWeapon(TDFPlasmaCannonWeapon){
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then
@@ -66,7 +66,7 @@ BEA0403 = Class(TAirUnit) {
             end,
         },
 
-        GatlingAACannon03 = Class(TDFPlasmaCannonWeapon){
+        GatlingAACannon03 = ClassWeapon(TDFPlasmaCannonWeapon){
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then
@@ -89,7 +89,7 @@ BEA0403 = Class(TAirUnit) {
             end,
         },
 
-        GatlingAACannon04 = Class(TDFPlasmaCannonWeapon){
+        GatlingAACannon04 = ClassWeapon(TDFPlasmaCannonWeapon){
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then

@@ -2,10 +2,10 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFParagonDeathWeapon = import('/lua/aeonweapons.lua').AIFParagonDeathWeapon
 
-SRB1401 = Class(AStructureUnit) {
+SRB1401 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        DeathWeapon = Class(AIFParagonDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFParagonDeathWeapon) {},
     },
 	
 	-- prevent construction of a Paragon within 164 of an existing paragon owned by self or 100 owned by ally
@@ -40,7 +40,7 @@ SRB1401 = Class(AStructureUnit) {
 			
 				if VDist3( MyPosition, paragon:GetPosition() ) < 168 then
 					ParagonTooClose = true
-					break	-- you have a paragon too close so you don’t need to check any others
+					break	-- you have a paragon too close so you donï¿½t need to check any others
 				end
 				
 			end

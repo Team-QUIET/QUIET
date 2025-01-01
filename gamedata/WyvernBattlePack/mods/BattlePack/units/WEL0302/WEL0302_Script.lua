@@ -7,10 +7,10 @@ local WeaponSteam01 = import('/lua/effecttemplates.lua').WeaponSteam01
 
 local TrashAdd = TrashBag.Add
 
-WEL0302 = Class(TWalkingLandUnit) 
+WEL0302 = ClassUnit(TWalkingLandUnit) 
 {
     Weapons = {
-        GatlingCannon = Class(TDFPlasmaCannonWeapon){     
+        GatlingCannon = ClassWeapon(TDFPlasmaCannonWeapon){     
 
             PlayFxWeaponPackSequence = function(self)
             

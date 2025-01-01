@@ -41,9 +41,9 @@ local ForkThread                = ForkThread
 local LOUDENTITY                = EntityCategoryContains
 local LOUDINSERT                = table.insert
 
-local SetCollisionShape = moho.entity_methods.SetCollisionShape
-local StayUnderwater    = moho.projectile_methods.StayUnderwater
-local TrackTarget       = moho.projectile_methods.TrackTarget
+local SetCollisionShape = _G.moho.entity_methods.SetCollisionShape
+local StayUnderwater    = _G.moho.projectile_methods.StayUnderwater
+local TrackTarget       = _G.moho.projectile_methods.TrackTarget
 
 local TrashBag          = TrashBag
 local TrashAdd          = TrashBag.Add
@@ -51,7 +51,7 @@ local TrashDestroy      = TrashBag.Destroy
 
 local WaitTicks         = coroutine.yield
 
-ASaintAntiNuke = Class(SinglePolyTrailProjectile) {
+ASaintAntiNuke = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/aeon_missile_trail_02_emit.bp',
     FxTrails = {'/effects/emitters/saint_munition_01_emit.bp'},
@@ -63,7 +63,7 @@ ASaintAntiNuke = Class(SinglePolyTrailProjectile) {
     FxImpactProjectile = EffectTemplate.ASaintImpact01,
 }
 
-AIFBallisticMortarProjectile = Class(EmitterProjectile) {
+AIFBallisticMortarProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.AQuarkBomb01,
 
@@ -73,7 +73,7 @@ AIFBallisticMortarProjectile = Class(EmitterProjectile) {
     FxImpactAirUnit =  EffectTemplate.AIFBallisticMortarHit01,
 }
 
-AIFBallisticMortarProjectile02 = Class(MultiPolyTrailProjectile) {
+AIFBallisticMortarProjectile02 = ClassProjectile(MultiPolyTrailProjectile) {
 
     PolyTrails = EffectTemplate.AIFBallisticMortarTrails02,
 
@@ -83,7 +83,7 @@ AIFBallisticMortarProjectile02 = Class(MultiPolyTrailProjectile) {
     FxImpactLand =  EffectTemplate.AIFBallisticMortarHitLand02,
 }
 
-AArtilleryProjectile = Class(EmitterProjectile) {
+AArtilleryProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.AIFBallisticMortarTrails01,
     FxTrailScale = 0.75,
@@ -95,7 +95,7 @@ AArtilleryProjectile = Class(EmitterProjectile) {
 
 }
 
-ABeamProjectile = Class(NullShell) {
+ABeamProjectile = ClassProjectile(NullShell) {
 
     FxUnitHitScale = 0.5,
     FxImpactUnit = EffectTemplate.ABeamHit01,
@@ -103,7 +103,7 @@ ABeamProjectile = Class(NullShell) {
     FxImpactLand = EffectTemplate.ABeamHit01,
 }
 
-AGravitonBombProjectile = Class(SinglePolyTrailProjectile) {
+AGravitonBombProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
 	PolyTrail = '/effects/emitters/default_polytrail_03_emit.bp',
     FxTrails = {'/effects/emitters/torpedo_munition_trail_01_emit.bp',},
@@ -113,11 +113,11 @@ AGravitonBombProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.ABombHit01,
 }
 
-ACannonSeaProjectile = Class(SingleBeamProjectile) {
+ACannonSeaProjectile = ClassProjectile(SingleBeamProjectile) {
     BeamName = '/effects/emitters/cannon_munition_ship_aeon_beam_01_emit.bp',
 }
 
-ACannonTankProjectile = Class(SingleBeamProjectile) {
+ACannonTankProjectile = ClassProjectile(SingleBeamProjectile) {
 
     BeamName = '/effects/emitters/cannon_munition_ship_aeon_beam_01_emit.bp',
 
@@ -134,7 +134,7 @@ ACannonTankProjectile = Class(SingleBeamProjectile) {
     end,
 }
 
-ADepthChargeProjectile = Class(OnWaterEntryEmitterProjectile) {
+ADepthChargeProjectile = ClassProjectile(OnWaterEntryEmitterProjectile) {
 	
     FxEnterWater= { '/effects/emitters/water_splash_plume_01_emit.bp','/effects/emitters/water_splash_ripples_ring_01_emit.bp' },
 
@@ -180,7 +180,7 @@ ADepthChargeProjectile = Class(OnWaterEntryEmitterProjectile) {
 
 }
 
-AGravitonProjectile = Class(EmitterProjectile) {
+AGravitonProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {'/effects/emitters/graviton_munition_trail_01_emit.bp',},
     FxImpactUnit = EffectTemplate.AGravitonBolterHit01,
@@ -189,7 +189,7 @@ AGravitonProjectile = Class(EmitterProjectile) {
     DirectionalImpactEffect = {'/effects/emitters/graviton_bolter_hit_01_emit.bp',},
 }
 
-AHighIntensityLaserProjectile = Class(SinglePolyTrailProjectile) {
+AHighIntensityLaserProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxTrails = {
         '/effects/emitters/aeon_laser_fxtrail_01_emit.bp',
@@ -202,7 +202,7 @@ AHighIntensityLaserProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.AHighIntensityLaserHitLand01,
 }
 
-AIMFlareProjectile = Class(EmitterProjectile) {
+AIMFlareProjectile = ClassProjectile(EmitterProjectile) {
     FxTrails = EffectTemplate.AAntiMissileFlare,
     FxTrailScale = 1.0,
 
@@ -229,7 +229,7 @@ AIMFlareProjectile = Class(EmitterProjectile) {
     end,
 }
 
-ALaserBotProjectile = Class(SinglePolyTrailProjectile) {
+ALaserBotProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/aeon_laser_trail_01_emit.bp',
 
@@ -238,7 +238,7 @@ ALaserBotProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.ALaserBotHit01,
 }
 
-ALaserProjectile = Class(SingleBeamProjectile) {
+ALaserProjectile = ClassProjectile(SingleBeamProjectile) {
 
     BeamName = '/effects/emitters/laserturret_munition_beam_02_emit.bp',
 
@@ -247,7 +247,7 @@ ALaserProjectile = Class(SingleBeamProjectile) {
     FxImpactLand = EffectTemplate.ALaserHit01,
 }
 
-AQuadLightLaserProjectile = Class(MultiPolyTrailProjectile) {
+AQuadLightLaserProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
     PolyTrails = {
 		'/effects/emitters/aeon_laser_trail_02_emit.bp',
@@ -259,7 +259,7 @@ AQuadLightLaserProjectile = Class(MultiPolyTrailProjectile) {
     FxImpactLand = EffectTemplate.ALightLaserHit01,
 }
 
-ALightLaserProjectile = Class(MultiPolyTrailProjectile) {
+ALightLaserProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
     PolyTrails = {
 		'/effects/emitters/aeon_laser_trail_02_emit.bp',
@@ -272,15 +272,15 @@ ALightLaserProjectile = Class(MultiPolyTrailProjectile) {
 
 }
 
-ASonicPulsarProjectile = Class(EmitterProjectile){ FxTrails = EffectTemplate.ASonicPulsarMunition01 }
+ASonicPulsarProjectile = ClassProjectile(EmitterProjectile){ FxTrails = EffectTemplate.ASonicPulsarMunition01 }
 
-AMiasmaProjectile = Class(EmitterProjectile) {
+AMiasmaProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.AMiasmaMunition01,
     FxImpactNone = EffectTemplate.AMiasma01,
 }
 
-AMiasmaProjectile02 = Class(EmitterProjectile) {
+AMiasmaProjectile02 = ClassProjectile(EmitterProjectile) {
 
 	FxTrails = EffectTemplate.AMiasmaMunition02,
 	FxImpactLand = EffectTemplate.AMiasmaField01,
@@ -288,7 +288,7 @@ AMiasmaProjectile02 = Class(EmitterProjectile) {
     FxImpactProp = EffectTemplate.AMiasmaField01,
 }
 
-AMissileAAProjectile = Class(SinglePolyTrailProjectile) {
+AMissileAAProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/aeon_missile_trail_01_emit.bp',
 
@@ -299,7 +299,7 @@ AMissileAAProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = AMissileHit01,
 }
 
-AZealot02AAMissileProjectile = Class(SinglePolyTrailProjectile) {
+AZealot02AAMissileProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/aeon_missile_trail_03_emit.bp',
 
@@ -310,7 +310,7 @@ AZealot02AAMissileProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = AMissileHit01,
 }
 
-AAALightDisplacementAutocannonMissileProjectile = Class(MultiPolyTrailProjectile) {
+AAALightDisplacementAutocannonMissileProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
     FxImpactUnit = EffectTemplate.ALightDisplacementAutocannonMissileHit,
     FxImpactAirUnit = EffectTemplate.ALightDisplacementAutocannonMissileHitUnit,
@@ -320,7 +320,7 @@ AAALightDisplacementAutocannonMissileProjectile = Class(MultiPolyTrailProjectile
     PolyTrails = EffectTemplate.ALightDisplacementAutocannonMissilePolyTrails,
 }
 
-AGuidedMissileProjectile = Class(SinglePolyTrailProjectile) {
+AGuidedMissileProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxTrails =  EffectTemplate.AMercyGuidedMissileFxTrails,
 	PolyTrail = EffectTemplate.AMercyGuidedMissilePolyTrail,
@@ -331,7 +331,7 @@ AGuidedMissileProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.AMercyGuidedMissileSplitMissileHitLand,
 }
 
-AMissileCruiseSubProjectile = Class(EmitterProjectile) {
+AMissileCruiseSubProjectile = ClassProjectile(EmitterProjectile) {
 
     FxInitialAtEntityEmitter = {},
     FxUnderWaterTrail = {'/effects/emitters/missile_cruise_munition_underwater_trail_01_emit.bp',},
@@ -357,7 +357,7 @@ AMissileCruiseSubProjectile = Class(EmitterProjectile) {
     end,
 }
 
-AMissileSerpentineProjectile = Class(SingleCompositeEmitterProjectile) {
+AMissileSerpentineProjectile = ClassProjectile(SingleCompositeEmitterProjectile) {
 
     PolyTrail = '/effects/emitters/serpentine_missile_trail_emit.bp',
     BeamName = '/effects/emitters/serpentine_missle_exhaust_beam_01_emit.bp',
@@ -376,7 +376,7 @@ AMissileSerpentineProjectile = Class(SingleCompositeEmitterProjectile) {
     end,
 }
 
-AMissileSerpentine02Projectile = Class(SingleCompositeEmitterProjectile) {
+AMissileSerpentine02Projectile = ClassProjectile(SingleCompositeEmitterProjectile) {
 
     PolyTrail = '/effects/emitters/serpentine_missile_trail_emit.bp',
     BeamName = '/effects/emitters/serpentine_missle_exhaust_beam_01_emit.bp',
@@ -395,7 +395,7 @@ AMissileSerpentine02Projectile = Class(SingleCompositeEmitterProjectile) {
     end,
 }
 
-AOblivionCannonProjectile = Class(EmitterProjectile) {
+AOblivionCannonProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {'/effects/emitters/oblivion_cannon_munition_01_emit.bp'},
     FxImpactUnit = EffectTemplate.AOblivionCannonHit01,
@@ -404,7 +404,7 @@ AOblivionCannonProjectile = Class(EmitterProjectile) {
     FxImpactWater = EffectTemplate.AOblivionCannonHit01,
 }
 
-AOblivionCannonProjectile02 = Class(SinglePolyTrailProjectile) {
+AOblivionCannonProjectile02 = ClassProjectile(SinglePolyTrailProjectile) {
 
 	FxImpactTrajectoryAligned = false,
     
@@ -416,7 +416,7 @@ AOblivionCannonProjectile02 = Class(SinglePolyTrailProjectile) {
     FxImpactWater = EffectTemplate.AOblivionCannonHit02,
 }
 
-AQuantumCannonProjectile = Class(SinglePolyTrailProjectile) {
+AQuantumCannonProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxTrails = {
         '/effects/emitters/quantum_cannon_munition_03_emit.bp',
@@ -428,7 +428,7 @@ AQuantumCannonProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.AQuantumCannonHit01,
 }
 
-AQuantumDisruptorProjectile = Class(SinglePolyTrailProjectile) {
+AQuantumDisruptorProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/default_polytrail_03_emit.bp',
     FxTrails = EffectTemplate.AQuantumDisruptor01,
@@ -438,7 +438,7 @@ AQuantumDisruptorProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.AQuantumDisruptorHit01,
 }
 
-AAAQuantumDisplacementCannonProjectile = Class(NullShell) {
+AAAQuantumDisplacementCannonProjectile = ClassProjectile(NullShell) {
 
     PolyTrail = '/effects/emitters/quantum_displacement_cannon_polytrail_01_emit.bp',
 
@@ -510,14 +510,14 @@ AAAQuantumDisplacementCannonProjectile = Class(NullShell) {
     end,
 }
 
-AQuantumWarheadProjectile = Class(MultiCompositeEmitterProjectile) {
+AQuantumWarheadProjectile = ClassProjectile(MultiCompositeEmitterProjectile) {
 
     Beams = {'/effects/emitters/aeon_nuke_exhaust_beam_01_emit.bp',},
     PolyTrails = {'/effects/emitters/aeon_nuke_trail_emit.bp',},
 
 }
 
-AQuarkBombProjectile = Class(EmitterProjectile) {
+AQuarkBombProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = EffectTemplate.AQuarkBomb01,
     FxTrailScale = 1,
@@ -548,7 +548,7 @@ AQuarkBombProjectile = Class(EmitterProjectile) {
     end,
 }
 
-ARailGunProjectile = Class(EmitterProjectile) {
+ARailGunProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {'/effects/emitters/railgun_munition_trail_02_emit.bp',
         '/effects/emitters/railgun_munition_trail_01_emit.bp'},
@@ -556,7 +556,7 @@ ARailGunProjectile = Class(EmitterProjectile) {
 
 }
 
-AReactonCannonProjectile = Class(EmitterProjectile) {
+AReactonCannonProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {
         '/effects/emitters/reacton_cannon_fxtrail_01_emit.bp',
@@ -569,7 +569,7 @@ AReactonCannonProjectile = Class(EmitterProjectile) {
     FxImpactLand = EffectTemplate.AReactonCannonHitLand01,
 }
 
-AReactonCannonAOEProjectile = Class(EmitterProjectile) {
+AReactonCannonAOEProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {
         '/effects/emitters/reacton_cannon_fxtrail_01_emit.bp',
@@ -582,7 +582,7 @@ AReactonCannonAOEProjectile = Class(EmitterProjectile) {
     FxImpactLand = EffectTemplate.AReactonCannonHitLand02,
 }
 
-ADisruptorProjectile = Class(SinglePolyTrailProjectile) {
+ADisruptorProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
 	PolyTrail = '/effects/emitters/default_polytrail_03_emit.bp',
     FxTrails = EffectTemplate.ADisruptorMunition01,
@@ -593,7 +593,7 @@ ADisruptorProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactShield = EffectTemplate.ADisruptorHitShield,
 }
 
-AShieldDisruptorProjectile = Class(SinglePolyTrailProjectile) {
+AShieldDisruptorProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
 	PolyTrail = EffectTemplate.ASDisruptorPolytrail01,
     FxTrails = EffectTemplate.ASDisruptorMunition01,
@@ -604,7 +604,7 @@ AShieldDisruptorProjectile = Class(SinglePolyTrailProjectile) {
     FxImpactShield = EffectTemplate.ASDisruptorHitShield,
 }
 
-ARocketProjectile = Class(EmitterProjectile) {
+ARocketProjectile = ClassProjectile(EmitterProjectile) {
 
     FxTrails = {'/effects/emitters/missile_sam_munition_trail_cybran_01_emit.bp',},
     FxTrailOffset = 0.5,
@@ -614,7 +614,7 @@ ARocketProjectile = Class(EmitterProjectile) {
     FxImpactLand = AMissileHit01,
 }
 
-ASonicPulseProjectile = Class(SinglePolyTrailProjectile) {
+ASonicPulseProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/sonic_pulse_munition_polytrail_01_emit.bp',
 
@@ -625,7 +625,7 @@ ASonicPulseProjectile = Class(SinglePolyTrailProjectile) {
 }
 
 -- Custom version of the sonic pulse battery projectile for flying units
-ASonicPulseProjectile02 = Class(SinglePolyTrailProjectile) {
+ASonicPulseProjectile02 = ClassProjectile(SinglePolyTrailProjectile) {
 
     PolyTrail = '/effects/emitters/sonic_pulse_munition_polytrail_02_emit.bp',
 
@@ -635,7 +635,7 @@ ASonicPulseProjectile02 = Class(SinglePolyTrailProjectile) {
     FxImpactLand = EffectTemplate.ASonicPulseHitLand01,
 }
 
-ATemporalFizzAAProjectile = Class(SingleCompositeEmitterProjectile) {
+ATemporalFizzAAProjectile = ClassProjectile(SingleCompositeEmitterProjectile) {
 
     BeamName = '/effects/emitters/temporal_fizz_munition_beam_01_emit.bp',
     PolyTrail = '/effects/emitters/default_polytrail_03_emit.bp',
@@ -645,7 +645,7 @@ ATemporalFizzAAProjectile = Class(SingleCompositeEmitterProjectile) {
     FxImpactNone = EffectTemplate.ATemporalFizzHit01,
 }
 
-ATorpedoShipProjectile = Class(OnWaterEntryEmitterProjectile) {
+ATorpedoShipProjectile = ClassProjectile(OnWaterEntryEmitterProjectile) {
 
     FxTrails = {'/effects/emitters/torpedo_munition_trail_01_emit.bp',},
 
@@ -705,7 +705,7 @@ ATorpedoShipProjectile = Class(OnWaterEntryEmitterProjectile) {
     end,    
 }
 
-ATorpedoSplitProjectile = Class(ATorpedoShipProjectile) {
+ATorpedoSplitProjectile = ClassProjectile(ATorpedoShipProjectile) {
 
     OnCreate = function(self,InWater)
 	
@@ -772,7 +772,7 @@ ATorpedoSplitProjectile = Class(ATorpedoShipProjectile) {
 
 }
 
-AAntiTorpedoProjectile = Class(SinglePolyTrailProjectile) {
+AAntiTorpedoProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxTrails = false,
     
@@ -812,7 +812,7 @@ AAntiTorpedoProjectile = Class(SinglePolyTrailProjectile) {
     end,    
 }
 
-ABaseTempProjectile = Class(SinglePolyTrailProjectile) {
+ABaseTempProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxImpactLand = AMissileHit01,
     FxImpactNone = AMissileHit01,
@@ -827,7 +827,7 @@ ABaseTempProjectile = Class(SinglePolyTrailProjectile) {
     PolyTrail = '/effects/emitters/aeon_laser_trail_01_emit.bp',    
 }
 
-AQuantumAutogun = Class(SinglePolyTrailProjectile) {
+AQuantumAutogun = ClassProjectile(SinglePolyTrailProjectile) {
 
 	FxImpactLand = EffectTemplate.Aeon_DualQuantumAutoGunHitLand,
     FxImpactNone = EffectTemplate.Aeon_DualQuantumAutoGunHit,
@@ -839,7 +839,7 @@ AQuantumAutogun = Class(SinglePolyTrailProjectile) {
     FxTrails = EffectTemplate.Aeon_DualQuantumAutoGunFxTrail,
 }
 
-AHeavyDisruptorCannonShell = Class(MultiPolyTrailProjectile) {
+AHeavyDisruptorCannonShell = ClassProjectile(MultiPolyTrailProjectile) {
 
 	FxImpactLand = EffectTemplate.Aeon_HeavyDisruptorCannonLandHit,
     FxImpactNone = EffectTemplate.Aeon_HeavyDisruptorCannonLandHit,
@@ -850,11 +850,11 @@ AHeavyDisruptorCannonShell = Class(MultiPolyTrailProjectile) {
     PolyTrails = EffectTemplate.Aeon_HeavyDisruptorCannonProjectileTrails, 
 }
 
-AQuantumCluster = Class(ABaseTempProjectile) {}
+AQuantumCluster = ClassProjectile(ABaseTempProjectile) {}
 
-ALightDisplacementAutoCannon = Class(ABaseTempProjectile) {}
+ALightDisplacementAutoCannon = ClassProjectile(ABaseTempProjectile) {}
 
-AArtilleryFragmentationSensorShellProjectile = Class(SinglePolyTrailProjectile) {
+AArtilleryFragmentationSensorShellProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     FxTrails = EffectTemplate.Aeon_QuanticClusterProjectileTrails,
     PolyTrail = EffectTemplate.Aeon_QuanticClusterProjectilePolyTrail,
@@ -862,13 +862,13 @@ AArtilleryFragmentationSensorShellProjectile = Class(SinglePolyTrailProjectile) 
     FxLandHitScale = 0.5,
 }
 
-AArtilleryFragmentationSensorShellProjectile02 = Class(AArtilleryFragmentationSensorShellProjectile) {
+AArtilleryFragmentationSensorShellProjectile02 = ClassProjectile(AArtilleryFragmentationSensorShellProjectile) {
 
 	FxTrails = EffectTemplate.Aeon_QuanticClusterProjectileTrails02,
     PolyTrail = EffectTemplate.Aeon_QuanticClusterProjectilePolyTrail02,
 }
 
-AArtilleryFragmentationSensorShellProjectile03 = Class(AArtilleryFragmentationSensorShellProjectile) {
+AArtilleryFragmentationSensorShellProjectile03 = ClassProjectile(AArtilleryFragmentationSensorShellProjectile) {
 
     PolyTrail = EffectTemplate.Aeon_QuanticClusterProjectilePolyTrail03,
 }

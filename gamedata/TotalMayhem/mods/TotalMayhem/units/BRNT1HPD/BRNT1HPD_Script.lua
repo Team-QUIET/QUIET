@@ -2,10 +2,10 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TDFGaussCannonWeapon = import('/lua/terranweapons.lua').TDFLandGaussCannonWeapon
 
-BRNT2PD2 = Class(TStructureUnit) {
+BRNT2PD2 = ClassUnit(TStructureUnit) {
 
     Weapons = {
-        MainGun = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
     },
 }
 

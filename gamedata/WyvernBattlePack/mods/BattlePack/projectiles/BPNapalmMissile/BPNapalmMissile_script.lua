@@ -1,7 +1,7 @@
 local StingerMissile = import('/mods/BattlePack/lua/BattlePackprojectiles.lua').NapalmMissile
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-BPNapalmMissile = Class(StingerMissile) {
+BPNapalmMissile = ClassProjectile(StingerMissile) {
 
     OnImpact = function(self, TargetType, targetEntity)
 

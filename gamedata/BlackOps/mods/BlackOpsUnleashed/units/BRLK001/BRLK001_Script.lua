@@ -7,15 +7,15 @@ local TargetingLaser    = CybranWeaponsFile.CDFParticleCannonWeapon
 
 CybranWeaponsFile = nil
 
-BRLK001 = Class(CWalkingLandUnit) 
+BRLK001 = ClassUnit(CWalkingLandUnit) 
 {
     Weapons = {
 
-		AAGun = Class(CAANanoDartWeapon) {},
+		AAGun = ClassWeapon(CAANanoDartWeapon) {},
 		
-		Lazor = Class(TargetingLaser) { FxMuzzleFlash = {'/effects/emitters/particle_cannon_muzzle_02_emit.bp'} },
+		Lazor = ClassWeapon(TargetingLaser) { FxMuzzleFlash = {'/effects/emitters/particle_cannon_muzzle_02_emit.bp'} },
 		
-		GroundGun = Class(CAANanoDartWeapon) {
+		GroundGun = ClassWeapon(CAANanoDartWeapon) {
 
 			SetOnTransport = function(self, transportstate)
                 CAANanoDartWeapon.SetOnTransport(self, transportstate)

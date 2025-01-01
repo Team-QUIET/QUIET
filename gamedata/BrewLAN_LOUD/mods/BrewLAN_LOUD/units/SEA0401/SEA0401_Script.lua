@@ -13,7 +13,7 @@ local             EffectUtil = import('/lua/EffectUtilities.lua')
 local                Effects = import('/lua/effecttemplates.lua')
 local  CreateBuildCubeThread = EffectUtil.CreateBuildCubeThread
 
-SEA0401 = Class(TAirUnit) {
+SEA0401 = ClassUnit(TAirUnit) {
 
     BeamExhaustCruise = import( '/lua/game.lua' ).BrewLANLOUDPath() .. '/effects/emitters/brewlan_missile_exhaust_fire_beam_01_emit.bp',
     DestroyNoFallRandomChance = 1.1,
@@ -22,13 +22,13 @@ SEA0401 = Class(TAirUnit) {
 
     Weapons = {
 	
-        AAGun = Class(TAAFlakArtilleryCannon) {},
+        AAGun = ClassWeapon(TAAFlakArtilleryCannon) {},
 		
-        SAM = Class(TSAMLauncher) {},
+        SAM = ClassWeapon(TSAMLauncher) {},
 		
-        RearASFBeam = Class(TDFHiroPlasmaCannon) {},
+        RearASFBeam = ClassWeapon(TDFHiroPlasmaCannon) {},
 		
-		GatlingCannon = Class(TDFPlasmaCannonWeapon){
+		GatlingCannon = ClassWeapon(TDFPlasmaCannonWeapon){
 		
             PlayFxWeaponPackSequence = function(self)
 			

@@ -4,7 +4,7 @@ local Entity = import('/lua/sim/Entity.lua').Entity
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local Util = import('/lua/utilities.lua')
 
-XSBSSG01 = Class(SShieldStructureUnit) {
+XSBSSG01 = ClassUnit(SShieldStructureUnit) {
     ShieldEffects1 = {
         '/effects/emitters/seraphim_shield_generator_t2_01_emit.bp',
     },

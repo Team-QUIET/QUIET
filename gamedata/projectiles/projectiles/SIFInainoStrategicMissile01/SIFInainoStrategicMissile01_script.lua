@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-SIFInainoStrategicMissile01 = Class(SIFInainoStrategicMissile) {
+SIFInainoStrategicMissile01 = ClassWeapon(SIFInainoStrategicMissile) {
 
     FxSplashScale = 0.5,
     FxTrails = {},

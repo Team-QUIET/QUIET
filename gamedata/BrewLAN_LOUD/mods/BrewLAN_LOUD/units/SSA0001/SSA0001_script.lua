@@ -1,6 +1,6 @@
 local SConstructionUnit = import('/lua/seraphimunits.lua').SConstructionUnit
 
-SSA0001 = Class(SConstructionUnit) {
+SSA0001 = ClassUnit(SConstructionUnit) {
 
     OnCreate = function(self)
         SConstructionUnit.OnCreate(self)

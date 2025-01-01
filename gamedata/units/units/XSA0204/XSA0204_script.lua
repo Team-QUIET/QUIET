@@ -2,10 +2,10 @@ local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local SANHeavyCavitationTorpedo = import('/lua/seraphimweapons.lua').SANHeavyCavitationTorpedo
 
-XSA0204 = Class(SAirUnit) {
+XSA0204 = ClassUnit(SAirUnit) {
 
     Weapons = {
-        Torpedo = Class(SANHeavyCavitationTorpedo) {},
+        Torpedo = ClassWeapon(SANHeavyCavitationTorpedo) {},
     },
 	
 }

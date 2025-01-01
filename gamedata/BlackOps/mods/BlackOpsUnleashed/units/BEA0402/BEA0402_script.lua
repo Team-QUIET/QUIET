@@ -12,20 +12,20 @@ local Effects       = import('/lua/effecttemplates.lua')
 local CreateRotator = CreateRotator
 local ForkThread = ForkThread
 
-BEA0402 = Class(TAirUnit) {
+BEA0402 = ClassUnit(TAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
     FxDamageScale = 2,
 
     Weapons = {
 	
-		MainTurret  = Class(RailGunWeapon02) {},
+		MainTurret  = ClassWeapon(RailGunWeapon02) {},
 		
-        HVMTurret   = Class(CitadelHVMWeapon) {},
+        HVMTurret   = ClassWeapon(CitadelHVMWeapon) {},
 		
-        AAAFlak     = Class(TAAFlakArtilleryCannon) {},
+        AAAFlak     = ClassWeapon(TAAFlakArtilleryCannon) {},
 		
-        GattlerTurret01 = Class(CitadelPlasmaGatlingCannonWeapon) {
+        GattlerTurret01 = ClassWeapon(CitadelPlasmaGatlingCannonWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
 
@@ -72,7 +72,7 @@ BEA0402 = Class(TAirUnit) {
             end,    
         },
 
-		GattlerTurret02 = Class(CitadelPlasmaGatlingCannonWeapon) {
+		GattlerTurret02 = ClassWeapon(CitadelPlasmaGatlingCannonWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
 

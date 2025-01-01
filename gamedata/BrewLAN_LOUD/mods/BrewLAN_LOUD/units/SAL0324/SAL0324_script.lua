@@ -5,7 +5,7 @@
 
 local ALandUnit = import('/lua/defaultunits.lua').MobileUnit
 
-SAL0324 = Class(ALandUnit) {
+SAL0324 = ClassUnit(ALandUnit) {
 
     OnStopBeingBuilt = function(self, builder, layer)
         ALandUnit.OnStopBeingBuilt(self, builder, layer)

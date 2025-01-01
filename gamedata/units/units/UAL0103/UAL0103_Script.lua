@@ -2,11 +2,11 @@ local ALandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local AIFMortarWeapon = import('/lua/aeonweapons.lua').AIFMortarWeapon
 
-UAL0103 = Class(ALandUnit) {
+UAL0103 = ClassUnit(ALandUnit) {
 
     Weapons = {
 	
-        MainGun = Class(AIFMortarWeapon) { FxMuzzleFlash = {'/effects/emitters/aeon_mortar_flash_01_emit.bp','/effects/emitters/aeon_mortar_flash_02_emit.bp'} }
+        MainGun = ClassWeapon(AIFMortarWeapon) { FxMuzzleFlash = {'/effects/emitters/aeon_mortar_flash_01_emit.bp','/effects/emitters/aeon_mortar_flash_02_emit.bp'} }
     },
 }
 

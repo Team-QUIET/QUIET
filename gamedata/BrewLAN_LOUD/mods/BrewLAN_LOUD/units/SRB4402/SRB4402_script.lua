@@ -9,11 +9,11 @@ local AIUtils = import('/lua/ai/aiutilities.lua')
 
 local LOUDINSERT = table.insert
 
-SRB4402 = Class(CRadarJammerUnit) {
+SRB4402 = ClassUnit(CRadarJammerUnit) {
 
     Weapons = {
 	
-        PulseWeapon = Class(BareBonesWeapon) {
+        PulseWeapon = ClassWeapon(BareBonesWeapon) {
 		
             OnWeaponFired = function(self)
             

@@ -8,7 +8,7 @@ local CConstructionStructureUnit = import('/lua/cybranunits.lua').CConstructionS
 local EffectUtil = import('/lua/EffectUtilities.lua')                
 local Utilities = import('/lua/utilities.lua')
 
-TEngineeringResourceStructureUnit = Class(CConstructionStructureUnit) { 
+TEngineeringResourceStructureUnit = ClassUnit(CConstructionStructureUnit) { 
     OnStopBeingBuilt = function(self,builder,layer)
         CConstructionStructureUnit.OnStopBeingBuilt(self,builder,layer)   
         ChangeState(self, self.ActiveState)

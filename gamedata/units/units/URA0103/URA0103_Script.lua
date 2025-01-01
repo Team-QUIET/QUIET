@@ -1,9 +1,9 @@
 local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 local CIFBombNeutronWeapon = import('/lua/cybranweapons.lua').CIFBombNeutronWeapon
 
-URA0103 = Class(CAirUnit) {
+URA0103 = ClassUnit(CAirUnit) {
     Weapons = {
-        Bomb = Class(CIFBombNeutronWeapon) {},
+        Bomb = ClassWeapon(CIFBombNeutronWeapon) {},
     },
 
     ExhaustBones = {'Exhaust_L','Exhaust_R',},

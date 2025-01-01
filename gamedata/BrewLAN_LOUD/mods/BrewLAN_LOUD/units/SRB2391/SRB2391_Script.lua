@@ -5,11 +5,11 @@ local DefaultWeapon = import('/lua/sim/defaultweapons.lua').DefaultProjectileWea
 
 local CleanupEffectBag = import('/lua/EffectUtilities.lua').CleanupEffectBag
 
-SRB2391 = Class(CStructureUnit) {
+SRB2391 = ClassUnit(CStructureUnit) {
 
     Weapons = {
 
-        MainGun = Class(CDFParticleCannonWeapon) {
+        MainGun = ClassWeapon(CDFParticleCannonWeapon) {
 
             BeamType = import('/lua/defaultcollisionbeams.lua').UnstablePhasonLaserCollisionBeam,
 
@@ -46,7 +46,7 @@ SRB2391 = Class(CStructureUnit) {
             end,
         },
         
-        DeathWeapon = Class(DefaultWeapon) {
+        DeathWeapon = ClassWeapon(DefaultWeapon) {
 
             Effects = {
                 '/effects/emitters/seraphim_othuy_hit_01_emit.bp',

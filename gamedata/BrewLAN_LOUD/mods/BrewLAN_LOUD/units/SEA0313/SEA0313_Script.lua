@@ -7,11 +7,11 @@ local TIFCruiseMissileLauncher = import('/lua/terranweapons.lua').TIFCruiseMissi
 local GinsuCollisionBeam = import('/lua/defaultcollisionbeams.lua').ParticleCannonCollisionBeam
 local DefaultBeamWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultBeamWeapon
 
-SEA0313 = Class(TAirUnit, MissileFlare) {
+SEA0313 = ClassUnit(TAirUnit, MissileFlare) {
 
     Weapons = {
-        ParticleCannon = Class(DefaultBeamWeapon) { BeamType = Class(GinsuCollisionBeam) {} },
-        Missile = Class(TIFCruiseMissileLauncher) {},
+        ParticleCannon = ClassWeapon(DefaultBeamWeapon) { BeamType = Class(GinsuCollisionBeam) {} },
+        Missile = ClassWeapon(TIFCruiseMissileLauncher) {},
     },
 
     FlareBones = {'Flare'},

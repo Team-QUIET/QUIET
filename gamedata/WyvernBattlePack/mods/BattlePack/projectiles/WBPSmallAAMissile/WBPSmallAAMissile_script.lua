@@ -2,7 +2,7 @@ local TMissileAAProjectile = import('/lua/terranprojectiles.lua').TMissileAAProj
 
 StarAdderMissilesAir = import('/mods/BattlePack/lua/BattlePackprojectiles.lua').StarAdderMissilesAir
 
-WBPSmallAAMissile = Class(StarAdderMissilesAir) {
+WBPSmallAAMissile = ClassProjectile(StarAdderMissilesAir) {
 }
 
 TypeClass = WBPSmallAAMissile

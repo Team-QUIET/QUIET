@@ -4,7 +4,7 @@ local Entity = import('/lua/sim/Entity.lua').Entity
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local Util = import('/lua/utilities.lua')
 
-URBSSG02 = Class(CShieldStructureUnit) {
+URBSSG02 = ClassUnit(CShieldStructureUnit) {
 
     ShieldEffects = {
 		'/effects/emitters/cybran_shield_01_generator_01_emit.bp',

@@ -8,7 +8,7 @@ local AttachBeamEntityToEntity  = AttachBeamEntityToEntity
 
 local ForkThread = ForkThread
 
-BRB2306 = Class(CRadarUnit) { 
+BRB2306 = ClassUnit(CRadarUnit) { 
 
 	ChargeEffects01 = {
         '/mods/BlackOpsUnleashed/effects/emitters/manticore_charge_laser_flash_01_emit.bp',
@@ -17,7 +17,7 @@ BRB2306 = Class(CRadarUnit) {
 
     Weapons = {
 
-        LaserTurret = Class(StunZapperWeapon) { 
+        LaserTurret = ClassWeapon(StunZapperWeapon) { 
 			
 			-- there is some interesting things going on here
             -- for example - the Stun Weapon is only fired when the main weapon fires
@@ -89,7 +89,7 @@ BRB2306 = Class(CRadarUnit) {
 			end,
         },
 		
-        StunWeapon = Class(CDFLaserHeavyWeapon){
+        StunWeapon = ClassWeapon(CDFLaserHeavyWeapon){
 		
 			-- after firing the stun weapon turns itself off
         	OnWeaponFired = function(self)

@@ -1,6 +1,6 @@
 local SMassStorageUnit = import('/lua/seraphimunits.lua').SMassStorageUnit
 
-XSB1106 = Class(SMassStorageUnit) {
+XSB1106 = ClassUnit(SMassStorageUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         SMassStorageUnit.OnStopBeingBuilt(self,builder,layer)

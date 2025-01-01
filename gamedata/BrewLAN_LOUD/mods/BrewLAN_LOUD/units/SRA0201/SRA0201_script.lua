@@ -1,6 +1,6 @@
 local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-SRA0201 = Class(CAirUnit) {
+SRA0201 = ClassUnit(CAirUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

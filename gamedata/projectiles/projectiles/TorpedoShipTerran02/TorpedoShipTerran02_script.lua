@@ -1,6 +1,6 @@
 local TTorpedoShipProjectile = import('/lua/terranprojectiles.lua').TTorpedoShipProjectile
 
-TorpedoShipTerran02 = Class(TTorpedoShipProjectile) {
+TorpedoShipTerran02 = ClassProjectile(TTorpedoShipProjectile) {
 
     FxSplashScale = 1,
 

@@ -1,9 +1,9 @@
 local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 local SAALosaareAutoCannonWeapon = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-XSA0303 = Class(SAirUnit) {
+XSA0303 = ClassUnit(SAirUnit) {
     Weapons = {
-        AutoCannon1 = Class(SAALosaareAutoCannonWeapon) {},
+        AutoCannon1 = ClassWeapon(SAALosaareAutoCannonWeapon) {},
     },
 }
 

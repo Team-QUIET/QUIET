@@ -5,11 +5,11 @@ local TDFHeavyPlasmaCannonWeapon = import('/lua/terranweapons.lua').TDFHeavyPlas
 local CreateBoneEffects = import('/lua/effectutilities.lua').CreateBoneEffects
 local WeaponSteam01 = import('/lua/effecttemplates.lua').WeaponSteam01
 
-XEB2306 = Class(TStructureUnit) {
+XEB2306 = ClassUnit(TStructureUnit) {
 
     Weapons = {
 
-        Gatling = Class(TDFHeavyPlasmaCannonWeapon){
+        Gatling = ClassWeapon(TDFHeavyPlasmaCannonWeapon){
 
 			OnCreate = function(self)
 			

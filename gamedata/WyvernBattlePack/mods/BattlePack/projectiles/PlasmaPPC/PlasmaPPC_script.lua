@@ -2,7 +2,7 @@
 
 local PlasmaPPC = import('/mods/BattlePack/lua/BattlePackprojectiles.lua').NEnergy
 
-PlasmaPPC = Class(PlasmaPPC) {
+PlasmaPPC = ClassProjectile(PlasmaPPC) {
     PolyTrailScale = 1.5, 
     FxTrailScale = 1.5,
     FxNoneHitScale = 1.5,

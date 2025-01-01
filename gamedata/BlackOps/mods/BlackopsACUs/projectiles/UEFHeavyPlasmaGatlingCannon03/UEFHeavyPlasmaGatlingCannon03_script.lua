@@ -1,2 +1,2 @@
-UEFHeavyPlasmaGatlingCannon03 = Class(import('/mods/BlackOpsACUs/lua/EXBlackOpsprojectiles.lua').UEFHeavyPlasmaGatlingCannon03) {}
+UEFHeavyPlasmaGatlingCannon03 = ClassProjectile(import('/mods/BlackOpsACUs/lua/EXBlackOpsprojectiles.lua').UEFHeavyPlasmaGatlingCannon03) {}
 TypeClass = UEFHeavyPlasmaGatlingCannon03

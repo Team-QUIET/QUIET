@@ -1,6 +1,6 @@
 local TConstructionUnit = import('/lua/terranunits.lua').TConstructionUnit
 
-XEA3204 = Class(TConstructionUnit) {
+XEA3204 = ClassUnit(TConstructionUnit) {
 
     OnCreate = function(self)
 	

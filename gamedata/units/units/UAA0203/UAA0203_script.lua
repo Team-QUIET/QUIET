@@ -2,11 +2,11 @@ local AAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local ADFLaserLightWeapon = import('/lua/aeonweapons.lua').ADFLaserLightWeapon
 
-UAA0203 = Class(AAirUnit) {
+UAA0203 = ClassUnit(AAirUnit) {
 
     Weapons = {
 	
-        Turret = Class(ADFLaserLightWeapon) {
+        Turret = ClassWeapon(ADFLaserLightWeapon) {
 		
 			FxChassisMuzzleFlash = {'/effects/emitters/aeon_gunship_body_illumination_01_emit.bp',},
 			

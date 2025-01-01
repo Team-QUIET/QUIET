@@ -1,6 +1,6 @@
 local TAirStagingPlatformUnit = import('/lua/defaultunits.lua').AirStagingPlatformUnit
 
-BEB0001 = Class(TAirStagingPlatformUnit) {
+BEB0001 = ClassUnit(TAirStagingPlatformUnit) {
 
 Parent = nil,
 

@@ -4,10 +4,10 @@ local SDFOhCannon = import('/lua/seraphimweapons.lua').SDFOhCannon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT1HT = Class(SHoverLandUnit) {
+BRPT1HT = ClassUnit(SHoverLandUnit) {
     
     Weapons = {
-        TauCannon01 = Class(SDFOhCannon){ },
+        TauCannon01 = ClassWeapon(SDFOhCannon){ },
     },
 
     OnKilled = function(self, instigator, damagetype, overkillRatio)

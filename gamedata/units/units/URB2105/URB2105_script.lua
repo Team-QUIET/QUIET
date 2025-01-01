@@ -1,6 +1,6 @@
 local CEnergyStorageUnit= import('/lua/defaultunits.lua').StructureUnit
 
-URB1105 = Class(CEnergyStorageUnit) {
+URB1105 = ClassUnit(CEnergyStorageUnit) {
     DestructionPartsChassisToss = {'URB1105'},
 
     OnStopBeingBuilt = function(self,builder,layer)

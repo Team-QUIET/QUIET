@@ -1,6 +1,6 @@
 local ResearchFactoryUnit = import('/lua/defaultunits.lua').ResearchFactoryUnit
 
-AResearchFactoryUnit = Class(ResearchFactoryUnit) {
+AResearchFactoryUnit = ClassUnit(ResearchFactoryUnit) {
 
     StartBuildFx = function(self, unitBeingBuilt)
         local bp = self:GetBlueprint()

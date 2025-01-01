@@ -7,7 +7,7 @@ local BrewLANLOUDPath = import( '/lua/game.lua' ).BrewLANLOUDPath()
 local Buff = import(BrewLANLOUDPath .. '/lua/legacy/VersionCheck.lua').Buff
 local GetTerrainAngles = import(BrewLANLOUDPath .. '/lua/TerrainUtils.lua').GetTerrainSlopeAnglesDegrees
 
-TIFDropPodArtilleryMechMarine = Class(TArtilleryAntiMatterProjectile) {
+TIFDropPodArtilleryMechMarine = ClassProjectile(TArtilleryAntiMatterProjectile) {
 
     FxLandHitScale = 0.2,
     FxUnitHitScale = 0.2,

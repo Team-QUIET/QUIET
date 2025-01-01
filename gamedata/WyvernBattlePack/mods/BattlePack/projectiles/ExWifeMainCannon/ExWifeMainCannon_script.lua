@@ -1,6 +1,6 @@
 local ExWifeMaincannonProjectile = import('/mods/BattlePack/lua/BattlePackprojectiles.lua').ExWifeMainProjectile
 
-ExWifeMaincannon01 = Class(ExWifeMaincannonProjectile) {
+ExWifeMaincannon01 = ClassProjectile(ExWifeMaincannonProjectile) {
 
 	OnImpact = function(self, TargetType, TargetEntity) 
 

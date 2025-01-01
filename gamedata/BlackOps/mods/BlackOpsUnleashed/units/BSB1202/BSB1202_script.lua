@@ -2,7 +2,7 @@ local SEnergyCreationUnit = import('/lua/seraphimunits.lua').SEnergyCreationUnit
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BSB1202 = Class(SEnergyCreationUnit) {
+BSB1202 = ClassUnit(SEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
     

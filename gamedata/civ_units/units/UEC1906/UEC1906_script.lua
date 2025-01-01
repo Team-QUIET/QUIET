@@ -1,5 +1,5 @@
 local TCivilianStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UEC1906 = Class(TCivilianStructureUnit) {}
+UEC1906 = ClassUnit(TCivilianStructureUnit) {}
 
 TypeClass = UEC1906

@@ -2,9 +2,9 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CDFElectronBolterWeapon = import('/lua/cybranweapons.lua').CDFElectronBolterWeapon
 
-WRL0301 = Class(CLandUnit) {
+WRL0301 = ClassUnit(CLandUnit) {
     Weapons = {
-        MainGun = Class(CDFElectronBolterWeapon) {},
+        MainGun = ClassWeapon(CDFElectronBolterWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

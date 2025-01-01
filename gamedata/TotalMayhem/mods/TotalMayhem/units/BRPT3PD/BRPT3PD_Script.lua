@@ -4,9 +4,9 @@ local SDFAireauBolterWeapon = import('/lua/seraphimweapons.lua').SDFAireauBolter
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT3PD = Class(SStructureUnit) {
+BRPT3PD = ClassUnit(SStructureUnit) {
 	Weapons = {
-		MainGun = Class(SDFAireauBolterWeapon) {FxMuzzleFlashScale = 2},
+		MainGun = ClassWeapon(SDFAireauBolterWeapon) {FxMuzzleFlashScale = 2},
 	},
 
 	OnStopBeingBuilt = function(self,builder,layer)

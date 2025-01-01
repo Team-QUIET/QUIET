@@ -1,0 +1,17 @@
+ProjectileBlueprint{
+    Physics = {
+        BounceVelDamp = 3,
+        CollideEntity = false,
+        DestroyOnWater = false,
+        InitialSpeed = 5,
+        InitialSpeedRange = 0,
+        Lifetime = 35,
+        MaxBounceCount = 3,
+        MaxSpeed = 100,
+        MinBounceCount = 1,
+        RotationalVelocity = 400,
+        RotationalVelocityRange = 0.5,
+        TurnRate = 0,
+        UseGravity = false,
+    },
+}

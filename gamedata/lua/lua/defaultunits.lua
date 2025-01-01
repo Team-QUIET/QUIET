@@ -97,26 +97,26 @@ local VDist2Sq  = VDist2Sq
 local VDist3    = VDist3
 local WaitTicks = coroutine.yield
 
-local AssignUnitsToPlatoon  = moho.aibrain_methods.AssignUnitsToPlatoon
-local MakePlatoon           = moho.aibrain_methods.MakePlatoon
+local AssignUnitsToPlatoon  = _G.moho.aibrain_methods.AssignUnitsToPlatoon
+local MakePlatoon           = _G.moho.aibrain_methods.MakePlatoon
 
-local BeenDestroyed         = moho.entity_methods.BeenDestroyed
-local DisableIntel          = moho.entity_methods.DisableIntel
-local EnableIntel           = moho.entity_methods.EnableIntel
-local GetBoneCount          = moho.entity_methods.GetBoneCount
-local GetFractionComplete   = moho.entity_methods.GetFractionComplete
-local GetPosition           = moho.entity_methods.GetPosition
+local BeenDestroyed         = _G.moho.entity_methods.BeenDestroyed
+local DisableIntel          = _G.moho.entity_methods.DisableIntel
+local EnableIntel           = _G.moho.entity_methods.EnableIntel
+local GetBoneCount          = _G.moho.entity_methods.GetBoneCount
+local GetFractionComplete   = _G.moho.entity_methods.GetFractionComplete
+local GetPosition           = _G.moho.entity_methods.GetPosition
 
-local GetAIBrain                    = moho.unit_methods.GetAIBrain
-local GetWeapon                     = moho.unit_methods.GetWeapon
-local GetWeaponCount                = moho.unit_methods.GetWeaponCount
-local HideBone                      = moho.unit_methods.HideBone
-local IsBeingBuilt                  = moho.unit_methods.IsBeingBuilt
-local SetConsumptionPerSecondMass   = moho.unit_methods.SetConsumptionPerSecondMass
-local SetProductionActive           = moho.unit_methods.SetProductionActive
-local SetProductionPerSecondMass    = moho.unit_methods.SetProductionPerSecondMass
+local GetAIBrain                    = _G.moho.unit_methods.GetAIBrain
+local GetWeapon                     = _G.moho.unit_methods.GetWeapon
+local GetWeaponCount                = _G.moho.unit_methods.GetWeaponCount
+local HideBone                      = _G.moho.unit_methods.HideBone
+local IsBeingBuilt                  = _G.moho.unit_methods.IsBeingBuilt
+local SetConsumptionPerSecondMass   = _G.moho.unit_methods.SetConsumptionPerSecondMass
+local SetProductionActive           = _G.moho.unit_methods.SetProductionActive
+local SetProductionPerSecondMass    = _G.moho.unit_methods.SetProductionPerSecondMass
 
-local PlayAnim = moho.AnimationManipulator.PlayAnim
+local PlayAnim = _G.moho.AnimationManipulator.PlayAnim
 
 local VectorCached = { 0, 0, 0 }
 
@@ -136,14 +136,14 @@ local function GetRandomInt( nmin, nmax)
     return LOUDFLOOR(Random() * (nmax - nmin + 1) + nmin)
 end
 
-DummyUnit = Class(Unit) {
+DummyUnit = ClassUnit(Unit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         self:Destroy()
     end,
 }
 
-StructureUnit = Class(Unit) {
+StructureUnit = ClassUnit(Unit) {
 
     LandBuiltHiddenBones = {'Floatation'},
 
@@ -1028,7 +1028,7 @@ local StructureUnitOnStopBuild          = StructureUnit.OnStopBuild
 local StructureUnitOnTransportAttach    = StructureUnit.OnTransportAttach
 local StructureUnitOnTransportDetach    = StructureUnit.OnTransportDetach
 
-MobileUnit = Class(Unit) {
+MobileUnit = ClassUnit(Unit) {
 
 	OnPreCreate = function(self)
 
@@ -1903,7 +1903,7 @@ local MobileUnitOnPreCreate             = MobileUnit.OnPreCreate
 local MobileUnitOnMotionHorzEventChange = MobileUnit.OnMotionHorzEventChange
 local MobileUnitOnMotionVertEventChange = MobileUnit.OnMotionVertEventChange
 
-FactoryUnit = Class(StructureUnit) {
+FactoryUnit = ClassUnit(StructureUnit) {
 
     OnCreate = function(self)
 
@@ -2252,7 +2252,7 @@ FactoryUnit = Class(StructureUnit) {
 function FactoryFixes( FactoryClass )
 
 	-- This code is from CBFP4.0 -- Do not use for mobile factories!
-    return Class(FactoryClass) {
+    return ClassUnit(FactoryClass) {
 
         -- rolloff delay. See miscellaneous.txt file for more info
 		-- by putting the RolloffDelay field into the factory blueprint you can
@@ -2297,7 +2297,7 @@ end
 
 FactoryUnit = FactoryFixes(FactoryUnit)
 
-QuantumGateUnit = Class(FactoryUnit) {
+QuantumGateUnit = ClassUnit(FactoryUnit) {
 
 	-- Base economic costs for starting a teleport
 	BaseChargeTime = 30,
@@ -2762,7 +2762,7 @@ QuantumGateUnit = Class(FactoryUnit) {
 	end,
 }
 
-AirStagingPlatformUnit = Class(StructureUnit) {
+AirStagingPlatformUnit = ClassUnit(StructureUnit) {
 
 	OnCreate = function(self)
 
@@ -2805,7 +2805,7 @@ AirStagingPlatformUnit = Class(StructureUnit) {
 
 }
 
-ConcreteStructureUnit = Class(StructureUnit) {
+ConcreteStructureUnit = ClassUnit(StructureUnit) {
 
     OnCreate = function(self)
         StructureUnitOnCreate(self)
@@ -2813,7 +2813,7 @@ ConcreteStructureUnit = Class(StructureUnit) {
     end
 }
 
-WallStructureUnit = Class(StructureUnit) {
+WallStructureUnit = ClassUnit(StructureUnit) {
 
     OnCreate = function(self)
 
@@ -2868,7 +2868,7 @@ WallStructureUnit = Class(StructureUnit) {
     end,
 }
 
-EnergyCreationUnit = Class(StructureUnit) {
+EnergyCreationUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 
@@ -2885,9 +2885,9 @@ EnergyCreationUnit = Class(StructureUnit) {
     end,
 }
 
-EnergyStorageUnit = Class(StructureUnit) {}
+EnergyStorageUnit = ClassUnit(StructureUnit) {}
 
-FootprintDummyUnit = Class(StructureUnit) {
+FootprintDummyUnit = ClassUnit(StructureUnit) {
     OnAdjacentTo = function(self, AdjUnit, TriggerUnit)
         if not self.AdjacentData then self.AdjacentData = {} end
         LOUDINSERT(self.AdjacentData, AdjUnit)
@@ -2904,7 +2904,7 @@ FootprintDummyUnit = Class(StructureUnit) {
     end,
 }
 
-MassCollectionUnit = Class(StructureUnit) {
+MassCollectionUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 
@@ -3011,7 +3011,7 @@ MassCollectionUnit = Class(StructureUnit) {
     end,
 }
 
-MassFabricationUnit = Class(StructureUnit) {
+MassFabricationUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 
@@ -3082,7 +3082,7 @@ MassFabricationUnit = Class(StructureUnit) {
     end,
 }
 
-RadarUnit = Class(StructureUnit) {
+RadarUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 
@@ -3106,7 +3106,7 @@ RadarUnit = Class(StructureUnit) {
     
 }
 
-RadarJammerUnit = Class(StructureUnit) {
+RadarJammerUnit = ClassUnit(StructureUnit) {
 
     -- Shut down intel while upgrading
     OnStartBuild = function(self, unitbuilding, order)
@@ -3182,7 +3182,7 @@ RadarJammerUnit = Class(StructureUnit) {
 
 }
 
-SonarUnit = Class(StructureUnit) {
+SonarUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 
@@ -3204,7 +3204,7 @@ SonarUnit = Class(StructureUnit) {
 
 }
 
-ShieldStructureUnit = Class(StructureUnit) {
+ShieldStructureUnit = ClassUnit(StructureUnit) {
 
 	UpgradingState = State(StructureUnit.UpgradingState) {
 
@@ -3218,7 +3218,7 @@ ShieldStructureUnit = Class(StructureUnit) {
     }
 }
 
-TransportBeaconUnit = Class(StructureUnit) {
+TransportBeaconUnit = ClassUnit(StructureUnit) {
 
     FxTransportBeacon = {'/effects/emitters/red_beacon_light_01_emit.bp'},
     FxTransportBeaconScale = 0.5,
@@ -3235,7 +3235,7 @@ TransportBeaconUnit = Class(StructureUnit) {
 }
 
 
-WalkingLandUnit = Class(MobileUnit) {
+WalkingLandUnit = ClassUnit(MobileUnit) {
    
     IdleAnim = false,
     DeathAnim = false,
@@ -3311,7 +3311,7 @@ WalkingLandUnit = Class(MobileUnit) {
     --end,
 }
 
-DirectionalWalkingLandUnit = Class(WalkingLandUnit) {
+DirectionalWalkingLandUnit = ClassUnit(WalkingLandUnit) {
 
     OnMotionHorzEventChange = function( self, new, old )
 
@@ -3324,7 +3324,7 @@ DirectionalWalkingLandUnit = Class(WalkingLandUnit) {
 }
 
 
-SubUnit = Class(MobileUnit) {
+SubUnit = ClassUnit(MobileUnit) {
 
     FxDamage1 = {EffectTemplate.DamageSparks01},
     FxDamage2 = {EffectTemplate.DamageSparks01},
@@ -3512,7 +3512,7 @@ SubUnit = Class(MobileUnit) {
     end,
 }
 
-SeaUnit = Class(MobileUnit) {
+SeaUnit = ClassUnit(MobileUnit) {
 
     PlayDestructionEffects = false,
     
@@ -3709,7 +3709,7 @@ SeaUnit = Class(MobileUnit) {
     end,
 }
 
-AirUnit = Class(MobileUnit) {
+AirUnit = ClassUnit(MobileUnit) {
 
     OnCreate = function(self)
 
@@ -4173,7 +4173,7 @@ AirUnit = Class(MobileUnit) {
 
 }
 
-ConstructionUnit = Class(MobileUnit) {
+ConstructionUnit = ClassUnit(MobileUnit) {
 
 	-- this used to be part of the platoon file and was executed every time engy got a build order
 	-- now it runs only when the engy is added to an Engineer Manager
@@ -4429,9 +4429,8 @@ ConstructionUnit = Class(MobileUnit) {
     end,
 }
 
----------------------------------
+-- Not sure what class this is supposed to be.
 local MissileDetectorRadius = {}
----------------------------------
 BaseDirectionalAntiMissileFlare = Class() {
 
     CreateMissileDetector = function(self)
@@ -4472,7 +4471,7 @@ BaseDirectionalAntiMissileFlare = Class() {
 
 -- Used primarily by SAB5401, but also mines,
 -- for tracking adjacency and making and breaking path blocking.
-FootprintDummyUnit = Class(StructureUnit) {
+FootprintDummyUnit = ClassUnit(StructureUnit) {
 
     OnAdjacentTo = function(self, AdjUnit, TriggerUnit)
         if not self.AdjacentData then self.AdjacentData = {} end
@@ -4492,11 +4491,11 @@ FootprintDummyUnit = Class(StructureUnit) {
     end,
 }
 
-MineStructureUnit = Class(StructureUnit) {
+MineStructureUnit = ClassUnit(StructureUnit) {
 
     Weapons = {
 
-        Suicide = Class(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
+        Suicide = ClassWeapon(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
 
             FxDeathLand     = EffectTemplate.DefaultHitExplosion01,
             FxDeathSeabed   = EffectTemplate.DefaultProjectileWaterImpact,
@@ -4649,11 +4648,11 @@ MineStructureUnit = Class(StructureUnit) {
 ---------------------
 -- Nuke Mine script
 ---------------------
-NukeMineStructureUnit = Class(MineStructureUnit) {
+NukeMineStructureUnit = ClassUnit(MineStructureUnit) {
 
     Weapons = {
 
-        Suicide = Class(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
+        Suicide = ClassWeapon(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
 
             OnFire = function(self)
                 local bp = self:GetBlueprint() -- Weapon blueprint
@@ -4675,7 +4674,7 @@ NukeMineStructureUnit = Class(MineStructureUnit) {
             end,
         },
 
-        DeathWeapon = Class(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
+        DeathWeapon = ClassWeapon(import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon) {
 
             OnFire = function(self) end,
 

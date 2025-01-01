@@ -2,9 +2,9 @@ local SLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local SDFThauCannon = import('/lua/seraphimweapons.lua').SDFThauCannon
 
-WSL0202 = Class(SLandUnit) {
+WSL0202 = ClassUnit(SLandUnit) {
     Weapons = {
-        MainTurret = Class(SDFThauCannon) {},
+        MainTurret = ClassWeapon(SDFThauCannon) {},
     },
 }
 

@@ -1,6 +1,6 @@
 local TEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
-BEB1202 = Class(TEnergyCreationUnit) {
+BEB1202 = ClassUnit(TEnergyCreationUnit) {
 
     DestructionPartsHighToss = {'Exhaust01',},
     DestructionPartsLowToss = {'Exhaust01','Exhaust02','Exhaust03','Exhaust04','Exhaust05',},

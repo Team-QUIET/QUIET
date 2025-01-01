@@ -3,11 +3,11 @@ local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 local TANTorpedoAngler = import('/lua/terranweapons.lua').TANTorpedoAngler
 
 
-UEA0204 = Class(TAirUnit) {
+UEA0204 = ClassUnit(TAirUnit) {
 
     Weapons = {
 	
-        Torpedo = Class(TANTorpedoAngler) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
 		
     },
 	

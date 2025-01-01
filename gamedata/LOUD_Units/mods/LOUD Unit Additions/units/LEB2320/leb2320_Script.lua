@@ -2,12 +2,12 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TIFArtilleryWeapon = import('/lua/terranweapons.lua').TIFArtilleryWeapon
 
-LEB2320 = Class(TStructureUnit) {
+LEB2320 = ClassUnit(TStructureUnit) {
 
     Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {},
-        MainGun1 = Class(TIFArtilleryWeapon) {},
-        MainGun2 = Class(TIFArtilleryWeapon) {},
+        MainGun = ClassWeapon(TIFArtilleryWeapon) {},
+        MainGun1 = ClassWeapon(TIFArtilleryWeapon) {},
+        MainGun2 = ClassWeapon(TIFArtilleryWeapon) {},
     },
 }
 

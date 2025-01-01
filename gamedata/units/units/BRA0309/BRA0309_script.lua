@@ -6,11 +6,11 @@ local CEMPAutoCannon    = import('/lua/sim/DefaultWeapons.lua').DefaultProjectil
 local explosion = import('/lua/defaultexplosions.lua')
 local util = import('/lua/utilities.lua')
 
-BRA0309 = Class(CAirUnit) {
+BRA0309 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        AAAutocannon = Class(CAAAutocannon) {},
-        EMPCannon = Class(CEMPAutoCannon) {},
+        AAAutocannon = ClassWeapon(CAAAutocannon) {},
+        EMPCannon = ClassWeapon(CEMPAutoCannon) {},
     },
 
     AirDestructionEffectBones = { 'Left_Exhaust', 'Right_Exhaust', 'Char04', 'Char03', 'Char02', 'Char01',

@@ -28,19 +28,19 @@ local CreateEmitterAtBone = CreateEmitterAtBone
 
 local VectorCached = { 0, 0, 0 }
 	
-local AdjustHealth      = moho.entity_methods.AdjustHealth
-local GetArmy           = moho.entity_methods.GetArmy        
-local GetBlueprint      = moho.entity_methods.GetBlueprint
-local GetHealth         = moho.entity_methods.GetHealth
-local GetMaxHealth      = moho.entity_methods.GetMaxHealth
-local SetMesh           = moho.entity_methods.SetMesh
+local AdjustHealth      = _G.moho.entity_methods.AdjustHealth
+local GetArmy           = _G.moho.entity_methods.GetArmy        
+local GetBlueprint      = _G.moho.entity_methods.GetBlueprint
+local GetHealth         = _G.moho.entity_methods.GetHealth
+local GetMaxHealth      = _G.moho.entity_methods.GetMaxHealth
+local SetMesh           = _G.moho.entity_methods.SetMesh
 
-local GetArmorMult      = moho.unit_methods.GetArmorMult
-local GetStat           = moho.unit_methods.GetStat
-local SetStat           = moho.unit_methods.SetStat
-local SetShieldRatio    = moho.unit_methods.SetShieldRatio
+local GetArmorMult      = _G.moho.unit_methods.GetArmorMult
+local GetStat           = _G.moho.unit_methods.GetStat
+local SetStat           = _G.moho.unit_methods.SetStat
+local SetShieldRatio    = _G.moho.unit_methods.SetShieldRatio
 
-Shield = Class(moho.shield_methods,Entity) {
+Shield = ClassShield(moho.shield_methods,Entity) {
 
     ShieldVerticalOffset = -1,
 
@@ -610,7 +610,7 @@ Shield = Class(moho.shield_methods,Entity) {
 }
 
 -- Unit shields typically hug the shape of the unit
-UnitShield = Class(Shield){
+UnitShield = ClassShield(Shield){
 
     OnCreate = function(self,spec)
 
@@ -669,7 +669,7 @@ UnitShield = Class(Shield){
 }
 
 -- AntiArtillery shields are typical bubbles but only intercept certain projectiles
-AntiArtilleryShield = Class(Shield){
+AntiArtilleryShield = ClassShield(Shield){
 
     OnCollisionCheckWeapon = function(self, firingWeapon)
 
@@ -734,7 +734,7 @@ AntiArtilleryShield = Class(Shield){
 }
 
 -- Hunker Shields take no damage while on --
-DomeHunkerShield = Class(Shield) {
+DomeHunkerShield = ClassShield(Shield) {
 	
 	OnCollisionCheckWeapon = function(self, firingWeapon)
 		return true
@@ -750,7 +750,7 @@ DomeHunkerShield = Class(Shield) {
 }
 
 -- Hunker Shields are time limited shields that take no damage --
-PersonalHunkerShield = Class(Shield) {
+PersonalHunkerShield = ClassShield(Shield) {
 
 	OnDamage =  function(self,instigator,amount,vector,type)
 	end, 
@@ -785,7 +785,7 @@ PersonalHunkerShield = Class(Shield) {
 
 }
 
-ProjectedShield = Class(Shield){
+ProjectedShield = ClassShield(Shield){
 
     OnDamage =  function(self,instigator,amount,vector,type)
 	

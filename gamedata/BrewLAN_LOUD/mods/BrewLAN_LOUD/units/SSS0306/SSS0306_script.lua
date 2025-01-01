@@ -4,10 +4,10 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 
 local TrashAdd = TrashBag.Add
 
-SSS0306 = Class(MobileUnit) {
+SSS0306 = ClassUnit(MobileUnit) {
 
     Weapons = {
-        TorpedoTurrets = Class(import('/lua/seraphimweapons.lua').SANHeavyCavitationTorpedo) {},
+        TorpedoTurrets = ClassWeapon(import('/lua/seraphimweapons.lua').SANHeavyCavitationTorpedo) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

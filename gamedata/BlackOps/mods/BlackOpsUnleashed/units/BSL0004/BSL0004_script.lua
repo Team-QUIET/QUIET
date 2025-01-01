@@ -6,9 +6,9 @@ local ForkThread = ForkThread
 local WaitTicks = coroutine.yield
 
 
-BSL0004 = Class(SLandUnit) {
+BSL0004 = ClassUnit(SLandUnit) {
     Weapons = {
-        MissileRack = Class(SLaanseMissileWeapon) {
+        MissileRack = ClassWeapon(SLaanseMissileWeapon) {
 		
             OnLostTarget = function(self)
                 self:ForkThread( self.LostTargetThread )

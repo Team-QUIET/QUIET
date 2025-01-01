@@ -17,24 +17,24 @@ WeaponsFile2 = nil
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRMT3AVA = Class(CWalkingLandUnit) {
+BRMT3AVA = ClassUnit(CWalkingLandUnit) {
    
     Weapons = {
         
-        TopTurret1      = Class(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 0.5,FxMuzzleFlash = EffectTemplate.CArtilleryFlash01},
-        TopTurret2      = Class(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 0.5,FxMuzzleFlash = EffectTemplate.CArtilleryFlash01},
-        NoseTurret      = Class(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 2.1,FxMuzzleFlash = EffectTemplate.CElectronBolterMuzzleFlash01},
-        NoseRockets     = Class(TDFGaussCannonWeapon) {FxMuzzleFlashScale = 0},        
-        BG1             = Class(DualLaser) {},
-        BG2             = Class(DualLaser) {},
-        BG3             = Class(DualLaser) {},
-        BG4             = Class(DualLaser) {},
+        TopTurret1      = ClassWeapon(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 0.5,FxMuzzleFlash = EffectTemplate.CArtilleryFlash01},
+        TopTurret2      = ClassWeapon(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 0.5,FxMuzzleFlash = EffectTemplate.CArtilleryFlash01},
+        NoseTurret      = ClassWeapon(CDFProtonCannonWeapon) {FxMuzzleFlashScale = 2.1,FxMuzzleFlash = EffectTemplate.CElectronBolterMuzzleFlash01},
+        NoseRockets     = ClassWeapon(TDFGaussCannonWeapon) {FxMuzzleFlashScale = 0},        
+        BG1             = ClassWeapon(DualLaser) {},
+        BG2             = ClassWeapon(DualLaser) {},
+        BG3             = ClassWeapon(DualLaser) {},
+        BG4             = ClassWeapon(DualLaser) {},
         
-        Missiles        = Class(MissileArray) {FxMuzzleFlashScale = 0},
-        AAMissiles       = Class(CAAMissileNaniteWeapon) {},
+        Missiles        = ClassWeapon(MissileArray) {FxMuzzleFlashScale = 0},
+        AAMissiles       = ClassWeapon(CAAMissileNaniteWeapon) {},
 
-        robottalk       = Class(TDFGaussCannonWeapon) {FxMuzzleFlashScale = 0},
-        DeathWeapon     = Class(CIFCommanderDeathWeapon) {},
+        robottalk       = ClassWeapon(TDFGaussCannonWeapon) {FxMuzzleFlashScale = 0},
+        DeathWeapon     = ClassWeapon(CIFCommanderDeathWeapon) {},
     },
 
 

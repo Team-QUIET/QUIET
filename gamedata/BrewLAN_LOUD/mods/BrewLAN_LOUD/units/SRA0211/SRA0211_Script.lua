@@ -2,9 +2,9 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local CIFBombNeutronWeapon = import('/lua/cybranweapons.lua').CIFBombNeutronWeapon
 
-SRA0211 = Class(CAirUnit) {
+SRA0211 = ClassUnit(CAirUnit) {
     Weapons = {
-        Bomb = Class(CIFBombNeutronWeapon) {},
+        Bomb = ClassWeapon(CIFBombNeutronWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

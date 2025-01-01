@@ -6,13 +6,13 @@ local CDFProtonCannonWeapon = CybranWeaponsFile.CDFProtonCannonWeapon
 
 CybranWeaponsFile = nil
 
-URS0103 = Class(CSeaUnit) {
+URS0103 = ClassUnit(CSeaUnit) {
 
     DestructionTicks = 120,
 
     Weapons = {
-        ProtonCannon = Class(CDFProtonCannonWeapon) {},
-        AAGun = Class(CAAAutocannon) {},
+        ProtonCannon = ClassWeapon(CDFProtonCannonWeapon) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

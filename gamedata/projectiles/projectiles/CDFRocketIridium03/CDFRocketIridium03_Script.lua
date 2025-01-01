@@ -8,7 +8,7 @@ end
 
 local CreateLightParticle = CreateLightParticle
 
-CDFRocketIridium03 = Class(CIridiumRocketProjectile) {
+CDFRocketIridium03 = ClassProjectile(CIridiumRocketProjectile) {
 
     OnCreate = function(self)
         CIridiumRocketProjectile.OnCreate(self)

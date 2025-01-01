@@ -2,10 +2,10 @@ local ASubUnit =  import('/lua/defaultunits.lua').SubUnit
 
 local AANChronoTorpedoWeapon = import('/lua/aeonweapons.lua').AANChronoTorpedoWeapon
 
-UAS0203 = Class(ASubUnit) {
+UAS0203 = ClassUnit(ASubUnit) {
 
     Weapons = {
-        Torpedo = Class(AANChronoTorpedoWeapon) {},
+        Torpedo = ClassWeapon(AANChronoTorpedoWeapon) {},
     },
 	
 }

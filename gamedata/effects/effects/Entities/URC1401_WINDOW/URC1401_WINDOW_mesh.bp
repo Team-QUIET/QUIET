@@ -1,0 +1,15 @@
+MeshBlueprint{
+    IconFadeInZoom = 4,
+    LODs = {
+        {
+            LODCutoff = 200,
+            ShaderName = "GlassAlpha",
+            MeshName = "urc1401windows_lod0.scm",
+            AlbedoName = "urc1401windows_albedo.dds",
+            NormalsName = "urc1401windows_normalsts.dds",
+            SpecularName = "urc1401windows_specteam.dds",
+        },
+    },
+    SortOrder = 1000,
+    StraddleWater = true,
+}

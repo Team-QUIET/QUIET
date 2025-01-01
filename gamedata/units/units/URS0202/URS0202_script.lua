@@ -9,13 +9,13 @@ local CAMZapperWeapon02 = CybranWeaponsFile.CAMZapperWeapon02
 CybranWeaponsFile = nil
 
 
-URS0202 = Class(CSeaUnit) {
+URS0202 = ClassUnit(CSeaUnit) {
 
     Weapons = {
-        ParticleGun = Class(CDFProtonCannonWeapon) {},
-        AAGun = Class(CAANanoDartWeapon) {},
-        GroundGun = Class(CAANanoDartWeapon) {},
-        Zapper = Class(CAMZapperWeapon02) {},
+        ParticleGun = ClassWeapon(CDFProtonCannonWeapon) {},
+        AAGun = ClassWeapon(CAANanoDartWeapon) {},
+        GroundGun = ClassWeapon(CAANanoDartWeapon) {},
+        Zapper = ClassWeapon(CAMZapperWeapon02) {},
     },
     
     OnCreate = function(self)

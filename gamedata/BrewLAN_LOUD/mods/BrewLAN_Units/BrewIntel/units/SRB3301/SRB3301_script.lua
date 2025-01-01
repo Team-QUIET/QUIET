@@ -1,7 +1,7 @@
 local CRadarUnit = import('/lua/defaultunits.lua').RadarUnit
 local AnimationThread = import('/lua/effectutilities.lua').IntelDishAnimationThread
 
-SRB3301 = Class(CRadarUnit) {
+SRB3301 = ClassUnit(CRadarUnit) {
     OnStopBeingBuilt = function(self, ...)
         CRadarUnit.OnStopBeingBuilt(self, unpack(arg) )
         self:ForkThread(AnimationThread,{

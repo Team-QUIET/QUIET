@@ -5,7 +5,7 @@ local SIFHuAntiNuke = import('/lua/seraphimprojectiles.lua').SIFHuAntiNuke
 local RandomFloat   = import('/lua/utilities.lua').GetRandomFloat
 local RandomInt     = import('/lua/utilities.lua').GetRandomInt
 
-SIFMobileHuAntiNuke01 = Class(SIFHuAntiNuke) {
+SIFMobileHuAntiNuke01 = ClassProjectile(SIFHuAntiNuke) {
 
     -- This is a custom impact to maeke the seraphim hit look really good, a tendrilled explosion
     OnImpact = function(self, TargetType, TargetEntity) 

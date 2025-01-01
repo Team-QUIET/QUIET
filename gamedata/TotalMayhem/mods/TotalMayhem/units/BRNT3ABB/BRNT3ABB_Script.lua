@@ -6,13 +6,13 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 
 local TrashAdd = TrashBag.Add
 
-BRNT3ABB = Class(TWalkingLandUnit) {
+BRNT3ABB = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
 
-        topguns = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.25 },
+        topguns = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.25 },
 
-        guns    = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45 },
+        guns    = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45 },
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

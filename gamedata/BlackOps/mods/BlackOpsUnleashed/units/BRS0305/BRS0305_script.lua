@@ -10,12 +10,12 @@ WeaponsFile = nil
 
 local TorpRedirectField = import('/mods/BlackOpsUnleashed/lua/BlackOpsdefaultantiprojectile.lua').TorpRedirectField
 
-BRS0305 = Class(CSubUnit) {
+BRS0305 = ClassUnit(CSubUnit) {
     
     Weapons = {
-        DeckGun = Class(CDFElectronBolterWeapon) {},
-        Torpedo01 = Class(CANNaniteTorpedoWeapon) {},
-        Torpedo02 = Class(CKrilTorpedoLauncherWeapon) {},
+        DeckGun = ClassWeapon(CDFElectronBolterWeapon) {},
+        Torpedo01 = ClassWeapon(CANNaniteTorpedoWeapon) {},
+        Torpedo02 = ClassWeapon(CKrilTorpedoLauncherWeapon) {},
     },
 	
     OnStopBeingBuilt = function(self, builder, layer)

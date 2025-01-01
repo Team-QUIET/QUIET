@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TIFHighBallisticMortarWeapon = import('/lua/terranweapons.lua').TIFHighBallisticMortarWeapon
 
-UEL0103 = Class(TLandUnit) {
+UEL0103 = ClassUnit(TLandUnit) {
     Weapons = {
-        MainGun = Class(TIFHighBallisticMortarWeapon) {
+        MainGun = ClassWeapon(TIFHighBallisticMortarWeapon) {
    
                 CreateProjectileAtMuzzle = function(self, muzzle)
                     local proj = TIFHighBallisticMortarWeapon.CreateProjectileAtMuzzle(self, muzzle)

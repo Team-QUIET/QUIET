@@ -2,7 +2,7 @@ local TLandUnit = import('/lua/defaultunits.lua').LandUnit
 local VizMarker = import('/lua/sim/VizMarker.lua').VizMarker
 local CleanupEffectBag = import('/lua/EffectUtilities.lua').CleanupEffectBag
 
-SEL3401 = Class(TLandUnit) {
+SEL3401 = ClassUnit(TLandUnit) {
 
     BpId = 'sel3401',
 

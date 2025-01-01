@@ -3,11 +3,11 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 local CDFElectronBolterWeapon   = import('/lua/cybranweapons.lua').CDFElectronBolterWeapon
 local CANTorpedoLauncherWeapon  = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-SRL0401 = Class(CLandUnit) {
+SRL0401 = ClassUnit(CLandUnit) {
 
     Weapons = {
-        Turret              = Class(CDFElectronBolterWeapon) {},
-        TorpedoLauncher     = Class(CANTorpedoLauncherWeapon) {},
+        Turret              = ClassWeapon(CDFElectronBolterWeapon) {},
+        TorpedoLauncher     = ClassWeapon(CANTorpedoLauncherWeapon) {},
     },
 
 	OnLayerChange = function(self, new, old)

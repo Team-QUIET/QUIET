@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 
-AIFMissileTactical01 = Class(AMissileSerpentineProjectile) {
+AIFMissileTactical01 = ClassProjectile(AMissileSerpentineProjectile) {
 
     OnCreate = function(self)
         AMissileSerpentineProjectile.OnCreate(self)

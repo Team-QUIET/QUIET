@@ -8,16 +8,16 @@ local SANAnaitTorpedo   = WeaponsFile.SANAnaitTorpedo
 
 WeaponsFile = nil
 
-XSL0303 = Class(SLandUnit) {
+XSL0303 = ClassUnit(SLandUnit) {
 
     Weapons = {
 	
-        Turret = Class(SDFThauCannon) {},
+        Turret = ClassWeapon(SDFThauCannon) {},
 
-        LeftTurret = Class(SDFAireauBolter) {},
-        RightTurret = Class(SDFAireauBolter) {},
+        LeftTurret = ClassWeapon(SDFAireauBolter) {},
+        RightTurret = ClassWeapon(SDFAireauBolter) {},
 		
-        Torpedo = Class(SANAnaitTorpedo) {},		
+        Torpedo = ClassWeapon(SANAnaitTorpedo) {},		
     },
 }
 

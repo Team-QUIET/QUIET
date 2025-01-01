@@ -9,7 +9,7 @@ local function LOC(s)
     return s
 end
 
-ZZZ0001 = Class(AShieldStructureUnit) {
+ZZZ0001 = ClassUnit(AShieldStructureUnit) {
 
     OnCreate = function(self)
         AShieldStructureUnit.OnCreate(self)

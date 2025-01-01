@@ -10,7 +10,7 @@ local AnimationThread = import('/lua/effectutilities.lua').IntelDishAnimationThr
 local BrewLANPath = import( '/lua/game.lua' ).BrewLANPath()
 local Buff = import(BrewLANPath .. '/lua/legacy/VersionCheck.lua').Buff
 
-SEB3404 = Class(TStructureUnit) {
+SEB3404 = ClassUnit(TStructureUnit) {
 
     OnStopBeingBuilt = function(self, ...)
 	

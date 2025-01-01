@@ -33,21 +33,21 @@ local TrashDestroy = TrashBag.Destroy
 
 local wep, wpTarget
 
-ERL0001 = Class(CWalkingLandUnit) {
+ERL0001 = ClassUnit(CWalkingLandUnit) {
 	
     DeathThreadDestructionWaitTime = 2,
 
 	BuffFields = {
 		OpticalInterferenceField = Class(BuffField){},
-	},
+	 },
 
     Weapons = {
 
-        DeathWeapon = Class(CIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(CIFCommanderDeathWeapon) {},
 		
-        TargetPainter = Class(Targeting) { FxMuzzleFlash = false },
+        TargetPainter = ClassWeapon(Targeting) { FxMuzzleFlash = false },
 
-        RightRipper = Class(CCannonMolecularWeapon) {
+        RightRipper = ClassWeapon(CCannonMolecularWeapon) {
 
         	OnCreate = function(self)
                 CCannonMolecularWeapon.OnCreate(self)
@@ -56,14 +56,14 @@ ERL0001 = Class(CWalkingLandUnit) {
             end,
         },
 
-        EXRocketPack01 = Class(RocketPack) {},
-        EXRocketPack02 = Class(RocketPack) {},
+        EXRocketPack01 = ClassWeapon(RocketPack) {},
+        EXRocketPack02 = ClassWeapon(RocketPack) {},
 
-        EXTorpedoLauncher01 = Class(CANNaniteTorpedo) {},
-        EXTorpedoLauncher02 = Class(CANNaniteTorpedo) {},
-        EXTorpedoLauncher03 = Class(CANNaniteTorpedo) {},
+        EXTorpedoLauncher01 = ClassWeapon(CANNaniteTorpedo) {},
+        EXTorpedoLauncher02 = ClassWeapon(CANNaniteTorpedo) {},
+        EXTorpedoLauncher03 = ClassWeapon(CANNaniteTorpedo) {},
 
-        EXEMPArray01 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray01 = ClassWeapon(EXCEMPArrayBeam01) {
 
             OnWeaponFired = function(self)
 
@@ -157,60 +157,60 @@ ERL0001 = Class(CWalkingLandUnit) {
 					self.unit.EMPArrayEffects01 = {}
 				end
 			end,
-		},
+		 },
 
-        EXEMPArray02 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray02 = ClassWeapon(EXCEMPArrayBeam01) {
+            OnWeaponFired = function(self)
+                EXCEMPArrayBeam01.OnWeaponFired(self)
+					self:SetWeaponEnabled(false)
+            end,
+		 },
+
+        EXEMPArray03 = ClassWeapon(EXCEMPArrayBeam01) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPArray03 = Class(EXCEMPArrayBeam01) {
+        EXEMPArray04 = ClassWeapon(EXCEMPArrayBeam01) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPArray04 = Class(EXCEMPArrayBeam01) {
+        EXEMPShot01 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPShot01 = Class(CCannonMolecularWeapon) {
+        EXEMPShot02 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
 		},
 
-        EXEMPShot02 = Class(CCannonMolecularWeapon) {
+        EXEMPShot03 = ClassWeapon(CCannonMolecularWeapon) {
             OnWeaponFired = function(self)
                 EXCEMPArrayBeam01.OnWeaponFired(self)
 					self:SetWeaponEnabled(false)
             end,
-		},
+		 },
 
-        EXEMPShot03 = Class(CCannonMolecularWeapon) {
-            OnWeaponFired = function(self)
-                EXCEMPArrayBeam01.OnWeaponFired(self)
-					self:SetWeaponEnabled(false)
-            end,
-		},
+        EXMLG01 = ClassWeapon(MicrowaveLaser) {},
+        EXMLG02 = ClassWeapon(MicrowaveLaser) {},
+        EXMLG03 = ClassWeapon(MicrowaveLaser) {},
 
-        EXMLG01 = Class(MicrowaveLaser) {},
-        EXMLG02 = Class(MicrowaveLaser) {},
-        EXMLG03 = Class(MicrowaveLaser) {},
+        EXAA01 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA02 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA03 = ClassWeapon(EXCEMPArrayBeam01) {},
+        EXAA04 = ClassWeapon(EXCEMPArrayBeam01) {},
 
-        EXAA01 = Class(EXCEMPArrayBeam01) {},
-        EXAA02 = Class(EXCEMPArrayBeam01) {},
-        EXAA03 = Class(EXCEMPArrayBeam01) {},
-        EXAA04 = Class(EXCEMPArrayBeam01) {},
-
-        OverCharge = Class(CDFOverchargeWeapon) {},
+        OverCharge = ClassWeapon(CDFOverchargeWeapon) {},
     },
 
 
@@ -240,7 +240,7 @@ ERL0001 = Class(CWalkingLandUnit) {
 
 		self:ForkThread(self.WeaponConfigCheck)
 
-        self.BuildArmManipulator:SetHeadingPitch( self:GetWeaponManipulatorByLabel('RightRipper'):GetHeadingPitch() )
+        self.BuildArmManipulator:SetHeadingPitch( self:GetWeaponManipulatorByLabel('TargetPainter'):GetHeadingPitch() )
     end,
 
     OnFailedToBuild = function(self)
@@ -256,7 +256,7 @@ ERL0001 = Class(CWalkingLandUnit) {
 
 		self:ForkThread(self.WeaponConfigCheck)
 
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStartBuild = function(self, unitBeingBuilt, order)
@@ -295,7 +295,7 @@ ERL0001 = Class(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
 
         self.UnitBeingBuilt = nil
         self.UnitBuildOrder = nil
@@ -314,7 +314,7 @@ ERL0001 = Class(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnFailedCapture = function(self, target)
@@ -329,7 +329,7 @@ ERL0001 = Class(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStopReclaim = function(self, target)
@@ -344,12 +344,24 @@ ERL0001 = Class(CWalkingLandUnit) {
         self.wcBuildMode = false
 
 		self:ForkThread(self.WeaponConfigCheck)
-        self:GetWeaponManipulatorByLabel('RightRipper'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
+        self:GetWeaponManipulatorByLabel('TargetPainter'):SetHeadingPitch( self.BuildArmManipulator:GetHeadingPitch() )
     end,
 
     OnStopBeingBuilt = function(self,builder,layer)
 
         CWalkingLandUnit.OnStopBeingBuilt(self,builder,layer)
+
+        self.Animator = CreateAnimator(self)
+        self.Animator:SetPrecedence(0)
+        
+        if self.IdleAnim then
+            self.Animator:PlayAnim( __blueprints[self.BlueprintID].Display.AnimationIdle, true)
+            for k, v in self.DisabledBones do
+                self.Animator:SetBoneEnabled(v, false)
+            end
+        end
+
+        self:BuildManipulatorSetEnabled(false)
 
         self:DisableUnitIntel('Cloak')
         self:DisableUnitIntel('CloakField')
@@ -590,68 +602,20 @@ ERL0001 = Class(CWalkingLandUnit) {
     WeaponConfigCheck = function(self)
 
 		if self.wcBuildMode then
-		
+
 			self:SetWeaponEnabledByLabel('TargetPainter', false)
-			self:SetWeaponEnabledByLabel('RightRipper', false)
-			self:SetWeaponEnabledByLabel('OverCharge', false)
 
-			self:SetWeaponEnabledByLabel('EXRocketPack01', false)
-			self:SetWeaponEnabledByLabel('EXRocketPack02', false)
-
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher01', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher02', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher03', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray01', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
-
-			self:SetWeaponEnabledByLabel('EXMLG01', false)
-			self:SetWeaponEnabledByLabel('EXMLG02', false)
-			self:SetWeaponEnabledByLabel('EXMLG03', false)
 		end
 
 		if self.wcOCMode then
-		
+
 			self:SetWeaponEnabledByLabel('TargetPainter', false)
-			self:SetWeaponEnabledByLabel('RightRipper', false)
 
-			self:SetWeaponEnabledByLabel('EXRocketPack01', false)
-			self:SetWeaponEnabledByLabel('EXRocketPack02', false)
-
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher01', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher02', false)
-			self:SetWeaponEnabledByLabel('EXTorpedoLauncher03', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray01', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
-
-			self:SetWeaponEnabledByLabel('EXMLG01', false)
-			self:SetWeaponEnabledByLabel('EXMLG02', false)
-			self:SetWeaponEnabledByLabel('EXMLG03', false)
 		end
-
+        
 		if not self.wcBuildMode and not self.wcOCMode then
 		
-			self:SetWeaponEnabledByLabel('TargetPainter', true)
-			self:SetWeaponEnabledByLabel('RightRipper', true)
-			self:SetWeaponEnabledByLabel('OverCharge', false)
-
-			self:SetWeaponEnabledByLabel('EXEMPArray02', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray03', false)
-			self:SetWeaponEnabledByLabel('EXEMPArray04', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot01', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot02', false)
-			self:SetWeaponEnabledByLabel('EXEMPShot03', false)
+			self:SetWeaponEnabledByLabel('TargetPainter', true) 
 
 			if self.wcRocket01 then
 

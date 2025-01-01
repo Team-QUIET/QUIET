@@ -7,10 +7,10 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-XRB2308 = Class(CStructureUnit) {
+XRB2308 = ClassUnit(CStructureUnit) {
 
     Weapons = {
-        Turret01 = Class(CKrilTorpedoLauncherWeapon) { FxMuzzleFlashScale = 0.5 },
+        Turret01 = ClassWeapon(CKrilTorpedoLauncherWeapon) { FxMuzzleFlashScale = 0.5 },
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

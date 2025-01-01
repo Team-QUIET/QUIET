@@ -16,7 +16,7 @@ local nukeFiredOnGotTarget = false
 local CreateRotator = CreateRotator
 local CreateDefaultHitExplosionAtBone = import('/lua/defaultexplosions.lua').CreateDefaultHitExplosionAtBone
 
-BSS0401 = Class(SSeaUnit) {
+BSS0401 = ClassUnit(SSeaUnit) {
 
     FxDamageScale = 2,
     DestructionTicks = 400,
@@ -30,7 +30,7 @@ BSS0401 = Class(SSeaUnit) {
 
     Weapons = {
 	
-    	FrontMainTurret     = Class(SDFSinnuntheWeapon) {
+    	FrontMainTurret     = ClassWeapon(SDFSinnuntheWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
 			
@@ -68,7 +68,7 @@ BSS0401 = Class(SSeaUnit) {
             end,
 		},
 		
-        BackMainTurret      = Class(SDFSinnuntheWeapon) {
+        BackMainTurret      = ClassWeapon(SDFSinnuntheWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
 			
@@ -107,11 +107,11 @@ BSS0401 = Class(SSeaUnit) {
 			
 		},
 		
-        SecondaryTurret     = Class(SDFHeavyQuarnonCannon) {},
-        AntiMissileTactical = Class(SAMElectrumMissileDefense) {},
-        AAGun               = Class(SAAOlarisCannonWeapon) {},
-        DeckGun             = Class(ChromaticBeamGenerator) {},
-        MissileRack         = Class(SIFHuAntiNukeWeapon) {},  
+        SecondaryTurret     = ClassWeapon(SDFHeavyQuarnonCannon) {},
+        AntiMissileTactical = ClassWeapon(SAMElectrumMissileDefense) {},
+        AAGun               = ClassWeapon(SAAOlarisCannonWeapon) {},
+        DeckGun             = ClassWeapon(ChromaticBeamGenerator) {},
+        MissileRack         = ClassWeapon(SIFHuAntiNukeWeapon) {},  
     },
 
 	OnStopBeingBuilt = function(self, builder, layer)

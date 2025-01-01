@@ -9,13 +9,13 @@ AeonWeapons = nil
 
 local AQuantumCannonMuzzle02 = import('/lua/EffectTemplates.lua').AQuantumCannonMuzzle02
 
-UAS0103 = Class(SeaUnit) {
+UAS0103 = ClassUnit(SeaUnit) {
 
     Weapons = {
 	
-        DeckGuns = Class(ADFCannonQuantumWeapon) { FxMuzzleFlash = AQuantumCannonMuzzle02 },
+        DeckGuns = ClassWeapon(ADFCannonQuantumWeapon) { FxMuzzleFlash = AQuantumCannonMuzzle02 },
 
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
 	
 }

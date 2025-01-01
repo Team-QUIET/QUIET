@@ -2,13 +2,13 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local CDFParticleCannonWeapon = import('/lua/cybranweapons.lua').CDFParticleCannonWeapon
 
-SRA0313 = Class(CAirUnit) {
+SRA0313 = ClassUnit(CAirUnit) {
 
     ExhaustBones = { 'Exhaust', },
     ContrailBones = { 'Tip_001', 'Tip_009', },
 	
     Weapons = {
-        Laser = Class(CDFParticleCannonWeapon) {},
+        Laser = ClassWeapon(CDFParticleCannonWeapon) {},
     },
 	
     OnStopBeingBuilt = function(self,builder,layer)

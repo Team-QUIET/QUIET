@@ -4,6 +4,6 @@ local CardinalWallUnit = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '
 
 TWallStructureUnit = CardinalWallUnit( TWallStructureUnit )
 
-SEB5210 = Class(TWallStructureUnit) {}
+SEB5210 = ClassUnit(TWallStructureUnit) {}
 
 TypeClass = SEB5210

@@ -12,7 +12,7 @@ local ForkThread = ForkThread
 
 local LOUDINSERT = table.insert
 
-BSL0401 = Class(SHoverLandUnit) {
+BSL0401 = ClassUnit(SHoverLandUnit) {
 
     SpawnEffects = {
 		'/effects/emitters/seraphim_othuy_spawn_01_emit.bp',
@@ -30,7 +30,7 @@ BSL0401 = Class(SHoverLandUnit) {
 	
     Weapons = {
 	
-        EyeWeapon01 = Class(YenzothaExperimentalLaser) {
+        EyeWeapon01 = ClassWeapon(YenzothaExperimentalLaser) {
 		
 			CreateProjectileAtMuzzle = function(self,muzzle)
 			
@@ -96,7 +96,7 @@ BSL0401 = Class(SHoverLandUnit) {
             end,
 		},
 		
-		EyeWeapon02 = Class(YenzothaExperimentalLaser) {
+		EyeWeapon02 = ClassWeapon(YenzothaExperimentalLaser) {
 		
 			CreateProjectileAtMuzzle = function(self,muzzle)
 			
@@ -163,7 +163,7 @@ BSL0401 = Class(SHoverLandUnit) {
             end,
 		},
 		
-		EyeWeapon03 = Class(YenzothaExperimentalLaser) {
+		EyeWeapon03 = ClassWeapon(YenzothaExperimentalLaser) {
 		
 			CreateProjectileAtMuzzle = function(self,muzzle)
 			
@@ -231,7 +231,7 @@ BSL0401 = Class(SHoverLandUnit) {
             end,
 		},
         
-        AA = Class(SAAOlarisCannonWeapon) {},
+        AA = ClassWeapon(SAAOlarisCannonWeapon) {},
     },
 	
     StartBeingBuiltEffects = function(self, builder, layer)

@@ -1,9 +1,9 @@
 local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UAB2301 = Class(AStructureUnit) {
+UAB2301 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        MainGun = Class(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
+        MainGun = ClassWeapon(import('/lua/aeonweapons.lua').ADFCannonOblivionWeapon) {
 			FxMuzzleFlash = {
 				'/effects/emitters/oblivion_cannon_flash_04_emit.bp',
 				'/effects/emitters/oblivion_cannon_flash_05_emit.bp',				

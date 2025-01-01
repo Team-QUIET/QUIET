@@ -1,5 +1,5 @@
 local TWallStructureUnit = import('/lua/defaultunits.lua').WallStructureUnit
 
-XEC9003 = Class(TWallStructureUnit) {}
+XEC9003 = ClassUnit(TWallStructureUnit) {}
 
 TypeClass = XEC9003

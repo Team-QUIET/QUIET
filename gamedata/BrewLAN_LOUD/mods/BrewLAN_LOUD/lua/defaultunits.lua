@@ -24,11 +24,11 @@ local EBPSRA = '/effects/emitters/seraphim_rifter_artillery_hit_'
 -- Mine script
 --------------------------------------------------------------------------------
 
-MineStructureUnit = Class(StructureUnit) {
+MineStructureUnit = ClassUnit(StructureUnit) {
 
     Weapons = {
 
-        Suicide = Class(DefaultWeapons.KamikazeWeapon) {
+        Suicide = ClassWeapon(DefaultWeapons.KamikazeWeapon) {
 
             FxDeathLand = EffectTemplates.DefaultHitExplosion01,
 
@@ -137,11 +137,11 @@ MineStructureUnit = Class(StructureUnit) {
 -- Nuke Mine script
 --------------------------------------------------------------------------------
 
-NukeMineStructureUnit = Class(MineStructureUnit) {
+NukeMineStructureUnit = ClassUnit(MineStructureUnit) {
 
     Weapons = {
 
-        DeathWeapon = Class(DefaultWeapons.BareBonesWeapon) {
+        DeathWeapon = ClassWeapon(DefaultWeapons.BareBonesWeapon) {
  
             OnFire = function(self)
             end,
@@ -153,7 +153,7 @@ NukeMineStructureUnit = Class(MineStructureUnit) {
             end,
         },
 
-        Suicide = Class(DeathNukeWeapon) {
+        Suicide = ClassWeapon(DeathNukeWeapon) {
 
             Fire = function(self, ...)
                 local radius = self:GetBlueprint().NukeInnerRingRadius or self:GetBlueprint().DamageRadius
@@ -172,7 +172,7 @@ NukeMineStructureUnit = Class(MineStructureUnit) {
 -- Wall scripts
 --------------------------------------------------------------------------------
 
-StackingBuilderUnit = Class(FactoryUnit) {
+StackingBuilderUnit = ClassUnit(FactoryUnit) {
 
     BuildAttachBone = 'WallNode',
 
@@ -241,10 +241,10 @@ StackingBuilderUnit = Class(FactoryUnit) {
 -- Energy storage variable explosion scripts
 --------------------------------------------------------------------------------
 
-BrewLANEnergyStorageUnit = Class(EnergyStorageUnit) {
+BrewLANEnergyStorageUnit = ClassUnit(EnergyStorageUnit) {
 
     Weapons = {
-        DeathWeapon = Class(EnergyStorageVariableDeathWeapon) {},
+        DeathWeapon = ClassWeapon(EnergyStorageVariableDeathWeapon) {},
     },
 
     OnKilled = function(self, instigator, type, overkillRatio)

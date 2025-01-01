@@ -1,9 +1,9 @@
 local CWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
-URL0106 = Class(CWalkingLandUnit) {
+URL0106 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        MainGun = Class(import('/lua/cybranweapons.lua').CDFLaserPulseLightWeapon) {},
+        MainGun = ClassWeapon(import('/lua/cybranweapons.lua').CDFLaserPulseLightWeapon) {},
     },
 }
 

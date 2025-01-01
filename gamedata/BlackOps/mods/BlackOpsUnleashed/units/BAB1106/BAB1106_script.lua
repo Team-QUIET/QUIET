@@ -2,7 +2,7 @@ local AMassStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TrashAdd = TrashBag.Add
 
-BAB1106 = Class(AMassStorageUnit) {
+BAB1106 = ClassUnit(AMassStorageUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
     

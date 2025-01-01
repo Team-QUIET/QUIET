@@ -43,7 +43,7 @@ for name,cclass in moho do
 
     --SPEW('C->lua ',name)
     
-    local g = ConvertCClassToLuaClass(cclass)
+    local g = ConvertCClassToLuaSimplifiedClass(cclass, name)
     
     --LOG("AI DEBUG "..name.." is "..repr(g))
 end

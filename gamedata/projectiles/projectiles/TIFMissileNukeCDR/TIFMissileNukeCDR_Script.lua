@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-TIFMissileNukeCDR = Class(TIFMissileNuke) {
+TIFMissileNukeCDR = ClassProjectile(TIFMissileNuke) {
 
     BeamName = '/effects/emitters/missile_exhaust_fire_beam_06_emit.bp',
 

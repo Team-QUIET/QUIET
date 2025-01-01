@@ -2,11 +2,11 @@ local SSeaUnit =  import('/lua/defaultunits.lua').SeaUnit
 
 local SWeapon = import('/lua/seraphimweapons.lua')
 
-XSS0103 = Class(SSeaUnit) {
+XSS0103 = ClassUnit(SSeaUnit) {
 
     Weapons = {
-        MainGun = Class(SWeapon.SDFShriekerCannon){},
-        AntiAir = Class(SWeapon.SAAShleoCannonWeapon){},
+        MainGun = ClassWeapon(SWeapon.SDFShriekerCannon){},
+        AntiAir = ClassWeapon(SWeapon.SAAShleoCannonWeapon){},
     },
 }
 

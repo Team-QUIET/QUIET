@@ -6,7 +6,7 @@ local BuffField = import('/lua/defaultbufffield.lua').DefaultBuffField
 local SeraphimAirStagePlat02 = import('/lua/EffectTemplates.lua').SeraphimAirStagePlat02
 local SeraphimAirStagePlat01 = import('/lua/EffectTemplates.lua').SeraphimAirStagePlat01
 
-XSB5202 = Class(SAirStagingPlatformUnit) {
+XSB5202 = ClassUnit(SAirStagingPlatformUnit) {
 
 	BuffFields = {
 	

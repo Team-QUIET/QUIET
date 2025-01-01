@@ -6,7 +6,7 @@ local utilities = import('/lua/utilities.lua')
 local EffectUtil = import('/lua/EffectUtilities.lua')
 local explosion = import('/lua/defaultexplosions.lua')
 
-SSB2311 = Class(SStructureUnit) {
+SSB2311 = ClassUnit(SStructureUnit) {
 
     SpawnEffects = {
 		'/effects/emitters/seraphim_othuy_spawn_01_emit.bp',
@@ -16,7 +16,7 @@ SSB2311 = Class(SStructureUnit) {
 	},
 	
     Weapons = {
-        RightArm = Class(SDFSinnuntheWeapon)
+        RightArm = ClassWeapon(SDFSinnuntheWeapon)
         {
             PlayFxMuzzleChargeSequence = function(self, muzzle)
 

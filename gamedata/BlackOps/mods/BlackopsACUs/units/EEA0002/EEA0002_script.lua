@@ -5,7 +5,7 @@ local CreateDeathExplosion = explosion.CreateDefaultHitExplosionAtBone
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local BlackOpsEffectTemplate = import('/mods/BlackOpsACUs/lua/EXBlackOpsEffectTemplates.lua')
 
-EEA0002 = Class(TAirUnit) {
+EEA0002 = ClassUnit(TAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
     

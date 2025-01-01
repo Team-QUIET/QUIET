@@ -2,7 +2,7 @@ local TShieldStructureUnit = import('/lua/terranunits.lua').TShieldStructureUnit
 
 local CreateRotator = CreateRotator
 
-UEB4301 = Class(TShieldStructureUnit) {
+UEB4301 = ClassUnit(TShieldStructureUnit) {
     
     ShieldEffects = {},
     

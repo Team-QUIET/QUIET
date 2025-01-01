@@ -1,6 +1,6 @@
 local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-XSA0107 = Class(SAirUnit) {
+XSA0107 = ClassUnit(SAirUnit) {
 
     Weapons = {},
 

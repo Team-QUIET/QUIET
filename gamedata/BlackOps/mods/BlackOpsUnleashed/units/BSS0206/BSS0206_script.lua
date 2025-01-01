@@ -3,11 +3,11 @@ local SSeaUnit = import('/lua/defaultunits.lua').SeaUnit
 local SIFSuthanusArtilleryCannon    = import('/lua/seraphimweapons.lua').SIFSuthanusMobileArtilleryCannon
 local SAAOlarisCannonWeapon         = import('/lua/seraphimweapons.lua').SAAOlarisCannonWeapon
 
-BSS0206 = Class(SSeaUnit) {
+BSS0206 = ClassUnit(SSeaUnit) {
 
     Weapons = {
-        DeckGun = Class(SIFSuthanusArtilleryCannon) {},
-		AAGun = Class(SAAOlarisCannonWeapon) {},
+        DeckGun = ClassWeapon(SIFSuthanusArtilleryCannon) {},
+		AAGun = ClassWeapon(SAAOlarisCannonWeapon) {},
 
     },
 

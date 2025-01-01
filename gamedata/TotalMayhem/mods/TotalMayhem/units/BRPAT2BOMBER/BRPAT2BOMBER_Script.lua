@@ -4,10 +4,10 @@ local SDFBombOtheWeapon = import('/lua/seraphimweapons.lua').SDFBombOtheWeapon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPAT2BOMBER = Class(SAirUnit) {
+BRPAT2BOMBER = ClassUnit(SAirUnit) {
     
     Weapons = {
-        Bomb = Class(SDFBombOtheWeapon) {},
+        Bomb = ClassWeapon(SDFBombOtheWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

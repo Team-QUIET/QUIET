@@ -1,5 +1,5 @@
 local SAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-SSA0002 = Class(SAirUnit) {}
+SSA0002 = ClassUnit(SAirUnit) {}
 
 TypeClass = SSA0002

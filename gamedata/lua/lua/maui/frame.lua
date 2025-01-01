@@ -3,7 +3,7 @@
 
 local Control = import('control.lua').Control
 
-Frame = Class(moho.frame_methods, Control) {
+Frame = ClassUI(moho.frame_methods, Control) {
 
     __init = function(self, debugname)
         InternalCreateFrame(self)

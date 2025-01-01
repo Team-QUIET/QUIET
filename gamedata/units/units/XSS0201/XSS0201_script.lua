@@ -8,12 +8,12 @@ local SDFAjelluAntiTorpedoDefense       = SeraphimWeapons.SDFAjelluAntiTorpedoDe
 
 SeraphimWeapons = nil
 
-XSS0201 = Class(SSubUnit) {
+XSS0201 = ClassUnit(SSubUnit) {
     
     Weapons = {
-        Turret      = Class(SDFUltraChromaticBeamGenerator) {},
-        Torpedo     = Class(SANAnaitTorpedo) { FxMuzzleFlashScale = 0.5 },
-        AntiTorpedo = Class(SDFAjelluAntiTorpedoDefense) {},
+        Turret      = ClassWeapon(SDFUltraChromaticBeamGenerator) {},
+        Torpedo     = ClassWeapon(SANAnaitTorpedo) { FxMuzzleFlashScale = 0.5 },
+        AntiTorpedo = ClassWeapon(SDFAjelluAntiTorpedoDefense) {},
     },
     
     OnKilled = function(self, instigator, type, overkillRatio)

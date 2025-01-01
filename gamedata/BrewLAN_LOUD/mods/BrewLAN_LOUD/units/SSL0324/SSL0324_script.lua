@@ -2,7 +2,7 @@ local SRadarUnit = import('/lua/seraphimunits.lua').SRadarUnit
 
 local SHoverLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
-SSL0324 = Class(SHoverLandUnit) {
+SSL0324 = ClassUnit(SHoverLandUnit) {
 
     OnCreate = function(self)
         self.FxBlinkingLightsBag = {}

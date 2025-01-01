@@ -1,6 +1,6 @@
 local AShieldStructureUnit = import('/lua/aeonunits.lua').AShieldStructureUnit
 
-ZZZ0002 = Class(AShieldStructureUnit) {
+ZZZ0002 = ClassUnit(AShieldStructureUnit) {
     OnCreate = function(self)
         if self:BrewLANInstallationCheck() then
             self.DomeEntity = import('/lua/sim/Entity.lua').Entity({Owner = self,})

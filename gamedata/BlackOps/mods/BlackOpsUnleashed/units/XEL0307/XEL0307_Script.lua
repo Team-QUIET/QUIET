@@ -19,7 +19,7 @@ local WeaponSteam01 = import('/lua/effecttemplates.lua').WeaponSteam01
 
 local LOUDROT = CreateRotator
 
-XEL0307 = Class(TLandUnit) {
+XEL0307 = ClassUnit(TLandUnit) {
     
     AmbientExhaustBones = {
 		'Smoke_01',
@@ -38,16 +38,16 @@ XEL0307 = Class(TLandUnit) {
 	
     Weapons = {
 	
-        MainTurret = Class(RailGunWeapon01) {},
+        MainTurret = ClassWeapon(RailGunWeapon01) {},
 		
-        Turret = Class(TDFPlasmaCannonWeapon) {},
+        Turret = ClassWeapon(TDFPlasmaCannonWeapon) {},
 		
-        RocketRack = Class(TIFCruiseMissileUnpackingLauncher) {},
+        RocketRack = ClassWeapon(TIFCruiseMissileUnpackingLauncher) {},
         
-        AntiTorpedo = Class(AntiTorp) {},
-        AntiTorpedo2 = Class(AntiTorp) {},		
+        AntiTorpedo = ClassWeapon(AntiTorp) {},
+        AntiTorpedo2 = ClassWeapon(AntiTorp) {},		
 
-        FlameGun = Class(TDFMachineGunWeapon) {
+        FlameGun = ClassWeapon(TDFMachineGunWeapon) {
 		
 			PlayFxMuzzleSequence = function(self, muzzle)
 				TDFMachineGunWeapon.PlayFxMuzzleSequence(self, muzzle)
@@ -55,7 +55,7 @@ XEL0307 = Class(TLandUnit) {
 			end,
 		},
 		
-        LeftGatlingCannon = Class(TDFPlasmaCannonWeapon) {
+        LeftGatlingCannon = ClassWeapon(TDFPlasmaCannonWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then
@@ -90,7 +90,7 @@ XEL0307 = Class(TLandUnit) {
 			
         },
 		
-        RightGatlingCannon = Class(TDFPlasmaCannonWeapon) {
+        RightGatlingCannon = ClassWeapon(TDFPlasmaCannonWeapon) {
 		
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then

@@ -9,9 +9,9 @@ local PlayAnim = moho.AnimationManipulator.PlayAnim
 
 local WaitTicks = coroutine.yield
 
-XEL0306 = Class(TLandUnit) {
+XEL0306 = ClassUnit(TLandUnit) {
     Weapons = {
-        MissileWeapon = Class(TIFCruiseMissileUnpackingLauncher) {
+        MissileWeapon = ClassWeapon(TIFCruiseMissileUnpackingLauncher) {
 
             FxMuzzleFlash = {'/effects/emitters/terran_mobile_missile_launch_01_emit.bp'},
            

@@ -6,17 +6,17 @@ local MicrowaveLaser            = import('/lua/cybranweapons.lua').CDFHeavyMicro
 
 local AIFBallisticMortarFlash02 = import('/lua/EffectTemplates.lua').AIFBallisticMortarFlash02
 
-BROT3SHBM = Class(AWalkingLandUnit) {
+BROT3SHBM = ClassUnit(AWalkingLandUnit) {
 
     Weapons = {
 
-        MainGun     = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1.5, FxMuzzleFlash = AIFBallisticMortarFlash02 },
+        MainGun     = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1.5, FxMuzzleFlash = AIFBallisticMortarFlash02 },
 		
-        Laser       = Class(MicrowaveLaser) {},
+        Laser       = ClassWeapon(MicrowaveLaser) {},
 		
-        EMPgun      = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
+        EMPgun      = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
 		
-        robottalk   = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
+        robottalk   = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
     }, 
     
 }

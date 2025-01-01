@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TSAMLauncher = import('/lua/terranweapons.lua').TSAMLauncher
 
-SEL0324 = Class(TLandUnit) {
+SEL0324 = ClassUnit(TLandUnit) {
     Weapons = {
-        MissileRack01 = Class(TSAMLauncher) {},
+        MissileRack01 = ClassWeapon(TSAMLauncher) {},
     },
 
     OnCreate = function(self)

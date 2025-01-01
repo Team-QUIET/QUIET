@@ -6,11 +6,11 @@ local AAASonicPulseBatteryWeapon    = import('/lua/aeonweapons.lua').AAASonicPul
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BROT3BT = Class(TLandUnit) {
+BROT3BT = ClassUnit(TLandUnit) {
 
     Weapons = {
 
-        MainGun = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1.5,
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1.5,
 
             FxMuzzleFlash = { 
             	'/effects/emitters/aeon_quanticcluster_muzzle_flash_03_emit.bp',
@@ -52,12 +52,12 @@ BROT3BT = Class(TLandUnit) {
             end,    
 		},
 		
-        mgweapon2 = Class(AAASonicPulseBatteryWeapon) { FxMuzzleFlashScale = 0.6,
+        mgweapon2 = ClassWeapon(AAASonicPulseBatteryWeapon) { FxMuzzleFlashScale = 0.6,
 
 			FxMuzzleFlash = {'/effects/emitters/sonic_pulse_muzzle_flash_02_emit.bp',},
         },
 		
-        rocket = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
+        rocket = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.4 },
 
     },
 }

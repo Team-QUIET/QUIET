@@ -2,7 +2,7 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CRadarJammerUnit = import('/lua/defaultunits.lua').RadarJammerUnit
 
-URL0306 = Class(CLandUnit) {
+URL0306 = ClassUnit(CLandUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

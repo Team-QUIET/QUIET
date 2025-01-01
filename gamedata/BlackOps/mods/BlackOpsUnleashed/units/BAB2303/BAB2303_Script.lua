@@ -4,11 +4,11 @@ local AIFArtilleryMiasmaShellWeapon = import('/lua/aeonweapons.lua').AIFArtiller
 
 local TrashAdd = TrashBag.Add
 
-BAB2303 = Class(AStructureUnit) {
+BAB2303 = ClassUnit(AStructureUnit) {
 
     Weapons = {
 	
-        MainGun = Class(AIFArtilleryMiasmaShellWeapon) {
+        MainGun = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {
 		
 			PlayFxWeaponPackSequence = function(self)
             

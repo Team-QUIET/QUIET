@@ -12,7 +12,7 @@ local RandomInt = import('/lua/utilities.lua').GetRandomInt
 local BlackOpsEffectTemplate = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffectTemplates.lua')
 
 
-GoldLaserBombEffect04 = Class(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
+GoldLaserBombEffect04 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
 	FxTrails = BlackOpsEffectTemplate.GoldLaserBombHitRingProjectileFxTrails04,
 }
 TypeClass = GoldLaserBombEffect04

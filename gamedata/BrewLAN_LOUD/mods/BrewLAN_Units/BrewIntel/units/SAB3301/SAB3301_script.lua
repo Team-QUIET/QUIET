@@ -1,7 +1,7 @@
 local ARadarUnit = import('/lua/defaultunits.lua').RadarUnit
 local AnimationThread = import('/lua/effectutilities.lua').IntelDishAnimationThread
 
-SAB3301 = Class(ARadarUnit) {
+SAB3301 = ClassUnit(ARadarUnit) {
     OnStopBeingBuilt = function(self, ...)
         ARadarUnit.OnStopBeingBuilt(self, unpack(arg) )
         self:ForkThread(AnimationThread,{

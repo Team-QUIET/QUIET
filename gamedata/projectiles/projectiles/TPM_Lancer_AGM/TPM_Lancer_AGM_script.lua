@@ -2,7 +2,7 @@ local TMissileCruiseProjectile = import('/lua/terranprojectiles.lua').TMissileCr
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-TPM_Lancer_AGM = Class(TMissileCruiseProjectile) {
+TPM_Lancer_AGM = ClassProjectile(TMissileCruiseProjectile) {
 
 	FxAirUnitHitScale = 1.65,
     FxLandHitScale = 1.65,

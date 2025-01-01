@@ -1,6 +1,6 @@
 local CMassCollectionUnit = import('/lua/defaultunits.lua').MassCollectionUnit
 
-URB1302 = Class(CMassCollectionUnit) {
+URB1302 = ClassUnit(CMassCollectionUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         CMassCollectionUnit.OnStopBeingBuilt(self,builder,layer)

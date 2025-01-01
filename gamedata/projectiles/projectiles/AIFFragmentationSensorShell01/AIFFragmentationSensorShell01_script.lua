@@ -3,7 +3,7 @@ local AArtilleryFragmentationSensorShellProjectile = import('/lua/aeonprojectile
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-AIFFragmentationSensorShell01 = Class(AArtilleryFragmentationSensorShellProjectile) {
+AIFFragmentationSensorShell01 = ClassProjectile(AArtilleryFragmentationSensorShellProjectile) {
 
     OnImpact = function(self, TargetType, TargetEntity)
 	

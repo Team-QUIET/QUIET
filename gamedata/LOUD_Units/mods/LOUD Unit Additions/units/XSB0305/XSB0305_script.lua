@@ -4,7 +4,7 @@ local SSeraphimSubCommanderGateway01 = import('/lua/EffectTemplates.lua').Seraph
 local SSeraphimSubCommanderGateway02 = import('/lua/EffectTemplates.lua').SeraphimSubCommanderGateway02
 local SSeraphimSubCommanderGateway03 = import('/lua/EffectTemplates.lua').SeraphimSubCommanderGateway03
 
-XSB0305 = Class(SQuantumGateUnit) {
+XSB0305 = ClassUnit(SQuantumGateUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         ###Place emitters at the center of the gateway.

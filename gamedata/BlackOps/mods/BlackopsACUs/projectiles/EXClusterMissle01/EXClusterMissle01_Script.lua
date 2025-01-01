@@ -3,7 +3,7 @@ local Explosion = import('/lua/defaultexplosions.lua')
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-EXClusterMissle01 = Class(TMissileCruiseProjectile) {
+EXClusterMissle01 = ClassProjectile(TMissileCruiseProjectile) {
 
 	OnCreate = function(self)
         TMissileCruiseProjectile.OnCreate(self)

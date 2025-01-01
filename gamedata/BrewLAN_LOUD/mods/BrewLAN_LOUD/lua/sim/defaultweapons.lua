@@ -4,7 +4,7 @@
 local NukeDamage = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '/lua/sim/NukeDamage.lua').NukeAOE
 local BareBonesWeapon = import('/lua/sim/DefaultWeapons.lua').BareBonesWeapon
 
-DeathNukeWeapon = Class(BareBonesWeapon) {
+DeathNukeWeapon = ClassWeapon(BareBonesWeapon) {
     OnFire = function(self)
         return self.Fire(self)
     end,

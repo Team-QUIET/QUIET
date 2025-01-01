@@ -3,7 +3,7 @@ local CAirStagingPlatformUnit = import('/lua/defaultunits.lua').AirStagingPlatfo
 local Buff = import('/lua/sim/Buff.lua')
 local BuffField = import('/lua/defaultbufffield.lua').DefaultBuffField
 
-URB5202 = Class(CAirStagingPlatformUnit) {
+URB5202 = ClassUnit(CAirStagingPlatformUnit) {
 
 	BuffFields = {
 	

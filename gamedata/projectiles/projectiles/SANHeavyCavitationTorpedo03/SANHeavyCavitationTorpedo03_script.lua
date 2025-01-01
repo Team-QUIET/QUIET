@@ -12,7 +12,7 @@ local CreateEmitterOnEntity = CreateEmitterOnEntity
 -- this torpedo is the split projectile created by the Heavy Cavitation Torpedo 1 & 2 ( from T2 & T3 Torpedo launcher )
 -- the essential difference is that this torp doesn't start tracking for several ticks depending on how far it is
 -- from the target
-SANHeavyCavitationTorpedo03 = Class(SHeavyCavitationTorpedo) {
+SANHeavyCavitationTorpedo03 = ClassProjectile(SHeavyCavitationTorpedo) {
 
     OnCreate = function(self, inWater)
 	

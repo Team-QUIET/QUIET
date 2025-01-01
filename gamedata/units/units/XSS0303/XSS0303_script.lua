@@ -7,13 +7,13 @@ local SLaanseMissileWeapon          = SeraphimWeapons.SLaanseMissileWeapon
 
 SeraphimWeapons = nil
 
-XSS0303 = Class(SSeaUnit) {
+XSS0303 = ClassUnit(SSeaUnit) {
 
     Weapons = {
 
-        CruiseMissiles = Class(SLaanseMissileWeapon) {},	
+        CruiseMissiles = ClassWeapon(SLaanseMissileWeapon) {},	
 
-        AAGun = Class(SAALosaareAutoCannonWeapon) {},
+        AAGun = ClassWeapon(SAALosaareAutoCannonWeapon) {},
     },
     
     BuildAttachBone = 'XSS0303',

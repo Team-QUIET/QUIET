@@ -2,9 +2,9 @@ local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local TIFCarpetBombWeapon = import('/lua/terranweapons.lua').TIFCarpetBombWeapon
 
-UEA0103 = Class(TAirUnit) {
+UEA0103 = ClassUnit(TAirUnit) {
     Weapons = {
-        Bomb = Class(TIFCarpetBombWeapon) {},
+        Bomb = ClassWeapon(TIFCarpetBombWeapon) {},
         },
     DamageEffectPullback = 0.5,
 }

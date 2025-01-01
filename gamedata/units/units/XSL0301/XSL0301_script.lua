@@ -12,15 +12,15 @@ SWeapons = nil
 local Buff = import('/lua/sim/Buff.lua')
 local CreateSeraphimUnitEngineerBuildingEffects = import('/lua/EffectUtilities.lua').CreateSeraphimUnitEngineerBuildingEffects
 
-XSL0301 = Class(SWalkingLandUnit) {
+XSL0301 = ClassUnit(SWalkingLandUnit) {
     
     Weapons = {
 
-        ChronotronCannon = Class(SDFLightChronotronCannonWeapon) {},
+        ChronotronCannon = ClassWeapon(SDFLightChronotronCannonWeapon) {},
 
-        DeathWeapon = Class(AIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFCommanderDeathWeapon) {},
 
-        OverCharge = Class(SDFOverChargeWeapon) {
+        OverCharge = ClassWeapon(SDFOverChargeWeapon) {
 
             OnCreate = function(self)
 
@@ -105,7 +105,7 @@ XSL0301 = Class(SWalkingLandUnit) {
 
         },
 
-        Missile = Class(SIFLaanseTacticalMissileLauncher) {
+        Missile = ClassWeapon(SIFLaanseTacticalMissileLauncher) {
 
             OnCreate = function(self)
                 SIFLaanseTacticalMissileLauncher.OnCreate(self)

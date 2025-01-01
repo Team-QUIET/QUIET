@@ -1,4 +1,4 @@
-CreateDropPing = Class(Unit) {
+CreateDropPing = ClassUnit(Unit) {
     OnCreate = function(self)
         Unit.OnCreate(self)
         ChangeState(self, self.RevolvingState)

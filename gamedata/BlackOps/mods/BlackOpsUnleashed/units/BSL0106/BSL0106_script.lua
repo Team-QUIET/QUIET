@@ -2,9 +2,9 @@ local SWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local SAAShleoCannonWeapon = import('/lua/seraphimweapons.lua').SAAShleoCannonWeapon
 
-BSL0106 = Class(SWalkingLandUnit) {
+BSL0106 = ClassUnit(SWalkingLandUnit) {
     Weapons = {
-        LaserTurret = Class(SAAShleoCannonWeapon) {},
+        LaserTurret = ClassWeapon(SAAShleoCannonWeapon) {},
     },
 }
 TypeClass = BSL0106

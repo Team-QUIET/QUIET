@@ -2,7 +2,7 @@ local AEnergyCreationUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TrashAdd = TrashBag.Add
 
-BAB1202 = Class(AEnergyCreationUnit) {
+BAB1202 = ClassUnit(AEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

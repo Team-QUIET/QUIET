@@ -20,16 +20,16 @@ local TrashDestroy = TrashBag.Destroy
 local EffectTemplate        = import('/lua/EffectTemplates.lua')
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BRNT3SHBM = Class(TWalkingLandUnit) {
+BRNT3SHBM = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
 
-        TacMissiles = Class(TIFCruiseMissileUnpackingLauncher) { FxMuzzleFlashScale = 0.5,
+        TacMissiles = ClassWeapon(TIFCruiseMissileUnpackingLauncher) { FxMuzzleFlashScale = 0.5,
 
             FxMuzzleFlash = {'/effects/emitters/terran_mobile_missile_launch_01_emit.bp'}
         },
 		
-        handweapon = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1,
+        handweapon = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 1,
 			
             FxMuzzleFlash = { 
             	'/effects/emitters/proton_artillery_muzzle_01_emit.bp',
@@ -56,17 +56,17 @@ BRNT3SHBM = Class(TWalkingLandUnit) {
             end, 
 		},
 		
-        Rockets             = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
+        Rockets             = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
 		
-        SAM                 = Class(TSAMLauncher) { FxMuzzleFlash = EffectTemplate.TAAMissileLaunchNoBackSmoke },	
+        SAM                 = ClassWeapon(TSAMLauncher) { FxMuzzleFlash = EffectTemplate.TAAMissileLaunchNoBackSmoke },	
 		
-        Torpedoes           = Class(TANTorpedoLandWeapon) {},		
+        Torpedoes           = ClassWeapon(TANTorpedoLandWeapon) {},		
 
-        Riotgun             = Class(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank, FxMuzzleFlashScale = 0.2 },
+        Riotgun             = ClassWeapon(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank, FxMuzzleFlashScale = 0.2 },
 		
-        robottalk           = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
+        robottalk           = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0 },
 		
-        DeathWeapon         = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon         = ClassWeapon(TIFCommanderDeathWeapon) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

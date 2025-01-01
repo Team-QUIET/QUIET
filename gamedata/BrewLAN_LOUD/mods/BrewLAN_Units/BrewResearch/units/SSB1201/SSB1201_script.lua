@@ -1,4 +1,4 @@
-SSB1201 = Class(import('/lua/defaultunits.lua').EnergyCreationUnit) {
+SSB1201 = ClassUnit(import('/lua/defaultunits.lua').EnergyCreationUnit) {
     AmbientEffects = 'ST2PowerAmbient'
 }
 

@@ -29,30 +29,30 @@ local TrashAdd                  = TrashBag.Add
 local WaitSeconds               = WaitSeconds
 local WaitTicks                 = coroutine.yield
 
-local GetEconomyIncome          = moho.aibrain_methods.GetEconomyIncome
-local GetEconomyStored          = moho.aibrain_methods.GetEconomyStored
+local GetEconomyIncome          = _G.moho.aibrain_methods.GetEconomyIncome
+local GetEconomyStored          = _G.moho.aibrain_methods.GetEconomyStored
 
-local PlayAnim                  = moho.AnimationManipulator.PlayAnim
+local PlayAnim                  = _G.moho.AnimationManipulator.PlayAnim
 
-local BeenDestroyed             = moho.entity_methods.BeenDestroyed
-local GetAIBrain                = moho.entity_methods.GetAIBrain
+local BeenDestroyed             = _G.moho.entity_methods.BeenDestroyed
+local GetAIBrain                = _G.moho.entity_methods.GetAIBrain
 
-local ScaleEmitter              = moho.IEffect.ScaleEmitter
+local ScaleEmitter              = _G.moho.IEffect.ScaleEmitter
 
-local SetPrecedence             = moho.manipulator_methods.SetPrecedence
+local SetPrecedence             = _G.moho.manipulator_methods.SetPrecedence
 
-local ChangeDetonateAboveHeight = moho.projectile_methods.ChangeDetonateAboveHeight
+local ChangeDetonateAboveHeight = _G.moho.projectile_methods.ChangeDetonateAboveHeight
 
-local SetGoal                   = moho.SlideManipulator.SetGoal
-local SetSpeed                  = moho.SlideManipulator.SetSpeed
+local SetGoal                   = _G.moho.SlideManipulator.SetGoal
+local SetSpeed                  = _G.moho.SlideManipulator.SetSpeed
 
-local HideBone                  = moho.unit_methods.HideBone
-local SetBusy                   = moho.unit_methods.SetBusy
-local SetWorkProgress           = moho.unit_methods.SetWorkProgress
-local ShowBone                  = moho.unit_methods.ShowBone
+local HideBone                  = _G.moho.unit_methods.HideBone
+local SetBusy                   = _G.moho.unit_methods.SetBusy
+local SetWorkProgress           = _G.moho.unit_methods.SetWorkProgress
+local ShowBone                  = _G.moho.unit_methods.ShowBone
 
 
-local WeaponMethods     = moho.weapon_methods
+local WeaponMethods     = _G.moho.weapon_methods
 
 local CreateProjectile          = WeaponMethods.CreateProjectile
 local GetBlueprint              = WeaponMethods.GetBlueprint
@@ -65,7 +65,7 @@ local WeaponHasTarget           = WeaponMethods.WeaponHasTarget
 WeaponMethods = nil
 
 
-DefaultProjectileWeapon = Class(Weapon) {		
+DefaultProjectileWeapon = ClassWeapon(Weapon) {		
 
     FxRackChargeMuzzleFlash = false,
     FxRackChargeMuzzleFlashScale = 1,
@@ -1724,7 +1724,7 @@ DefaultProjectileWeapon = Class(Weapon) {
 
 local DefaultProjectileWeaponOnCreate = DefaultProjectileWeapon.OnCreate
 
-KamikazeWeapon = Class(DefaultProjectileWeapon) {
+KamikazeWeapon = ClassWeapon(DefaultProjectileWeapon) {
 
     OnWeaponFired = function(self)
 
@@ -1739,7 +1739,7 @@ KamikazeWeapon = Class(DefaultProjectileWeapon) {
  
 }
 
-BareBonesWeapon = Class(DefaultProjectileWeapon) {
+BareBonesWeapon = ClassWeapon(DefaultProjectileWeapon) {
     
     RackSalvoFireReadyState = State {
 
@@ -1796,7 +1796,7 @@ BareBonesWeapon = Class(DefaultProjectileWeapon) {
 
 }
 
-DefaultBeamWeapon = Class(DefaultProjectileWeapon) {
+DefaultBeamWeapon = ClassWeapon(DefaultProjectileWeapon) {
 
     BeamType = CollisionBeam,
 

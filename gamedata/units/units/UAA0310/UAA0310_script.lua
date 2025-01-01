@@ -13,19 +13,19 @@ local explosion = import('/lua/defaultexplosions.lua')
 
 local LOUDSTATE = ChangeState
 
-UAA0310 = Class(AAirUnit) {
+UAA0310 = ClassUnit(AAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
 
     Weapons = {
 
-        QuantumBeamGeneratorWeapon = Class(AQuantumBeamGenerator){},
+        QuantumBeamGeneratorWeapon = ClassWeapon(AQuantumBeamGenerator){},
 
-        AA_Missile          = Class(AAAZealotMissileWeapon) {},
+        AA_Missile          = ClassWeapon(AAAZealotMissileWeapon) {},
 
-        AAFizz              = Class(AAATemporalFizzWeapon) {},		
+        AAFizz              = ClassWeapon(AAATemporalFizzWeapon) {},		
 
-        DepthCharge         = Class(AANDepthChargeBombWeapon) {},
+        DepthCharge         = ClassWeapon(AANDepthChargeBombWeapon) {},
     },
 
     OnKilled = function(self, instigator, type, overkillRatio)

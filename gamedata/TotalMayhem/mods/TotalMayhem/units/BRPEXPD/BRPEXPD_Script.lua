@@ -4,10 +4,10 @@ local SDFUltraChromaticBeamGenerator = import('/lua/seraphimweapons.lua').SDFUlt
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPEXPD = Class(SStructureUnit) {
+BRPEXPD = ClassUnit(SStructureUnit) {
 
 	Weapons = {
-		MainWeapon = Class(SDFUltraChromaticBeamGenerator) { FxMuzzleFlashScale = 2.4 },
+		MainWeapon = ClassWeapon(SDFUltraChromaticBeamGenerator) { FxMuzzleFlashScale = 2.4 },
 	},
 
 	OnStopBeingBuilt = function(self,builder,layer)

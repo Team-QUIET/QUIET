@@ -6,10 +6,10 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 
 local TrashAdd = TrashBag.Add
 
-BAB2304 = Class(AStructureUnit) {
+BAB2304 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        AntiMissile = Class(AAATemporalFizzWeapon) {},
+        AntiMissile = ClassWeapon(AAATemporalFizzWeapon) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

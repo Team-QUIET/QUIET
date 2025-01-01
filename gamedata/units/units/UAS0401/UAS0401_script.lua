@@ -13,12 +13,12 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-UAS0401 = Class(ASubUnit) {
+UAS0401 = ClassUnit(ASubUnit) {
 
     Weapons = {
-        MainGun     = Class(ADFCannonOblivionWeapon) {},
-        Torpedo     = Class(AANChronoTorpedoWeapon) {},
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        MainGun     = ClassWeapon(ADFCannonOblivionWeapon) {},
+        Torpedo     = ClassWeapon(AANChronoTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
 
     BuildAttachBone = 'Attachpoint01',

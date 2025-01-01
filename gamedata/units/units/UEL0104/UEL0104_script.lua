@@ -2,9 +2,9 @@ local TLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local TAALinkedRailgun = import('/lua/terranweapons.lua').TAALinkedRailgun
 
-UEL0104 = Class(TLandUnit) {
+UEL0104 = ClassUnit(TLandUnit) {
     Weapons = {
-        AAGun = Class(TAALinkedRailgun) { FxMuzzleFlashScale = 0.25 },
+        AAGun = ClassWeapon(TAALinkedRailgun) { FxMuzzleFlashScale = 0.25 },
     },
 
 }

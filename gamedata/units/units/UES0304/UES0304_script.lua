@@ -3,11 +3,11 @@ local TSubUnit =  import('/lua/defaultunits.lua').SubUnit
 local TIFCruiseMissileLauncherSub   = import('/lua/terranweapons.lua').TIFCruiseMissileLauncherSub
 local TIFStrategicMissileWeapon     = import('/lua/sim/DefaultWeapons.lua').DefaultProjectileWeapon
 
-UES0304 = Class(TSubUnit) {
+UES0304 = ClassUnit(TSubUnit) {
 	
     Weapons = {
 	
-        CruiseMissiles = Class(TIFCruiseMissileLauncherSub) {
+        CruiseMissiles = ClassWeapon(TIFCruiseMissileLauncherSub) {
 		
             CurrentRack = 1,
            
@@ -62,7 +62,7 @@ UES0304 = Class(TSubUnit) {
             end,
         },
 		
-        NukeMissiles = Class(TIFStrategicMissileWeapon) {
+        NukeMissiles = ClassWeapon(TIFStrategicMissileWeapon) {
 		
             CurrentRack = 1,
            

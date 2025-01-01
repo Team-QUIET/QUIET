@@ -11,7 +11,7 @@ local CreateEmitterOnEntity = CreateEmitterOnEntity
 
 -- This torpedo is used by the T2 Torpedo Launcher --
 -- and splits into 3 torpedoes ( see Cavitation Torpedo 3 )
-SANHeavyCavitationTorpedo02 = Class(SHeavyCavitationTorpedo) {
+SANHeavyCavitationTorpedo02 = ClassProjectile(SHeavyCavitationTorpedo) {
 
     FxSplashScale = .4,
 	

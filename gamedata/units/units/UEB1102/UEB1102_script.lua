@@ -4,7 +4,7 @@ local LOUDSTATE = ChangeState
 local LOUDINSERT = table.insert
 local LOUDATTACHEMITTER = CreateAttachedEmitter
 
-UEB1102 = Class(TEnergyCreationUnit) {
+UEB1102 = ClassUnit(TEnergyCreationUnit) {
 
     DestructionPartsHighToss = {'Exhaust01',},
     DestructionPartsLowToss = {'Exhaust01','Exhaust02','Exhaust03','Exhaust04','Exhaust05',},

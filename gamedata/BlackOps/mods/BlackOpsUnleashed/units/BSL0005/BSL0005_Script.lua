@@ -8,13 +8,13 @@ local SANUallCavitationTorpedo = WeaponsFile.SANUallCavitationTorpedo
 
 local ForkThread = ForkThread
 
-BSL0005 = Class(SLandUnit) {
+BSL0005 = ClassUnit(SLandUnit) {
 
     Weapons = {
-        MainTurret = Class(SDFThauCannon) {},
-        Torpedo01 = Class(SANUallCavitationTorpedo) {},
-        LeftTurret = Class(SDFAireauBolter) {},
-        RightTurret = Class(SDFAireauBolter) {},
+        MainTurret = ClassWeapon(SDFThauCannon) {},
+        Torpedo01 = ClassWeapon(SANUallCavitationTorpedo) {},
+        LeftTurret = ClassWeapon(SDFAireauBolter) {},
+        RightTurret = ClassWeapon(SDFAireauBolter) {},
     },
 
 

@@ -1,6 +1,6 @@
 local TCivilianStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UEC1401 = Class(TCivilianStructureUnit) {
+UEC1401 = ClassUnit(TCivilianStructureUnit) {
 
 	OnCreate = function(self)
 		TCivilianStructureUnit.OnCreate(self)

@@ -2,11 +2,11 @@ local ALandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local ADFAlchemistPhasonLaser = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '/lua/weapons.lua').ADFAlchemistPhasonLaser
 
-SAL0320 = Class(ALandUnit) {
+SAL0320 = ClassUnit(ALandUnit) {
 
     KickupBones = {},
 
-    Weapons = {AAGun = Class(ADFAlchemistPhasonLaser) {}},
+    Weapons = {AAGun = ClassWeapon(ADFAlchemistPhasonLaser) {}},
 
     OnStopBeingBuilt = function(self,builder,layer)
 	

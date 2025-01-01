@@ -2,7 +2,7 @@ local TShieldLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CreateRotator = CreateRotator
 
-UEL0308 = Class(TShieldLandUnit) {
+UEL0308 = ClassUnit(TShieldLandUnit) {
 
     ShieldEffects = {
         '/effects/emitters/terran_shield_generator_mobile_01_emit.bp',

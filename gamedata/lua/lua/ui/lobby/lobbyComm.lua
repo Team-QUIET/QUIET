@@ -47,7 +47,7 @@ function GetDefaultPlayerOptions(playerName)
 	
 end
 
-DiscoveryService = Class(moho.discovery_service_methods) {
+DiscoveryService = ClassUI(moho.discovery_service_methods) {
 
     RemoveGame = function(self, index)
         LOG('DiscoveryService.RemoveGame(' .. tostring(index) .. ')')
@@ -73,7 +73,7 @@ function CreateDiscoveryService()
 	
 end
 
-SteamDiscoveryService = Class(moho.steam_discovery_service_methods) {
+SteamDiscoveryService = ClassUI(moho.steam_discovery_service_methods) {
 
     RemoveGame = function(self, index)
         LOG('SteamDiscoveryService.RemoveGame(' .. tostring(index) .. ')')
@@ -99,7 +99,7 @@ function CreateSteamDiscoveryService()
 	
 end
 
-LobbyComm = Class(moho.lobby_methods) {
+LobbyComm = ClassUI(moho.lobby_methods) {
 
     -- General events you should override
     Hosting = function(self) end,

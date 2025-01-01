@@ -12,12 +12,12 @@ WeaponFile = nil
 local BrewLANLOUDPath = import( '/lua/game.lua' ).BrewLANLOUDPath()
 local AssistThread = import(BrewLANLOUDPath .. '/lua/fieldengineers.lua').AssistThread
 
-SES0319 = Class(TSeaUnit) {
+SES0319 = ClassUnit(TSeaUnit) {
     DestructionTicks = 200,
     Weapons = {
-        FrontTurret02   = Class(TAALinkedRailgun) {},
-        Torpedo01       = Class(TANTorpedoAngler) {},
-        AntiTorpedo     = Class(TorpedoDecoy) {},
+        FrontTurret02   = ClassWeapon(TAALinkedRailgun) {},
+        Torpedo01       = ClassWeapon(TANTorpedoAngler) {},
+        AntiTorpedo     = ClassWeapon(TorpedoDecoy) {},
     },
 
     RadarThread = function(self)

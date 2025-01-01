@@ -2,7 +2,7 @@ local TEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
 local ChangeState = ChangeState
 
-UEB1301 = Class(TEnergyCreationUnit) {
+UEB1301 = ClassUnit(TEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TEnergyCreationUnit.OnStopBeingBuilt(self,builder,layer)

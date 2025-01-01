@@ -3,11 +3,11 @@ local SLandUnit = import('/lua/defaultunits.lua').MobileUnit
 local SAALosaareAutoCannonWeapon    = import('/lua/seraphimweapons.lua').SAALosaareAutoCannonWeapon
 local SAMElectrumMissileDefense     = import('/lua/seraphimweapons.lua').SAMElectrumMissileDefense
 
-SSL0320 = Class(SLandUnit) {
+SSL0320 = ClassUnit(SLandUnit) {
 
     Weapons = {
-        AntiMissile     = Class(SAMElectrumMissileDefense) {},
-        AAMissiles      = Class(SAALosaareAutoCannonWeapon) {},
+        AntiMissile     = ClassWeapon(SAMElectrumMissileDefense) {},
+        AAMissiles      = ClassWeapon(SAALosaareAutoCannonWeapon) {},
     },
 
 }

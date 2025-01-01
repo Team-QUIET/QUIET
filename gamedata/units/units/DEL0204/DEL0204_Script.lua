@@ -8,10 +8,10 @@ local WeaponSteam01 = import('/lua/effecttemplates.lua').WeaponSteam01
 
 local CreateRotator = CreateRotator
 
-DEL0204 = Class(TWalkingLandUnit) 
+DEL0204 = ClassUnit(TWalkingLandUnit) 
 {
     Weapons = {
-        GatlingCannon = Class(TDFPlasmaCannonWeapon) 
+        GatlingCannon = ClassWeapon(TDFPlasmaCannonWeapon) 
         {
             PlayFxWeaponPackSequence = function(self)
                 if self.SpinManip then
@@ -42,7 +42,7 @@ DEL0204 = Class(TWalkingLandUnit)
             end,
         },
         
-        Grenade = Class(TDFHeavyPlasmaCannonWeapon) {}
+        Grenade = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {}
     },
 }
 

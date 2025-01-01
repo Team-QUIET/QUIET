@@ -1,6 +1,6 @@
 local TMassCollectionUnit = import('/lua/terranunits.lua').TMassCollectionUnit
 
-UEB1304 = Class(TMassCollectionUnit) {
+UEB1304 = ClassUnit(TMassCollectionUnit) {
     
     
     PlayActiveAnimation = function(self)

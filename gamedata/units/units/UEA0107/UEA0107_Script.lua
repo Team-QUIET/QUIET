@@ -7,7 +7,7 @@ local LOUDFLOOR = math.floor
 local LOUDGETN = table.getn
 local LOUDINSERT = table.insert
 
-UEA0107 = Class(TAirUnit) 
+UEA0107 = ClassUnit(TAirUnit) 
 {
     AirDestructionEffectBones = { 'Front_Right_Exhaust','Front_Left_Exhaust','Back_Right_Exhaust','Back_Left_Exhaust',
                                 'Left_Front_Leg','Right_Front_Leg','Left_Back_Leg','Right_Back_Leg'},

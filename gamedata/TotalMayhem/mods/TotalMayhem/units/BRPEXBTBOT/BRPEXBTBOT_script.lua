@@ -9,11 +9,11 @@ SeraphimWeapons = nil
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPEXBTBOT = Class( SWalkingLandUnit ) {
+BRPEXBTBOT = ClassUnit(SWalkingLandUnit) {
 
 	Weapons = {
-		AAGun       = Class(SAAOlarisCannonWeapon) {},
-		ArmWeapons  = Class(SDFChronotronCannonWeapon) {},
+		AAGun       = ClassWeapon(SAAOlarisCannonWeapon) {},
+		ArmWeapons  = ClassWeapon(SDFChronotronCannonWeapon) {},
 	},
 
 	OnStopBeingBuilt = function(self,builder,layer)

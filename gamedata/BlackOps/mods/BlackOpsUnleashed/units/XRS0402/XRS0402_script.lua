@@ -11,16 +11,16 @@ local CAMZapperWeapon02         = CybranWeaponsFile.CAMZapperWeapon02
 
 CybranWeaponsFile = nil
 
-XRS0402= Class(CSeaUnit) {
+XRS0402= ClassUnit(CSeaUnit) {
 
     Weapons = {
-        MainCannonFront = Class(XCannonWeapon01) {},
-        MainCannonBack  = Class(XCannonWeapon01) {},
-        BombardmentGun  = Class(CDFProtonCannonWeapon) {},
-        SecondaryCannon = Class(CDFProtonCannonWeapon) {},
-        AAGun           = Class(CAAAutocannon) {},
-        Zapper          = Class(CAMZapperWeapon02) {},
-        Torpedo         = Class(CANNaniteTorpedoWeapon) {},
+        MainCannonFront = ClassWeapon(XCannonWeapon01) {},
+        MainCannonBack  = ClassWeapon(XCannonWeapon01) {},
+        BombardmentGun  = ClassWeapon(CDFProtonCannonWeapon) {},
+        SecondaryCannon = ClassWeapon(CDFProtonCannonWeapon) {},
+        AAGun           = ClassWeapon(CAAAutocannon) {},
+        Zapper          = ClassWeapon(CAMZapperWeapon02) {},
+        Torpedo         = ClassWeapon(CANNaniteTorpedoWeapon) {},
     },
 }
 

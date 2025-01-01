@@ -6,7 +6,7 @@ local LOUDFLOOR = math.floor
 -- vertical true means the bar will grow in the vertical direction
 -- negative true means for horizontal bars they will grow right to left, for vertical they will grow top to bottom
 
-StatusBar = Class(Bitmap)
+StatusBar = ClassUI(Bitmap)
 {
     __init = function(self, parent, rangeMin, rangeMax, vertical, negative, background, bar, stretchTextures, debugname)
         Bitmap.__init(self, parent, background)

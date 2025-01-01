@@ -10,7 +10,7 @@ DefaultProjectileFile = nil
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-ArrowMissileProjectile = Class(SingleCompositeEmitterProjectile) {
+ArrowMissileProjectile = ClassProjectile(SingleCompositeEmitterProjectile) {
 
     PolyTrail = '/effects/emitters/serpentine_missile_trail_emit.bp',
     BeamName = '/effects/emitters/serpentine_missle_exhaust_beam_01_emit.bp',
@@ -26,7 +26,7 @@ ArrowMissileProjectile = Class(SingleCompositeEmitterProjectile) {
     end,
 }
 
-BFGProjectile = Class(EmitterProjectile) {
+BFGProjectile = ClassProjectile(EmitterProjectile) {
     FxTrails = EffectTemplate.SDFExperimentalPhasonProjFXTrails01,
     FxTrailScale = 0.75,
 
@@ -38,7 +38,7 @@ BFGProjectile = Class(EmitterProjectile) {
     FxPropHitScale = 0.3,    
 }
 
-LaserPhalanxProjectile = Class(MultiPolyTrailProjectile) {
+LaserPhalanxProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
 	PolyTrails = {
   	'/effects/emitters/disintegrator_polytrail_04_emit.bp',
@@ -54,7 +54,7 @@ LaserPhalanxProjectile = Class(MultiPolyTrailProjectile) {
     FxProjectileHitScale = 0.5,
 }
 
-Over_ChargeProjectile = Class(MultiPolyTrailProjectile) {
+Over_ChargeProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
     PolyTrails = {
         '/effects/emitters/laserturret_munition_trail_01_emit.bp',

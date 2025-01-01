@@ -1,7 +1,7 @@
 local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 
-SEB3303 = Class(TStructureUnit) {
+SEB3303 = ClassUnit(TStructureUnit) {
     DeathThreadDestructionWaitTime = 0,
 
     OnStopBeingBuilt = function(self, ...)

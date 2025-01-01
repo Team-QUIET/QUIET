@@ -1,4 +1,4 @@
-UHeavyGauss04 = Class(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile)  {
+UHeavyGauss04 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile)  {
 
 	FxImpactTrajectoryAligned = true,
 

@@ -14,21 +14,21 @@ local MicrowaveLaser             = import('/mods/BlackOpsUnleashed/lua/BlackOpsw
 CybranWeaponsFile = nil
 
 
-BRS0304 = Class(CSeaUnit) {
+BRS0304 = ClassUnit(CSeaUnit) {
 
     Weapons = {
 	
-        ParticleGun     = Class(CDFProtonCannonWeapon) {},
+        ParticleGun     = ClassWeapon(CDFProtonCannonWeapon) {},
 
-        RightGun        = Class(MicrowaveLaser) {},
-        LeftGun         = Class(MicrowaveLaser) {},
+        RightGun        = ClassWeapon(MicrowaveLaser) {},
+        LeftGun         = ClassWeapon(MicrowaveLaser) {},
 		
-        AAGun           = Class(CAANanoDartWeapon) {},
-        GroundGun       = Class(CAANanoDartWeapon) {},
+        AAGun           = ClassWeapon(CAANanoDartWeapon) {},
+        GroundGun       = ClassWeapon(CAANanoDartWeapon) {},
 		
-        Zapper          = Class(CAMZapperWeapon) {},
-        Torpedo         = Class(CANNaniteTorpedoWeapon) {},
-        AntiTorpedo     = Class(AIFQuasarAntiTorpedoWeapon) {},
+        Zapper          = ClassWeapon(CAMZapperWeapon) {},
+        Torpedo         = ClassWeapon(CANNaniteTorpedoWeapon) {},
+        AntiTorpedo     = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
 		
     },
     

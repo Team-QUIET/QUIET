@@ -15,17 +15,17 @@ local fxutil = import('/lua/effectutilities.lua')
 local ForkThread = ForkThread
 local KillThread = KillThread
 
-BRA0409 = Class(CAirUnit) {
+BRA0409 = ClassUnit(CAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
 	
     Weapons = {
         
-        AA = Class(MartyrHeavyMicrowaveLaserGenerator) {},
+        AA = ClassWeapon(MartyrHeavyMicrowaveLaserGenerator) {},
 		
-        RocketPod = Class(RedHeavyTurboLaserWeapon) {},
+        RocketPod = ClassWeapon(RedHeavyTurboLaserWeapon) {},
 		
-        MainGun = Class(CIFMissileStrategicWeapon) {},
+        MainGun = ClassWeapon(CIFMissileStrategicWeapon) {},
     },
 
     AirDestructionEffectBones = { 'Engine_01', 'Engine_02', 'Engine_03', 'Engine_04', 'Engine_05', 'Main_Gun_Turret', 'L_Barrel_01', 'R_Barrel_01','L_Back_Barrel_01', 'R_Back_Turret_01', 'Main_Gun_Muzzle','R_Turret_01', 'R_U_Muzzle_01',     'R_Pivot01', 'L_pivot_01', 'L_Back_Turret_01','R_B_AA_Muzzle_01','R_Back_Barrel_01'},

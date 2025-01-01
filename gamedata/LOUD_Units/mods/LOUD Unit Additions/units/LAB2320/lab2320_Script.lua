@@ -2,12 +2,12 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFArtilleryMiasmaShellWeapon = import('/lua/aeonweapons.lua').AIFArtilleryMiasmaShellWeapon
 
-LAB2320 = Class(AStructureUnit) {
+LAB2320 = ClassUnit(AStructureUnit) {
 
     Weapons = {
-        MainGun = Class(AIFArtilleryMiasmaShellWeapon) {},
-        MainGun1 = Class(AIFArtilleryMiasmaShellWeapon) {},
-        MainGun2 = Class(AIFArtilleryMiasmaShellWeapon) {},
+        MainGun = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
+        MainGun1 = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
+        MainGun2 = ClassWeapon(AIFArtilleryMiasmaShellWeapon) {},
     },
 }
 

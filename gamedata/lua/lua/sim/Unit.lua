@@ -61,10 +61,10 @@ local setmetatable      = setmetatable
 local WaitFor           = WaitFor
 local WaitTicks         = coroutine.yield
 
-local PlatoonExists = moho.aibrain_methods.PlatoonExists
-local PlayAnim      = moho.AnimationManipulator.PlayAnim
+local PlatoonExists = _G.moho.aibrain_methods.PlatoonExists
+local PlayAnim      = _G.moho.AnimationManipulator.PlayAnim
 	
-local EntityMethods = moho.entity_methods
+local EntityMethods = _G.moho.entity_methods
 
 local AdjustHealth          = EntityMethods.AdjustHealth
 local GetArmy               = EntityMethods.GetArmy
@@ -82,7 +82,7 @@ local SetHealth             = EntityMethods.SetHealth
 local SetIntelRadius        = EntityMethods.SetIntelRadius
 local SetMesh               = EntityMethods.SetMesh
 
-local UnitMethods = moho.unit_methods
+local UnitMethods = _G.moho.unit_methods
 
 local GetAIBrain                        = UnitMethods.GetAIBrain
 local GetBuildRate                      = UnitMethods.GetBuildRate
@@ -167,7 +167,7 @@ local PROJECTILE = categories.PROJECTILE
 local SUBCOMMANDER = categories.SUBCOMMANDER
 local WALL = categories.WALL
 
-Unit = Class(UnitMethods) {
+Unit = ClassUnit(UnitMethods) {
 
     BuffTypes = {
         Regen = { BuffType = 'VET_REGEN', BuffValFunction = 'Add', BuffDuration = -1, BuffStacks = 'REPLACE' },

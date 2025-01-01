@@ -11,19 +11,19 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashAdd = TrashBag.Add
 
 
-BSS0306 = Class(SSeaUnit) {
+BSS0306 = ClassUnit(SSeaUnit) {
 
     Weapons = {
 	
-        MainGun         = Class(SWeapon.SDFShriekerCannon){},
+        MainGun         = ClassWeapon(SWeapon.SDFShriekerCannon){},
 
-        LazorTurret     = Class(SWeapon.SDFUltraChromaticBeamGenerator) {},
+        LazorTurret     = ClassWeapon(SWeapon.SDFUltraChromaticBeamGenerator) {},
 		
-        BombardTurret   = Class(SWeapon.SIFSuthanusArtilleryCannon) {},
+        BombardTurret   = ClassWeapon(SWeapon.SIFSuthanusArtilleryCannon) {},
 		
-        AAGun = Class(SWeapon.SAALosaareAutoCannonWeapon) {},
+        AAGun = ClassWeapon(SWeapon.SAALosaareAutoCannonWeapon) {},
 		
-        PhasonBeam = Class(SDFUnstablePhasonBeam) { FxMuzzleFlash = {'/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_01_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_02_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_03_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_04_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_05_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_06_emit.bp','/mods/BlackOpsUnleashed/Effects/Emitters/seraphim_electricity_emit.bp'}, },
+        PhasonBeam = ClassWeapon(SDFUnstablePhasonBeam) { FxMuzzleFlash = {'/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_01_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_02_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_03_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_04_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_05_emit.bp','/Effects/Emitters/seraphim_experimental_phasonproj_muzzle_flash_06_emit.bp','/mods/BlackOpsUnleashed/Effects/Emitters/seraphim_electricity_emit.bp'}, },
 
     },
     

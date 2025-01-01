@@ -3,7 +3,7 @@ local Bitmap = import('bitmap.lua').Bitmap
 local Dragger = import('dragger.lua').Dragger
 local UIUtil = import('/lua/ui/uiutil.lua')
 
-Button = Class(Bitmap) {
+Button = ClassUI(Bitmap) {
 
     __init = function(self, parent, normal, active, highlight, disabled, clickCue, rolloverCue, frameRate, debugname)
         Bitmap.__init(self, parent, normal)

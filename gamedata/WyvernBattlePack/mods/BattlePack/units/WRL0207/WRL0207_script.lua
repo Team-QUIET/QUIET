@@ -1,6 +1,6 @@
 local CWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
-WRL0207 = Class(CWalkingLandUnit) {
+WRL0207 = ClassUnit(CWalkingLandUnit) {
 
 	ShieldEffects = {'/mods/BattlePack/effects/emitters/ex_cybran_shieldgen_01_emit.bp'},
 

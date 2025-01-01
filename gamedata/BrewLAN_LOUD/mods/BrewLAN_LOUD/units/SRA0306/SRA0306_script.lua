@@ -11,12 +11,12 @@ local CEMPAutoCannon    = import('/lua/sim/DefaultWeapons.lua').DefaultProjectil
 
 cWeapons = nil
 
-SRA0306 = Class(CAirUnit) {
+SRA0306 = ClassUnit(CAirUnit) {
 
     Weapons = {
 	
-        AAAutocannon = Class(CAAAutocannon) {},
-        EMPCannon = Class(CEMPAutoCannon) {},
+        AAAutocannon = ClassWeapon(CAAAutocannon) {},
+        EMPCannon = ClassWeapon(CEMPAutoCannon) {},
 		
     },
 

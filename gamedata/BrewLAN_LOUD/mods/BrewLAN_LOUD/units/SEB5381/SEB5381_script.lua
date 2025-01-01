@@ -2,7 +2,7 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local Buff = import('/lua/sim/buff.lua')
 
-SEB5381 = Class(TStructureUnit) {
+SEB5381 = ClassUnit(TStructureUnit) {
 
     --When we're adjacent, try to all all the possible bonuses.
     OnAdjacentTo = function(self, adjacentUnit, triggerUnit)

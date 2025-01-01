@@ -16,19 +16,19 @@ local EffectUtil        = import('/lua/EffectUtilities.lua')
 
 local CreateAeonCommanderBuildingEffects = EffectUtil.CreateAeonCommanderBuildingEffects
 
-UAL0001 = Class(AWalkingLandUnit) {
+UAL0001 = ClassUnit(AWalkingLandUnit) {
 
     DeathThreadDestructionWaitTime = 2,
 
     Weapons = {
 	
-        DeathWeapon = Class(AIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFCommanderDeathWeapon) {},
 		
-        RightDisruptor = Class(ADFDisruptorCannonWeapon) {},
+        RightDisruptor = ClassWeapon(ADFDisruptorCannonWeapon) {},
 		
-        ChronoDampener = Class(ADFChronoDampener) {},
+        ChronoDampener = ClassWeapon(ADFChronoDampener) {},
 		
-        OverCharge = Class(ADFOverchargeWeapon) {
+        OverCharge = ClassWeapon(ADFOverchargeWeapon) {
 
             OnCreate = function(self)
                 ADFOverchargeWeapon.OnCreate(self)

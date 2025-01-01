@@ -5,13 +5,13 @@ local TracerChromBeam = import('/lua/seraphimweapons.lua').BrewLANTracerChromBea
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
 
-SSL0404 = Class(SWalkingLandUnit) {
+SSL0404 = ClassUnit(SWalkingLandUnit) {
 
     Weapons = {
     
-        MainGun = Class(ChonkChromBeam) {},
+        MainGun = ClassWeapon(ChonkChromBeam) {},
         
-        MainTracer = Class(TracerChromBeam) {
+        MainTracer = ClassWeapon(TracerChromBeam) {
 			OnWeaponFired = function(self, target)
 				TracerChromBeam.OnWeaponFired(self, target)
 				ChangeState( self.unit, self.unit.VisibleState )

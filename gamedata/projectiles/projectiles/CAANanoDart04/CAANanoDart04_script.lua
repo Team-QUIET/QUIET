@@ -8,7 +8,7 @@ local WaitSeconds = WaitSeconds
 
 local CreateEmitterOnEntity = CreateEmitterOnEntity
 
-CAANanoDart04 = Class(CAANanoDartProjectile) {
+CAANanoDart04 = ClassProjectile(CAANanoDartProjectile) {
 
    OnCreate = function(self)
         CAANanoDartProjectile.OnCreate(self)

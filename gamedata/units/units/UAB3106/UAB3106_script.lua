@@ -1,6 +1,6 @@
 local AMassStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
-UAB1106 = Class(AMassStorageUnit) {
+UAB1106 = ClassUnit(AMassStorageUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         AMassStorageUnit.OnStopBeingBuilt(self,builder,layer)

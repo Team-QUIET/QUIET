@@ -7,12 +7,12 @@ local SDFSihEnergyRifleSniperMode = SeraphimWeapons.SDFSniperShotSniperMode
 
 SeraphimWeapons = nil
 
-XSL0305 = Class(SLandUnit) {
+XSL0305 = ClassUnit(SLandUnit) {
 
     Weapons = {
-        MainGun = Class(SDFSihEnergyRifleNormalMode) {},
+        MainGun = ClassWeapon(SDFSihEnergyRifleNormalMode) {},
 		
-        SniperGun = Class(SDFSihEnergyRifleSniperMode) {
+        SniperGun = ClassWeapon(SDFSihEnergyRifleSniperMode) {
 		
             SetOnTransport = function(self, transportstate)
 			

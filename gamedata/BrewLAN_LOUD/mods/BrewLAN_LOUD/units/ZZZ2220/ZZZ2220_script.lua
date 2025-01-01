@@ -1,5 +1,5 @@
 local CStructureUnit = import('/lua/cybranunits.lua').CStructureUnit
 
-ZZZ2220 = Class(CStructureUnit) {}
+ZZZ2220 = ClassUnit(CStructureUnit) {}
 
 TypeClass = ZZZ2220

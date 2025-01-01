@@ -1,6 +1,6 @@
 local AEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
-UAB1201 = Class(AEnergyCreationUnit) {
+UAB1201 = ClassUnit(AEnergyCreationUnit) {
     AmbientEffects = 'AT2PowerAmbient',
     
 }

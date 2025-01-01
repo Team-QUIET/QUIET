@@ -1,6 +1,6 @@
 local AEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
-UAB1102 = Class(AEnergyCreationUnit) {
+UAB1102 = ClassUnit(AEnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
 

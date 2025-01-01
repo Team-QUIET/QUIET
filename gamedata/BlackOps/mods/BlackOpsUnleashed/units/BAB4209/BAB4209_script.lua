@@ -6,7 +6,7 @@ local ForkThread = ForkThread
 
 local TrashAdd = TrashBag.Add
 
-BAB4209 = Class(AStructureUnit) {
+BAB4209 = ClassUnit(AStructureUnit) {
 
 	AntiTeleportEffects = {'/effects/emitters/aeon_gate_02_emit.bp','/effects/emitters/aeon_gate_03_emit.bp'},
 

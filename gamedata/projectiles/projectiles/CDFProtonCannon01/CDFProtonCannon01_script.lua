@@ -1,6 +1,6 @@
 local CDFProtonCannonProjectile = import('/lua/cybranprojectiles.lua').CDFProtonCannonProjectile
 
-CDFProtonCannon01 = Class(CDFProtonCannonProjectile) {
+CDFProtonCannon01 = ClassProjectile(CDFProtonCannonProjectile) {
     
     OnCreate = function(self)
         CDFProtonCannonProjectile.OnCreate(self)

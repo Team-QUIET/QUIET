@@ -4,7 +4,7 @@ local CardinalWallUnit = import(import( '/lua/game.lua' ).BrewLANLOUDPath() .. '
 
 AShieldStructureUnit = CardinalWallUnit( AShieldStructureUnit ) 
 
-SAB5301 = Class( AShieldStructureUnit ) {
+SAB5301 = ClassUnit( AShieldStructureUnit ) {
 
     ShieldEffects = {
         '/effects/emitters/aeon_shield_generator_t2_01_emit.bp',  	-- tight floor pulse

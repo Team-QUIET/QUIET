@@ -2,7 +2,7 @@ local TAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local VizMarker = import('/lua/sim/VizMarker.lua').VizMarker
 
-XEA0002 = Class(TAirUnit) {
+XEA0002 = ClassUnit(TAirUnit) {
 	DestroyNoFallRandomChance = 1.1,
 	
 	HideBones = { 'Shell01', 'Shell02', 'Shell03', 'Shell04', },

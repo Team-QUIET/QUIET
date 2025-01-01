@@ -7,7 +7,7 @@ local TAALinkedRailgun        = TWeapons.TAALinkedRailgun
 
 TWeapons = nil
 
-UEA0305 = Class(TAirUnit) {
+UEA0305 = ClassUnit(TAirUnit) {
     
     EngineRotateBones = {'Jet_Front', 'Jet_Back',},
     BeamExhaustCruise = '/effects/emitters/gunship_thruster_beam_01_emit.bp',
@@ -15,8 +15,8 @@ UEA0305 = Class(TAirUnit) {
     
     Weapons = {
 	
-        Plasma = Class(TDFHeavyPlasmaCannonWeapon) {},
-        AAGun = Class(TAALinkedRailgun) {},
+        Plasma = ClassWeapon(TDFHeavyPlasmaCannonWeapon) {},
+        AAGun = ClassWeapon(TAALinkedRailgun) {},
 		
     },
     

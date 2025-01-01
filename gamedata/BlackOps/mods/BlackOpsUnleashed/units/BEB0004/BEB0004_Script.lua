@@ -2,7 +2,7 @@ local SStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BEB0004 = Class(SStructureUnit) {
+BEB0004 = ClassUnit(SStructureUnit) {
 
 Parent = nil,
 

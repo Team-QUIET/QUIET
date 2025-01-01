@@ -7,10 +7,10 @@ local TIFCruiseMissileLauncher = TWeapons.TIFCruiseMissileLauncher
 
 TWeapons = nil
 
-SEA0212 = Class(TAirUnit) {
+SEA0212 = ClassUnit(TAirUnit) {
     Weapons = {
-        AutoCannon = Class(TAAGinsuRapidPulseWeapon) {},
-        Missile = Class(TIFCruiseMissileLauncher) {},
+        AutoCannon = ClassWeapon(TAAGinsuRapidPulseWeapon) {},
+        Missile = ClassWeapon(TIFCruiseMissileLauncher) {},
     },
 }
 

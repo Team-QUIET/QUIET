@@ -21,7 +21,7 @@ local ScorchSplatTextures = {
 }
 
 --------------------------------------------------------------------------------
-SEB4401 = Class(TShieldStructureUnit) {
+SEB4401 = ClassUnit(TShieldStructureUnit) {
 
     ShieldEffects = {
         '/effects/emitters/terran_shield_generator_t2_01_emit.bp',

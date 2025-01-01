@@ -2,7 +2,7 @@ local TArtilleryProjectilePolytrail = import('/lua/terranprojectiles.lua').TArti
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-HellStormArtillery01 = Class(TArtilleryProjectilePolytrail) {
+HellStormArtillery01 = ClassProjectile(TArtilleryProjectilePolytrail) {
 
 	FxImpactTrajectoryAligned = false,
 

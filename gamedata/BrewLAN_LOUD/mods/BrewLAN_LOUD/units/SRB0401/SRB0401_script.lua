@@ -16,7 +16,7 @@ local AIControl = GantryUtils.AIControl
 local AIStartCheats = GantryUtils.AIStartCheats
 local AICheats = GantryUtils.AICheats
 --------------------------------------------------------------------------------
-SRB0401 = Class(CLandFactoryUnit) {
+SRB0401 = ClassUnit(CLandFactoryUnit) {
 --------------------------------------------------------------------------------
 -- Function triggers
 --------------------------------------------------------------------------------

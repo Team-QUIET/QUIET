@@ -2,11 +2,11 @@ local SWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local SDFAireauBolterWeapon = import('/lua/seraphimweapons.lua').SDFAireauBolterWeapon
 
-BRPT2BTBOT = Class(SWalkingLandUnit) {
+BRPT2BTBOT = ClassUnit(SWalkingLandUnit) {
 
 	Weapons = {
-		MainGun = Class(SDFAireauBolterWeapon) {},
-		MainGun2 = Class(SDFAireauBolterWeapon) {},
+		MainGun = ClassWeapon(SDFAireauBolterWeapon) {},
+		MainGun2 = ClassWeapon(SDFAireauBolterWeapon) {},
 	},
 
 }

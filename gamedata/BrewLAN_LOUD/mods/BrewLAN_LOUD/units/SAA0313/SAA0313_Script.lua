@@ -5,9 +5,9 @@ local MissileFlare = import('/lua/defaultunits.lua').BaseDirectionalAntiMissileF
 --------------------------------------------------------------------------------
 local ADFPhasonLaser = import('/lua/aeonweapons.lua').ADFPhasonLaser
 --------------------------------------------------------------------------------
-SAA0313 = Class(AAirUnit, MissileFlare) {
+SAA0313 = ClassUnit(AAirUnit, MissileFlare) {
     Weapons = {
-        AAGun = Class(ADFPhasonLaser) {}
+        AAGun = ClassWeapon(ADFPhasonLaser) {}
     },
 
     FlareBones = {

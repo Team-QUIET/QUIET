@@ -14,21 +14,21 @@ WeaponsFile = nil
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 
-WEL0401 = Class(TMobileFactoryUnit) {
+WEL0401 = ClassUnit(TMobileFactoryUnit) {
 
 	Weapons = {
     
-        Turret      = Class(TDFGaussCannonWeapon) {},
+        Turret      = ClassWeapon(TDFGaussCannonWeapon) {},
         
-        Riotgun     = Class(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
+        Riotgun     = ClassWeapon(TDFRiotWeapon) { FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank },
 
-		MainGun     = Class(TIFArtilleryWeapon) { FxMuzzleFlashScale = 1.5 },
+		MainGun     = ClassWeapon(TIFArtilleryWeapon) { FxMuzzleFlashScale = 1.5 },
         
-		AAGun       = Class(TAAFlakArtilleryCannon) { PlayOnlyOneSoundCue = true },
+		AAGun       = ClassWeapon(TAAFlakArtilleryCannon) { PlayOnlyOneSoundCue = true },
         
-		Rockets     = Class(TIFCruiseMissileLauncher) {},
+		Rockets     = ClassWeapon(TIFCruiseMissileLauncher) {},
         
-		TMD         = Class(TDFHiroPlasmaCannon) {},
+		TMD         = ClassWeapon(TDFHiroPlasmaCannon) {},
     },
 }
 

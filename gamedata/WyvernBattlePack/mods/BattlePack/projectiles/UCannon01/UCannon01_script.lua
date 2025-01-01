@@ -2,9 +2,9 @@
 --  File     : /projectiles/UEF/UCannon01/UCannon01_script.lua
 --  Author(s): Gordon Duclos
 --  Summary  : SC2 UEF Commander Cannon Shell: UCannon01
---  Copyright © 2009 Gas Powered Games, Inc.  All rights reserved.
+--  Copyright ï¿½ 2009 Gas Powered Games, Inc.  All rights reserved.
 -----------------------------------------------------------------------------
-UCannon01 = Class(import('/mods/BattlePack/lua/BattlePackDefaultProjectiles.lua').SC2SinglePolyTrailProjectile) {
+UCannon01 = ClassProjectile(import('/mods/BattlePack/lua/BattlePackDefaultProjectiles.lua').SC2SinglePolyTrailProjectile) {
 	FxImpactTrajectoryAligned =true,
 
 	Polytrail = {

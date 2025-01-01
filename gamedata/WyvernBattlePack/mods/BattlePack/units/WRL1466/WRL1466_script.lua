@@ -21,18 +21,18 @@ local utilities = import('/lua/Utilities.lua')
 
 local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileRedirect
 
-WRL1466 = Class(CWalkingLandUnit) {
+WRL1466 = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
 
-		KillerCannon = Class(CDFHvyProtonCannonWeapon) {},
+		KillerCannon = ClassWeapon(CDFHvyProtonCannonWeapon) {},
         
-		BolterLeft   = Class(CDFElectronBolterWeapon) {},
-		BolterRight  = Class(CDFElectronBolterWeapon) {},
+		BolterLeft   = ClassWeapon(CDFElectronBolterWeapon) {},
+		BolterRight  = ClassWeapon(CDFElectronBolterWeapon) {},
         
-		AALaser      = Class(AAMicrowaveLaserGenerator) {},
+		AALaser      = ClassWeapon(AAMicrowaveLaserGenerator) {},
 
-		Rockets      = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },	
+		Rockets      = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },	
     },
 	
 	OnStartBeingBuilt = function(self, builder, layer)

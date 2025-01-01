@@ -4,7 +4,7 @@ local LOUDINSERT = table.insert
 local LOUDATTACHEMITTER = CreateAttachedEmitter
 local LOUDROTATE = CreateRotator
 
-UAB4202 = Class(AShieldStructureUnit) {
+UAB4202 = ClassUnit(AShieldStructureUnit) {
     ShieldEffects = {},
     
     OnStopBeingBuilt = function(self,builder,layer)

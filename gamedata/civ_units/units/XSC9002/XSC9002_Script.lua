@@ -10,7 +10,7 @@ local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 local SSJammerCrystalAmbient = import('/lua/EffectTemplates.lua').SJammerCrystalAmbient
 
 
-XSC9002 = Class(SStructureUnit) {
+XSC9002 = ClassUnit(SStructureUnit) {
 
     OnCreate = function(self, builder, layer)
         ###SEnergyCreationUnit.OnStopBeingBuilt(self, builder, layer)

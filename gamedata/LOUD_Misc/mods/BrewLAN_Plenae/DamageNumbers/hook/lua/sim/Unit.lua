@@ -40,7 +40,7 @@ do
     ]]--
     local UnitOld = Unit
 
-    Unit = Class(UnitOld) {
+    Unit = ClassUnit(UnitOld) {
         DoTakeDamage = function(self, instigator, amount, vector, damageType)
             --LOG(instigator:GetArmy())
             --[[

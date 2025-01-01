@@ -7,12 +7,12 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-SEB2308 = Class(TStructureUnit) {
+SEB2308 = ClassUnit(TStructureUnit) {
 
     UpsideDown = false,
 
     Weapons = {
-        Torpedo = Class(TANTorpedoAngler) {},
+        Torpedo = ClassWeapon(TANTorpedoAngler) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

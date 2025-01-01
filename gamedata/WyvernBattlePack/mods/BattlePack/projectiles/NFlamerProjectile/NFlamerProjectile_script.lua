@@ -1,5 +1,5 @@
 local Flamer = import('/mods/BattlePack/lua/BattlePackprojectiles.lua').Flamethrower
 
-NFlamerProjectile = Class(Flamer) {}
+NFlamerProjectile = ClassProjectile(Flamer) {}
 
 TypeClass = NFlamerProjectile

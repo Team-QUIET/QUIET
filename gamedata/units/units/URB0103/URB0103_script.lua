@@ -2,7 +2,7 @@ local CSeaFactoryUnit = import('/lua/cybranunits.lua').CSeaFactoryUnit
 
 local WaitFor = WaitFor
 
-URB0103 = Class(CSeaFactoryUnit) {
+URB0103 = ClassUnit(CSeaFactoryUnit) {
 
     StartArmsMoving = function(self)
 

@@ -9,11 +9,11 @@ local TrashAdd = TrashBag.Add
 
 WeaponsFile = nil
 
-UAS0303 = Class(ASeaUnit) {
+UAS0303 = ClassUnit(ASeaUnit) {
 
     Weapons = {
 	
-        AAMissiles = Class(AAAZealotMissileWeapon) {},
+        AAMissiles = ClassWeapon(AAAZealotMissileWeapon) {},
 		
     },
 

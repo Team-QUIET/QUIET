@@ -1,6 +1,6 @@
 local TRadarJammerUnit = import('/lua/terranunits.lua').TRadarJammerUnit
 
-UEB4304 = Class(TRadarJammerUnit) {
+UEB4304 = ClassUnit(TRadarJammerUnit) {
 
     IntelEffects = { { Bones = {'UEB4203'}, Offset = {0,0,3}, Type = 'Jammer01'} },
 

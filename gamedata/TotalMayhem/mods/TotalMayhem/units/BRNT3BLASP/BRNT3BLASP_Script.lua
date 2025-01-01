@@ -9,17 +9,17 @@ local TDFRiotWeapon         = WeaponsFile.TDFRiotWeapon
 
 WeaponsFile = nil
 
-BRNT3BLASP = Class(TWalkingLandUnit) {
+BRNT3BLASP = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
 
-        laser = Class(TDFHiroPlasmaCannon) { FxMuzzleFlashScale = 0.01 },
+        laser = ClassWeapon(TDFHiroPlasmaCannon) { FxMuzzleFlashScale = 0.01 },
 
-        gauss = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
+        gauss = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
 		
-        rocket = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45 },
+        rocket = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.45 },
 
-        Riotgun = Class(TDFRiotWeapon) {
+        Riotgun = ClassWeapon(TDFRiotWeapon) {
 		
             FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank,
             FxMuzzleFlashScale = 0.25, 

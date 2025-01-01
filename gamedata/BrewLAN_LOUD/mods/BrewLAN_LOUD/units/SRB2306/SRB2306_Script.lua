@@ -10,11 +10,11 @@ local CStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 local CDFHeavyMicrowaveLaserGeneratorCom = import('/lua/cybranweapons.lua').CDFHeavyMicrowaveLaserGeneratorCom
 local explosion = import('/lua/defaultexplosions.lua') 
 
-SRB2306 = Class(CStructureUnit) {
+SRB2306 = ClassUnit(CStructureUnit) {
    
     Weapons = {
 	
-        MainGun = Class(CDFHeavyMicrowaveLaserGeneratorCom) {
+        MainGun = ClassWeapon(CDFHeavyMicrowaveLaserGeneratorCom) {
         
             OnCreate = function(self)
             

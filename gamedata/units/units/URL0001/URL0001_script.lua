@@ -20,18 +20,18 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-URL0001 = Class(CWalkingLandUnit) {
+URL0001 = ClassUnit(CWalkingLandUnit) {
 
     DeathThreadDestructionWaitTime = 2,
 
     Weapons = {
-        DeathWeapon = Class(CIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(CIFCommanderDeathWeapon) {},
 		
-        RightRipper = Class(CCannonMolecularWeapon) {},
+        RightRipper = ClassWeapon(CCannonMolecularWeapon) {},
 		
-        Torpedo     = Class(CANTorpedoLauncherWeapon) {},
+        Torpedo     = ClassWeapon(CANTorpedoLauncherWeapon) {},
 		
-        MLG         = Class(CDFHeavyMicrowaveLaserGeneratorCom) {
+        MLG         = ClassWeapon(CDFHeavyMicrowaveLaserGeneratorCom) {
 
             DisabledFiringBones = {'Turret_Muzzle_03'},
             
@@ -49,7 +49,7 @@ URL0001 = Class(CWalkingLandUnit) {
             end,          
         },
 
-        OverCharge  = Class(CDFOverchargeWeapon) {
+        OverCharge  = ClassWeapon(CDFOverchargeWeapon) {
 
             OnCreate = function(self)
                 CDFOverchargeWeapon.OnCreate(self)

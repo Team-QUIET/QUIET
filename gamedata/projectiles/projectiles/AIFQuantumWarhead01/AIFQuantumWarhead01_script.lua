@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 
-AIFQuantumWarhead01 = Class(AQuantumWarheadProjectile) {
+AIFQuantumWarhead01 = ClassProjectile(AQuantumWarheadProjectile) {
 
     OnImpact = function(self, TargetType, TargetEntity)
 

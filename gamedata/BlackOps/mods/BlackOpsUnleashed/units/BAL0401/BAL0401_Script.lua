@@ -11,7 +11,7 @@ local BlackOpsEffectTemplate = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffec
 
 local VectorCached = { 0, 0, 0 }
 
-BAL0401 = Class(AWalkingLandUnit) {
+BAL0401 = ClassUnit(AWalkingLandUnit) {
 
 	ChargeEffects01 = {
         '/mods/BlackOpsUnleashed/effects/emitters/g_laser_flash_01_emit.bp',
@@ -29,7 +29,7 @@ BAL0401 = Class(AWalkingLandUnit) {
 	
     Weapons = {
 	
-        BoomWeapon = Class(CDFLaserHeavyWeapon){
+        BoomWeapon = ClassWeapon(CDFLaserHeavyWeapon){
 		
         	PlayFxWeaponPackSequence = function(self)
 			
@@ -120,7 +120,7 @@ BAL0401 = Class(AWalkingLandUnit) {
 			end,
         },
 		
-		DefenseGun01 = Class(GoldenLaserGenerator) {},
+		DefenseGun01 = ClassWeapon(GoldenLaserGenerator) {},
     },
 	
     OnStopBeingBuilt = function(self,builder,layer)

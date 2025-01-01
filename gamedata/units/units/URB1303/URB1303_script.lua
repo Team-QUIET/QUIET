@@ -1,6 +1,6 @@
 local CMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 
-URB1303 = Class(CMassFabricationUnit) {
+URB1303 = ClassUnit(CMassFabricationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         CMassFabricationUnit.OnStopBeingBuilt(self,builder,layer)

@@ -4,7 +4,7 @@
 local Game = import('/lua/game.lua')
 local VersionIsFAF = string.sub(GetVersion(),1,3) == '1.5' and tonumber(string.sub(GetVersion(),5)) > 3603
 --------------------------------------------------------------------------------
-ResearchItem = Class(DummyUnit) {
+ResearchItem = ClassUnit(DummyUnit) {
     OnCreate = function(self)
         local bp = self:GetBlueprint()
         DummyUnit.OnCreate(self)
@@ -128,7 +128,7 @@ if not string.sub(GetVersion(),1,3) == '1.1' or string.sub(GetVersion(),1,3) == 
     Buff = import('/lua/sim/Buff.lua') else Buff.ApplyBuff = function() end
 end
 --------------------------------------------------------------------------------
-ResearchFactoryUnit = Class(FactoryUnit) {
+ResearchFactoryUnit = ClassUnit(FactoryUnit) {
 
     -- Prevents LOUD factory manager errors.
     SetupComplete = true,
@@ -259,7 +259,7 @@ end
 local WindEnergyMin = false
 local WindEnergyRange = false
 -- These are defined here so they are global for the turbines, and only 1 has to define it.
-WindEnergyCreationUnit = Class(EnergyCreationUnit) {
+WindEnergyCreationUnit = ClassUnit(EnergyCreationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         EnergyCreationUnit.OnStopBeingBuilt(self,builder,layer)
@@ -345,7 +345,7 @@ WindEnergyCreationUnit = Class(EnergyCreationUnit) {
 -- local TidalEnergyMin = false
 -- local TidalEnergyRange = false
 -- These are defined here so they are global for the turbines, and only 1 has to define it.
--- TidalEnergyCreationUnit = Class(EnergyCreationUnit) {
+-- TidalEnergyCreationUnit = ClassUnit(EnergyCreationUnit) {
 --
 --    OnStopBeingBuilt = function(self,builder,layer)
 --        EnergyCreationUnit.OnStopBeingBuilt(self,builder,layer)

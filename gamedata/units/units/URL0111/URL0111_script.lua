@@ -2,10 +2,10 @@ local CLandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local CIFMissileLoaWeapon = import('/lua/cybranweapons.lua').CIFMissileLoaWeapon
 
-URL0111 = Class(CLandUnit) {
+URL0111 = ClassUnit(CLandUnit) {
 
     Weapons = {
-        MissileRack = Class(CIFMissileLoaWeapon) {},
+        MissileRack = ClassWeapon(CIFMissileLoaWeapon) {},
     },
 	
 }

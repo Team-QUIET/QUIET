@@ -2,9 +2,9 @@ local AWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local ADFSonicPulsarWeapon = import('/lua/aeonweapons.lua').ADFSonicPulsarWeapon
 
-UAL0106 = Class(AWalkingLandUnit) {
+UAL0106 = ClassUnit(AWalkingLandUnit) {
     Weapons = {
-        ArmLaserTurret = Class(ADFSonicPulsarWeapon) {}
+        ArmLaserTurret = ClassWeapon(ADFSonicPulsarWeapon) {}
     },
 
 }

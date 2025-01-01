@@ -2,10 +2,10 @@ local ASeaUnit =  import('/lua/defaultunits.lua').SeaUnit
 
 local AIFQuasarAntiTorpedoWeapon = import('/lua/aeonweapons.lua').AIFQuasarAntiTorpedoWeapon
 
-UAS0305 = Class(ASeaUnit) {
+UAS0305 = ClassUnit(ASeaUnit) {
 
     Weapons = {
-        AntiTorpedo01 = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo01 = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
     
     TimedSonarTTIdleEffects = { {Bones = {'Probe'},Type = 'SonarBuoy01'} },    

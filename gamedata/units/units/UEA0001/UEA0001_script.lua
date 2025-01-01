@@ -1,6 +1,6 @@
 local TConstructionUnit = import('/lua/terranunits.lua').TConstructionUnit
 
-UEA0001 = Class(TConstructionUnit) {
+UEA0001 = ClassUnit(TConstructionUnit) {
     Parent = nil,
 
     SetParent = function(self, parent, podName)

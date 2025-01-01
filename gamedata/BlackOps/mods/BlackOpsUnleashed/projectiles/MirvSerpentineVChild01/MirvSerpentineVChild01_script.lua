@@ -2,7 +2,7 @@ local MIRVChild01Projectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojec
 
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-MIRVChild01 = Class(MIRVChild01Projectile) {
+MIRVChild01 = ClassProjectile(MIRVChild01Projectile) {
 
     OnCreate = function(self)
         MIRVChild01Projectile.OnCreate(self)

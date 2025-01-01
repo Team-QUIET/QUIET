@@ -4,7 +4,7 @@ local Projectile = import('/lua/sim/Projectile.lua').Projectile
 NullShell = Class(Projectile) {}
 
 
-EmitterProjectile = Class(Projectile) {
+EmitterProjectile = ClassProjectile(Projectile) {
     FxTrails = {'/effects/emitters/missile_munition_trail_01_emit.bp',},
     FxTrailScale = 1,
     FxTrailOffset = 0,
@@ -18,7 +18,7 @@ EmitterProjectile = Class(Projectile) {
     end,
 }
 
-SC2SinglePolyTrailProjectile = Class(EmitterProjectile) {
+SC2SinglePolyTrailProjectile = ClassProjectile(EmitterProjectile) {
 
     PolyTrail = '',
     PolyTrailOffset = 0,
@@ -32,7 +32,7 @@ SC2SinglePolyTrailProjectile = Class(EmitterProjectile) {
     end,
 }
 
-SC2MultiPolyTrailProjectile = Class(EmitterProjectile) {
+SC2MultiPolyTrailProjectile = ClassProjectile(EmitterProjectile) {
 
     PolyTrails = {'/mods/BattlePack/effects/emitters/excemparraybeam01_emit.bp'},
     PolyTrailOffset = {0},

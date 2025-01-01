@@ -2,10 +2,10 @@ local MineStructureUnit = import('/lua/defaultunits.lua').MineStructureUnit
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-SRB2221 = Class(MineStructureUnit) {
+SRB2221 = ClassUnit(MineStructureUnit) {
 
     Weapons = {
-        Suicide = Class(MineStructureUnit.Weapons.Suicide) {
+        Suicide = ClassWeapon(MineStructureUnit.Weapons.Suicide) {
             FxDeathLand = EffectTemplate.CProtonBombHit01,
             SplatTexture = {
                 Albedo = {'scorch_011_albedo',2}

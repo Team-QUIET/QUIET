@@ -12,15 +12,15 @@ local SeraLambdaFieldDestroyer = import('/lua/defaultantiprojectile.lua').SeraLa
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-BRPT2HVBOT = Class( SWalkingLandUnit ) {
+BRPT2HVBOT = ClassUnit(SWalkingLandUnit) {
 
 	Weapons = {
 	
-		Beam            = Class(SDFUltraChromaticBeamGenerator) { FxMuzzleFlashScale = 2 },
+		Beam            = ClassWeapon(SDFUltraChromaticBeamGenerator) { FxMuzzleFlashScale = 2 },
 
-		ChronoCannon    = Class(SDFChronotronCannonWeapon) {},
+		ChronoCannon    = ClassWeapon(SDFChronotronCannonWeapon) {},
 
-		Bolter          = Class(SDFAireauBolterWeapon) { FxMuzzleFlashScale = 0.9 },
+		Bolter          = ClassWeapon(SDFAireauBolterWeapon) { FxMuzzleFlashScale = 0.9 },
 	},
 
 	OnStopBeingBuilt = function(self,builder,layer)

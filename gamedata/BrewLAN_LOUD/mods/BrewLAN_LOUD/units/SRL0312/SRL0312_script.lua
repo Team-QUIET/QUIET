@@ -12,13 +12,13 @@ CybranWeaponsFile = nil
 
 local meshfile = string.gsub(__blueprints.srl0312.Source, 'units/srl0312/srl0312_unit.bp', '') .. 'projectiles/ciftoxmissiletactical01/ciftoxmissiletactical01_mesh'
 
-SRL0312 = Class(CLandUnit) {
+SRL0312 = ClassUnit(CLandUnit) {
 
     Weapons = {
 
-        MissileRack = Class(CIFMissileLoaWeapon) {},
+        MissileRack = ClassWeapon(CIFMissileLoaWeapon) {},
         
-        AntiAir = Class(CAANanoDartWeapon) {
+        AntiAir = ClassWeapon(CAANanoDartWeapon) {
 
             CreateProjectileForWeapon = function(self, bone)
                 local projectile = CAANanoDartWeapon.CreateProjectileForWeapon(self, bone)
@@ -28,9 +28,9 @@ SRL0312 = Class(CLandUnit) {
             end,
         },
         
-        Proton = Class(CDFProtonCannonWeapon) {},
+        Proton = ClassWeapon(CDFProtonCannonWeapon) {},
         
-        AntiTorpedo = Class(AntiTorp) {},
+        AntiTorpedo = ClassWeapon(AntiTorp) {},
     },
 
     OnCreate = function(self)

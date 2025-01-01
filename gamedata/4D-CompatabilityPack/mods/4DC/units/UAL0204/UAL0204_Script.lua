@@ -11,11 +11,11 @@ local SniperWeapon = import('/lua/aeonweapons.lua').ADFDisruptorCannonWeapon
 -- Bones for weapon recoil effects 
 local weaponBones = { 'sniper_rifle', 'sniper_barrel' } 
 
-UAL0204 = Class(AWalkingLandUnit) {   
+UAL0204 = ClassUnit(AWalkingLandUnit) {   
 
     Weapons = {        
 
-        Piercing_Rifle = Class(SniperWeapon) {
+        Piercing_Rifle = ClassWeapon(SniperWeapon) {
 
             PlayFxMuzzleSequence = function(self, muzzle) 
             

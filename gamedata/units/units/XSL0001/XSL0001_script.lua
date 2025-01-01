@@ -22,7 +22,7 @@ local RemoteViewing = import('/lua/RemoteViewing.lua').RemoteViewing
 
 SWalkingLandUnit = RemoteViewing( SWalkingLandUnit ) 
 
-XSL0001 = Class( SWalkingLandUnit ) {
+XSL0001 = ClassUnit(SWalkingLandUnit) {
     DeathThreadDestructionWaitTime = 2,
 	
 	BuffFields = {
@@ -53,9 +53,9 @@ XSL0001 = Class( SWalkingLandUnit ) {
 	},
 	
     Weapons = {
-        DeathWeapon = Class(SIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(SIFCommanderDeathWeapon) {},
         
-        ChronotronCannon = Class(SDFChronotronCannonWeapon) {
+        ChronotronCannon = ClassWeapon(SDFChronotronCannonWeapon) {
             OnCreate = function(self)
                 SDFChronotronCannonWeapon.OnCreate(self)
                 self.DamageMod = 0
@@ -63,14 +63,14 @@ XSL0001 = Class( SWalkingLandUnit ) {
             end,
         },
         
-        Missile = Class(SIFLaanseTacticalMissileLauncher) {
+        Missile = ClassWeapon(SIFLaanseTacticalMissileLauncher) {
             OnCreate = function(self)
                 SIFLaanseTacticalMissileLauncher.OnCreate(self)
                 self:SetWeaponEnabled(false)
             end,
         },
 		
-        OverCharge = Class(SDFOverChargeWeapon) {
+        OverCharge = ClassWeapon(SDFOverChargeWeapon) {
 
             OnCreate = function(self)
 

@@ -10,12 +10,12 @@ local SANHeavyCavitationTorpedo = SeraphimWeapons.SANHeavyCavitationTorpedo
 
 SeraphimWeapons = nil
 
-SSA0314 = Class(SAirUnit, MissileFlare) {
+SSA0314 = ClassUnit(SAirUnit, MissileFlare) {
 
     Weapons = {
-        Bomb            = Class(SIFBombZhanaseeWeapon) {},
-        CruiseMissile   = Class(SLaanseMissileWeapon) {},
-        ClusterTorpedo  = Class(SANHeavyCavitationTorpedo) {},
+        Bomb            = ClassWeapon(SIFBombZhanaseeWeapon) {},
+        CruiseMissile   = ClassWeapon(SLaanseMissileWeapon) {},
+        ClusterTorpedo  = ClassWeapon(SANHeavyCavitationTorpedo) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

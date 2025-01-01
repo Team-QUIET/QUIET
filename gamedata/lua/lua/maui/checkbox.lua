@@ -2,7 +2,7 @@
 local Bitmap = import('bitmap.lua').Bitmap
 --local Dragger = import('dragger.lua').Dragger
 
-Checkbox = Class(Bitmap)
+Checkbox = ClassUI(Bitmap)
 {
     __init = function(self, parent, normalUnchecked, normalChecked, overUnchecked, overChecked, disabledUnchecked, disabledChecked, clickCue, rolloverCue, debugname)
         Bitmap.__init(self, parent, normalUnchecked, debugname or "checkbox")

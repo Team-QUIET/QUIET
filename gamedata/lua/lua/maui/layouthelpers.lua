@@ -2024,7 +2024,7 @@ local LayouterAttributeControl = Class {
 ------------------------------
 
 ---@class LayouterAttributeDropShadow
-local LayouterAttributeDropShadow = Class {
+local LayouterAttributeDropShadow = ClassSimple {
     --- Sets if the control has a drop shadow
     ---@generic T : LayouterAttributeDropShadow
     ---@param self T
@@ -2047,7 +2047,7 @@ local LayouterAttributeDropShadow = Class {
 ------------------------------
 
 ---@class LayouterAttributeFont
-local LayouterAttributeFont = Class {
+local LayouterAttributeFont = ClassSimple {
     --- Sets the font of the control
     ---@generic T : LayouterAttributeFont
     ---@param self T
@@ -2071,7 +2071,7 @@ local LayouterAttributeFont = Class {
 -------------------
 
 ---@class LayouterAttributeEditor : LayouterAttributeFont
-local LayouterAttributeEditor = Class(LayouterAttributeFont) {
+local LayouterAttributeEditor = ClassSimple(LayouterAttributeFont) {
     --- Sets up the editor of the control
     ---@generic T : LayouterAttributeEditor
     ---@param self T
@@ -2095,7 +2095,7 @@ local LayouterAttributeEditor = Class(LayouterAttributeFont) {
 ------------------
 
 ---@class LayouterAttributeColor
-local LayouterAttributeColor = Class {
+local LayouterAttributeColor = ClassSimple {
     --- Sets the color of the control
     ---@generic T : LayouterAttributeColor
     ---@param self T
@@ -2142,7 +2142,7 @@ local LayouterAttributeTexture = Class(LayouterAttributeColor) {
 ----------------------------
 
 ---@class LayouterAttributeSelection
-local LayouterAttributeSelection = Class {
+local LayouterAttributeSelection = ClassSimple {
     --- Sets the list's selection colors
     ---@generic T : LayouterAttributeSelection
     ---@param self T

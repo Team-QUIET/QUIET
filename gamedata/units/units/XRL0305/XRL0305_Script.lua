@@ -7,11 +7,11 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 
 local TrashAdd = TrashBag.Add
 
-XRL0305 = Class(CWalkingLandUnit){
+XRL0305 = ClassUnit(CWalkingLandUnit){
 
     Weapons = {
-        Disintegrator   = Class(CDFHeavyDisintegratorWeapon) {},
-        Torpedo         = Class(CANNaniteTorpedoWeapon) {},
+        Disintegrator   = ClassWeapon(CDFHeavyDisintegratorWeapon) {},
+        Torpedo         = ClassWeapon(CANNaniteTorpedoWeapon) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

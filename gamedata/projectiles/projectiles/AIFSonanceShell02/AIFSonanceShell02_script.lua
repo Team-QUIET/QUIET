@@ -5,7 +5,7 @@ local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
 local CreateDecal = CreateDecal
 
-AIFSonanceShell02 = Class(AArtilleryProjectile) {
+AIFSonanceShell02 = ClassProjectile(AArtilleryProjectile) {
     
     FxTrails = EffectTemplate.ASonanceWeaponFXTrail02,
     

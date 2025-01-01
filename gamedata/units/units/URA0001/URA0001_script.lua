@@ -7,7 +7,7 @@ local CreateCybranBuildBeams = import('/lua/EffectUtilities.lua').CreateCybranBu
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-URA0001 = Class(CAirUnit) {
+URA0001 = ClassUnit(CAirUnit) {
 
     OnCreate = function(self)
     

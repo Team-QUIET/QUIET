@@ -10,15 +10,15 @@ SeraphimWeapons = nil
 local CreateSeraphimExperimentalBuildBaseThread = import('/lua/EffectUtilities.lua').CreateSeraphimExperimentalBuildBaseThread
 local explosion = import('/lua/defaultexplosions.lua')
 
-XSA0402 = Class(SAirUnit) {
+XSA0402 = ClassUnit(SAirUnit) {
 
     DestroyNoFallRandomChance = 1.1,
     
     Weapons = {
 	
-        Bomb = Class(SB0OhwalliExperimentalStrategicBombWeapon) {},
+        Bomb = ClassWeapon(SB0OhwalliExperimentalStrategicBombWeapon) {},
         
-        Autocannon = Class(SAALosaareAutoCannonWeapon) {},
+        Autocannon = ClassWeapon(SAALosaareAutoCannonWeapon) {},
 		
     },
     

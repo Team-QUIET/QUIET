@@ -5,10 +5,10 @@ local TDFGaussCannonWeapon = import('/lua/terranweapons.lua').TDFLandGaussCannon
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-BRMT3BT = Class(TLandUnit) {
+BRMT3BT = ClassUnit(TLandUnit) {
 
     Weapons = {
-        MainGun = Class(TDFGaussCannonWeapon) {
+        MainGun = ClassWeapon(TDFGaussCannonWeapon) {
 		
             FxMuzzleFlashScale = 0.6,
             FxMuzzleFlash = { 
@@ -47,7 +47,7 @@ BRMT3BT = Class(TLandUnit) {
             end,                   
         },
         
-        rocket = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
+        rocket = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.5 },
     },
 }
 

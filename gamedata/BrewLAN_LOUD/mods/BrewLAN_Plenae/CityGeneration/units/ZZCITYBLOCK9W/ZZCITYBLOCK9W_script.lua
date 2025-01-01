@@ -1,5 +1,5 @@
 local CStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
-ZZCITYBLOCK = Class(CStructureUnit) {}
+ZZCITYBLOCK = ClassUnit(CStructureUnit) {}
 
 TypeClass = ZZCITYBLOCK

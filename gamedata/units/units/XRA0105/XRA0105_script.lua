@@ -2,9 +2,9 @@ local CAirUnit = import('/lua/defaultunits.lua').AirUnit
 
 local CDFLaserHeavyWeapon = import('/lua/cybranweapons.lua').CDFLaserHeavyWeapon02
 
-URA0203 = Class(CAirUnit) {
+URA0203 = ClassUnit(CAirUnit) {
     Weapons = {
-        MainGun = Class(CDFLaserHeavyWeapon) {}
+        MainGun = ClassWeapon(CDFLaserHeavyWeapon) {}
     },
 
     DestructionPartsChassisToss = {'XRA0105',},

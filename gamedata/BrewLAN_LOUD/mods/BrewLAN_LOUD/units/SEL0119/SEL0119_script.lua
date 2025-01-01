@@ -4,9 +4,9 @@ local TDFRiotWeapon = import('/lua/terranweapons.lua').TDFRiotWeapon
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-SEL0319 = Class(TConstructionUnit) {
+SEL0319 = ClassUnit(TConstructionUnit) {
     Weapons = {
-        Riotgun01 = Class(TDFRiotWeapon) {
+        Riotgun01 = ClassWeapon(TDFRiotWeapon) {
             FxMuzzleFlash = EffectTemplate.TRiotGunMuzzleFxTank,
             FxMuzzleFlashScale = 0.75,
         },

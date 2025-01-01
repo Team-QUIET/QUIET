@@ -125,7 +125,7 @@ local Checkbox = import('/lua/maui/checkbox.lua').Checkbox
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 local Prefs = import('/lua/user/prefs.lua')
 
-Window = Class(Group) {
+Window = ClassUI(Group) {
     __init = function(self, parent, title, icon, pin, config, lockSize, lockPosition, prefID, defaultPosition, textureTable)
         Group.__init(self, parent, tostring(title) .. '-window')
         

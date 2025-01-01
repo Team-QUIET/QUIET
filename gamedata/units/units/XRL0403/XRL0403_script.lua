@@ -22,17 +22,17 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 
-XRL0403 = Class(CWalkingLandUnit) {
+XRL0403 = ClassUnit(CWalkingLandUnit) {
 
     WalkingAnimRate = 1.2,
 
     Weapons = {
 
-        ParticleGunRight    = Class(CDFHvyProtonCannonWeapon) {},
-        ParticleGunLeft     = Class(CDFHvyProtonCannonWeapon) {},
-        Torpedo01           = Class(CANNaniteTorpedoWeapon) {},
-        AntiTorpedo         = Class(AIFQuasarAntiTorpedoWeapon){},
-        AAGun               = Class(FlakArtilleryWeapon) {},
+        ParticleGunRight    = ClassWeapon(CDFHvyProtonCannonWeapon) {},
+        ParticleGunLeft     = ClassWeapon(CDFHvyProtonCannonWeapon) {},
+        Torpedo01           = ClassWeapon(CANNaniteTorpedoWeapon) {},
+        AntiTorpedo         = ClassWeapon(AIFQuasarAntiTorpedoWeapon){},
+        AAGun               = ClassWeapon(FlakArtilleryWeapon) {},
     },
     
     OnCreate = function(self)

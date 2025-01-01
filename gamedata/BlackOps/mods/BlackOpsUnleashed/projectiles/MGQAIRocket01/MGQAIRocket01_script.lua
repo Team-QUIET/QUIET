@@ -2,7 +2,7 @@ local CLOATacticalMissileProjectile = import('/lua/cybranprojectiles.lua').CLOAT
 
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
-MGQAIRocket01 = Class(CLOATacticalMissileProjectile) {
+MGQAIRocket01 = ClassProjectile(CLOATacticalMissileProjectile) {
 
     OnCreate = function(self)
 

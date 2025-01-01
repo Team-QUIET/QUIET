@@ -7,12 +7,12 @@ local TAMPhalanxWeapon      = WeaponsFile.TAMPhalanxWeapon
 
 WeaponsFile = nil
 
-BRNT2BM = Class(TWalkingLandUnit) {
+BRNT2BM = ClassUnit(TWalkingLandUnit) {
 
     Weapons = {
 	
-        rocket = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.3 },
-        gatling = Class(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.25 },
+        rocket = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.3 },
+        gatling = ClassWeapon(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.25 },
 
     },
 }

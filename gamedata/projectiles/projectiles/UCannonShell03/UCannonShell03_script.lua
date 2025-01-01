@@ -1,4 +1,4 @@
-UCannonShell03 = Class(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
+UCannonShell03 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
 
 	PolyTrails = {
 		'/effects/emitters/weapons/uef/gauss03/projectile/w_u_gau03_p_01_polytrails_emit.bp',

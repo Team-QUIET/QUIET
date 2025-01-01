@@ -13,15 +13,15 @@ local TrashBag = TrashBag
 local TrashAdd = TrashBag.Add
 local TrashDestroy = TrashBag.Destroy
 
-WEB0404 = Class(TStructureUnit) {
+WEB0404 = ClassUnit(TStructureUnit) {
 
     Weapons = {
     
-        TurretLarge = Class(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.6 },
+        TurretLarge = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlashScale = 0.6 },
         
-        Turret = Class(TDFGaussCannonWeapon) { FxMuzzleFlash = false },
+        Turret = ClassWeapon(TDFGaussCannonWeapon) { FxMuzzleFlash = false },
 
-        Torpedo = Class(TANTorpedoAngler) { FxMuzzleFlash = false },
+        Torpedo = ClassWeapon(TANTorpedoAngler) { FxMuzzleFlash = false },
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)

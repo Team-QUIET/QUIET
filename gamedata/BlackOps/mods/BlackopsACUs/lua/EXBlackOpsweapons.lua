@@ -16,7 +16,7 @@ local EXCollisionBeamFile   = import('/mods/BlackOpsACUs/lua/EXBlackOpsdefaultco
 local EXEffectTemplate      = import('/mods/BlackopsACUs/lua/EXBlackOpsEffectTemplates.lua')
 
 
-AeonACUPhasonLaser                  = Class(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.AeonACUPhasonLaserCollisionBeam,
+AeonACUPhasonLaser                  = ClassWeapon(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.AeonACUPhasonLaserCollisionBeam,
     FxMuzzleFlash = {},
     FxChargeMuzzleFlash = {},
 
@@ -37,9 +37,9 @@ AeonACUPhasonLaser                  = Class(DefaultBeamWeapon) { BeamType = EXCo
     end,
 }
 
-EXCEMPArrayBeam01                   = Class(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.EXCEMPArrayBeam01CollisionBeam }
+EXCEMPArrayBeam01                   = ClassWeapon(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.EXCEMPArrayBeam01CollisionBeam }
 
-PDLaserGrid                         = Class(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.PDLaserCollisionBeam,
+PDLaserGrid                         = ClassWeapon(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.PDLaserCollisionBeam,
 
     FxUpackingChargeEffects = {},
     FxUpackingChargeEffectScale = 1,
@@ -59,7 +59,7 @@ PDLaserGrid                         = Class(DefaultBeamWeapon) { BeamType = EXCo
     end,
 }
 
-PDLaserGrid2                        = Class(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.PDLaser2CollisionBeam,
+PDLaserGrid2                        = ClassWeapon(DefaultBeamWeapon) { BeamType = EXCollisionBeamFile.PDLaser2CollisionBeam,
 
     FxUpackingChargeEffects = {},
     FxUpackingChargeEffectScale = 1,
@@ -82,19 +82,19 @@ PDLaserGrid2                        = Class(DefaultBeamWeapon) { BeamType = EXCo
     end,
 }
 
-UEFACUAntiMatterWeapon              = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EXEffectTemplate.ACUAntiMatterMuzzle }
+UEFACUAntiMatterWeapon              = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EXEffectTemplate.ACUAntiMatterMuzzle }
 
-UEFACUFlamerWeapon                  = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TGaussCannonFlash }
+UEFACUFlamerWeapon                  = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TGaussCannonFlash }
 
-UEFACUHeavyPlasmaGatlingCannonWeapon = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EXEffectTemplate.UEFACUHeavyPlasmaGatlingCannonMuzzleFlash,
+UEFACUHeavyPlasmaGatlingCannonWeapon = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EXEffectTemplate.UEFACUHeavyPlasmaGatlingCannonMuzzleFlash,
 	FxMuzzleFlashScale = 0.35,
 }
 
-SeraACURapidWeapon                  = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SDFAireauWeaponMuzzleFlash,
+SeraACURapidWeapon                  = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SDFAireauWeaponMuzzleFlash,
 	FxMuzzleFlashScale = 0.33,
 }
 
-SeraACUBigBallWeapon                = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SDFSinnutheWeaponMuzzleFlash,
+SeraACUBigBallWeapon                = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.SDFSinnutheWeaponMuzzleFlash,
     FxChargeMuzzleFlash = EffectTemplate.SDFSinnutheWeaponChargeMuzzleFlash,
 	FxChargeMuzzleFlashScale = 0.33,
 	FxMuzzleFlashScale = 0.33,

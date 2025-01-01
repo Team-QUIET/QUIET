@@ -8,7 +8,7 @@
 --**  Copyright � 2007 Gas Powered Games, Inc.  All rights reserved.
 --****************************************************************************
 
-GoldLaserBombEffect03 = Class(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
+GoldLaserBombEffect03 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').EmitterProjectile) {
 	FxTrails = import('/mods/BlackOpsUnleashed/lua/BlackOpsEffectTemplates.lua').GoldLaserBombHitRingProjectileFxTrails03,
 }
 TypeClass = GoldLaserBombEffect03

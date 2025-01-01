@@ -2,11 +2,11 @@ local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 
 local SIFSuthanusArtilleryCannon = import('/lua/seraphimweapons.lua').SIFSuthanusArtilleryCannon
 
-XSB2302 = Class(SStructureUnit) {
+XSB2302 = ClassUnit(SStructureUnit) {
 
     Weapons = {
 	
-        MainGun = Class(SIFSuthanusArtilleryCannon) {
+        MainGun = ClassWeapon(SIFSuthanusArtilleryCannon) {
 		
             CreateProjectileAtMuzzle = function(self, muzzle)
 			

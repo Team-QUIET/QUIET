@@ -44,11 +44,11 @@ local LOUDWARP = Warp
 local ScaleEmitter = moho.IEffect.ScaleEmitter
 
 
-CDirectionalWalkingLandUnit = Class(DirectionalWalkingLandUnit) {}
+CDirectionalWalkingLandUnit = ClassUnit(DirectionalWalkingLandUnit) {}
 
-CStructureUnit = Class(StructureUnit) {}
+CStructureUnit = ClassUnit(StructureUnit) {}
 
-CAirFactoryUnit = Class(FactoryUnit) {
+CAirFactoryUnit = ClassUnit(FactoryUnit) {
 
     CreateBuildEffects = function( self, unitBeingBuilt, order )
     
@@ -100,7 +100,7 @@ CAirFactoryUnit = Class(FactoryUnit) {
     end,
 }   
 
-CLandFactoryUnit = Class(FactoryUnit) {
+CLandFactoryUnit = ClassUnit(FactoryUnit) {
    
     CreateBuildEffects = function( self, unitBeingBuilt, order )
     
@@ -160,7 +160,7 @@ CLandFactoryUnit = Class(FactoryUnit) {
     end,
 }
 
-CSeaFactoryUnit = Class(FactoryUnit) {
+CSeaFactoryUnit = ClassUnit(FactoryUnit) {
     
     StartBuildingEffects = function( self, unitBeingBuilt, order )
 
@@ -235,7 +235,7 @@ CSeaFactoryUnit = Class(FactoryUnit) {
     end,
 }
 
-CConstructionUnit = Class(ConstructionUnit){
+CConstructionUnit = ClassUnit(ConstructionUnit){
     
     CreateBuildEffects = function( self, unitBeingBuilt, order )
         
@@ -360,7 +360,7 @@ CConstructionUnit = Class(ConstructionUnit){
 
 }
 
-CConstructionStructureUnit = Class(StructureUnit) {
+CConstructionStructureUnit = ClassUnit(StructureUnit) {
    
     OnCreate = function(self)
 
@@ -514,7 +514,7 @@ CConstructionStructureUnit = Class(StructureUnit) {
 
 }
 
-CConstructionEggUnit = Class(StructureUnit) {
+CConstructionEggUnit = ClassUnit(StructureUnit) {
 
     OnStopBeingBuilt = function(self, builder, layer)
 

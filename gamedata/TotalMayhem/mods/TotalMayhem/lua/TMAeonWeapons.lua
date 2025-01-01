@@ -10,20 +10,20 @@ local TMNovaCatBlueLaserBeam    = TMCollisionBeamFile.TMNovaCatBlueLaserBeam
 local TMNovaCatGreenLaserBeam   = TMCollisionBeamFile.TMNovaCatGreenLaserBeam
 local TMMizuraBlueLaserBeam     = TMCollisionBeamFile.TMMizuraBlueLaserBeam
 
-TMAnovacatbluelaserweapon   = Class(DefaultBeamWeapon) { BeamType = TMNovaCatBlueLaserBeam,
+TMAnovacatbluelaserweapon   = ClassWeapon(DefaultBeamWeapon) { BeamType = TMNovaCatBlueLaserBeam,
 
     FxUpackingChargeEffects = EffectTemplate.CMicrowaveLaserCharge01,
     FxUpackingChargeEffectScale = 0.5,
 }
 
-TMAnovacatgreenlaserweapon  = Class(DefaultBeamWeapon) { BeamType = TMNovaCatGreenLaserBeam,
+TMAnovacatgreenlaserweapon  = ClassWeapon(DefaultBeamWeapon) { BeamType = TMNovaCatGreenLaserBeam,
 
     FxChargeMuzzleFlash = EffectTemplate.SDFExperimentalPhasonProjChargeMuzzleFlash,
     FxUpackingChargeEffects = EffectTemplate.SDFExperimentalPhasonProjChargeMuzzleFlash,
     FxUpackingChargeEffectScale = 0.5,
 }
 
-TMAmizurabluelaserweapon    = Class(DefaultBeamWeapon) { BeamType = TMMizuraBlueLaserBeam,
+TMAmizurabluelaserweapon    = ClassWeapon(DefaultBeamWeapon) { BeamType = TMMizuraBlueLaserBeam,
 
     FxUpackingChargeEffects = EffectTemplate.CMicrowaveLaserCharge01,
     FxUpackingChargeEffectScale = 0.5,

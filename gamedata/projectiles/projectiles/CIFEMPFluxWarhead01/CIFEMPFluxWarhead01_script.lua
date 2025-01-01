@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-CIFEMPFluxWarhead01 = Class(CEMPFluxWarheadProjectile) {
+CIFEMPFluxWarhead01 = ClassProjectile(CEMPFluxWarheadProjectile) {
     FxSplashScale = 0.5,
     FxTrails = {},
 

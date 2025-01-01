@@ -2,7 +2,7 @@ local CEnergyCreationUnit = import('/lua/defaultunits.lua').EnergyCreationUnit
 
 local CreateAttachedEmitter = CreateAttachedEmitter
 
-URB1102 = Class(CEnergyCreationUnit) {
+URB1102 = ClassUnit(CEnergyCreationUnit) {
 
     AirEffects      = {'/effects/emitters/hydrocarbon_smoke_01_emit.bp',},
     AirEffectsBones = {'Exhaust01', 'Exhaust02', 'Exhaust03', 'Exhaust04','Exhaust05','Exhaust06','Exhaust07',},

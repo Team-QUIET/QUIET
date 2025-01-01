@@ -8,7 +8,7 @@ do
         end
     end
 
-    Unit = Class(oldUnit) {
+    Unit = ClassUnit(oldUnit) {
         OnStopBeingBuilt = function(self,builder,layer)
             oldUnit.OnStopBeingBuilt(self,builder,layer)
             local bp = self:GetBlueprint()

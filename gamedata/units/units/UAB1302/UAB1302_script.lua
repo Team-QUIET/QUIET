@@ -2,7 +2,7 @@ local AMassCollectionUnit = import('/lua/defaultunits.lua').MassCollectionUnit
 
 local ChangeState = ChangeState
 
-UAB1302 = Class(AMassCollectionUnit) {
+UAB1302 = ClassUnit(AMassCollectionUnit) {
 
     OnCreate = function(self)
         AMassCollectionUnit.OnCreate(self)

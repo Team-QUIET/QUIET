@@ -4,7 +4,7 @@ local sdNo = 12
 local LDBP = __blueprints.ssb4401_large
 local sdBP = __blueprints.ssb4401_small
 
-SSB4401 = Class(SShieldStructureUnit) {
+SSB4401 = ClassUnit(SShieldStructureUnit) {
 
     ShieldEffects = {
         '/effects/emitters/seraphim_shield_generator_t3_01_emit.bp',

@@ -10,7 +10,7 @@ local LOUDINSERT = table.insert
 local LOUDPARSE = ParseEntityCategory
 local LOUDREMOVE = table.remove
 
-local LOUDCREATEPROJECTILE = moho.weapon_methods.CreateProjectile
+local LOUDCREATEPROJECTILE = _G.moho.weapon_methods.CreateProjectile
 
 local ForkThread = ForkThread
 local ForkTo = ForkThread
@@ -22,17 +22,17 @@ local TrashDestroy = TrashBag.Destroy
 local WaitSeconds = WaitSeconds
 local WaitTicks = coroutine.yield
 
-local BeenDestroyed = moho.entity_methods.BeenDestroyed
-local GetBlueprint = moho.weapon_methods.GetBlueprint
-local PlaySound = moho.weapon_methods.PlaySound
+local BeenDestroyed = _G.moho.entity_methods.BeenDestroyed
+local GetBlueprint = _G.moho.weapon_methods.GetBlueprint
+local PlaySound = _G.moho.weapon_methods.PlaySound
 
-local SetBoneEnabled = moho.AnimationManipulator.SetBoneEnabled
-local SetEnabled = moho.AimManipulator.SetEnabled
-local SetFiringArc = moho.AimManipulator.SetFiringArc
+local SetBoneEnabled = _G.moho.AnimationManipulator.SetBoneEnabled
+local SetEnabled = _G.moho.AimManipulator.SetEnabled
+local SetFiringArc = _G.moho.AimManipulator.SetFiringArc
 
-local SetFireTargetLayerCaps = moho.weapon_methods.SetFireTargetLayerCaps
-local SetResetPoseTime = moho.AimManipulator.SetResetPoseTime
-local SetTargetingPriorities = moho.weapon_methods.SetTargetingPriorities
+local SetFireTargetLayerCaps = _G.moho.weapon_methods.SetFireTargetLayerCaps
+local SetResetPoseTime = _G.moho.AimManipulator.SetResetPoseTime
+local SetTargetingPriorities = _G.moho.weapon_methods.SetTargetingPriorities
 
 local PassDamageData = import('/lua/sim/Projectile.lua').Projectile.PassDamageData
 
@@ -78,7 +78,7 @@ end
 
 --LOG("*AI DEBUG Weapon Methods are "..repr(moho.weapon_methods))
 
-Weapon = Class(moho.weapon_methods) {
+Weapon = ClassWeapon(moho.weapon_methods) {
 
     __init = function(self, unit)
 

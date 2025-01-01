@@ -25,25 +25,25 @@ local LOUDCOS = math.cos
 local LOUDINSERT = table.insert
 local LOUDSIN = math.sin
 
-BEL0402 = Class(TWalkingLandUnit) {
+BEL0402 = ClassUnit(TWalkingLandUnit) {
 
 	FlamerEffects = { '/mods/BlackOpsUnleashed/effects/emitters/ex_flamer_torch_01.bp' },
 	
 	Weapons = {
 		
-		MissileWeapon = Class(TIFCruiseMissileUnpackingLauncher) {},
+		MissileWeapon = ClassWeapon(TIFCruiseMissileUnpackingLauncher) {},
 		
-		Laser = Class(GoliathShoulderBeam) {},
+		Laser = ClassWeapon(GoliathShoulderBeam) {},
 	
-		Flamer = Class(HawkGaussCannonWeapon) {},
+		Flamer = ClassWeapon(HawkGaussCannonWeapon) {},
 	
-		Flamer2 = Class(HawkGaussCannonWeapon) {},		
+		Flamer2 = ClassWeapon(HawkGaussCannonWeapon) {},		
 
-		TMDTurret = Class(GoliathTMDGun) {},
+		TMDTurret = ClassWeapon(GoliathTMDGun) {},
 		
-		HeadWeapon = Class(TSAMLauncher){},
+		HeadWeapon = ClassWeapon(TSAMLauncher){},
 		
-		GoliathDeathNuck = Class(TIFCommanderDeathWeapon) {},
+		GoliathDeathNuck = ClassWeapon(TIFCommanderDeathWeapon) {},
 	},
 	
 	OnStartBeingBuilt = function(self, builder, layer)

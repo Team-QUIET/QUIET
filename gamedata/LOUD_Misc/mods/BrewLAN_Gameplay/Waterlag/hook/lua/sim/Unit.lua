@@ -1,7 +1,7 @@
 do
     local UnitOld = Unit
 
-    Unit = Class(UnitOld) {
+    Unit = ClassUnit(UnitOld) {
     
         OnCreate = function(self)
         

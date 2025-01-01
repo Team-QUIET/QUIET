@@ -14,7 +14,7 @@ local AIStartCheats = GantryUtils.AIStartCheats
 local AICheats = GantryUtils.AICheats
 local OffsetBoneToSurface = import(BrewLANLOUDPath .. '/lua/terrainutils.lua').OffsetBoneToSurface
 --------------------------------------------------------------------------------
-SSB0401 = Class(SSeaFactoryUnit) {
+SSB0401 = ClassUnit(SSeaFactoryUnit) {
     OnCreate = function(self)
         SSeaFactoryUnit.OnCreate(self)
         OffsetBoneToSurface(self, 'Attachpoint')

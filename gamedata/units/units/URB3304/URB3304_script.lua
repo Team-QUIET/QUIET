@@ -2,9 +2,9 @@ local CStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local CAABurstCloudFlakArtilleryWeapon = import('/lua/cybranweapons.lua').CAABurstCloudFlakArtilleryWeapon
 
-URB3304 = Class(CStructureUnit) {
+URB3304 = ClassUnit(CStructureUnit) {
     Weapons = {
-        AAGun = Class(CAABurstCloudFlakArtilleryWeapon) {},
+        AAGun = ClassWeapon(CAABurstCloudFlakArtilleryWeapon) {},
     },
 }
 

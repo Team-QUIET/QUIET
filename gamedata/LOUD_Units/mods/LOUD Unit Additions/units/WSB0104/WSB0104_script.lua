@@ -2,7 +2,7 @@ local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
 
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
-WSB0104 = Class(SStructureUnit) {
+WSB0104 = ClassUnit(SStructureUnit) {
 
     CreateBuildEffects = function( self, unitBeingBuilt, order )
         EffectUtil.CreateSeraphimUnitEngineerBuildingEffects( self, unitBeingBuilt, self:GetBlueprint().General.BuildBones.BuildEffectBones, self.BuildEffectsBag )

@@ -1,8 +1,8 @@
 
-BrewLANUltraChonkChromBeamGenerator = Class(SDFUltraChromaticBeamGenerator) {
+BrewLANUltraChonkChromBeamGenerator = ClassWeapon(SDFUltraChromaticBeamGenerator) {
     BeamType = CollisionBeamFile.ChonkChromBeamGenCollisionBeam,
 }
 
-BrewLANTracerChromBeamGenerator = Class(SDFUltraChromaticBeamGenerator) {
+BrewLANTracerChromBeamGenerator = ClassWeapon(SDFUltraChromaticBeamGenerator) {
     BeamType = CollisionBeamFile.TracerChromBeamGenCollisionBeam,
 }

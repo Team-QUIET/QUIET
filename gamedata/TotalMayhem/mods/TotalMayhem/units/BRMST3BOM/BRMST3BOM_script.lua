@@ -9,14 +9,14 @@ local CAMZapperWeapon           = CybranWeaponsFile.CAMZapperWeapon
 
 CybranWeaponsFile = nil
 
-BRMST3BOM = Class(CSeaUnit) {
+BRMST3BOM = ClassUnit(CSeaUnit) {
 
     Weapons = {
 	
-        Cannon  = Class(CDFProtonCannonWeapon) {},
-        Torpedo = Class(CANNaniteTorpedoWeapon) {},
-        AAGun   = Class(CAAAutocannon) {},
-        Zapper  = Class(CAMZapperWeapon) {},
+        Cannon  = ClassWeapon(CDFProtonCannonWeapon) {},
+        Torpedo = ClassWeapon(CANNaniteTorpedoWeapon) {},
+        AAGun   = ClassWeapon(CAAAutocannon) {},
+        Zapper  = ClassWeapon(CAMZapperWeapon) {},
 		
     },
 }

@@ -2,10 +2,10 @@ local CWalkingLandUnit = import('/lua/defaultunits.lua').WalkingLandUnit
 
 local TMAmizurabluelaserweapon = import('/mods/TotalMayhem/lua/TMAeonWeapons.lua').TMAmizurabluelaserweapon
 
-BROT2ASB = Class(CWalkingLandUnit) {
+BROT2ASB = ClassUnit(CWalkingLandUnit) {
 
     Weapons = {
-        laser = Class(TMAmizurabluelaserweapon) { FxMuzzleFlashScale = 0.1 },  
+        laser = ClassWeapon(TMAmizurabluelaserweapon) { FxMuzzleFlashScale = 0.1 },  
     },
 }
 

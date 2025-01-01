@@ -10,7 +10,7 @@ local CreateEmitterAtEntity = CreateEmitterAtEntity
 local LOUDCOS = math.cos
 local LOUDSIN = math.sin
 
-TIFFragmentationSensorShell01 = Class(TArtilleryProjectile) {
+TIFFragmentationSensorShell01 = ClassProjectile(TArtilleryProjectile) {
 
     OnImpact = function(self, TargetType, TargetEntity) 
         

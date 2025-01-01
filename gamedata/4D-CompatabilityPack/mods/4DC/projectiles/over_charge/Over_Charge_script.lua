@@ -2,7 +2,7 @@ local Over_ChargeProjectile = import('/mods/4DC/lua/4D_projectiles.lua').Over_Ch
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-Over_Charge = Class(Over_ChargeProjectile) {
+Over_Charge = ClassProjectile(Over_ChargeProjectile) {
     FxTrails = EffectTemplate.TCommanderOverchargeFXTrail01,
     FxTrailScale = 0.5, 
 }

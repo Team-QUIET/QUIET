@@ -4,9 +4,9 @@ local WeaponsFile = import('/lua/terranweapons.lua')
 
 local TDFHiroPlasmaCannon = WeaponsFile.TDFHiroPlasmaCannon
 
-WEL0207 = Class(TLandUnit) {
+WEL0207 = ClassUnit(TLandUnit) {
     Weapons = {
-        TMD = Class(TDFHiroPlasmaCannon) {},
+        TMD = ClassWeapon(TDFHiroPlasmaCannon) {},
     },
 }
 TypeClass = WEL0207

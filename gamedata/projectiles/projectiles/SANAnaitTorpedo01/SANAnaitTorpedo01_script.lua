@@ -1,5 +1,5 @@
 local SANAnaitTorpedo = import('/lua/seraphimprojectiles.lua').STorpedoShipProjectile
 
-SANAnaitTorpedo01 = Class(SANAnaitTorpedo) {}
+SANAnaitTorpedo01 = ClassProjectile(SANAnaitTorpedo) {}
 
 TypeClass = SANAnaitTorpedo01

@@ -2,9 +2,9 @@ local ALandUnit = import('/lua/defaultunits.lua').MobileUnit
 
 local AIFMissileTacticalSerpentineWeapon = import('/lua/aeonweapons.lua').AIFMissileTacticalSerpentineWeapon
 
-UAL0111 = Class(ALandUnit) {
+UAL0111 = ClassUnit(ALandUnit) {
     Weapons = {
-        MissileRack = Class(AIFMissileTacticalSerpentineWeapon) {},
+        MissileRack = ClassWeapon(AIFMissileTacticalSerpentineWeapon) {},
     },
 }
 

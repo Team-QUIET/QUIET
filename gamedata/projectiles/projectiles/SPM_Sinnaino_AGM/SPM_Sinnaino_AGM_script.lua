@@ -4,7 +4,7 @@ local ForkThread = ForkThread
 local WaitSeconds = WaitSeconds
 local VDist2 = VDist2
 
-SPM_Sinnaino_AGM = Class(SLaanseTacticalMissile) {
+SPM_Sinnaino_AGM = ClassWeapon(SLaanseTacticalMissile) {
 
     OnCreate = function(self)
         SLaanseTacticalMissile.OnCreate(self)

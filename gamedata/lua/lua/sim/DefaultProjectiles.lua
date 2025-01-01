@@ -2,6 +2,7 @@
 ---  Script for default projectiles
 
 local Projectile = import('/lua/sim/Projectile.lua').Projectile
+local DummyProjectile = import("/lua/sim/projectile.lua").DummyProjectile
 
 local ProjectileOnCreate        = Projectile.OnCreate
 local ProjectileOnEnterWater    = Projectile.OnEnterWater
@@ -22,7 +23,7 @@ local WaitTicks                 = coroutine.yield
 
 NullShell = Class(Projectile) {}
 
-EmitterProjectile = Class(Projectile) {
+EmitterProjectile = ClassProjectile(Projectile) {
 
     FxTrails = {'/effects/emitters/missile_munition_trail_01_emit.bp',},
     FxTrailScale = 0.7,
@@ -56,7 +57,7 @@ EmitterProjectile = Class(Projectile) {
 
 local EmitterProjectileOnCreate = EmitterProjectile.OnCreate
 
-SingleBeamProjectile = Class(EmitterProjectile) {
+SingleBeamProjectile = ClassProjectile(EmitterProjectile) {
 
     BeamName = '/effects/emitters/default_beam_01_emit.bp',
 
@@ -70,7 +71,7 @@ SingleBeamProjectile = Class(EmitterProjectile) {
     end,
 }
 
-MultiBeamProjectile = Class(EmitterProjectile) {
+MultiBeamProjectile = ClassProjectile(EmitterProjectile) {
 
     Beams = {'/effects/emitters/default_beam_01_emit.bp',},
 
@@ -86,7 +87,7 @@ MultiBeamProjectile = Class(EmitterProjectile) {
     end,
 }
 
-SinglePolyTrailProjectile = Class(EmitterProjectile) {
+SinglePolyTrailProjectile = ClassProjectile(EmitterProjectile) {
 
     PolyTrail = '/effects/emitters/test_missile_trail_emit.bp',
 
@@ -105,7 +106,7 @@ SinglePolyTrailProjectile = Class(EmitterProjectile) {
     end,
 }
 
-MultiPolyTrailProjectile = Class(EmitterProjectile) {
+MultiPolyTrailProjectile = ClassProjectile(EmitterProjectile) {
 
     PolyTrails = {'/effects/emitters/test_missile_trail_emit.bp'},
     
@@ -151,7 +152,7 @@ MultiPolyTrailProjectile = Class(EmitterProjectile) {
     end,
 }
 
-SingleCompositeEmitterProjectile = Class(SinglePolyTrailProjectile) {
+SingleCompositeEmitterProjectile = ClassProjectile(SinglePolyTrailProjectile) {
 
     BeamName = '/effects/emitters/default_beam_01_emit.bp',
 
@@ -165,7 +166,7 @@ SingleCompositeEmitterProjectile = Class(SinglePolyTrailProjectile) {
     end,
 }
 
-MultiCompositeEmitterProjectile = Class(MultiPolyTrailProjectile) {
+MultiCompositeEmitterProjectile = ClassProjectile(MultiPolyTrailProjectile) {
 
     Beams = {'/effects/emitters/default_beam_01_emit.bp',},
     PolyTrails = {'/effects/emitters/test_missile_trail_emit.bp'},
@@ -182,7 +183,7 @@ MultiCompositeEmitterProjectile = Class(MultiPolyTrailProjectile) {
     end,
 }
 
-OnWaterEntryEmitterProjectile = Class(Projectile) {
+OnWaterEntryEmitterProjectile = ClassProjectile(Projectile) {
 
     FxTrails = {'/effects/emitters/anti_torpedo_flare_01_emit.bp' },
     FxTrailScale = 0.4,
@@ -289,7 +290,7 @@ OnWaterEntryEmitterProjectile = Class(Projectile) {
 	
 }
 
-BaseGenericDebris = Class( EmitterProjectile ){
+BaseGenericDebris = ClassDummyProjectile(DummyProjectile){
     FxUnitHitScale = 0.25,
     FxWaterHitScale = 0.25,
     FxUnderWaterHitScale = 0.25,

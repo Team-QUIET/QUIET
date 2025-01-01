@@ -2,9 +2,9 @@ local TStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local TDFHiroPlasmaCannon = import('/lua/terranweapons.lua').TDFHiroPlasmaCannon
 
-SEB2320 = Class(TStructureUnit) {
+SEB2320 = ClassUnit(TStructureUnit) {
     Weapons = {
-        HiroCannon = Class(TDFHiroPlasmaCannon) {},
+        HiroCannon = ClassWeapon(TDFHiroPlasmaCannon) {},
     },
 }
 TypeClass = SEB2320

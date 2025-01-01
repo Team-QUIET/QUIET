@@ -1,4 +1,4 @@
-UCannonShell02 = Class(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
+UCannonShell02 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
 
 	FxImpactUnit = {
 		'/effects/emitters/weapons/uef/gauss01/impact/unit/w_u_gau01_i_u_01_flatflash_emit.bp',

@@ -1,6 +1,6 @@
 local SShieldStructureUnit = import('/lua/seraphimunits.lua').SShieldStructureUnit
 
-XSB4301 = Class(SShieldStructureUnit) {
+XSB4301 = ClassUnit(SShieldStructureUnit) {
     
     ShieldEffects = {},
     

@@ -1,6 +1,6 @@
 local AConstructionUnit = import('/lua/aeonunits.lua').AConstructionUnit
 
-SAL0319 = Class(AConstructionUnit) {
+SAL0319 = ClassUnit(AConstructionUnit) {
 
     ShieldEffects = {
         '/effects/emitters/aeon_shield_generator_t3_03_emit.bp',

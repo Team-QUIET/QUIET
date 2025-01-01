@@ -1,6 +1,6 @@
 local AAirUnit = import('/lua/defaultunits.lua').AirUnit
 
-SAA0201 = Class(AAirUnit) {
+SAA0201 = ClassUnit(AAirUnit) {
 
     OnScriptBitSet = function(self, bit)
 	

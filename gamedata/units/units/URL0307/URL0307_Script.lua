@@ -6,7 +6,7 @@ local Buff = import('/lua/sim/Buff.lua')
 
 local BuffField = import('/lua/cybranweapons.lua').CybranBuffField
 
-URL0307 = Class(CLandUnit) {
+URL0307 = ClassUnit(CLandUnit) {
 
 	BuffFields = {
 		OpticalInterferenceField = Class(BuffField){},

@@ -7,7 +7,7 @@ local Custom_4D_EffectTemplate = import('/mods/4DC/lua/4D_EffectTemplates.lua')
 local RandomFloat = import('/lua/utilities.lua').GetRandomFloat
 
 
-BFG_Shell = Class(BFG_Projectile) { 
+BFG_Shell = ClassProjectile(BFG_Projectile) { 
 
     -- Beam FX templates  
     FxBeam = Custom_4D_EffectTemplate.ArcBeam,

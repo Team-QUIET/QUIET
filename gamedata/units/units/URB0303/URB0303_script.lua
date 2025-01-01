@@ -4,10 +4,10 @@ local CIFSmartCharge = import('/lua/cybranweapons.lua').CIFSmartCharge
 
 local WaitFor = WaitFor
 
-URB0303 = Class(CSeaFactoryUnit) {
+URB0303 = ClassUnit(CSeaFactoryUnit) {
 
     Weapons = {
-        AntiTorpedo = Class(CIFSmartCharge) {},
+        AntiTorpedo = ClassWeapon(CIFSmartCharge) {},
     },
 	
     StartArmsMoving = function(self)

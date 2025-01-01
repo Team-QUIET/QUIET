@@ -2,11 +2,11 @@ local AStructureUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AAMWillOWisp = import('/lua/aeonweapons.lua').AAMWillOWisp
 
-UAB4201 = Class(AStructureUnit) {
+UAB4201 = ClassUnit(AStructureUnit) {
 
     Weapons = {
 
-        AntiMissile = Class(AAMWillOWisp) {
+        AntiMissile = ClassWeapon(AAMWillOWisp) {
 
             PlayRackRecoil = function(self, rackList)
 

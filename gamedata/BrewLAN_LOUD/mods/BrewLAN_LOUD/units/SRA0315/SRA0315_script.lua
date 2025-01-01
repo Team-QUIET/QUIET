@@ -9,11 +9,11 @@ local CDFHeavyMicrowaveLaserGeneratorCom    = CybranWeapons.CDFHeavyMicrowaveLas
 
 CybranWeapons = nil
 
-SRA0315 = Class(CAirUnit, MissileFlare) {
+SRA0315 = ClassUnit(CAirUnit, MissileFlare) {
 
     Weapons = {
-        MainLaser = Class(CDFHeavyMicrowaveLaserGeneratorCom) {},
-        SmallLaser = Class(CDFParticleCannonWeapon) {},
+        MainLaser = ClassWeapon(CDFHeavyMicrowaveLaserGeneratorCom) {},
+        SmallLaser = ClassWeapon(CDFParticleCannonWeapon) {},
     },
 
     FlareBones = {'Spike_001', 'Spike_002', 'Spike_003', 'Spike_004', 'Spike_005', 'Spike_006'},

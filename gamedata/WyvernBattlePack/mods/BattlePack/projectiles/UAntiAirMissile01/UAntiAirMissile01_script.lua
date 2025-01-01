@@ -2,10 +2,10 @@
 --  File     : /projectiles/UEF/UAntiAirMissile01/UAntiAirMissile01_script.lua
 --  Author(s): Gordon Duclos
 --  Summary  : SC2 UEF Anti-Air Missile: UAntiAirMissile01
---  Copyright © 2009 Gas Powered Games, Inc.  All rights reserved.
+--  Copyright ï¿½ 2009 Gas Powered Games, Inc.  All rights reserved.
 -----------------------------------------------------------------------------
 local EffectTemplate = import('/lua/EffectTemplates.lua')
-UAntiAirMissile01 = Class(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
+UAntiAirMissile01 = ClassProjectile(import('/lua/sim/defaultprojectiles.lua').MultiPolyTrailProjectile) {
 
 	FxTrails = {
             '/mods/BattlePack/effects/emitters/w_u_crm01_p_04_ignitefire_emit.bp',

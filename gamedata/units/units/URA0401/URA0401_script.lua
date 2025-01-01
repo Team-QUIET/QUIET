@@ -8,12 +8,12 @@ local util = import('/lua/utilities.lua')
 
 local CleanupEffectBag = import('/lua/effectutilities.lua').CleanupEffectBag
 
-URA0401 = Class(CAirUnit) {
+URA0401 = ClassUnit(CAirUnit) {
 
     Weapons = {
-        Missile     = Class(CDFRocketIridiumWeapon) {},
-        HeavyBolter = Class(CDFHeavyElectronBolterWeapon){},
-        AAMissile   = Class(CAAMissileNaniteWeapon) {},
+        Missile     = ClassWeapon(CDFRocketIridiumWeapon) {},
+        HeavyBolter = ClassWeapon(CDFHeavyElectronBolterWeapon){},
+        AAMissile   = ClassWeapon(CAAMissileNaniteWeapon) {},
     },
     
     MovementAmbientExhaustBones = {

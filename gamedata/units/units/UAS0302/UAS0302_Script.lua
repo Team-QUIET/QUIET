@@ -7,17 +7,17 @@ local AAMWillOWisp              = WeaponsFile.AAMWillOWisp
 
 WeaponsFile = nil
 
-UAS0302 = Class(ASeaUnit) {
+UAS0302 = ClassUnit(ASeaUnit) {
 
     FxDamageScale = 2,
     DestructionTicks = 400,
 
     Weapons = {
-        BackTurret      = Class(ADFCannonOblivionWeapon) {},
-        FrontTurret     = Class(ADFCannonOblivionWeapon) {},
-        MidTurret       = Class(ADFCannonOblivionWeapon) {},
-        AntiMissile1    = Class(AAMWillOWisp) {},
-        AntiMissile2    = Class(AAMWillOWisp) {},
+        BackTurret      = ClassWeapon(ADFCannonOblivionWeapon) {},
+        FrontTurret     = ClassWeapon(ADFCannonOblivionWeapon) {},
+        MidTurret       = ClassWeapon(ADFCannonOblivionWeapon) {},
+        AntiMissile1    = ClassWeapon(AAMWillOWisp) {},
+        AntiMissile2    = ClassWeapon(AAMWillOWisp) {},
     },
     
     OnCreate = function(self)

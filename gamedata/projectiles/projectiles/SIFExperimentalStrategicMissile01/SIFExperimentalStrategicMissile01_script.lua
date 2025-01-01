@@ -5,7 +5,7 @@ local WaitSeconds = WaitSeconds
 local CreateAttachedEmitter = CreateAttachedEmitter
 local VDist2 = VDist2
 
-SIFExperimentalStrategicMissile01 = Class(SExperimentalStrategicMissile) {
+SIFExperimentalStrategicMissile01 = ClassWeapon(SExperimentalStrategicMissile) {
     FxSplashScale = 0.5,
 
     LaunchSound = 'Nuke_Launch',

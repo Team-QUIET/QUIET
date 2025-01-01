@@ -4,11 +4,11 @@ local TAMPhalanxWeapon = import('/lua/terranweapons.lua').TAMPhalanxWeapon
 
 local CreateRotator = CreateRotator
 
-BRNT1EXPD = Class(TStructureUnit) {
+BRNT1EXPD = ClassUnit(TStructureUnit) {
 
     Weapons = {
 	
-        gatling1 = Class(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.3,		
+        gatling1 = ClassWeapon(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.3,		
 
             PlayFxWeaponUnpackSequence = function(self)
             
@@ -34,7 +34,7 @@ BRNT1EXPD = Class(TStructureUnit) {
 			end,
         },
 
-        gatling2 = Class(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.3,
+        gatling2 = ClassWeapon(TAMPhalanxWeapon) { FxMuzzleFlashScale = 0.3,
 		
             PlayFxWeaponUnpackSequence = function(self)
 			

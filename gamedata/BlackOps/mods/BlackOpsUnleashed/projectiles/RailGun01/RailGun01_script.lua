@@ -1,6 +1,6 @@
 local RailGun01Projectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsprojectiles.lua').RailGun01Projectile
 
-RailGun01 = Class(RailGun01Projectile) {
+RailGun01 = ClassProjectile(RailGun01Projectile) {
 
 	OnImpact = function(self, TargetType, TargetEntity) 
 		self:ShakeCamera( 15, 0.25, 0, 0.2 )

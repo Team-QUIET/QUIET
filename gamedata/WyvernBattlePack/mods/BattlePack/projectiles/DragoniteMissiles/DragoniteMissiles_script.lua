@@ -4,7 +4,7 @@ local EffectTemplate = import('/lua/EffectTemplates.lua')
 
 local SingleBeamProjectile = import('/lua/sim/defaultprojectiles.lua').SingleBeamProjectile
 
-DragoniteMissiles = Class(TMissileCruiseProjectile) {
+DragoniteMissiles = ClassProjectile(TMissileCruiseProjectile) {
     FxTrails = EffectTemplate.TMissileExhaust01,
     FxTrailOffset = -0.85,
     

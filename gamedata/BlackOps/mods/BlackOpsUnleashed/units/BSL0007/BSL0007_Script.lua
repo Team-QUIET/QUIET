@@ -5,9 +5,9 @@ local SIFSuthanusArtilleryCannon = import('/lua/seraphimweapons.lua').SIFSuthanu
 local ForkThread = ForkThread
 local WaitTicks = coroutine.yield
 
-BSL0007 = Class(SWalkingLandUnit) {
+BSL0007 = ClassUnit(SWalkingLandUnit) {
     Weapons = {
-        MainGun = Class(SIFSuthanusArtilleryCannon) {}
+        MainGun = ClassWeapon(SIFSuthanusArtilleryCannon) {}
     },
 
     OnStopBeingBuilt = function(self, builder, layer)

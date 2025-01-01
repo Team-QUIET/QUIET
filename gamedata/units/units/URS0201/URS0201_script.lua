@@ -17,22 +17,22 @@ AeonWeapons = nil
 CybranWeapons = nil
 WeaponsFile = nil
 
-URS0201 = Class(CSeaUnit) {
+URS0201 = ClassUnit(CSeaUnit) {
 
     SwitchAnims = true,
     Walking = false,
     IsWaiting = false,
 
     Weapons = {
-        ParticleGun = Class(CDFProtonCannonWeapon) {},
+        ParticleGun = ClassWeapon(CDFProtonCannonWeapon) {},
 
-        AAGun = Class(CAAAutocannon) {},
+        AAGun = ClassWeapon(CAAAutocannon) {},
 
-        Torpedo = Class(CANNaniteTorpedoWeapon) {},
+        Torpedo = ClassWeapon(CANNaniteTorpedoWeapon) {},
 
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
 
-        TorpedoDecoy = Class(TIFSmartCharge) {}
+        TorpedoDecoy = ClassWeapon(TIFSmartCharge) {}
     },
 
     OnCreate = function(self)

@@ -9,13 +9,13 @@ local BlackOpsEffectTemplate    = import('/mods/BlackOpsUnleashed/lua/BlackOpsEf
 local CreateAttachedEmitter = CreateAttachedEmitter
 local LOUDINSERT = table.insert
 
-BES0402 = Class(TSeaUnit) {
+BES0402 = ClassUnit(TSeaUnit) {
 
 	SteamEffects = BlackOpsEffectTemplate.WeaponSteam02,
 
     Weapons = {
 	
-    	FrontAMCCannon01 = Class(ZCannonWeapon) {
+    	FrontAMCCannon01 = ClassWeapon(ZCannonWeapon) {
 		
 			PlayFxRackSalvoReloadSequence = function(self)
 			
@@ -42,7 +42,7 @@ BES0402 = Class(TSeaUnit) {
 			end,
 		},
 		
-        FrontAMCCannon02 = Class(ZCannonWeapon) {
+        FrontAMCCannon02 = ClassWeapon(ZCannonWeapon) {
 		
 			PlayFxRackSalvoReloadSequence = function(self)
 			
@@ -67,7 +67,7 @@ BES0402 = Class(TSeaUnit) {
             end,
 		},
 		
-        BackAMCCannon = Class(ZCannonWeapon) {
+        BackAMCCannon = ClassWeapon(ZCannonWeapon) {
 		
 			PlayFxRackSalvoReloadSequence = function(self)
 			
@@ -92,9 +92,9 @@ BES0402 = Class(TSeaUnit) {
             end,
 		},
 		
-        AAGun = Class(TAALinkedRailgun) {},
+        AAGun = ClassWeapon(TAALinkedRailgun) {},
 
-        Deckgun = Class(TDFShipGaussCannonWeapon) {},
+        Deckgun = ClassWeapon(TDFShipGaussCannonWeapon) {},
 
     },
 

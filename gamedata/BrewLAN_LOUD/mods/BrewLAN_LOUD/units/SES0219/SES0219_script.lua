@@ -6,9 +6,9 @@ local Entity = import('/lua/sim/Entity.lua').Entity
 local BrewLANLOUDPath = import( '/lua/game.lua' ).BrewLANLOUDPath()
 local AssistThread = import(BrewLANLOUDPath .. '/lua/fieldengineers.lua').AssistThread
 
-SES0219 = Class(TSeaUnit) {
+SES0219 = ClassUnit(TSeaUnit) {
     Weapons = {
-        AAGun = Class(TAALinkedRailgun) {},
+        AAGun = ClassWeapon(TAALinkedRailgun) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

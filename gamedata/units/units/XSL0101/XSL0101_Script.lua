@@ -2,10 +2,10 @@ local SWalkingLandUnit = import('/lua/seraphimunits.lua').SWalkingLandUnit
 
 local SDFPhasicAutoGunWeapon = import('/lua/seraphimweapons.lua').SDFPhasicAutoGunWeapon
 
-XSL0101 = Class(SWalkingLandUnit) {
+XSL0101 = ClassUnit(SWalkingLandUnit) {
 
     Weapons = {
-		LaserTurret = Class(SDFPhasicAutoGunWeapon) {
+		LaserTurret = ClassWeapon(SDFPhasicAutoGunWeapon) {
 		
 			OnWeaponFired = function(self, target)
 			

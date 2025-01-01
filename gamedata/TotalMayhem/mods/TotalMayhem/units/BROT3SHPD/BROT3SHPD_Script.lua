@@ -13,11 +13,11 @@ local MissileRedirect = import('/lua/defaultantiprojectile.lua').MissileTorpDest
 local TrashBag      = TrashBag
 local TrashAdd      = TrashBag.Add
 
-BROT3SHPD = Class(TStructureUnit) {
+BROT3SHPD = ClassUnit(TStructureUnit) {
 
     Weapons = {
 
-        MainGun = Class(DefaultProjectileWeapon) {
+        MainGun = ClassWeapon(DefaultProjectileWeapon) {
 
             FxMuzzleFlashScale = 0.5,
 
@@ -64,9 +64,9 @@ BROT3SHPD = Class(TStructureUnit) {
             end,  
 		},
 		
-        AAMissiles  = Class(AAAZealotMissileWeapon) {},		
+        AAMissiles  = ClassWeapon(AAAZealotMissileWeapon) {},		
 
-        DeathWeapon = Class(TIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(TIFCommanderDeathWeapon) {},
 
     },
 	

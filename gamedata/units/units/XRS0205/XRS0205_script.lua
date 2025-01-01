@@ -8,13 +8,13 @@ local AIFQuasarAntiTorpedoWeapon = import('/lua/aeonweapons.lua').AIFQuasarAntiT
 
 local EffectUtil = import('/lua/EffectUtilities.lua')
 
-XRS0205 = Class(CSeaUnit) {
+XRS0205 = ClassUnit(CSeaUnit) {
 
     Weapons = {
 
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
         
-        AntiFlare = Class(CIFSmartCharge) {},
+        AntiFlare = ClassWeapon(CIFSmartCharge) {},
     },
 
     IntelEffects = {

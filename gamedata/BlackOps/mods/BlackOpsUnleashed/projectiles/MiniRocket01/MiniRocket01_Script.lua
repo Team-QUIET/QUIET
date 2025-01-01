@@ -2,7 +2,7 @@ local MiniRocket03PRojectile = import('/mods/BlackOpsUnleashed/lua/BlackOpsproje
 
 local EffectTemplate = import('/lua/EffectTemplates.lua')
 
-AWMissileCruise01 = Class(MiniRocket03PRojectile) {
+AWMissileCruise01 = ClassProjectile(MiniRocket03PRojectile) {
 	
     FxTrails = EffectTemplate.TMissileExhaust01,
     FxImpactUnit = EffectTemplate.TMissileHit01,

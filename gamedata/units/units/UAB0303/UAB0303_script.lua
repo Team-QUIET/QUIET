@@ -2,12 +2,12 @@ local ASeaFactoryUnit = import('/lua/aeonunits.lua').AeonFactoryUnit
 
 local AIFQuasarAntiTorpedoWeapon = import('/lua/aeonweapons.lua').AIFQuasarAntiTorpedoWeapon
 
-UAB0303 = Class(ASeaFactoryUnit) {
+UAB0303 = ClassUnit(ASeaFactoryUnit) {
 
     Buildbone = 'Attachpoint01',
     
     Weapons = {
-        AntiTorpedo = Class(AIFQuasarAntiTorpedoWeapon) {},
+        AntiTorpedo = ClassWeapon(AIFQuasarAntiTorpedoWeapon) {},
     },
     
     OnCreate = function(self)

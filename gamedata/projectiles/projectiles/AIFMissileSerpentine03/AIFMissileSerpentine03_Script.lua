@@ -5,7 +5,7 @@ local KillThread = KillThread
 local WaitSeconds = WaitSeconds
 local WaitTicks = WaitTicks
 
-AIFMissileTactical03 = Class(AMissileSerpentineProjectile) {
+AIFMissileTactical03 = ClassProjectile(AMissileSerpentineProjectile) {
 
     OnCreate = function(self)
 	

@@ -2,10 +2,10 @@ local AEnergyStorageUnit = import('/lua/defaultunits.lua').StructureUnit
 
 local AIFCommanderDeathWeapon = import('/lua/aeonweapons.lua').AIFCommanderDeathWeapon
 
-UAB8765 = Class(AEnergyStorageUnit) {
+UAB8765 = ClassUnit(AEnergyStorageUnit) {
 
     Weapons = {
-        DeathWeapon = Class(AIFCommanderDeathWeapon) {},
+        DeathWeapon = ClassWeapon(AIFCommanderDeathWeapon) {},
     },
 
     OnStopBeingBuilt = function(self,builder,layer)

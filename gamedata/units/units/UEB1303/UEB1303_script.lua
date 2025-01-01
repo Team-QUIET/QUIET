@@ -1,7 +1,7 @@
 local TMassFabricationUnit = import('/lua/defaultunits.lua').MassFabricationUnit
 local CreateRotator = CreateRotator
 
-UEB1303 = Class(TMassFabricationUnit) {
+UEB1303 = ClassUnit(TMassFabricationUnit) {
 
     OnStopBeingBuilt = function(self,builder,layer)
         TMassFabricationUnit.OnStopBeingBuilt(self,builder,layer)

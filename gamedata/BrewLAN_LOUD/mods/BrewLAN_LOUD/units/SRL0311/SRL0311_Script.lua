@@ -6,10 +6,10 @@ local CreateSlider = CreateSlider
 
 local LOUDINSERT = table.insert
 
-SRL0311 = Class(CLandUnit) {
+SRL0311 = ClassUnit(CLandUnit) {
     Weapons = {
     
-        MainGun = Class(CDFRocketIridiumWeapon) {
+        MainGun = ClassWeapon(CDFRocketIridiumWeapon) {
             FxMuzzleFlash = {
                 '/effects/emitters/cybran_artillery_muzzle_flash_01_emit.bp',
                 '/effects/emitters/cybran_artillery_muzzle_flash_02_emit.bp',

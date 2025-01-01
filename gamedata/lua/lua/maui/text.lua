@@ -18,7 +18,7 @@ local LOUDINSERT = table.insert
 local LOUDSUB = string.sub
 local LOUDMIN = math.min
 
-Text = Class(moho.text_methods, Control) {
+Text = ClassUI(moho.text_methods, Control) {
 
     __init = function(self, parent, debugname)
         InternalCreateText(self, parent)

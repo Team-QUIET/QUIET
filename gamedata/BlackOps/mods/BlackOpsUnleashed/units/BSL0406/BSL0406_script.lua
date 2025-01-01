@@ -5,14 +5,14 @@ local BuffField = import('/lua/sim/BuffField.lua').BuffField
 
 local SAAShleoCannonWeapon = import('/lua/seraphimweapons.lua').SAAShleoCannonWeapon
 
-BSL0406 = Class(SWalkingLandUnit) {
+BSL0406 = ClassUnit(SWalkingLandUnit) {
 	
 	BuffFields = {
 		RegenField = Class(BuffField){},
 	},
 
     Weapons = {
-        LaserTurret = Class(SAAShleoCannonWeapon) {},
+        LaserTurret = ClassWeapon(SAAShleoCannonWeapon) {},
     },
 	
 	OnStopBeingBuilt = function(self,builder,layer)
