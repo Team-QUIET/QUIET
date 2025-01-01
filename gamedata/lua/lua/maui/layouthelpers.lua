@@ -2071,7 +2071,7 @@ local LayouterAttributeFont = ClassSimple {
 -------------------
 
 ---@class LayouterAttributeEditor : LayouterAttributeFont
-local LayouterAttributeEditor = ClassUI(LayouterAttributeFont) {
+local LayouterAttributeEditor = ClassSimple(LayouterAttributeFont) {
     --- Sets up the editor of the control
     ---@generic T : LayouterAttributeEditor
     ---@param self T
