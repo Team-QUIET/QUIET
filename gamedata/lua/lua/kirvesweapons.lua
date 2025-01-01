@@ -9,7 +9,7 @@ local EffectTemplate = import('/lua/kirveseffects.lua')
 local CollisionBeamFile = import('/lua/kirvesbeams.lua')
 
 
-TAAPhalanxWeapon                = Class(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPhalanxGunMuzzleFlash,
+TAAPhalanxWeapon                = ClassWeapon(DefaultProjectileWeapon) { FxMuzzleFlash = EffectTemplate.TPhalanxGunMuzzleFlash,
     FxShellEject  = EffectTemplate.TPhalanxGunShells,
 
     PlayFxMuzzleSequence = function(self, muzzle)

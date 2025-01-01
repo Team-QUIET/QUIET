@@ -725,7 +725,7 @@ Weapon = Class(moho.weapon_methods) {
                 priorities = ParsePriorities()
                 cachedPriorities = priorities
             end
-            local bp = self.Blueprint.TargetPriorities
+            local bp = self.bp.TargetPriorities
             if bp then
                 local count = 0
                 local priorityTable = RecycledPriTable
