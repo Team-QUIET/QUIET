@@ -39,6 +39,43 @@ local PassDamageData = import('/lua/sim/Projectile.lua').Projectile.PassDamageDa
 local MISSILEOPTION = tonumber(ScenarioInfo.Options.MissileOption)
 local STRUCTURE = categories.STRUCTURE
 
+-- Enhanced Target Priority System --
+local ParseEntityCategoryProperly = import("/lua/sim/categoryutils.lua").ParseEntityCategoryProperly
+local cachedPriorities = false
+local RecycledPriTable = {}
+-------------------------------------
+
+local function ParsePriorities()
+    local idlist = EntityCategoryGetUnitList(categories.ALLUNITS)
+    local finalPriorities = {}
+    local StringFind = string.find
+    local ParseEntityCategoryProperly = ParseEntityCategoryProperly
+    local ParseEntityCategory = ParseEntityCategory
+
+    for _, id in idlist do
+        local weapons = GetUnitBlueprintByName(id).Weapon
+        if not weapons then
+            continue
+        end
+        for _, weapon in weapons do
+            local priorities = weapon.TargetPriorities
+            if not priorities then
+                continue
+            end
+            for _, priority in priorities do
+                if not finalPriorities[priority] then
+                    if StringFind(priority, '%(', 1, true) then
+                        finalPriorities[priority] = ParseEntityCategoryProperly(priority)
+                    else
+                        finalPriorities[priority] = ParseEntityCategory(priority)
+                    end
+                end
+            end
+        end
+    end
+    return finalPriorities
+end
+
 --LOG("*AI DEBUG Weapon Methods are "..repr(moho.weapon_methods))
 
 Weapon = ClassWeapon(moho.weapon_methods) {
@@ -666,46 +703,50 @@ Weapon = ClassWeapon(moho.weapon_methods) {
         end
     end,
 
-    SetWeaponPriorities = function(self, priTable)
-	
-		local LOUDPARSE = ParseEntityCategory
-        local SetTargetingPriorities = SetTargetingPriorities 
-		
-        if not priTable then
-
-            if self.bp.TargetPriorities then
-			
-                local priorityTable = {}
-				local counter = 1
-				
-                for k, v in self.bp.TargetPriorities do
-                
-                    priorityTable[counter] = LOUDPARSE(v)
-					counter = counter + 1
+    SetWeaponPriorities = function(self, priorities)
+        if priorities then
+            if type(priorities[1]) == 'string' then
+                local count = 1
+                local priorityTable = RecycledPriTable
+                for _, v in priorities do
+                    priorityTable[count] = ParseEntityCategory(v)
+                    count = count + 1
                 end
-				
-                SetTargetingPriorities( self, priorityTable )
-            end
-			
-        else
-        
-            if type(priTable[1]) == 'string' then
-			
-                local priorityTable = {}
-				local counter = 1
-				
-                for k, v in priTable do
-                
-                    priorityTable[counter] = LOUDPARSE(v)
-					counter = counter + 1
+                self:SetTargetingPriorities(priorityTable)
+                for i = 1, count - 1 do
+                    priorityTable[i] = nil
                 end
-				
-                SetTargetingPriorities( self, priorityTable )
-                
             else
-            
-                SetTargetingPriorities( self, priTable )
-                
+                self:SetTargetingPriorities(priorities)
+            end
+        else
+            priorities = cachedPriorities
+            if not priorities then
+                priorities = ParsePriorities()
+                cachedPriorities = priorities
+            end
+            local bp = self.Blueprint.TargetPriorities
+            if bp then
+                local count = 0
+                local priorityTable = RecycledPriTable
+                for _, v in bp do
+                    count = count + 1
+                    if priorities[v] then
+                        priorityTable[count] = priorities[v]
+                    else
+                        if string.find(v, '%(') then
+                            cachedPriorities[v] = ParseEntityCategoryProperly(v)
+                            priorityTable[count] = priorities[v]
+                        else
+                            cachedPriorities[v] = ParseEntityCategory(v)
+                            priorityTable[count] = priorities[v]
+                        end
+                    end
+                end
+                self:SetTargetingPriorities(priorityTable)
+                for i = 1, count do
+                    priorityTable[i] = nil
+                end
             end
         end
     end,
