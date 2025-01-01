@@ -228,12 +228,13 @@ UnitBlueprint {
             
             TargetCheckInterval = 2,
             TargetPriorities = {
-                'SPECIALHIGHPRI',
-                'DEFENSE',
-                'MOBILE',
-                'ALLUNITS,-WALL',
-            },
-            TargetRestrictDisallow = 'UNTARGETABLE',
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "(STRUCTURE * DEFENSE - ANTIMISSILE)",
+                "ALLUNITS",
+            },            TargetRestrictDisallow = 'UNTARGETABLE',
 
             TurretBoneMuzzle = 'Main_Turret_Muzzle',
             TurretBonePitch = 'Main_Turret_Barrel',
