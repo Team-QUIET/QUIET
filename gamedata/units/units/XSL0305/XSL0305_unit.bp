@@ -94,7 +94,13 @@ UnitBlueprint {
 
         UniformScale = 0.068,
     },
-	
+    	 
+    Economy = { 
+        BuildCostEnergy = 15000, 
+        BuildCostMass = 800, 
+        BuildTime = 4000, 
+    }, 
+
     General = {
         CapCost = 3,
         CommandCaps = {
