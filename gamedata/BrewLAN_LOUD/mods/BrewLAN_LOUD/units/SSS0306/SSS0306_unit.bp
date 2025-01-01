@@ -276,8 +276,6 @@ UnitBlueprint {
                 "(STRUCTURE * DEFENSE - ANTIMISSILE)",
                 "ALLUNITS",
             },
-                'ALLUNITS',
-            },
 
             TargetRestrictDisallow = 'UNTARGETABLE, HOVER',
             TrackingRadius = 1.1,

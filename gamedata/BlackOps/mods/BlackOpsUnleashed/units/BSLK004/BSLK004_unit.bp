@@ -302,7 +302,6 @@ UnitBlueprint {
                 "(STRUCTURE * DEFENSE - ANTIMISSILE)",
                 "ALLUNITS",
             },
-            },
             TargetRestrictDisallow = 'UNTARGETABLE,AIR,WALL',
             TrackingRadius = 1.15,
 			
