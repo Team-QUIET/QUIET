@@ -124,6 +124,13 @@ WaterSplash01 = {
     '/effects/emitters/water_splash_plume_01_emit.bp',
 }
 
+ExplosionMediumWater = {
+    EmtBpPath .. 'Watertower_m.bp',
+    EmtBpPath .. 'Water_pie.bp',
+    EmtBpPath .. 'Watersplash_m.bp',
+
+}
+
 -- Default Unit Damage Effects
 DamageSmoke01 = { '/effects/emitters/destruction_damaged_smoke_01_emit.bp',}
 DamageSparks01 = { '/effects/emitters/destruction_damaged_sparks_01_emit.bp',}
