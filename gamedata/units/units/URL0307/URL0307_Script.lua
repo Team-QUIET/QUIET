@@ -38,7 +38,10 @@ URL0307 = ClassUnit(CLandUnit) {
 			self.IntelFxOn = true
 		end
 		
-		self:GetBuffFieldByName('CybranOpticalDisruptionBuffField'):Enable()
+		local buffField = self:GetBuffFieldByName('CybranOpticalDisruptionBuffField')
+		if buffField then
+			buffField:Enable()
+		end
     end,
 
     OnIntelDisabled = function(self,intel)
@@ -49,7 +52,10 @@ URL0307 = ClassUnit(CLandUnit) {
 		
 		self.IntelFxOn = false
 		
-		self:GetBuffFieldByName('CybranOpticalDisruptionBuffField'):Disable()
+		local buffField = self:GetBuffFieldByName('CybranOpticalDisruptionBuffField')
+		if buffField then
+			buffField:Disable()
+		end
     end,    
     
 }
