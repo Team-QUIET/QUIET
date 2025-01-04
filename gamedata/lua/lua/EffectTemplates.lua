@@ -1755,8 +1755,10 @@ TNapalmCarpetBombHitWater01 = {
 }
 
 TNukeRings01 = {
-    '/effects/emitters/nuke_concussion_ring_01_emit.bp',
-	'/effects/emitters/nuke_concussion_ring_02_emit.bp',
+    EmtBpPath .. 'nuke_concussion_ring_01_emit.bp',
+    EmtBpPath .. 'nuke_concussion_ring_02_emit.bp',
+    EmtBpPath .. 'shockwave_01_emit.bp',
+    EmtBpPath .. 'shockwave_smoke_01_emit.bp',
 }
 TNukeFlavorPlume01 = { '/effects/emitters/nuke_smoke_trail01_emit.bp', }
 TNukeGroundConvectionEffects01 = { '/effects/emitters/nuke_mist_01_emit.bp', }
